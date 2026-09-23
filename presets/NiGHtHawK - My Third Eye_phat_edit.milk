@@ -1,0 +1,64 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+dx=-0.035
+dy=-0.175
+fDecay=1.0
+fWaveScale=0.01
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+ib_size=0.0
+mv_a=0.1
+mv_b=0.8
+mv_l=2.5
+nWaveMode=5.0
+ob_a=1.0
+ob_size=0.005
+rot=-0.92
+wave_b=0.5
+wave_g=0.5
+wave_r=0.5
+wave_y=0.95
+fVideoEchoZoom=4.923038
+nVideoEchoOrientation=1.0
+fWaveAlpha=0.001
+nMotionVectorsX=31.199999
+nMotionVectorsY=2.280001
+shapecode_0_enabled=1.0
+shapecode_0_textured=1.0
+shapecode_0_x=0.68
+shapecode_0_rad=0.599579
+shapecode_0_tex_ang=2.701768
+shapecode_0_tex_zoom=0.741921
+shapecode_0_border_a=0.0
+shape_0_per_frame1=tex_ang=(cos(floor((time)/(5)))*6.28);
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+wavecode_0_enabled=0.0
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=framethird = 0;
+per_frame_init_2=volume = 0;
+per_frame_init_3=beatrate = 0;
+per_frame_init_4=lastbeat = 0;
+per_frame_init_5=meanbass_att = 0;
+per_frame_init_6=peakbass_att = 0;
+per_frame_init_7=beat = 0;
+per_frame_1=warp=0;
+per_frame_2=framethird=((frame)%(3));
+per_frame_3=volume=(0.3*(bass+mid));
+per_frame_4=beatrate=(equal(beatrate, 0)+((1-equal(beatrate, 0))*(below(volume, 0.01)+((1-below(volume, 0.01))*beatrate))));
+per_frame_5=lastbeat=(lastbeat+(equal(lastbeat, 0)*time));
+per_frame_6=meanbass_att=(0.1*((meanbass_att*9)+bass_att));
+per_frame_7=peakbass_att=max(bass_att, peakbass_att);
+per_frame_8=beat=((above(volume, 0.8)*below((peakbass_att-bass_att), (0.05*peakbass_att)))*above((time-lastbeat), (0.1+(0.5*(beatrate-0.1)))));
+per_frame_9=beatrate=max((if(abs(beat)>0.00001,(if(abs(below((time-lastbeat), (2*beatrate)))>0.00001,(0.1*(((beatrate*9)+time)-lastbeat)),beatrate)),beatrate)), 0.1);
+per_frame_10=peakbass_att=((beat*bass_att)+(((1-beat)*peakbass_att)*((above((time-lastbeat), (2*beatrate))*0.99)+((1-above((time-lastbeat), (2*beatrate)))*0.998))));
+per_frame_11=lastbeat=((beat*time)+((1-beat)*lastbeat));
+per_frame_12=peakbass_att=max(peakbass_att, (1.1*meanbass_att));
+per_frame_13=dx=(if(abs(beat)>0.00001,(1-(2*floor(int(rand(2))))),0));

@@ -1,0 +1,66 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+dy=-0.001
+fDecay=0.95
+fGammaAdj=1.0
+fModWaveAlphaStart=0.35
+fWarpAnimSpeed=2.704811
+fWarpScale=1.645016
+fWaveScale=1.000183
+fWaveSmoothing=0.7
+mv_a=0.0
+mv_b=0.2
+mv_g=0.4
+mv_l=5.0
+mv_r=0.0
+nWaveMode=2.0
+warp=0.01
+wave_b=0.25
+wave_g=0.25
+wave_r=0.35
+zoom=1.032026
+bAdditiveWaves=1.0
+fVideoEchoZoom=0.999696
+fWaveAlpha=7.888684
+nMotionVectorsX=1.247999
+nMotionVectorsY=1.224001
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=d = 0;
+per_frame_init_2=q1 = 0;
+per_frame_init_3=dx_old = 0;
+per_frame_init_4=beat_q2 = 0;
+per_frame_init_5=old_rot = 0;
+per_frame_init_6=t = 0;
+per_frame_init_7=dy_old = 0;
+per_frame_init_8=q2 = 0;
+per_frame_init_9=beat_q1 = 0;
+per_frame_init_10=old_rot=0.001;
+per_frame_1=q1=above(bass_att, (beat_q1*1.15));
+per_frame_2=q2=above((mid_att*1.15), beat_q2);
+per_frame_3=beat_q1=((q1*5)+((((1-q1)*(beat_q1-1.2))*0.9)+1.2));
+per_frame_4=beat_q2=((q2*3)+((((1-q2)*(beat_q2-1.2))*0.8)+1.2));
+per_frame_5=wave_r=abs(((wave_r+(0.35*sin((0.984*time))))+(0.1*sin((12.43*time)))));
+per_frame_6=wave_g=((wave_g+(0.33*sin((0.764*time))))+(0.1*sin((13.13*time))));
+per_frame_7=wave_b=((wave_b+(0.25*sin((0.881*time))))+(0.1*sin((11.43*time))));
+per_frame_8=rot=(((1-q2)*old_rot)+((q2*0.2)*sin((412*time))));
+per_frame_9=old_rot=(rot*0.98);
+per_frame_10=ob_a=(if(abs(q1)>0.00001,1,0));
+per_frame_11=ob_size=(if(abs(q1)>0.00001,2,0));
+per_frame_12=ob_r=(if(abs(q1)>0.00001,wave_r,0));
+per_frame_13=ob_g=(if(abs(q1)>0.00001,wave_g,0));
+per_frame_14=ob_b=(if(abs(q1)>0.00001,wave_b,0));
+per_frame_15=d=((t*-0.5)+((((1-t)*(d-0.92))*0.7)+0.92));
+per_frame_16=decay=d;
+per_frame_17=t=q1;
+per_frame_18=dy=(((1-q2)*dy_old)+((q2*0.03)*sin((4.33*time))));
+per_frame_19=dx=(((1-q2)*dx_old)+((q2*0.03)*sin((2.35*time))));
+per_frame_20=dy_old=(dy*0.88);
+per_frame_21=dx_old=(dx*0.88);
+per_frame_22=zoom=min(max(0.96, bass_att), 1.5);
+per_pixel_1=rot=((rot*(0.5-rad))*2);

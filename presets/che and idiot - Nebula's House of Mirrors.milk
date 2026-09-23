@@ -1,0 +1,65 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+dx=-0.02
+fDecay=0.979
+fGammaAdj=1.7
+fModWaveAlphaEnd=1.0
+fModWaveAlphaStart=1.0
+fWaveScale=1.220674
+fWaveSmoothing=0.0
+ib_a=1.0
+ib_size=0.0
+mv_a=0.0
+mv_l=0.5
+nWaveMode=1.0
+ob_a=1.0
+ob_size=0.0
+rot=0.04
+sx=0.990099
+sy=1.01
+warp=0.0
+wave_b=0.5
+wave_g=0.5
+wave_r=0.5
+zoom=1.000223
+fVideoEchoAlpha=0.5
+fVideoEchoZoom=1.000499
+nVideoEchoOrientation=3.0
+fWaveAlpha=1.000416
+fZoomExponent=1.000158
+nMotionVectorsX=19.199995
+nMotionVectorsY=14.4
+fWaveParam=-0.08
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=brot = 0;
+per_frame_init_2=q1 = 0;
+per_frame_init_3=mrot = 0;
+per_frame_init_4=partone = 0;
+per_frame_init_5=q4 = 0;
+per_frame_init_6=trot = 0;
+per_frame_init_7=q2 = 0;
+per_frame_init_8=q3 = 0;
+per_frame_init_9=wave_myster = 0;
+per_frame_1=brot=(brot+(0.035*bass));
+per_frame_2=mrot=(mrot+(0.035*mid));
+per_frame_3=trot=(trot+(0.035*treb));
+per_frame_4=wave_r=(sqr(cos((1.7*brot)))*sin(((bass)&(treb))));
+per_frame_5=wave_g=(sqr(cos((1.8*brot)))*sin(((mid)&(bass))));
+per_frame_6=wave_b=(sqr(cos((1.9*brot)))*sin(((treb)&(mid_att))));
+per_frame_7=q1=sqr(sin((0.3*mrot)));
+per_frame_8=q2=sqr(sin((0.21*trot)));
+per_frame_9=q3=sqr(sin(((0.17*brot)+(0.05*mrot))));
+per_frame_10=q4=sqr(sin(((0.11*trot)+(0.06*mrot))));
+per_frame_11=wave_mystery=(wave_myster+(0.6*sin(above(mid_att, bass))));
+per_pixel_1=partone=above(above(tan(((y*above(treb, treb_att))*18.85)), 0), above(tan(((x*above(bass, bass_att))*12.57)), 0));
+per_pixel_2=cx=((if(abs(partone)>0.00001,q1,q3))-(x*sin((if(abs(equal(bass, bass_att))>0.00001,(0.2+x),(0.6+y))))));
+per_pixel_3=cy=((if(abs(partone)>0.00001,q2,q4))-(y*sin((if(abs(equal(mid, mid_att))>0.00001,(0.2-y),(0.6-x))))));
+per_pixel_4=rot=(((0.007*(if(abs(partone)>0.00001,(bass+mid),(-treb-mid))))-((rot*sin(equal(mid, treb)))*(rad-(y*ang))))+(0.02*sin(above(bass, bass_att))));
+per_pixel_5=dx=((dx)&(rad));
+per_pixel_6=dy=((dy)&(rad));

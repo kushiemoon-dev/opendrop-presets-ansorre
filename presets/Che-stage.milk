@@ -1,0 +1,51 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+dy=0.008
+fDecay=1.0
+fGammaAdj=1.0
+fModWaveAlphaEnd=1.0
+fModWaveAlphaStart=1.0
+fWaveScale=1.000404
+fWaveSmoothing=0.0
+ib_a=1.0
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+ib_size=0.035
+mv_dx=-0.08
+mv_l=5.0
+nWaveMode=4.0
+ob_size=0.5
+warp=0.0
+wave_b=0.5
+wave_g=0.5
+wave_r=0.5
+wave_y=0.1
+zoom=1.000223
+fVideoEchoZoom=1.000499
+fWaveAlpha=1.000416
+fZoomExponent=1.000158
+nMotionVectorsX=2.048001
+nMotionVectorsY=47.999996
+fWaveParam=-0.48
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=altwave = 0;
+per_frame_1=zoom=(if(abs(above((bass+treb), 4.5))>0.00001,5,0.97));
+per_frame_2=mv_r=min(1, max(0, (bass_att-0.8)));
+per_frame_3=mv_g=min(1, max(0, (mid_att-0.8)));
+per_frame_4=mv_b=min(1, max(0, (treb_att-0.8)));
+per_frame_5=altwave=((frame)%(2));
+per_frame_6=wave_mode=(if(abs(altwave)>0.00001,4,0));
+per_frame_7=wave_y=(if(abs(altwave)>0.00001,0.1,0.5));
+per_frame_8=wave_r=(if(abs(altwave)>0.00001,min(1, max(0, (bass_att-0.8))),sin((time*1.5))));
+per_frame_9=wave_g=(if(abs(altwave)>0.00001,min(1, max(0, (mid_att-0.8))),sin(time)));
+per_frame_10=wave_b=(if(abs(altwave)>0.00001,min(1, max(0, (treb_att-0.8))),sin((time*2))));
+per_pixel_1=dx=(if(abs(above(x, 0.95))>0.00001,0.03,(if(abs(below(x, 0.05))>0.00001,-0.03,dx))));
+per_pixel_2=dy=(if(abs(above(y, 0.95))>0.00001,0.03,(if(abs(below(y, 0.05))>0.00001,-0.03,dy))));

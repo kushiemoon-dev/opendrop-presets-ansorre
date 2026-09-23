@@ -1,0 +1,152 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bBrighten=1.0
+bWaveThick=1.0
+fDecay=1.0
+fGammaAdj=1.84
+fModWaveAlphaEnd=1.0
+fModWaveAlphaStart=0.5
+fWaveScale=0.0
+fWaveSmoothing=0.5
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+ib_size=0.002
+mv_a=0.0
+mv_l=0.0
+nWaveMode=6.0
+ob_a=1.0
+ob_b=1.0
+ob_g=1.0
+ob_r=1.0
+ob_size=0.0
+warp=0.0
+wave_b=0.5
+wave_g=0.5
+wave_r=0.5
+fVideoEchoZoom=0.907
+nVideoEchoOrientation=1.0
+fWaveAlpha=0.0
+nMotionVectorsX=64.0
+nMotionVectorsY=48.0
+bTexWrap=0.0
+shapecode_0_enabled=1.0
+shapecode_0_x=0.55
+shapecode_0_rad=0.47979
+shapecode_0_tex_zoom=0.27705
+shapecode_0_r=0.0
+shapecode_0_g2=0.0
+shapecode_0_a2=1.0
+shapecode_0_border_a=0.05
+shape_0_init1=q3 = 0;
+shape_0_init2=q4 = 0;
+shape_0_init3=q2 = 0;
+shape_0_init4=q5 = 0;
+shape_0_init5=q6 = 0;
+shape_0_init6=q7 = 0;
+shape_0_per_frame1=x=q3;
+shape_0_per_frame2=y=q4;
+shape_0_per_frame3=a=(1-q2);
+shape_0_per_frame4=a2=a;
+shape_0_per_frame5=border_r=(0.4+(0.2*sin((4+q5))));
+shape_0_per_frame6=border_g=(0.4+(0.2*sin((3+q6))));
+shape_0_per_frame7=border_b=(0.1+(0.1*sin((2+q7))));
+shapecode_1_enabled=1.0
+shapecode_1_sides=10.0
+shapecode_1_num_inst=1024.0
+shapecode_1_rad=0.03539
+shapecode_1_tex_ang=4.08407
+shapecode_1_tex_zoom=5.7611
+shapecode_1_g=1.0
+shapecode_1_b=1.0
+shapecode_1_g2=0.0
+shapecode_1_border_g=0.7
+shapecode_1_border_b=0.1
+shapecode_1_border_a=0.0
+shape_1_init1=d = 0;
+shape_1_init2=y1 = 0;
+shape_1_init3=z = 0;
+shape_1_init4=x1 = 0;
+shape_1_init5=q6 = 0;
+shape_1_init6=q1 = 0;
+shape_1_init7=q5 = 0;
+shape_1_init8=sa = 0;
+shape_1_init9=q10 = 0;
+shape_1_init10=i1 = 0;
+shape_1_init11=q4 = 0;
+shape_1_init12=p2 = 0;
+shape_1_init13=i = 0;
+shape_1_init14=p1 = 0;
+shape_1_init15=q3 = 0;
+shape_1_init16=q7 = 0;
+shape_1_init17=c = 0;
+shape_1_init18=q8 = 0;
+shape_1_per_frame1=i=(instance+(1024*q1));
+shape_1_per_frame2=c=((i>0)?1:0);
+shape_1_per_frame3=i1=floor(((3.14*i))/(q8));
+shape_1_per_frame4=p1+=(sin((i1+q5))+cos((i1+q5)));
+shape_1_per_frame5=p1*=c;
+shape_1_per_frame6=p2+=p1;
+shape_1_per_frame7=p2=(if(abs(c)>0.00001,p2,pow(10, q7)));
+shape_1_per_frame8=x1+=(i*sin(p2));
+shape_1_per_frame9=x1*=c;
+shape_1_per_frame10=y1+=(i*cos(p2));
+shape_1_per_frame11=y1*=c;
+shape_1_per_frame12=d=sqrt(((x1*x1)+(y1*y1)));
+shape_1_per_frame13=z=0.000002;
+shape_1_per_frame14=x=(floor(((z*x1))/(q10))+q3);
+shape_1_per_frame15=y=((z*y1)+q4);
+shape_1_per_frame16=sa=floor((i)/(4000));
+shape_1_per_frame17=r=(0.4+(0.2*sin(((4*sa)+q5))));
+shape_1_per_frame18=g=(0.4+(0.2*sin(((3*sa)+q6))));
+shape_1_per_frame19=b=(0.1+(0.1*sin(((2*sa)+q7))));
+shape_1_per_frame20=r2=r;
+shape_1_per_frame21=g2=g;
+shape_1_per_frame22=b2=b;
+shape_1_per_frame23=rad*=(0.1+((0.01*z)*d));
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+wavecode_0_enabled=0.0
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=p6 = 0;
+per_frame_init_2=q6 = 0;
+per_frame_init_3=p7 = 0;
+per_frame_init_4=q1 = 0;
+per_frame_init_5=q5 = 0;
+per_frame_init_6=q10 = 0;
+per_frame_init_7=q4 = 0;
+per_frame_init_8=t = 0;
+per_frame_init_9=p2 = 0;
+per_frame_init_10=p1 = 0;
+per_frame_init_11=q2 = 0;
+per_frame_init_12=p8 = 0;
+per_frame_init_13=p3 = 0;
+per_frame_init_14=q3 = 0;
+per_frame_init_15=q7 = 0;
+per_frame_init_16=p5 = 0;
+per_frame_init_17=p4 = 0;
+per_frame_init_18=q8 = 0;
+per_frame_1=q10=aspecty;
+per_frame_2=t+=1;
+per_frame_3=decay=((t>2)?1:0);
+per_frame_4=p1=((t)%(4));
+per_frame_5=q1=p1;
+per_frame_6=p2=((p1>0)?1:0);
+per_frame_7=q2=p2;
+per_frame_8=p3=(if(abs(p2)>0.00001,p3,int(rand(1))));
+per_frame_9=q3=p3;
+per_frame_10=p4=(if(abs(p2)>0.00001,p4,int(rand(1))));
+per_frame_11=q4=p4;
+per_frame_12=p5=(if(abs(p2)>0.00001,p5,(((1.57*int(rand(8))))%(8))));
+per_frame_13=q5=p5;
+per_frame_14=p6=(if(abs(p2)>0.00001,p6,(((1.57*int(rand(8))))%(8))));
+per_frame_15=q6=p6;
+per_frame_16=p7=(if(abs(p2)>0.00001,p7,(7+((int(rand(12)))%(12)))));
+per_frame_17=q7=p7;
+per_frame_18=p8=(if(abs(p2)>0.00001,p8,(10+((int(rand(20)))%(20)))));
+per_frame_19=q8=p8;

@@ -1,0 +1,42 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+fGammaAdj=1.0
+fWarpAnimSpeed=4.91379
+fWarpScale=3.795043
+fWaveScale=1.661034
+fWaveSmoothing=0.0
+ib_size=0.0
+nWaveMode=5.0
+ob_size=0.0
+warp=0.484544
+wave_b=0.5
+wave_g=0.5
+wave_r=0.5
+zoom=1.040084
+bAdditiveWaves=1.0
+fVideoEchoZoom=0.999608
+nVideoEchoOrientation=3.0
+fWaveAlpha=1.28756
+bMotionVectorsOn=0.0
+nMotionVectorsX=2.0
+nMotionVectorsY=2.0
+fWaveParam=-0.2
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=vol = 0;
+per_frame_1=vol=floor(((((5*bass_att)+(3*mid_att))+(2*treb_att)))/(10));
+per_frame_2=wave_r=(wave_r+pow(sin(time), 3));
+per_frame_3=wave_g=(wave_g+pow(sin((1.32*time)), 4));
+per_frame_4=wave_b=(wave_b+pow(sin((2.31*time)), sin((1.33*time))));
+per_frame_5=wave_x=(wave_x+floor(((((0.1*sin((1.44*time)))+(0.065*sin((time*3.62))))+(0.14*sin((0.35*time)))))/(5)));
+per_frame_6=wave_y=(wave_y+floor(((((0.14*sin((1.341*time)))+(0.045*sin((time*3.12))))+(0.13*sin((0.45*time)))))/(5)));
+per_frame_7=dx=(dx+((1.8*vol)*((0.006*sin((2.11*time)))+(0.0085*sin((0.649*time))))));
+per_frame_8=dy=(dy+((1.8*vol)*((0.007*sin((2.32*time)))+(0.0075*sin((0.789*time))))));
+per_frame_9=rot=(rot+(0.1*sin((0.45*time))));
+per_frame_10=rot=(rot*vol);

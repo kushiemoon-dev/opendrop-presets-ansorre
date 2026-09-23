@@ -1,0 +1,150 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bBrighten=1.0
+bDarken=1.0
+bInvert=1.0
+bModWaveAlphaByVolume=1.0
+bSolarize=1.0
+fDecay=1.0
+fGammaAdj=1.0
+fModWaveAlphaEnd=1.3
+fModWaveAlphaStart=0.71
+fWarpScale=1.331
+fWaveScale=1.285751
+fWaveSmoothing=0.63
+ib_size=0.26
+mv_a=0.0
+nWaveMode=7.0
+ob_r=0.01
+ob_size=0.5
+sy=0.061662
+warp=0.01
+wave_b=0.65
+wave_g=0.65
+wave_r=0.65
+zoom=1.1051
+bAdditiveWaves=1.0
+fVideoEchoZoom=0.999514
+fWaveAlpha=0.001
+fZoomExponent=12.37402
+shapecode_0_enabled=1.0
+shapecode_0_sides=100.0
+shapecode_0_textured=1.0
+shapecode_0_rad=0.419061
+shapecode_0_tex_zoom=1.01
+shapecode_0_g=1.0
+shapecode_0_b=1.0
+shapecode_0_r2=1.0
+shapecode_0_b2=1.0
+shapecode_0_a2=1.0
+shapecode_0_border_a=0.0
+shape_0_init1=q1 = 0;
+shape_0_per_frame1=rad=(1.27*q1);
+shape_0_per_frame2=tex_zoom=(floor((1)/(rad))*tex_zoom);
+shapecode_1_enabled=1.0
+shapecode_1_rad=0.419
+shapecode_1_tex_zoom=1.01
+shapecode_1_g=1.0
+shapecode_1_b=1.0
+shapecode_1_a=0.0
+shapecode_1_r2=1.0
+shapecode_1_b2=1.0
+shapecode_1_border_a=0.0
+shape_1_init1=q1 = 0;
+shape_1_per_frame1=rad=(1.27*q1);
+shape_1_per_frame2=tex_zoom=(floor((1)/(rad))*tex_zoom);
+shapecode_2_enabled=1.0
+shapecode_2_sides=100.0
+shapecode_2_textured=1.0
+shapecode_2_rad=0.330038
+shapecode_2_tex_ang=1.5707
+shapecode_2_tex_zoom=0.614055
+shapecode_2_b=1.0
+shapecode_2_r2=1.0
+shapecode_2_b2=0.5
+shapecode_2_a2=1.0
+shapecode_2_border_a=0.0
+shape_2_init1=q1 = 0;
+shape_2_per_frame1=rad=q1;
+shape_2_per_frame2=tex_zoom=(floor((1)/(rad))*tex_zoom);
+shapecode_3_enabled=1.0
+shapecode_3_sides=100.0
+shapecode_3_textured=1.0
+shapecode_3_x=0.73
+shapecode_3_rad=0.47693
+shapecode_3_tex_ang=1.5707
+shapecode_3_tex_zoom=0.614055
+shapecode_3_g=1.0
+shapecode_3_b=1.0
+shapecode_3_r2=1.0
+shapecode_3_b2=1.0
+shapecode_3_a2=1.0
+shapecode_3_border_a=0.0
+shape_3_init1=q1 = 0;
+shape_3_init2=mod = 0;
+shape_3_init3=ti = 0;
+shape_3_per_frame1=rad=(q1*rad);
+shape_3_per_frame2=tex_zoom=(floor((1)/(rad))*tex_zoom);
+shape_3_per_frame3=mod=(time*0.9);
+shape_3_per_frame4=mod=((sin((mod*0.654))+sin((mod*0.321)))+sin((mod*0.987)));
+shape_3_per_frame5=mod=(mod*0.333);
+shape_3_per_frame6=mod=((q1*mod)*0.25);
+shape_3_per_frame7=ti=(time*0.1);
+shape_3_per_frame8=ti=((sin((ti*1.123))+sin((ti*1.456)))-sin((ti*1.789)));
+shape_3_per_frame9=ti=(ti*6.2832);
+shape_3_per_frame10=x=(0.5+((mod*sin(ti))*0.75));
+shape_3_per_frame11=y=(0.5+(mod*cos(ti)));
+wavecode_0_enabled=1.0
+wave_0_init1=sp = 0;
+wave_0_init2=ra = 0;
+wave_0_init3=q1 = 0;
+wave_0_init4=ti = 0;
+wave_0_init5=le = 0;
+wave_0_init6=sw = 0;
+wavecode_1_enabled=1.0
+wave_1_init1=sp = 0;
+wave_1_init2=ra = 0;
+wave_1_init3=q1 = 0;
+wave_1_init4=mod = 0;
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=tic = 0;
+per_frame_init_2=vt = 0;
+per_frame_init_3=bt = 0;
+per_frame_init_4=q1 = 0;
+per_frame_init_5=q5 = 0;
+per_frame_init_6=mid_avg = 0;
+per_frame_init_7=tt = 0;
+per_frame_init_8=tin = 0;
+per_frame_init_9=bass_avg = 0;
+per_frame_init_10=vav = 0;
+per_frame_init_11=q4 = 0;
+per_frame_init_12=mt = 0;
+per_frame_init_13=ra = 0;
+per_frame_init_14=treb_avg = 0;
+per_frame_init_15=vol = 0;
+per_frame_init_16=q2 = 0;
+per_frame_init_17=q3 = 0;
+per_frame_1=warp=0;
+per_frame_2=tic=min((time-tin), 0.1);
+per_frame_3=tin=time;
+per_frame_4=vol=(((bass_att+treb_att)+mid_att)*0.333333);
+per_frame_5=ra=(floor((1)/(tic))*0.25);
+per_frame_6=treb_avg=(tic*((treb_avg*(floor((1)/(tic))-ra))+(ra*treb)));
+per_frame_7=mid_avg=(tic*((mid_avg*(floor((1)/(tic))-ra))+(ra*mid)));
+per_frame_8=bass_avg=(tic*((bass_avg*(floor((1)/(tic))-ra))+(ra*bass)));
+per_frame_9=tt=(tt+(tic*treb));
+per_frame_10=mt=(mt+(tic*mid));
+per_frame_11=bt=(bt+(tic*bass));
+per_frame_12=q2=((tt+mt)*0.5);
+per_frame_13=q3=((0.1*(treb_avg+mid_avg))*0.5);
+per_frame_14=q4=bt;
+per_frame_15=q5=(0.1*bass_avg);
+per_frame_16=ra=(floor((1)/(tic))*0.1);
+per_frame_17=vav=(tic*((vav*(floor((1)/(tic))-ra))+((ra*((bass+treb)+mid))*0.33333)));
+per_frame_18=sy=max(0.1, (0.4-(vav*0.15)));
+per_frame_19=q1=(0.9-(vav*0.1));
+per_frame_20=vt=(vt+(tic*vav));

@@ -1,0 +1,80 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bInvert=1.0
+bSolarize=1.0
+bWaveThick=1.0
+dx=1e-05
+dy=1e-05
+fDecay=1.0
+fGammaAdj=1.0
+fModWaveAlphaEnd=1.0
+fModWaveAlphaStart=0.5
+fWaveScale=1.599178
+fWaveSmoothing=0.5
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+ib_size=0.0
+mv_a=0.0
+mv_l=1.0
+nWaveMode=5.0
+ob_a=1.0
+ob_size=0.005
+warp=0.01
+wave_b=0.0
+wave_g=0.0
+wave_r=0.0
+bAdditiveWaves=1.0
+fVideoEchoAlpha=0.5
+fVideoEchoZoom=1.172578
+fWaveAlpha=100.0
+fShader=1.0
+nMotionVectorsX=0.0
+nMotionVectorsY=0.0
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+wavecode_0_enabled=0.0
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=sim = 0;
+per_frame_init_2=fx = 0;
+per_frame_init_3=thresh = 0;
+per_frame_init_4=sib = 0;
+per_frame_init_5=dy_r = 0;
+per_frame_init_6=bruch = 0;
+per_frame_init_7=brach = 0;
+per_frame_init_8=sit = 0;
+per_frame_init_9=dx_r = 0;
+per_frame_init_10=fy = 0;
+per_frame_1=warp=0;
+per_frame_2=wave_r=((wave_r+(0.25*cos((1.12*time))))+(0.2*((0.3*cos((1.28*time)))+(0.317*sin((1.8*time))))));
+per_frame_3=wave_g=((wave_g+(0.25*cos((1.142*time))))+(0.2*((0.3*cos((1.2*time)))+(0.32*sin((1.623*time))))));
+per_frame_4=wave_b=((wave_b+(0.25*cos((1.13*time))))+(0.2*((0.4*cos((0.9*time)))+(0.328*sin((1.5245*time))))));
+per_frame_5=ob_r=wave_g;
+per_frame_6=ob_b=wave_r;
+per_frame_7=ob_g=wave_b;
+per_pixel_1=thresh=((above(bass_att, thresh)*2)+((1-above(bass_att, thresh))*(((thresh-1.3)*0.96)+1.3)));
+per_pixel_2=dx_r=(((equal(thresh, 2)*0.015)*sin((5*time)))+((1-equal(thresh, 2))*dx_r));
+per_pixel_3=dy_r=(((equal(thresh, 2)*0.015)*sin((6*time)))+((1-equal(thresh, 2))*dy_r));
+per_pixel_4=sib=(0.45*cos(floor(((bass_att*3))/(sin(time)))));
+per_pixel_5=sit=(0.45*sin(floor(((treb_att*3))/(sin(time)))));
+per_pixel_6=sim=(0.45*cos(floor(((mid_att*3))/(sin(time)))));
+per_pixel_7=fx=((0.5*sin((time*x)))-((0.5*y)*cos(time)));
+per_pixel_8=fy=((0.5*cos((time*y)))-((0.5*x)*sin(time)));
+per_pixel_9=bruch=((fx*floor((((sit+sib)+sim))/(2)))*below(rad, (0.4*sin((fy*time)))));
+per_pixel_10=brach=((fy*(((sit*sib)*sim)*2))*above(rad, (0.4*cos((fx*time)))));
+per_pixel_11=zoom=(zoom-(0.02*abs((bruch+brach))));
+per_pixel_12=zoom=(zoom-(0.02*abs((sin((12*ang))+(sin(sin(((2*sin(bass_att))*rad)))*cos(rad))))));
+per_pixel_13=rot=(rot+((0.08*abs((0.746-rad)))*sin(((2.2*(0.5-rad))+(5.7*sin((0.1*time)))))));
+per_pixel_14=sx=(sx+(((0.1*((0.59*1)-rad))*sin((0.733*time)))*below(sin(time), 0)));
+per_pixel_15=sy=(sy+(((0.1*((0.59*1)-rad))*cos((0.953*time)))*above(sin(time), 0)));
+per_pixel_16=zoom=(zoom-((0.05*(1.5-rad))*below(rad, 1.5)));
+per_pixel_17=cx=(cx+((1.3*(0.5-rad))*cos((0.977*time))));
+per_pixel_18=cy=(cy+((1.3*(0.5-rad))*cos((0.643*time))));

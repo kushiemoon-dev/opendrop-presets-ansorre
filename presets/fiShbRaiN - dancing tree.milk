@@ -1,0 +1,120 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+fDecay=0.77
+fGammaAdj=1.0
+fModWaveAlphaEnd=1.3
+fModWaveAlphaStart=0.71
+fWarpAnimSpeed=100.0
+fWarpScale=1.330988
+fWaveScale=1.285751
+fWaveSmoothing=0.63
+ib_a=0.1
+ib_b=0.05
+ib_g=0.45
+ib_r=0.7
+ib_size=0.16
+mv_a=0.0
+mv_b=0.483183
+mv_g=0.178507
+mv_l=0.473831
+nWaveMode=7.0
+ob_a=0.1
+ob_b=0.1
+ob_g=0.7
+ob_r=0.9
+ob_size=0.075
+warp=0.218587
+wave_b=0.65
+wave_g=0.65
+wave_r=0.65
+zoom=0.999514
+bAdditiveWaves=1.0
+fVideoEchoZoom=1.001827
+fWaveAlpha=0.001
+fShader=1.0
+nMotionVectorsX=21.473322
+nMotionVectorsY=15.907337
+shapecode_0_enabled=1.0
+shapecode_0_sides=100.0
+shapecode_0_x=0.8
+shapecode_0_y=0.81
+shapecode_0_rad=0.093272
+shapecode_0_tex_zoom=0.498313
+shapecode_0_g=1.0
+shapecode_0_a=0.05
+shapecode_0_r2=1.0
+shapecode_0_border_a=0.06
+shapecode_1_enabled=1.0
+shapecode_1_sides=34.0
+shapecode_1_x=0.76
+shapecode_1_y=0.75
+shapecode_1_rad=0.194774
+shapecode_1_g=1.0
+shapecode_1_a=0.01
+shapecode_1_r2=1.0
+shapecode_1_border_a=0.05
+shapecode_2_enabled=1.0
+shapecode_2_sides=100.0
+shapecode_2_x=0.34
+shapecode_2_y=0.34
+shapecode_2_rad=0.89269
+shapecode_2_g=1.0
+shapecode_2_a=0.01
+shapecode_2_r2=1.0
+shapecode_2_border_a=0.02
+shapecode_3_enabled=1.0
+shapecode_3_sides=3.0
+shapecode_3_y=0.0
+shapecode_3_rad=1.827421
+shapecode_3_ang=0.188496
+shapecode_3_g=1.0
+shapecode_3_a=0.0
+shapecode_3_r2=1.0
+shapecode_3_a2=0.01
+shapecode_3_border_a=0.0
+wavecode_0_enabled=1.0
+wavecode_0_r=0.4
+wavecode_0_b=0.3
+wave_0_init1=d = 0;
+wave_0_init2=la = 0;
+wave_0_init3=wx = 0;
+wave_0_init4=branch = 0;
+wave_0_init5=sc = 0;
+wave_0_init6=wa = 0;
+wave_0_init7=wy = 0;
+wave_0_init8=ra = 0;
+wave_0_init9=wainc = 0;
+wavecode_1_enabled=1.0
+wavecode_1_scaling=0.999998
+wavecode_1_a=0.02
+wave_1_init1=q3 = 0;
+wave_1_init2=xs = 0;
+wave_1_init3=ys = 0;
+wavecode_2_enabled=1.0
+wavecode_2_r=0.4
+wavecode_2_b=0.3
+wavecode_2_a=0.01
+wave_2_init1=d = 0;
+wave_2_init2=la = 0;
+wave_2_init3=wx = 0;
+wave_2_init4=branch = 0;
+wave_2_init5=sc = 0;
+wave_2_init6=wa = 0;
+wave_2_init7=wy = 0;
+wave_2_init8=ra = 0;
+wave_2_init9=wainc = 0;
+wavecode_3_enabled=1.0
+wavecode_3_r=0.4
+wavecode_3_b=0.3
+wave_3_init1=d = 0;
+wave_3_init2=la = 0;
+wave_3_init3=wx = 0;
+wave_3_init4=branch = 0;
+wave_3_init5=sc = 0;
+wave_3_init6=wa = 0;
+wave_3_init7=wy = 0;
+wave_3_init8=ra = 0;
+wave_3_init9=wainc = 0;

@@ -1,0 +1,62 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bBrighten=1.0
+bDarken=1.0
+bSolarize=1.0
+fGammaAdj=1.0
+fWarpScale=1.331
+fWaveScale=0.010682
+fWaveSmoothing=0.1
+ib_a=1.0
+ib_b=0.0
+ib_r=0.0
+ib_size=0.005
+mv_a=0.0
+nWaveMode=5.0
+ob_a=1.0
+ob_r=0.01
+warp=0.01
+wave_b=0.65
+wave_g=0.65
+wave_r=0.65
+zoom=0.999525
+bAdditiveWaves=1.0
+fVideoEchoAlpha=0.5
+fVideoEchoZoom=0.999609
+nVideoEchoOrientation=3.0
+nMotionVectorsX=1.0
+nMotionVectorsY=1.0
+fWaveParam=-0.0098
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=my_volume = 0;
+per_frame_init_2=dx_residual = 0;
+per_frame_init_3=dy_residual = 0;
+per_frame_init_4=bass_thresh = 0;
+per_frame_1=wave_r=(wave_r+(0.350*((0.60*sin((0.823*time)))+(0.40*sin((0.916*time))))));
+per_frame_2=wave_g=(wave_g+(0.350*((0.60*sin((0.900*time)))+(0.40*sin((1.023*time))))));
+per_frame_3=wave_b=(wave_b+(0.350*((0.60*sin((0.808*time)))+(0.40*sin((0.949*time))))));
+per_frame_4=rot=(rot+(0.030*((0.60*sin((0.381*time)))+(0.40*sin((0.479*time))))));
+per_frame_5=cx=(cx+(0.110*((0.60*sin((0.374*time)))+(0.40*sin((0.294*time))))));
+per_frame_6=cy=(cy+(0.110*((0.60*sin((0.393*time)))+(0.40*sin((0.223*time))))));
+per_frame_7=zoom=((zoom+0.05)+(0.05*sin((time*0.133))));
+per_frame_8=decay=(decay-(0.01*((frame)%(2))));
+per_frame_9=wave_x=ib_a;
+per_frame_10=wave_y=ib_a;
+per_frame_11=dx=(dx+dx_residual);
+per_frame_12=dy=(dy+dy_residual);
+per_frame_13=bass_thresh=((above(bass_att, bass_thresh)*2)+((1-above(bass_att, bass_thresh))*(((bass_thresh-1.3)*0.96)+1.3)));
+per_frame_14=dx_residual=(((equal(bass_thresh, 2)*0.016)*sin((time*7)))+((1-equal(bass_thresh, 2))*dx_residual));
+per_frame_15=dy_residual=(((equal(bass_thresh, 2)*0.012)*sin((time*9)))+((1-equal(bass_thresh, 2))*dy_residual));
+per_frame_16=ib_r=bass;
+per_frame_17=ib_g=mid;
+per_frame_18=ib_b=treb;
+per_pixel_1=zoom=((1+floor(((tan((0.5*my_volume))*sin((time-ang))))/(17)))+floor((mid_att)/(40)));
+per_pixel_2=rot=(0.01*sin((ang+floor((tan(2))/(3)))));
+per_pixel_3=sx=(sx+(0.07*sin(((rad*18)+(time*9)))));
+per_pixel_4=sy=(sy+(0.07*sin(((rad*18)+(time*9)))));

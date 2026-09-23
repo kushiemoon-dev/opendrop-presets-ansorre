@@ -1,0 +1,148 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bBrighten=1.0
+dx=1.0
+dy=-0.32
+fDecay=0.5
+fGammaAdj=1.0
+fModWaveAlphaEnd=1.3
+fModWaveAlphaStart=0.71
+fWarpScale=1.331
+fWaveScale=0.01
+fWaveSmoothing=0.63
+ib_b=0.0
+ib_g=1.0
+ib_r=0.0
+ib_size=0.0
+mv_a=0.0
+mv_b=0.05
+mv_g=0.71
+mv_l=3.399997
+mv_r=0.080001
+ob_a=1.0
+ob_r=1.0
+ob_size=0.0
+sy=0.999999
+warp=0.01
+wave_b=0.65
+wave_g=0.65
+wave_r=0.65
+zoom=13.290894
+bAdditiveWaves=1.0
+fVideoEchoAlpha=0.5
+fVideoEchoZoom=1.001818
+nVideoEchoOrientation=1.0
+fWaveAlpha=0.001
+fZoomExponent=0.999998
+fShader=1.0
+nMotionVectorsX=30.080032
+nMotionVectorsY=35.040012
+fWaveParam=-1.0
+bTexWrap=0.0
+shapecode_0_enabled=1.0
+shapecode_0_sides=3.0
+shapecode_0_textured=1.0
+shapecode_0_x=0.7
+shapecode_0_y=0.1
+shapecode_0_rad=2.185846
+shapecode_0_tex_zoom=0.653061
+shapecode_0_g=1.0
+shapecode_0_b=1.0
+shapecode_0_r2=1.0
+shapecode_0_b2=1.0
+shapecode_0_border_a=0.0
+shapecode_1_enabled=1.0
+shapecode_1_sides=3.0
+shapecode_1_textured=1.0
+shapecode_1_x=0.6
+shapecode_1_y=0.9
+shapecode_1_rad=1.31059
+shapecode_1_ang=3.769911
+shapecode_1_tex_ang=3.769911
+shapecode_1_tex_zoom=1.028386
+shapecode_1_g=1.0
+shapecode_1_b=1.0
+shapecode_1_r2=1.0
+shapecode_1_b2=1.0
+shapecode_1_border_r=0.0
+shapecode_1_border_g=0.0
+shapecode_1_border_b=0.0
+shapecode_1_border_a=0.0
+shapecode_2_enabled=1.0
+shapecode_2_sides=23.0
+shapecode_2_textured=1.0
+shapecode_2_x=0.53
+shapecode_2_rad=0.731593
+shapecode_2_ang=5.654867
+shapecode_2_tex_ang=5.654867
+shapecode_2_tex_zoom=0.338639
+shapecode_2_g=1.0
+shapecode_2_b=1.0
+shapecode_2_r2=1.0
+shapecode_2_b2=1.0
+shapecode_2_border_a=0.0
+shapecode_3_enabled=1.0
+shapecode_3_textured=1.0
+shapecode_3_x=0.8
+shapecode_3_y=0.9
+shapecode_3_rad=0.599573
+shapecode_3_ang=6.283185
+shapecode_3_tex_ang=6.283185
+shapecode_3_tex_zoom=2.629955
+shapecode_3_g=1.0
+shapecode_3_b=1.0
+shapecode_3_r2=1.0
+shapecode_3_b2=1.0
+shapecode_3_border_r=0.0
+shapecode_3_border_g=0.0
+shapecode_3_border_b=0.0
+shapecode_3_border_a=0.0
+wavecode_0_enabled=1.0
+wave_0_init1=n = 0;
+wave_0_init2=size = 0;
+wave_0_init3=flux = 0;
+wave_0_init4=tm = 0;
+wavecode_1_enabled=1.0
+wave_1_init1=n = 0;
+wave_1_init2=size = 0;
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=xpos = 0;
+per_frame_init_2=basstime = 0;
+per_frame_init_3=q6 = 0;
+per_frame_init_4=q1 = 0;
+per_frame_init_5=q5 = 0;
+per_frame_init_6=musictime = 0;
+per_frame_init_7=q4 = 0;
+per_frame_init_8=ypos = 0;
+per_frame_init_9=vol = 0;
+per_frame_init_10=q2 = 0;
+per_frame_init_11=q8 = 0;
+per_frame_init_12=zoom=1;
+per_frame_init_13=xpos=0;
+per_frame_init_14=ypos=0;
+per_frame_1=decay=1;
+per_frame_2=vol=(((bass+mid)+treb)*0.25);
+per_frame_3=vol=(vol*vol);
+per_frame_4=mv_r=(0.5+(0.4*sin((time*1.324))));
+per_frame_5=mv_g=(0.5+(0.4*cos((time*1.371))));
+per_frame_6=musictime=(musictime+vol);
+per_frame_7=q4=0;
+per_frame_8=q5=0;
+per_frame_9=dx=(sin((musictime*0.1))*0.07);
+per_frame_10=dy=(cos((musictime*0.069))*0.01);
+per_frame_11=q1=((sin((musictime*0.001))*0.4)+0.5);
+per_frame_12=q2=((cos((musictime*0.001))*0.5)+0.5);
+per_frame_13=q8=musictime;
+per_frame_14=zoom=0.6;
+per_frame_15=monitor=rot;
+per_frame_16=musictime=(musictime+((mid*mid)*0.003));
+per_frame_17=basstime=(basstime+((bass*bass)*0.03));
+per_frame_18=xpos=(sin((musictime*0.6))*0.01);
+per_frame_19=ypos=(sin((musictime*0.4))*0.01);
+per_frame_20=q4=xpos;
+per_frame_21=q5=ypos;
+per_frame_22=q6=basstime;

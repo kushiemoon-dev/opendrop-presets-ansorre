@@ -1,0 +1,107 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bWaveThick=1.0
+fDecay=0.5
+fGammaAdj=1.7
+fModWaveAlphaEnd=1.0
+fModWaveAlphaStart=1.0
+fWarpAnimSpeed=0.01
+fWarpScale=0.01
+fWaveScale=0.2
+fWaveSmoothing=0.0
+ib_size=0.26
+mv_a=0.0
+nWaveMode=1.0
+ob_a=0.05
+ob_b=1.0
+ob_g=1.0
+ob_r=1.0
+ob_size=0.0
+sx=0.9999
+warp=0.01
+wave_b=0.65
+wave_g=0.0
+zoom=0.9999
+fVideoEchoZoom=1.0
+nVideoEchoOrientation=3.0
+fWaveAlpha=0.0
+nMotionVectorsX=1.0
+nMotionVectorsY=1.0
+fWaveParam=0.2
+shapecode_0_enabled=0.0
+shapecode_1_enabled=1.0
+shapecode_1_sides=100.0
+shapecode_1_textured=1.0
+shapecode_1_rad=0.03333
+shapecode_1_r=0.0
+shapecode_1_g2=0.0
+shapecode_1_border_a=1.0
+shape_1_per_frame1=x=(floor(int(rand(100)))*0.01);
+shape_1_per_frame2=y=(floor(int(rand(100)))*0.01);
+shape_1_per_frame3=a=(if(abs(above(((frame)%(7)), 0))>0.00001,0,1));
+shape_1_per_frame4=a2=(if(abs(above(((frame)%(7)), 0))>0.00001,0,1));
+shape_1_per_frame5=border_a=0;
+shape_1_per_frame6=rad=((bass+mid)+treb);
+shapecode_2_enabled=1.0
+shapecode_2_sides=100.0
+shapecode_2_textured=1.0
+shapecode_2_rad=0.03333
+shapecode_2_r=0.0
+shapecode_2_g2=0.0
+shapecode_2_border_a=1.0
+shape_2_per_frame1=x=(floor(int(rand(100)))*0.01);
+shape_2_per_frame2=y=(floor(int(rand(100)))*0.01);
+shape_2_per_frame3=a=(if(abs(above(((frame)%(7)), 0))>0.00001,0,1));
+shape_2_per_frame4=a2=(if(abs(above(((frame)%(7)), 0))>0.00001,0,1));
+shape_2_per_frame5=border_a=0;
+shape_2_per_frame6=rad=((bass+mid)+treb);
+shapecode_3_enabled=1.0
+shapecode_3_sides=100.0
+shapecode_3_textured=1.0
+shapecode_3_rad=0.03333
+shapecode_3_r=0.0
+shapecode_3_g2=0.0
+shapecode_3_border_a=1.0
+shape_3_per_frame1=x=(floor(int(rand(100)))*0.01);
+shape_3_per_frame2=y=(floor(int(rand(100)))*0.01);
+shape_3_per_frame3=a=(if(abs(above(((frame)%(7)), 0))>0.00001,0,1));
+shape_3_per_frame4=a2=(if(abs(above(((frame)%(7)), 0))>0.00001,0,1));
+shape_3_per_frame5=border_a=0;
+shape_3_per_frame6=rad=((bass+mid)+treb);
+wavecode_0_enabled=1.0
+wavecode_0_smoothing=0.0
+wave_0_init1=freqlvl = 0;
+wave_0_init2=myamp = 0;
+wave_0_init3=myfreq = 0;
+wave_0_init4=myaltfreq = 0;
+wave_0_init5=pi = 0;
+wave_0_init6=pi23 = 0;
+wave_0_init7=fade = 0;
+wavecode_1_enabled=1.0
+wavecode_1_smoothing=0.0
+wave_1_init1=freqlvl = 0;
+wave_1_init2=myamp = 0;
+wave_1_init3=myfreq = 0;
+wave_1_init4=myaltfreq = 0;
+wave_1_init5=pi = 0;
+wave_1_init6=pi23 = 0;
+wave_1_init7=fade = 0;
+wavecode_2_enabled=1.0
+wavecode_2_sep=256.0
+wavecode_2_smoothing=0.8
+wave_2_init1=runtreb = 0;
+wave_2_init2=sw = 0;
+wave_2_init3=mo = 0;
+wave_2_init4=q1 = 0;
+wave_2_init5=pi23 = 0;
+wave_2_init6=osa = 0;
+wave_2_init7=mod = 0;
+wave_2_init8=runbass = 0;
+wave_2_init9=vol = 0;
+wave_2_init10=runmid = 0;
+wavecode_3_enabled=0.0
+per_frame_init_1=aspect = 0;
+per_frame_1=aspect=floor((1600)/(1200));

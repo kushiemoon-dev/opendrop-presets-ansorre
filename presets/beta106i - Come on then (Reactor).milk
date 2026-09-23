@@ -1,0 +1,68 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bDarken=1.0
+bWaveThick=1.0
+dx=1e-05
+dy=1e-05
+fDecay=0.99
+fGammaAdj=1.14
+fModWaveAlphaEnd=1.0
+fModWaveAlphaStart=0.5
+fWaveScale=0.591236
+fWaveSmoothing=0.5
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+ib_size=0.005
+mv_a=0.5
+mv_l=1.0
+nWaveMode=1.0
+ob_a=1.0
+ob_size=0.0
+warp=0.01
+wave_b=0.2
+wave_g=0.2
+wave_r=0.2
+fVideoEchoZoom=1.0
+nVideoEchoOrientation=1.0
+fWaveAlpha=100.0
+nMotionVectorsX=19.199999
+nMotionVectorsY=14.4
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+wavecode_0_enabled=0.0
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=treb_tick = 0;
+per_frame_init_2=bass_shift = 0;
+per_frame_init_3=thresh = 0;
+per_frame_init_4=dy_r = 0;
+per_frame_init_5=bass_tick = 0;
+per_frame_init_6=mid_tick = 0;
+per_frame_init_7=dx_r = 0;
+per_frame_init_8=treb_shift = 0;
+per_frame_init_9=mid_shift = 0;
+per_frame_1=bass_tick=((above(bass_att, bass_tick)*2)+((1-above(bass_att, bass_tick))*(((bass_tick-1.3)*0.96)+1.3)));
+per_frame_2=treb_tick=((above(treb_att, treb_tick)*2)+((1-above(treb_att, treb_tick))*(((treb_tick-1.3)*0.96)+1.3)));
+per_frame_3=mid_tick=((above(mid_att, mid_tick)*2)+((1-above(mid_att, mid_tick))*(((mid_tick-1.3)*0.96)+1.3)));
+per_frame_4=bass_shift=(((equal(bass_tick, 2)*0.95)*sin((time*5)))+((1-equal(bass_tick, 2))*bass_shift));
+per_frame_5=treb_shift=(((equal(treb_tick, 2)*0.95)*sin((time*5)))+((1-equal(treb_tick, 2))*treb_shift));
+per_frame_6=mid_shift=(((equal(mid_tick, 2)*0.95)*sin((time*5)))+((1-equal(mid_tick, 2))*mid_shift));
+per_frame_7=wave_r=(wave_r+bass_shift);
+per_frame_8=wave_g=(wave_g+treb_shift);
+per_frame_9=wave_b=(wave_b+mid_shift);
+per_frame_10=mv_r=(mv_r+treb_shift);
+per_frame_11=mv_g=(mv_g+mid_shift);
+per_frame_12=mv_b=(mv_b+bass_shift);
+per_pixel_1=thresh=((above(bass_att, thresh)*2)+((1-above(bass_att, thresh))*(((thresh-1.3)*0.96)+1.3)));
+per_pixel_2=dx_r=(((equal(thresh, 2)*0.015)*sin((5*time)))+((1-equal(thresh, 2))*dx_r));
+per_pixel_3=dy_r=(((equal(thresh, 2)*0.015)*sin((6*time)))+((1-equal(thresh, 2))*dy_r));
+per_pixel_4=zoom=(zoom+((0.5*((sin(bass)*sin((0.5*treb)))-rad))*((3*bass)-(3*treb))));
+per_pixel_5=rot=(rot-(floor((((1*(3*mid))*2))/(bass))*0.014));

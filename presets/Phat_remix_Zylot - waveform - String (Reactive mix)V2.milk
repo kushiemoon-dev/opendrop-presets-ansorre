@@ -1,0 +1,88 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bBrighten=1.0
+bInvert=1.0
+bWaveThick=1.0
+fDecay=0.997
+fGammaAdj=1.0
+fModWaveAlphaEnd=1.3
+fModWaveAlphaStart=0.71
+fWarpScale=1.331
+fWaveScale=5.492229
+fWaveSmoothing=0.0
+ib_b=1.0
+ib_g=1.0
+ib_r=1.0
+ib_size=0.26
+mv_a=0.0
+mv_b=0.4999
+mv_g=0.4999
+mv_l=0.85
+mv_r=0.4999
+nWaveMode=6.0
+ob_a=1.0
+ob_b=0.26
+ob_g=0.1
+sy=1.072135
+warp=0.01
+wave_g=0.7
+wave_r=0.0
+wave_x=0.1
+zoom=0.979819
+fVideoEchoZoom=0.996629
+fWaveAlpha=0.00122
+nMotionVectorsX=64.0
+nMotionVectorsY=48.0
+fWaveParam=-0.6
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+wavecode_0_enabled=0.0
+wavecode_1_enabled=0.0
+wavecode_2_enabled=1.0
+wave_2_init1=t8 = 0;
+wave_2_init2=t1 = 0;
+wave_2_init3=t2 = 0;
+wave_2_init4=t7 = 0;
+wave_2_init5=inc = 0;
+wave_2_init6=bassspin = 0;
+wave_2_init7=width = 0;
+wave_2_init8=t1=((floor(int(rand(100)))*0.01)+0.5);
+wave_2_init9=t2=((floor(int(rand(100)))*0.01)+0.5);
+wave_2_init10=t3=((floor(int(rand(40)))*0.01)+0.1);
+wave_2_init11=inc=1;
+wave_2_init12=speed=0;
+wave_2_per_frame1=inc=(if(abs(below(inc, 1))>0.00001,(inc+0.01),(if(abs(above(mid, 1.5))>0.00001,0,1))));
+wave_2_per_frame2=bassspin=(if(abs(above((mid*0.05), bassspin))>0.00001,(bassspin+0.0001),(bassspin-0.0001)));
+wave_2_per_frame3=bassspin=(bassspin*above(bassspin, 0));
+wave_2_per_frame4=width=bassspin;
+wave_2_per_frame5=t8=width;
+wave_2_per_frame6=t7=inc;
+wavecode_3_enabled=1.0
+wavecode_3_scaling=1.001829
+wave_3_init1=t8 = 0;
+wave_3_init2=t1 = 0;
+wave_3_init3=t2 = 0;
+wave_3_init4=t7 = 0;
+wave_3_init5=inc = 0;
+wave_3_init6=bassspin = 0;
+wave_3_init7=width = 0;
+wave_3_init8=t1=((floor(int(rand(100)))*0.01)+0.5);
+wave_3_init9=t2=((floor(int(rand(100)))*0.01)+0.5);
+wave_3_init10=t3=((floor(int(rand(40)))*0.01)+0.1);
+wave_3_init11=inc=1;
+wave_3_per_frame1=inc=(if(abs(below(inc, 1))>0.00001,(inc+0.01),(if(abs(above(((bass+mid)+treb), 4.5))>0.00001,0,1))));
+wave_3_per_frame2=bassspin=(if(abs(above(((bass+mid)+(treb*0.05)), bassspin))>0.00001,(bassspin+0.0001),(bassspin-0.0001)));
+wave_3_per_frame3=bassspin=(bassspin*above(bassspin, 0));
+wave_3_per_frame4=width=bassspin;
+wave_3_per_frame5=t8=width;
+wave_3_per_frame6=t7=inc;
+per_frame_1=decay=0.9999;
+per_pixel_1=dy=(if(abs(above(y, 0.9))>0.00001,0.01,0));
+per_pixel_2=dx=(dy+(0.01*rad));
+per_pixel_3=warp=(((((cos(time)*0.5)+0.5)*3)*x)+((((((sin(time)*0.5)+0.5)*3)*y)*rad)*ang));
+per_pixel_4=rot=((0+((((cos(time)*0.5)+0.5)*0.02)*ang))+(((((sin(time)*0.5)+0.5)*0.02)*ang)*rad));

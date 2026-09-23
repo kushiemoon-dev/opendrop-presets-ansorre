@@ -1,0 +1,38 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bWaveThick=1.0
+fGammaAdj=1.98
+fWaveScale=0.769339
+fWaveSmoothing=0.9
+mv_a=0.0
+nWaveMode=2.0
+warp=0.28
+wave_b=0.0
+wave_g=0.0
+wave_r=0.0
+zoom=1.135
+fWaveAlpha=7.9
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=dx_residual = 0;
+per_frame_init_2=dy_residual = 0;
+per_frame_init_3=bass_thresh = 0;
+per_frame_1=wave_b=(wave_b+min(1, max(0, ((bass_att-1)*1.5))));
+per_frame_2=wave_r=(wave_b*0.4);
+per_frame_3=wave_g=(wave_b*0.4);
+per_frame_4=zoom=(zoom+(0.013*((0.60*sin((0.339*time)))+(0.40*sin((0.276*time))))));
+per_frame_5=rot=(rot+(0.040*((0.60*sin((0.381*time)))+(0.40*sin((0.579*time))))));
+per_frame_6=cx=(cx+(0.005*((0.60*sin((0.471*time)))+(0.40*sin((0.297*time))))));
+per_frame_7=cy=(cy+(0.005*((0.60*sin((0.379*time)))+(0.40*sin((0.351*time))))));
+per_frame_8=dx=(dx+(0.009*((0.60*sin((0.234*time)))+(0.40*sin((0.277*time))))));
+per_frame_9=dx=(dx+dx_residual);
+per_frame_10=dy=(dy+dy_residual);
+per_frame_11=bass_thresh=((above(bass_att, bass_thresh)*2.5)+((1-above(bass_att, bass_thresh))*(((bass_thresh-1.4)*0.98)+1.4)));
+per_frame_12=dx_residual=(((equal(bass_thresh, 2.5)*0.016)*sin((time*7)))+((1-equal(bass_thresh, 2.5))*dx_residual));
+per_frame_13=dy_residual=(((equal(bass_thresh, 2.5)*0.012)*sin((time*9)))+((1-equal(bass_thresh, 2.5))*dy_residual));
+per_pixel_1=zoom=(zoom+(0.1*rad));

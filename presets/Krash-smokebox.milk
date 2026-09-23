@@ -1,0 +1,50 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bDarkenCenter=1.0
+bInvert=1.0
+fDecay=0.95
+fWarpAnimSpeed=53.523743
+fWarpScale=0.274296
+fWaveScale=1.3478
+ib_a=0.1
+ib_b=1.0
+ib_g=1.0
+ib_r=1.0
+ib_size=0.5
+mv_a=0.1
+mv_l=0.0
+ob_a=1.0
+ob_b=1.0
+ob_g=1.0
+ob_r=1.0
+ob_size=0.005
+warp=0.9999
+wave_b=0.5
+wave_g=0.5
+wave_r=0.5
+fVideoEchoAlpha=1.0
+fVideoEchoZoom=0.503298
+fWaveAlpha=0.001
+nMotionVectorsX=64.0
+nMotionVectorsY=48.0
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=inside = 0;
+per_frame_init_2=outsidex = 0;
+per_frame_init_3=outsidey = 0;
+per_frame_init_4=q1 = 0;
+per_frame_init_5=q2 = 0;
+per_frame_1=q1=min(((((2*bass_att)+mid_att)+treb_att)*0.33), 2);
+per_frame_2=q2=((time*10)+(5*((bass+mid)+treb)));
+per_pixel_1=inside=(if(abs(below(abs((x-0.5)), 0.25))>0.00001,(if(abs(below(abs((y-0.5)), 0.25))>0.00001,1,0)),0));
+per_pixel_2=outsidex=(if(abs(below(abs((x-0.5)), 0.25))>0.00001,0,1));
+per_pixel_3=outsidey=(if(abs(below(abs((y-0.5)), 0.25))>0.00001,0,1));
+per_pixel_4=warp=(warp*abs((1-inside)));
+per_pixel_5=dy=(if(abs(outsidex)>0.00001,0,(((0.05*(q1-1))*log((2-abs(((y*2)-1.8)))))+(0.01*(sin((((x*q2)*0.483)+((y*q2)*1.238)))+sin((((x*q2)*1.612)+((y*q2)*0.648))))))));
+per_pixel_6=dx=(if(abs(outsidey)>0.00001,0,(((0.05*(q1-1))*log((2-abs(((x*2)-1.8)))))+(0.01*(cos((((y*q2)*0.483)+((x*q2)*1.238)))+cos((((y*q2)*1.612)+((x*q2)*0.648))))))));

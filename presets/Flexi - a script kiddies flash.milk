@@ -1,0 +1,97 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bInvert=1.0
+fDecay=0.95
+fGammaAdj=1.700001
+fModWaveAlphaEnd=1.000001
+fModWaveAlphaStart=1.0
+fWarpScale=0.106584
+fWaveScale=5.715231
+fWaveSmoothing=0.9
+ib_a=1.0
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+ib_size=0.0
+mv_a=0.0
+mv_b=0.0
+mv_l=0.0
+ob_size=0.31
+warp=0.017426
+wave_b=0.0
+wave_g=0.0
+wave_r=0.0
+fVideoEchoAlpha=0.5
+fVideoEchoZoom=0.999797
+fWaveAlpha=0.001
+fZoomExponent=2.190733
+nMotionVectorsX=64.0
+nMotionVectorsY=48.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+wavecode_0_enabled=1.0
+wavecode_0_scaling=2.44415
+wavecode_0_smoothing=0.0
+wave_0_init1=d = 0;
+wave_0_init2=y1 = 0;
+wave_0_init3=xx = 0;
+wave_0_init4=z = 0;
+wave_0_init5=w = 0;
+wave_0_init6=t5 = 0;
+wave_0_init7=t1 = 0;
+wave_0_init8=x1 = 0;
+wave_0_init9=ll = 0;
+wave_0_init10=j3 = 0;
+wave_0_init11=zoom = 0;
+wave_0_init12=j = 0;
+wave_0_init13=t8 = 0;
+wave_0_init14=v = 0;
+wave_0_init15=t3 = 0;
+wave_0_init16=s8 = 0;
+wave_0_init17=pi3 = 0;
+wave_0_init18=c2 = 0;
+wave_0_init19=j2 = 0;
+wave_0_init20=dir = 0;
+wave_0_init21=s3 = 0;
+wave_0_init22=t = 0;
+wave_0_init23=cl = 0;
+wave_0_init24=k = 0;
+wave_0_init25=zz = 0;
+wave_0_init26=c3 = 0;
+wave_0_init27=t2 = 0;
+wave_0_init28=l = 0;
+wave_0_init29=bb = 0;
+wave_0_init30=s1 = 0;
+wave_0_init31=s2 = 0;
+wave_0_init32=t4 = 0;
+wave_0_init33=yy = 0;
+wave_0_init34=c = 0;
+wave_0_init35=c1 = 0;
+wave_0_init36=t2=0;
+wave_0_init37=t3=0;
+wave_0_init38=t4=0;
+wave_0_init39=cl=0;
+wave_0_per_frame1=t1=0;
+wave_0_per_frame2=v=0.01;
+wave_0_per_frame3=j=(j+(bass_att*0.01));
+wave_0_per_frame4=j2=(j2+(mid_att*0.01));
+wave_0_per_frame5=j3=(j3+(treb_att*0.01));
+wave_0_per_frame6=t2=j;
+wave_0_per_frame7=t3=j2;
+wave_0_per_frame8=t4=j3;
+wave_0_per_frame9=k=((k*0.98)+floor(((10*treb_att))/(fps)));
+wave_0_per_frame10=t5=-k;
+wave_0_per_frame11=cl=(cl+0.0005);
+wave_0_per_frame12=cl=(if(abs(above(cl, 1))>0.00001,0,cl));
+wave_0_per_frame13=cl=(if(abs(below(cl, 0))>0.00001,1,cl));
+wave_0_per_frame14=t8=cl;
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=x1=0;
+per_frame_init_2=y1=0;

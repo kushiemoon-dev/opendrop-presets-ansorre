@@ -1,0 +1,152 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bBrighten=1.0
+bDarken=1.0
+bInvert=1.0
+bModWaveAlphaByVolume=1.0
+fDecay=1.0
+fGammaAdj=1.0
+fModWaveAlphaEnd=1.3
+fModWaveAlphaStart=0.71
+fWaveScale=1.285751
+fWaveSmoothing=0.63
+ib_a=1.0
+ib_b=1.0
+ib_g=0.0
+ib_r=0.0
+ib_size=0.0025
+mv_a=0.0
+mv_b=0.71
+mv_g=0.91
+mv_l=1.0
+nWaveMode=7.0
+ob_a=1.0
+ob_g=1.0
+ob_r=1.0
+ob_size=0.002
+warp=0.001
+wave_b=0.65
+wave_g=0.65
+wave_r=0.65
+bAdditiveWaves=1.0
+fVideoEchoAlpha=0.5
+fVideoEchoZoom=1.0
+nVideoEchoOrientation=3.0
+fWaveAlpha=0.001
+fShader=0.03
+nMotionVectorsX=0.0
+nMotionVectorsY=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=1.0
+shapecode_1_sides=6.0
+shapecode_1_textured=1.0
+shapecode_1_rad=2.185873
+shapecode_1_tex_ang=1.256637
+shapecode_1_tex_zoom=1.063454
+shapecode_1_g=1.0
+shapecode_1_b=1.0
+shapecode_1_r2=1.0
+shapecode_1_b2=1.0
+shapecode_1_a2=0.2
+shapecode_1_border_g=0.0
+shapecode_1_border_b=0.0
+shapecode_1_border_a=0.0
+shape_1_init1=q1 = 0;
+shape_1_init2=q2 = 0;
+shape_1_init3=bumptime = 0;
+shape_1_init4=q7 = 0;
+shape_1_init5=flux = 0;
+shape_1_init6=tex_cx = 0;
+shape_1_init7=tex_cy = 0;
+shape_1_per_frame1=x=q1;
+shape_1_per_frame2=y=(1-q2);
+shape_1_per_frame3=bumptime=(bumptime+(pow(((sin((time*2))*0.5)+0.5), 3)*0.03));
+shape_1_per_frame4=ang=(-0.285+floor((sin(bumptime))/(2)));
+shape_1_per_frame5=rad=((max((0.2-(q7*0.1)), 0)*2)*rad);
+shape_1_per_frame6=flux=sin((time*2.1));
+shape_1_per_frame7=flux=(flux*above(flux, 0.95));
+shape_1_per_frame8=flux=((flux-0.95)*20);
+shape_1_per_frame9=flux=max(flux, 0);
+shape_1_per_frame10=flux=pow(flux, 1.3);
+shape_1_per_frame11=rad=(rad+(flux*0.2));
+shape_1_per_frame12=tex_cx=sin(time);
+shape_1_per_frame13=tex_cy=cos(time);
+shapecode_2_enabled=0.0
+shapecode_3_enabled=1.0
+shapecode_3_sides=6.0
+shapecode_3_textured=1.0
+shapecode_3_rad=0.402711
+shapecode_3_tex_zoom=0.819542
+shapecode_3_g=1.0
+shapecode_3_b=1.0
+shapecode_3_r2=0.2
+shapecode_3_g2=0.5
+shapecode_3_b2=0.2
+shapecode_3_a2=0.1
+shapecode_3_border_r=0.0
+shapecode_3_border_g=0.0
+shapecode_3_border_b=0.0
+shapecode_3_border_a=0.0
+shape_3_init1=q1 = 0;
+shape_3_init2=q2 = 0;
+shape_3_init3=q6 = 0;
+shape_3_init4=flux = 0;
+shape_3_init5=tex_cx = 0;
+shape_3_per_frame1=x=q1;
+shape_3_per_frame2=y=(1-q2);
+shape_3_per_frame3=ang=(0.261799-(q6*50));
+shape_3_per_frame4=tex_ang=(time*8);
+shape_3_per_frame5=flux=sin((time*2.1));
+shape_3_per_frame6=flux=(flux*above(flux, 0.95));
+shape_3_per_frame7=flux=((flux-0.95)*20);
+shape_3_per_frame8=flux=max(flux, 0);
+shape_3_per_frame9=flux=pow(flux, 1.3);
+shape_3_per_frame10=rad=(rad+(flux*0.2));
+shape_3_per_frame11=tex_cx=time;
+shape_3_per_frame12=ang=(((cos(time)*0.5)+0.5)*6.28);
+wavecode_0_enabled=1.0
+wave_0_init1=xs = 0;
+wave_0_init2=ys = 0;
+wave_0_init3=scale = 0;
+wave_0_init4=t1 = 0;
+wave_0_init5=colorrange = 0;
+wave_0_per_frame1=colorrange=2;
+wave_0_per_frame2=t1=colorrange;
+wavecode_1_enabled=0.0
+wavecode_2_enabled=1.0
+wavecode_2_sep=51.0
+wavecode_2_scaling=1.32735
+wavecode_2_smoothing=0.82
+wavecode_2_r=0.5
+wavecode_2_g=0.5
+wavecode_2_b=0.5
+wave_2_init1=sw = 0;
+wave_2_init2=t1 = 0;
+wave_2_init3=it = 0;
+wave_2_init4=r1 = 0;
+wave_2_init5=fluy = 0;
+wave_2_init6=vx = 0;
+wave_2_init7=flux = 0;
+wave_2_init8=vy = 0;
+wave_2_init9=ry = 0;
+wave_2_init10=xfade2 = 0;
+wave_2_init11=xfade = 0;
+wave_2_init12=rx = 0;
+wave_2_init13=tm = 0;
+wave_2_init14=g1 = 0;
+wave_2_init15=b1 = 0;
+wave_2_per_frame1=t1=((sin((time*0.236))*0.5)+0.5);
+wavecode_3_enabled=0.0
+per_frame_1=wave_r=((wave_r+(0.35*sin((4*time))))+(0.15*sin((2.5*time))));
+per_frame_2=wave_g=((wave_g+(0.35*sin((3.7*time))))+(0.15*sin((2.11*time))));
+per_frame_3=wave_b=((wave_b+(0.35*sin((3.84*time))))+(0.15*sin((2.3*time))));
+per_frame_4=ob_r=wave_r;
+per_frame_5=ob_g=wave_g;
+per_frame_6=ob_b=wave_b;
+per_frame_7=monitor=wave_r;
+per_pixel_1=cx=(0.25+(0.5*above(x, 0.5)));
+per_pixel_2=cy=(0.5+((sin(time)*(above(x, 0.5)-0.5))*1.5));
+per_pixel_3=rot=(((0.16*(above(x, 0.5)-0.5))-(sqr((y-0.5))*0.16))*sin(((time*1.22)+(bass_att*0.5))));

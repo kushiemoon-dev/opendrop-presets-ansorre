@@ -1,0 +1,88 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bBrighten=1.0
+bWaveThick=1.0
+fDecay=1.0
+fGammaAdj=1.0
+fModWaveAlphaEnd=1.0
+fModWaveAlphaStart=0.5
+fWaveScale=0.0
+fWaveSmoothing=0.5
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+ib_size=0.002
+mv_a=0.0
+mv_l=0.0
+nWaveMode=4.0
+ob_a=1.0
+ob_size=0.005
+warp=0.0
+wave_b=0.5
+wave_g=0.5
+wave_r=0.5
+fVideoEchoZoom=1.0
+fWaveAlpha=0.0
+nMotionVectorsX=64.0
+nMotionVectorsY=48.0
+shapecode_0_enabled=1.0
+shapecode_0_sides=12.0
+shapecode_0_additive=1.0
+shapecode_0_num_inst=1024.0
+shapecode_0_rad=0.02988
+shapecode_0_tex_zoom=0.27705
+shapecode_0_r=0.2
+shapecode_0_g=0.5
+shapecode_0_b=1.0
+shapecode_0_a=0.05
+shapecode_0_r2=0.2
+shapecode_0_g2=0.5
+shapecode_0_b2=1.0
+shapecode_0_border_r=0.0
+shapecode_0_border_g=0.7
+shapecode_0_border_b=0.1
+shapecode_0_border_a=0.0
+shape_0_init1=c = 0;
+shape_0_init2=c0 = 0;
+shape_0_init3=c1 = 0;
+shape_0_init4=c2 = 0;
+shape_0_init5=x1 = 0;
+shape_0_init6=y1 = 0;
+shape_0_init7=z = 0;
+shape_0_per_frame1=c=((int(rand(3)))%(3));
+shape_0_per_frame2=c0=equal(c, 0);
+shape_0_per_frame3=c1=equal(c, 1);
+shape_0_per_frame4=c2=equal(c, 2);
+shape_0_per_frame5=x1=((((0.48*x1)-(c0*sin(x1)))+(c1*sin(x1)))+(c2*sin((x1+y1))));
+shape_0_per_frame6=y1=((((0.48*y1)-(c0*cos(y1)))+(c1*cos(x1)))+(c2*cos((y1-x1))));
+shape_0_per_frame7=z=0.26;
+shape_0_per_frame8=y=(0.5+(z*x1));
+shape_0_per_frame9=x=(0.5+(z*y1));
+shape_0_per_frame10=rad=(0.1*rad);
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=1.0
+shapecode_3_rad=2.93418
+shapecode_3_tex_zoom=1.54929
+shapecode_3_r=0.0
+shapecode_3_g2=0.0
+shapecode_3_a2=1.0
+shapecode_3_border_g=0.7
+shapecode_3_border_b=0.1
+shapecode_3_border_a=0.0
+shape_3_init1=q1 = 0;
+shape_3_per_frame1=a=q1;
+shape_3_per_frame2=a2=q1;
+wavecode_0_enabled=0.0
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=q6 = 0;
+per_frame_init_2=t = 0;
+per_frame_init_3=q1 = 0;
+per_frame_1=q6=aspecty;
+per_frame_2=t=(t+floor((1)/(fps)));
+per_frame_3=q1=below(t, 0.2);

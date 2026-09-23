@@ -1,0 +1,134 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bWaveThick=1.0
+fDecay=1.0
+fGammaAdj=1.0
+fModWaveAlphaEnd=1.0
+fModWaveAlphaStart=1.0
+fWaveScale=0.408556
+fWaveSmoothing=0.0
+ib_a=1.0
+ib_g=1.0
+ib_size=0.0
+mv_a=0.2
+mv_b=0.0
+mv_dy=0.08
+mv_l=2.5
+mv_r=0.0
+ob_size=0.5
+warp=0.0
+wave_b=0.5
+wave_g=0.5
+wave_r=0.5
+zoom=1.000223
+fVideoEchoZoom=1.000499
+fWaveAlpha=1.000416
+fZoomExponent=1.000158
+fShader=0.09
+nMotionVectorsX=16.104
+nMotionVectorsY=18.096004
+fWaveParam=-0.418
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=cblock = 0;
+per_frame_init_2=caught = 0;
+per_frame_init_3=beatfreq = 0;
+per_frame_init_4=xyy = 0;
+per_frame_init_5=pulsefreq = 0;
+per_frame_init_6=vortex_y = 0;
+per_frame_init_7=bt = 0;
+per_frame_init_8=q1 = 0;
+per_frame_init_9=wx = 0;
+per_frame_init_10=zzoom = 0;
+per_frame_init_11=box = 0;
+per_frame_init_12=lastbeat = 0;
+per_frame_init_13=mvr = 0;
+per_frame_init_14=wavedir = 0;
+per_frame_init_15=pulse = 0;
+per_frame_init_16=wxx = 0;
+per_frame_init_17=mvg = 0;
+per_frame_init_18=aty = 0;
+per_frame_init_19=vortex_x = 0;
+per_frame_init_20=wy = 0;
+per_frame_init_21=wavespd = 0;
+per_frame_init_22=wyy = 0;
+per_frame_init_23=atx = 0;
+per_frame_init_24=ctime = 0;
+per_frame_init_25=le = 0;
+per_frame_init_26=btblock = 0;
+per_frame_init_27=leccl = 0;
+per_frame_init_28=beat = 0;
+per_frame_init_29=hccp = 0;
+per_frame_init_30=mvb = 0;
+per_frame_init_31=q2 = 0;
+per_frame_init_32=lastpulse = 0;
+per_frame_init_33=q3 = 0;
+per_frame_init_34=arad = 0;
+per_frame_init_35=th = 0;
+per_frame_init_36=vortexdir = 0;
+per_frame_init_37=aang = 0;
+per_frame_init_38=thccl = 0;
+per_frame_init_39=wx=0.7;
+per_frame_init_40=wy=0.7;
+per_frame_init_41=vortex_x=0.2;
+per_frame_init_42=vortex_y=0.2;
+per_frame_1=le=(((1.4*bass_att)+(0.1*bass))+(0.5*treb));
+per_frame_2=pulse=above(le, th);
+per_frame_3=pulsefreq=(if(abs(equal(pulsefreq, 0))>0.00001,2,(if(abs(pulse)>0.00001,((0.8*pulsefreq)+(0.2*(time-lastpulse))),pulsefreq))));
+per_frame_4=lastpulse=(if(abs(pulse)>0.00001,time,lastpulse));
+per_frame_5=bt=floor(((time-lastbeat))/(((0.5*beatfreq)+(0.5*pulsefreq))));
+per_frame_6=hccp=(floor((0.03)/((bt+0.2)))+(0.5*(if(abs(band(above(bt, 0.8), below(bt, 1.2)))>0.00001,(pow(sin(((bt-1)*7.854)), 4)-1),0))));
+per_frame_7=beat=band(above(le, (th+hccp)), btblock);
+per_frame_8=btblock=(1-above(le, (th+hccp)));
+per_frame_9=lastbeat=(if(abs(beat)>0.00001,time,lastbeat));
+per_frame_10=beatfreq=(if(abs(equal(beatfreq, 0))>0.00001,2,(if(abs(beat)>0.00001,((0.8*beatfreq)+(0.2*(time-lastbeat))),beatfreq))));
+per_frame_11=th=(if(abs(above(le, th))>0.00001,((le+floor((114)/((le+10))))-7.407),((th+floor(((th*0.07))/((th-12))))+((below(th, 2.7)*0.1)*(2.7-th)))));
+per_frame_12=th=(if(abs(above(th, 6))>0.00001,6,th));
+per_frame_13=thccl=(thccl+(th-2.5144));
+per_frame_14=leccl=(leccl+le);
+per_frame_15=wave_r=((0.2+(0.2*sin((0.02*leccl))))+(0.6*caught));
+per_frame_16=wave_g=((0.5+(0.5*sin((0.021*leccl))))*(1-(0.7*caught)));
+per_frame_17=wave_b=((0.5+(0.5*sin((0.025*leccl))))*(1-(0.7*caught)));
+per_frame_18=wavedir=(if(abs(beat)>0.00001,((vortexdir+(int(rand(1000))*0.00314))-(if(abs(above((sqr((wxx-vortex_x))+sqr((xyy-vortex_y))), 0.25))>0.00001,4.71,1.57))),(if(abs(band(below((sqr((wxx-vortex_x))+sqr((xyy-vortex_y))), 0.009), below(abs((vortexdir-wavedir)), 2)))>0.00001,(vortexdir+3.14),(wavedir+(0.073*sin(int(rand(567)))))))));
+per_frame_19=wavespd=(((th-2)*0.003)*(1-caught));
+per_frame_20=wx=((wx+(wavespd*cos(wavedir)))+(((0.001*int(rand(1000)))*(1-caught))*cblock));
+per_frame_21=wy=((wy+(wavespd*sin(wavedir)))+(((0.001*int(rand(1000)))*(1-caught))*cblock));
+per_frame_22=wxx=((0.001*(((wx*1000))%(1000)))+((0.07*sin(int(rand(6543))))*caught));
+per_frame_23=wyy=((0.001*(((wy*1000))%(1000)))+((0.07*sin(int(rand(6543))))*caught));
+per_frame_24=wave_x=wxx;
+per_frame_25=wave_y=(1-wyy);
+per_frame_26=vortexdir=atan(((wyy-vortex_y))/( (wxx-vortex_x)));
+per_frame_27=vortex_x=(vortex_x+(0.0035*cos(vortexdir)));
+per_frame_28=vortex_y=(vortex_y+(0.0035*sin(vortexdir)));
+per_frame_29=caught=band(below(abs((wxx-vortex_x)), 0.1), below(abs((wyy-vortex_y)), 0.1));
+per_frame_30=ctime=(if(abs(band(caught, (1-cblock)))>0.00001,time,ctime));
+per_frame_31=cblock=caught;
+per_frame_32=caught=(caught*below((time-ctime), 2));
+per_frame_33=monitor=(time-ctime);
+per_frame_34=q1=vortex_x;
+per_frame_35=q2=vortex_y;
+per_frame_36=cx=q1;
+per_frame_37=cy=q2;
+per_frame_38=q3=((le*0.03)*sign((0.5-caught)));
+per_frame_39=dx=(0.002*sin((0.005*thccl)));
+per_frame_40=dy=(0.002*sin((0.0055*thccl)));
+per_frame_41=mvr=(if(abs(beat)>0.00001,(0.001*int(rand(1000))),mvr));
+per_frame_42=mv_r=mvr;
+per_frame_43=mvg=(if(abs(beat)>0.00001,(0.001*int(rand(1000))),mvg));
+per_frame_44=mv_g=mvg;
+per_frame_45=mvb=(if(abs(beat)>0.00001,(0.001*int(rand(1000))),mvb));
+per_frame_46=mv_b=mvb;
+per_pixel_1=aang=atan(((y-q2))/( (x-q1)));
+per_pixel_2=arad=sqrt((sqr((y-q2))+sqr((x-q1))));
+per_pixel_3=atx=(cos(aang)*arad);
+per_pixel_4=aty=(sin(aang)*arad);
+per_pixel_5=box=band(below(abs(atx), 0.1), below(abs(aty), 0.1));
+per_pixel_6=zzoom=0.92;
+per_pixel_7=dx=(if(abs(box)>0.00001,((x-q1)*(zzoom-1)),dx));
+per_pixel_8=dy=(if(abs(box)>0.00001,((y-q2)*(zzoom-1)),dy));
+per_pixel_9=rot=(box*q3);

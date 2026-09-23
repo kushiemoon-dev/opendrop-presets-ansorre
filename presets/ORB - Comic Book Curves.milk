@@ -1,0 +1,81 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bBrighten=1.0
+bSolarize=1.0
+dy=0.015
+fDecay=0.9985
+mv_a=0.0
+warp=0.011
+wave_b=0.0
+wave_g=0.0
+wave_r=0.0
+fVideoEchoZoom=0.2939
+fWaveAlpha=0.001
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+wavecode_0_enabled=1.0
+wavecode_0_smoothing=0.0
+wave_0_init1=q1 = 0;
+wave_0_init2=speed = 0;
+wave_0_init3=v = 0;
+wave_0_init4=xs = 0;
+wave_0_init5=ys = 0;
+wavecode_1_enabled=1.0
+wavecode_1_smoothing=0.0
+wave_1_init1=q1 = 0;
+wave_1_init2=speed = 0;
+wave_1_init3=v = 0;
+wave_1_init4=xs = 0;
+wave_1_init5=ys = 0;
+wavecode_2_enabled=1.0
+wavecode_2_smoothing=0.0
+wave_2_init1=q1 = 0;
+wave_2_init2=speed = 0;
+wave_2_init3=v = 0;
+wave_2_init4=xs = 0;
+wave_2_init5=ys = 0;
+wavecode_3_enabled=1.0
+wavecode_3_smoothing=0.0
+wave_3_init1=q1 = 0;
+wave_3_init2=speed = 0;
+wave_3_init3=v = 0;
+wave_3_init4=xs = 0;
+wave_3_init5=ys = 0;
+per_frame_init_1=bass_clip = 0;
+per_frame_init_2=basstime = 0;
+per_frame_init_3=state = 0;
+per_frame_init_4=state_count = 0;
+per_frame_init_5=xs = 0;
+per_frame_init_6=ys = 0;
+per_frame_init_7=speed = 0;
+per_frame_init_8=bass_time = 0;
+per_frame_init_9=state=0;
+per_frame_1=bass_clip=((above(bass_att, bass_clip)*2)+((1-above(bass_att, bass_clip))*(((bass_clip-1.3)*0.96)+1.3)));
+per_frame_2=basstime=((basstime+(((bass_att*0.09)*bass_att)*0.25))+(time*0.1));
+per_frame_3=rot=0;
+per_frame_4=state=(state+equal(bass_clip, 2));
+per_frame_5=state=(if(abs(above(state, 4))>0.00001,-1,state));
+per_frame_6=state_count=(state_count+equal(state, -1));
+per_frame_7=state_count=(if(abs(above(state_count, 1))>0.00001,0,state_count));
+per_frame_8=state=(state+equal(state, -1));
+per_frame_9=xs=(xs+(0.1*equal(2, bass_clip)));
+per_frame_10=ys=(ys+(0.1*equal(2, bass_clip)));
+per_frame_11=speed=0.08;
+per_frame_12=xs=(xs+((equal(0, state)*atan((bass_time*4)))*speed));
+per_frame_13=ys=(ys+((equal(0, state)*cos((bass_time*4)))*speed));
+per_frame_14=xs=(xs+((equal(1, state)*cos((bass_time*4)))*speed));
+per_frame_15=ys=(ys+((equal(1, state)*cos((bass_time*4)))*speed));
+per_frame_16=xs=(xs+((equal(2, state)*cos((bass_time*4)))*speed));
+per_frame_17=ys=(ys+((equal(2, state)*sin((bass_time*4)))*speed));
+per_frame_18=xs=(xs+((equal(3, state)*cos((bass_time*5)))*speed));
+per_frame_19=ys=(ys+((equal(3, state)*cos((bass_time*9)))*speed));
+per_frame_20=xs=(xs+((equal(4, state)*atan((bass_time*6)))*speed));
+per_frame_21=ys=(ys+((equal(4, state)*cos((bass_time*2)))*speed));
+per_frame_22=dx=((((equal(state_count, 0)*0.5)*sin(xs))*0.04)+(((equal(state_count, 1)*0.45)*sin((xs*1.1)))*0.05));
+per_frame_23=dy=((((equal(state_count, 0)*0.5)*sin(ys))*0.04)+(((equal(state_count, 1)*0.45)*cos(ys))*0.05));
+per_frame_24=zoom=(0.985+(bass*0.01));

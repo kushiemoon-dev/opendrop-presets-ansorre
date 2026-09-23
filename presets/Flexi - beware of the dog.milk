@@ -1,0 +1,72 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bDarkenCenter=1.0
+bWaveThick=1.0
+fDecay=0.965
+fGammaAdj=1.0
+fModWaveAlphaEnd=2.0
+fModWaveAlphaStart=2.0
+fWarpScale=0.106584
+fWaveScale=0.591235
+fWaveSmoothing=0.0
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+ib_size=0.0
+mv_a=0.0
+mv_l=0.0
+ob_size=0.185
+warp=0.041415
+wave_b=0.0
+wave_g=0.5
+bAdditiveWaves=1.0
+fVideoEchoAlpha=0.5
+fVideoEchoZoom=1.040396
+fWaveAlpha=5.012583
+fZoomExponent=0.158398
+fShader=1.0
+nMotionVectorsX=0.0
+nMotionVectorsY=0.0
+fWaveParam=-1.0
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+wavecode_0_enabled=0.0
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=d = 0;
+per_frame_init_2=cx1 = 0;
+per_frame_init_3=y3 = 0;
+per_frame_init_4=y1 = 0;
+per_frame_init_5=cy1 = 0;
+per_frame_init_6=x1 = 0;
+per_frame_init_7=x3 = 0;
+per_frame_init_8=dir = 0;
+per_frame_init_9=x2 = 0;
+per_frame_init_10=y2 = 0;
+per_pixel_1=cx1=(0.5+(sin((time*0.618))*0.2));
+per_pixel_2=cy1=(0.5+(cos((time*1.618))*0.2));
+per_pixel_3=dir=bass;
+per_pixel_4=d=sqrt((((x-cx1)*(x-cx1))+((y-cy1)*(y-cy1))));
+per_pixel_5=x1=(if(abs(above(d, 0.3))>0.00001,0,((sin((y-cy1))*0.05)*dir)));
+per_pixel_6=y1=(if(abs(above(d, 0.3))>0.00001,0,((-sin((x-cx1))*0.05)*dir)));
+per_pixel_7=cx1=(0.5+(sin((time*2.618))*0.3));
+per_pixel_8=cy1=(0.5+(cos((time*3.14))*0.3));
+per_pixel_9=dir=(-mid*2);
+per_pixel_10=d=sqrt((((x-cx1)*(x-cx1))+((y-cy1)*(y-cy1))));
+per_pixel_11=x2=(if(abs(above(d, 0.2))>0.00001,0,((sin((y-cy1))*0.05)*dir)));
+per_pixel_12=y2=(if(abs(above(d, 0.2))>0.00001,0,((-sin((x-cx1))*0.05)*dir)));
+per_pixel_13=cx1=(0.5+(sin((-time*2.618))*0.4));
+per_pixel_14=cy1=(0.5+(cos((-time*1.14))*0.4));
+per_pixel_15=dir=(treb*3);
+per_pixel_16=d=sqrt((((x-cx1)*(x-cx1))+((y-cy1)*(y-cy1))));
+per_pixel_17=x3=(if(abs(above(d, 0.1))>0.00001,0,((sin((y-cy1))*0.05)*dir)));
+per_pixel_18=y3=(if(abs(above(d, 0.1))>0.00001,0,((-sin((x-cx1))*0.05)*dir)));
+per_pixel_19=dx=((x1+x2)+x3);
+per_pixel_20=dy=((y1+y2)+y3);

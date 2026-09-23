@@ -1,0 +1,99 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bDarkenCenter=1.0
+fDecay=0.91
+fGammaAdj=1.14
+fModWaveAlphaEnd=1.3
+fModWaveAlphaStart=0.71
+fWarpScale=1.331
+fWaveScale=1.001829
+fWaveSmoothing=0.0
+ib_a=0.5
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+ib_size=0.005
+mv_a=0.5
+nWaveMode=1.0
+ob_a=0.01
+ob_b=0.1
+ob_g=0.1
+ob_r=0.1
+ob_size=0.0
+sx=0.905286
+sy=0.932718
+warp=0.01
+wave_b=0.65
+wave_g=0.65
+wave_r=0.65
+zoom=1.001827
+bAdditiveWaves=1.0
+fVideoEchoZoom=0.591237
+fWaveAlpha=1.008018
+nMotionVectorsX=11.52
+nMotionVectorsY=10.559999
+fWaveParam=0.5
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=ying = 0;
+per_frame_init_2=vol_now = 0;
+per_frame_init_3=redneg = 0;
+per_frame_init_4=yin = 0;
+per_frame_init_5=yang = 0;
+per_frame_init_6=q1 = 0;
+per_frame_init_7=slowtime = 0;
+per_frame_init_8=q5 = 0;
+per_frame_init_9=new_x = 0;
+per_frame_init_10=blueneg = 0;
+per_frame_init_11=greenneg = 0;
+per_frame_init_12=solipsist = 0;
+per_frame_init_13=beat = 0;
+per_frame_init_14=new_y = 0;
+per_frame_init_15=q2 = 0;
+per_frame_init_16=beatcount = 0;
+per_frame_init_17=q3 = 0;
+per_frame_init_18=vol_mean = 0;
+per_frame_init_19=warp=0;
+per_frame_init_20=beatcount=0;
+per_frame_1=slowtime=(slowtime+(beat*time));
+per_frame_2=ying=(if(abs(below(ying, 1))>0.00001,1,ying));
+per_frame_3=ying=(if(abs(beat)>0.00001,(ying+bnot((((time*10))%(3)))),ying));
+per_frame_4=yin=((ying)%(2));
+per_frame_5=vol_now=((0.4*bass)+(0.1*((bass_att+treb)+mid)));
+per_frame_6=vol_mean=(if(abs(equal(((frame)%(50)), 0))>0.00001,(vol_mean-(0.5*(vol_mean-vol_now))),(0.1*((vol_mean*9)+vol_now))));
+per_frame_7=beat=(if(abs(above(vol_now, (1.5*vol_mean)))>0.00001,1,0));
+per_frame_8=beatcount=(if(abs(bnot(((time)%(5000))))>0.00001,0,beatcount));
+per_frame_9=beatcount=(beatcount+(0.05*beat));
+per_frame_10=yang=bnot(((beatcount)%(2)));
+per_frame_11=ib_r=0;
+per_frame_12=ib_g=(pow(abs(sign(sin(slowtime))), 2)*sin(slowtime));
+per_frame_13=ib_b=((cos(slowtime)*sign(cos(slowtime)))*pow(abs(sign(sin(slowtime))), 2));
+per_frame_14=mv_g=((sin(slowtime)*(sign(sin(slowtime))-1))*sign(sin(slowtime)));
+per_frame_15=mv_b=((-1*abs(cos(slowtime)))+1);
+per_frame_16=mv_r=0.8;
+per_frame_17=redneg=(if(abs(below(ib_r, 0))>0.00001,1,0));
+per_frame_18=greenneg=(if(abs(below(ib_g, 0))>0.00001,1,0));
+per_frame_19=blueneg=(if(abs(below(ib_b, 0))>0.00001,1,0));
+per_frame_20=wave_r=(if(abs(redneg)>0.00001,(if(abs(bor(greenneg, blueneg))>0.00001,1,(1+ib_r))),ib_r));
+per_frame_21=wave_g=(if(abs(greenneg)>0.00001,(if(abs(equal((greenneg+blueneg), 2))>0.00001,1,(1+ib_g))),ib_g));
+per_frame_22=wave_b=(if(abs(blueneg)>0.00001,(1+ib_b),ib_b));
+per_frame_23=q1=(if(abs(yin)>0.00001,sin(slowtime),q1));
+per_frame_24=q2=(if(abs(yin)>0.00001,cos(slowtime),0));
+per_frame_25=q3=sin(beatcount);
+per_frame_26=dx=(if(abs(yin)>0.00001,(0.01*sin(slowtime)),(if(abs(equal(yin, yang))>0.00001,0,dx))));
+per_frame_27=dy=(if(abs(yin)>0.00001,(0.01*cos(slowtime)),0));
+per_frame_28=q5=(if(abs(bnot(yin))>0.00001,abs(cos(time)),dx));
+per_frame_29=wave_mystery=(wave_mystery-(1*sin(((time*0.65)*sin(q3)))));
+per_frame_30=wave_mode=int(rand(((slowtime)%(12))));
+per_pixel_1=solipsist=(if(abs(equal(q3, 0))>0.00001,0,(0.01*((rad-(q3*x))+(pow(q3, 4)*y)))));
+per_pixel_2=rot=(((rot+sin(rad))-(5*solipsist))-(1.5*q5));
+per_pixel_3=sy=(if(abs(equal(q3, 0))>0.00001,sy,(1-solipsist)));
+per_pixel_4=new_x=((rad*0.05)-x);
+per_pixel_5=new_y=((rad*0.05)-y);
+per_pixel_6=zoom=((zoom+((0.01*sin((ang-((rad*3.14)*sin(((if(abs(above(q2, q1))>0.00001,0.5,-0.5))*sin((new_x*new_y))))))))*sin((if(abs(above(q3, q1))>0.00001,0.5,-0.5)))))-(0.03*sin(((ang*5)-(rad*sin((if(abs(above(q3, q2))>0.00001,0.5,-0.5))))))));

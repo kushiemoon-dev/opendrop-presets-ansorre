@@ -1,0 +1,104 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bBrighten=1.0
+bDarken=1.0
+fDecay=1.0
+fGammaAdj=1.0
+fWaveScale=0.01
+fWaveSmoothing=0.0
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+ib_size=0.0
+mv_a=0.0
+ob_a=1.0
+ob_size=0.005
+warp=0.01
+wave_b=0.02
+wave_g=0.02
+wave_r=0.02
+fVideoEchoZoom=1.001
+fWaveAlpha=1.17
+fWaveParam=0.56
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+wavecode_0_enabled=1.0
+wavecode_0_scaling=0.01
+wavecode_0_smoothing=1.0
+wavecode_0_r=0.7
+wavecode_0_g=0.7
+wavecode_0_a=0.04
+wave_0_init1=my_z = 0;
+wave_0_init2=d = 0;
+wave_0_init3=y3 = 0;
+wave_0_init4=z2 = 0;
+wave_0_init5=y1 = 0;
+wave_0_init6=z = 0;
+wave_0_init7=w = 0;
+wave_0_init8=w2 = 0;
+wave_0_init9=x1 = 0;
+wave_0_init10=q22 = 0;
+wave_0_init11=q21 = 0;
+wave_0_init12=q6 = 0;
+wave_0_init13=zoom = 0;
+wave_0_init14=p = 0;
+wave_0_init15=q5 = 0;
+wave_0_init16=v = 0;
+wave_0_init17=z3 = 0;
+wave_0_init18=w3 = 0;
+wave_0_init19=my_x = 0;
+wave_0_init20=x3 = 0;
+wave_0_init21=my_y = 0;
+wave_0_init22=w1 = 0;
+wave_0_init23=x2 = 0;
+wave_0_init24=l = 0;
+wave_0_init25=u = 0;
+wave_0_init26=y2 = 0;
+wave_0_init27=sinh_v2 = 0;
+wave_0_init28=cosh_v = 0;
+wave_0_init29=z1 = 0;
+wave_0_init30=q20 = 0;
+wavecode_1_enabled=1.0
+wavecode_1_samples=311.0
+wavecode_1_scaling=0.20929
+wavecode_1_smoothing=0.0
+wavecode_1_r=0.8
+wavecode_1_g=0.8
+wave_1_init1=q10 = 0;
+wave_1_init2=t = 0;
+wave_1_init3=q20 = 0;
+wave_1_init4=mx = 0;
+wave_1_init5=my = 0;
+wave_1_init6=p1 = 0;
+wave_1_init7=p2 = 0;
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=t1 = 0;
+per_frame_init_2=q22 = 0;
+per_frame_init_3=q21 = 0;
+per_frame_init_4=q6 = 0;
+per_frame_init_5=q5 = 0;
+per_frame_init_6=t2 = 0;
+per_frame_init_7=speed = 0;
+per_frame_init_8=t0 = 0;
+per_frame_init_9=q20 = 0;
+per_frame_init_10=t0=time;
+per_frame_1=warp=0;
+per_frame_2=wave_a=0;
+per_frame_3=zoom=above((time-t0), 0.2);
+per_frame_4=q5=aspectx;
+per_frame_5=q6=aspecty;
+per_frame_6=speed=10;
+per_frame_7=t2=(t2+floor((1)/(fps)));
+per_frame_8=decay=(1-t1);
+per_frame_9=t1=(t1+floor(((0.5*equal(((((0.1*t2)*speed))%(20)), 0)))/(fps)));
+per_frame_10=t1=(t1*above(0.2, ((((0.1*t2)*speed))%(20))));
+per_frame_11=q20=(0.314*(((0.05*(((0.1*t2)*speed)+10)))%(20)));
+per_frame_12=q21=speed;
+per_frame_13=q22=((0.1*t2)*speed);

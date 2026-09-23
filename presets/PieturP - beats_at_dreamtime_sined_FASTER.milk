@@ -1,0 +1,67 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+fDecay=0.9359
+fGammaAdj=1.0
+fModWaveAlphaEnd=0.0
+fModWaveAlphaStart=0.0
+fWarpScale=0.01
+fWaveScale=0.01
+fWaveSmoothing=0.0
+ib_a=1.0
+ib_r=1.0
+ib_size=0.0
+mv_a=0.0
+nWaveMode=2.0
+ob_a=1.0
+ob_size=0.005
+sx=1.00815
+warp=0.01
+wave_b=0.0
+wave_g=0.0
+wave_r=0.0
+zoom=1.001829
+fVideoEchoAlpha=0.23
+fVideoEchoZoom=0.14057
+nVideoEchoOrientation=3.0
+fWaveAlpha=0.001
+fWaveParam=1.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+wavecode_0_enabled=0.0
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=ddoe1 = 0;
+per_frame_init_2=ddoe2 = 0;
+per_frame_init_3=doen = 0;
+per_frame_init_4=q1 = 0;
+per_frame_init_5=wr = 0;
+per_frame_init_6=wg = 0;
+per_frame_init_7=wb = 0;
+per_frame_1=ddoe1=((1-below(treb_att, 1.4))*0.9);
+per_frame_2=ddoe2=((1-below(bass_att, 1.4))*0.7);
+per_frame_3=doen=below(bass_att, 1.45);
+per_frame_4=decay=1;
+per_frame_5=monitor=decay;
+per_frame_6=q1=ddoe2;
+per_frame_7=rot=(rot+(sin(time)*(ddoe1+0.1)));
+per_frame_8=zoom=1;
+per_frame_9=dx=(ddoe1*(bass*0.9));
+per_frame_10=dy=(ddoe2*(bass*0.9));
+per_frame_11=wr=(max((max(bass, bass_att)-1.2), 0)+0.5);
+per_frame_12=wg=(max((max(treb, treb_att)-1.2), 0)+0.5);
+per_frame_13=wb=(max((max(mid, mid_att)-1.2), 0)+0.5);
+per_frame_14=ob_r=wr;
+per_frame_15=ob_g=wg;
+per_frame_16=ob_b=wb;
+per_frame_17=ob_size=((1-doen)*(treb*0.2));
+per_frame_18=ib_r=wb;
+per_frame_19=ib_g=wr;
+per_frame_20=ib_b=wg;
+per_frame_21=ib_size=((ddoe2*0.5)*(bass*0.2));
+per_pixel_1=dx=(1+(above(1.8, bass_att)*sin((rad+(bass*2)))));

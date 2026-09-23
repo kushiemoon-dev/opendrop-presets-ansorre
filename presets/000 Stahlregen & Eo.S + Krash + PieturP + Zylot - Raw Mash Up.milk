@@ -1,0 +1,156 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bWaveThick=1.0
+fDecay=0.5
+fGammaAdj=1.0
+fModWaveAlphaEnd=1.3
+fModWaveAlphaStart=0.71
+fWaveScale=0.01
+fWaveSmoothing=0.63
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+ib_size=0.0
+mv_a=0.0
+mv_l=5.0
+ob_a=1.0
+ob_size=0.005
+wave_b=0.0
+wave_g=0.0
+wave_r=0.0
+wave_x=0.01
+bAdditiveWaves=1.0
+fVideoEchoAlpha=0.4
+fVideoEchoZoom=1.0
+fWaveAlpha=0.001
+nMotionVectorsX=12.8
+nMotionVectorsY=48.0
+fWaveParam=-1.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+wavecode_0_enabled=1.0
+wavecode_0_sep=256.0
+wavecode_0_scaling=1.02841
+wave_0_init1=xp = 0;
+wave_0_init2=ab = 0;
+wave_0_init3=s = 0;
+wave_0_init4=yp = 0;
+wave_0_init5=t1 = 0;
+wave_0_init6=advance = 0;
+wave_0_init7=gg = 0;
+wave_0_init8=zf = 0;
+wave_0_init9=zq = 0;
+wave_0_init10=zm = 0;
+wave_0_init11=x2 = 0;
+wave_0_init12=t2 = 0;
+wave_0_init13=l = 0;
+wave_0_init14=y2 = 0;
+wave_0_init15=zp = 0;
+wave_0_init16=bb = 0;
+wave_0_init17=h = 0;
+wave_0_init18=rr = 0;
+wave_0_init19=zt = 0;
+wave_0_init20=cc = 0;
+wave_0_per_frame1=advance=(advance+(abs(((bass+treb)+mid))*0.01));
+wave_0_per_frame2=advance=(if(abs(above(advance, 2))>0.00001,0,advance));
+wave_0_per_frame3=t1=advance;
+wave_0_per_frame4=ab=(ab+(abs(((bass+treb)+mid))*0.001));
+wave_0_per_frame5=ab=(if(abs(above(ab, 628))>0.00001,0,ab));
+wave_0_per_frame6=t2=ab;
+wavecode_1_enabled=1.0
+wavecode_1_sep=256.0
+wavecode_1_scaling=1.02841
+wave_1_init1=xp = 0;
+wave_1_init2=ab = 0;
+wave_1_init3=s = 0;
+wave_1_init4=yp = 0;
+wave_1_init5=t1 = 0;
+wave_1_init6=advance = 0;
+wave_1_init7=gg = 0;
+wave_1_init8=zf = 0;
+wave_1_init9=zq = 0;
+wave_1_init10=zm = 0;
+wave_1_init11=x2 = 0;
+wave_1_init12=t2 = 0;
+wave_1_init13=l = 0;
+wave_1_init14=y2 = 0;
+wave_1_init15=zp = 0;
+wave_1_init16=bb = 0;
+wave_1_init17=h = 0;
+wave_1_init18=rr = 0;
+wave_1_init19=zt = 0;
+wave_1_init20=cc = 0;
+wave_1_per_frame1=advance=(advance+(abs(((bass+treb)+mid))*0.01));
+wave_1_per_frame2=advance=(if(abs(above(advance, 2))>0.00001,0,advance));
+wave_1_per_frame3=t1=advance;
+wave_1_per_frame4=ab=(ab+(abs(((bass+treb)+mid))*0.001));
+wave_1_per_frame5=ab=(if(abs(above(ab, 628))>0.00001,0,ab));
+wave_1_per_frame6=t2=ab;
+wavecode_2_enabled=1.0
+wavecode_2_sep=256.0
+wavecode_2_scaling=1.02841
+wave_2_init1=xp = 0;
+wave_2_init2=ab = 0;
+wave_2_init3=s = 0;
+wave_2_init4=yp = 0;
+wave_2_init5=t1 = 0;
+wave_2_init6=advance = 0;
+wave_2_init7=gg = 0;
+wave_2_init8=zf = 0;
+wave_2_init9=zq = 0;
+wave_2_init10=zm = 0;
+wave_2_init11=x2 = 0;
+wave_2_init12=t2 = 0;
+wave_2_init13=l = 0;
+wave_2_init14=y2 = 0;
+wave_2_init15=zp = 0;
+wave_2_init16=bb = 0;
+wave_2_init17=h = 0;
+wave_2_init18=rr = 0;
+wave_2_init19=zt = 0;
+wave_2_init20=cc = 0;
+wave_2_per_frame1=advance=(advance+(abs(((bass+treb)+mid))*0.01));
+wave_2_per_frame2=advance=(if(abs(above(advance, 2))>0.00001,0,advance));
+wave_2_per_frame3=t1=advance;
+wave_2_per_frame4=ab=(ab+(abs(((bass+treb)+mid))*0.001));
+wave_2_per_frame5=ab=(if(abs(above(ab, 628))>0.00001,0,ab));
+wave_2_per_frame6=t2=ab;
+wavecode_3_enabled=1.0
+wavecode_3_sep=256.0
+wavecode_3_scaling=1.02841
+wave_3_init1=xp = 0;
+wave_3_init2=ab = 0;
+wave_3_init3=s = 0;
+wave_3_init4=yp = 0;
+wave_3_init5=t1 = 0;
+wave_3_init6=advance = 0;
+wave_3_init7=gg = 0;
+wave_3_init8=zf = 0;
+wave_3_init9=zq = 0;
+wave_3_init10=zm = 0;
+wave_3_init11=x2 = 0;
+wave_3_init12=t2 = 0;
+wave_3_init13=l = 0;
+wave_3_init14=y2 = 0;
+wave_3_init15=zp = 0;
+wave_3_init16=bb = 0;
+wave_3_init17=h = 0;
+wave_3_init18=rr = 0;
+wave_3_init19=zt = 0;
+wave_3_init20=cc = 0;
+wave_3_per_frame1=advance=(advance+(abs(((bass+treb)+mid))*0.01));
+wave_3_per_frame2=advance=(if(abs(above(advance, 2))>0.00001,0,advance));
+wave_3_per_frame3=t1=advance;
+wave_3_per_frame4=ab=(ab+(abs(((bass+treb)+mid))*0.001));
+wave_3_per_frame5=ab=(if(abs(above(ab, 628))>0.00001,0,ab));
+wave_3_per_frame6=t2=ab;
+per_frame_1=warp=0;
+per_frame_2=wave_a=0;
+per_pixel_1=zoom=(zoom-0.5);
+per_pixel_2=dx=(1.3+(0.3*sin(time)));
+per_pixel_3=dy=(1.3+(0.3*sin((time*1.2))));

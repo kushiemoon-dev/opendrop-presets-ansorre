@@ -1,0 +1,88 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bWaveThick=1.0
+fDecay=0.5
+fGammaAdj=1.0
+fModWaveAlphaEnd=1.000001
+fModWaveAlphaStart=1.0
+fWarpAnimSpeed=0.01
+fWarpScale=100.0
+fWaveScale=0.01
+fWaveSmoothing=0.0
+ib_a=0.200001
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+ib_size=0.5
+mv_a=0.0
+mv_b=0.0
+mv_l=0.0
+ob_size=0.5
+warp=0.013588
+fVideoEchoZoom=0.999797
+nVideoEchoOrientation=3.0
+fWaveAlpha=0.00158
+fZoomExponent=0.158398
+fShader=1.0
+nMotionVectorsX=64.0
+nMotionVectorsY=48.0
+fWaveParam=0.34
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+wavecode_0_enabled=0.0
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=d = 0;
+per_frame_init_2=n = 0;
+per_frame_init_3=xx = 0;
+per_frame_init_4=z = 0;
+per_frame_init_5=w = 0;
+per_frame_init_6=cz = 0;
+per_frame_init_7=my = 0;
+per_frame_init_8=vx = 0;
+per_frame_init_9=vy = 0;
+per_frame_init_10=pi3 = 0;
+per_frame_init_11=vz = 0;
+per_frame_init_12=mx = 0;
+per_frame_init_13=yy = 0;
+per_frame_init_14=c = 0;
+per_frame_1=pi3=floor(((3.1415*2))/(3));
+per_frame_2=c=0.2;
+per_frame_3=n=(pow(bass, 5)*0.01);
+per_frame_4=ib_r=(0.5+(sin(((n+(c*time))+pi3))*0.5));
+per_frame_5=ib_g=(0.5+(sin(((n+(c*time))-pi3))*0.5));
+per_frame_6=ib_b=(0.5+(sin((n+(c*time)))*0.5));
+per_frame_7=ob_size=(if(abs(above(n, 0.5))>0.00001,0,0.5));
+per_frame_8=wave_r=(1-ib_r);
+per_frame_9=wave_g=(1-ib_g);
+per_frame_10=wave_b=(1-ib_b);
+per_pixel_1=vx=(0.5+(cos((time*0.2))*1));
+per_pixel_2=vy=(0.5+(sin((time*0.2))*1));
+per_pixel_3=vz=0;
+per_pixel_4=z=(0-vz);
+per_pixel_5=x=(x-vx);
+per_pixel_6=y=(y-vy);
+per_pixel_7=d=((time*0.3)-(((treb*treb)*treb)*0.001));
+per_pixel_8=xx=((sin(d)*x)+(cos(d)*y));
+per_pixel_9=yy=((cos(d)*x)-(sin(d)*y));
+per_pixel_10=x=xx;
+per_pixel_11=y=yy;
+per_pixel_12=x=(x+mx);
+per_pixel_13=y=(y+my);
+per_pixel_14=z=(z+vz);
+per_pixel_15=cx=0;
+per_pixel_16=cy=0;
+per_pixel_17=cz=(0.5+(treb*0.0));
+per_pixel_18=vx=0;
+per_pixel_19=vy=0;
+per_pixel_20=vz=0;
+per_pixel_21=zoom=(0.4-(((bass*bass)*bass)*0.001));
+per_pixel_22=w=(floor((1)/(zoom))*(1+sqrt(((sqr((z-cz))+sqr((x-cx)))+sqr((y-cy))))));
+per_pixel_23=dx=(-(x-mx)*w);
+per_pixel_24=dy=(-(y-my)*w);

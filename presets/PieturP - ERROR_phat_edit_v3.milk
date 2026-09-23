@@ -1,0 +1,192 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bWaveThick=1.0
+dx=0.005
+fDecay=0.51
+fGammaAdj=1.0
+fModWaveAlphaEnd=1.3
+fModWaveAlphaStart=0.71
+fWarpScale=1.331
+fWaveScale=0.175616
+fWaveSmoothing=0.63
+ib_a=1.0
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+ib_size=0.0
+mv_a=0.0
+mv_dx=1.0
+nWaveMode=5.0
+ob_a=1.0
+warp=0.01
+wave_b=0.65
+wave_g=0.65
+wave_r=0.65
+wave_x=0.51
+zoom=0.999514
+bAdditiveWaves=1.0
+fVideoEchoAlpha=1.0
+fVideoEchoZoom=1.813357
+fWaveAlpha=4.099998
+nMotionVectorsX=3.84
+nMotionVectorsY=6.600001
+fWaveParam=-0.4
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=1.0
+shapecode_2_sides=100.0
+shapecode_2_textured=1.0
+shapecode_2_x=0.69
+shapecode_2_y=0.66
+shapecode_2_rad=0.204702
+shapecode_2_ang=3.141593
+shapecode_2_tex_ang=6.283185
+shapecode_2_tex_zoom=3.9549
+shapecode_2_g=1.0
+shapecode_2_b=1.0
+shapecode_2_r2=1.0
+shapecode_2_b2=1.0
+shapecode_2_a2=1.0
+shapecode_2_border_r=0.0
+shapecode_2_border_g=0.0
+shapecode_2_border_b=0.0
+shapecode_2_border_a=0.0
+shape_2_per_frame1=tex_ang=(((cos(time)*0.5)+0.5)*6.4);
+shapecode_3_enabled=1.0
+shapecode_3_sides=100.0
+shapecode_3_textured=1.0
+shapecode_3_x=0.69
+shapecode_3_y=0.3
+shapecode_3_rad=0.304773
+shapecode_3_ang=3.141593
+shapecode_3_tex_ang=3.141593
+shapecode_3_tex_zoom=1.615158
+shapecode_3_g=1.0
+shapecode_3_b=1.0
+shapecode_3_r2=1.0
+shapecode_3_b2=1.0
+shapecode_3_a2=1.0
+shapecode_3_border_r=0.0
+shapecode_3_border_g=0.0
+shapecode_3_border_b=0.0
+shapecode_3_border_a=0.0
+shape_3_per_frame1=tex_ang=(((cos(time)*0.5)+0.5)*6.4);
+wavecode_0_enabled=0.0
+wavecode_1_enabled=0.0
+wavecode_2_enabled=1.0
+wavecode_2_scaling=1.612216
+wavecode_2_smoothing=0.0
+wave_2_init1=xp = 0;
+wave_2_init2=b3 = 0;
+wave_2_init3=iz = 0;
+wave_2_init4=d4 = 0;
+wave_2_init5=a3 = 0;
+wave_2_init6=ascii = 0;
+wave_2_init7=yp = 0;
+wave_2_init8=x86 = 0;
+wave_2_init9=t1 = 0;
+wave_2_init10=b4 = 0;
+wave_2_init11=x74 = 0;
+wave_2_init12=x65 = 0;
+wave_2_init13=x87 = 0;
+wave_2_init14=x70 = 0;
+wave_2_init15=x88 = 0;
+wave_2_init16=x83 = 0;
+wave_2_init17=x32 = 0;
+wave_2_init18=x80 = 0;
+wave_2_init19=vg = 0;
+wave_2_init20=x85 = 0;
+wave_2_init21=d1 = 0;
+wave_2_init22=x90 = 0;
+wave_2_init23=t3 = 0;
+wave_2_init24=d3 = 0;
+wave_2_init25=x68 = 0;
+wave_2_init26=d2 = 0;
+wave_2_init27=x64 = 0;
+wave_2_init28=x78 = 0;
+wave_2_init29=x72 = 0;
+wave_2_init30=c2 = 0;
+wave_2_init31=x75 = 0;
+wave_2_init32=ex = 0;
+wave_2_init33=x67 = 0;
+wave_2_init34=x76 = 0;
+wave_2_init35=vol_avg = 0;
+wave_2_init36=x81 = 0;
+wave_2_init37=x82 = 0;
+wave_2_init38=a4 = 0;
+wave_2_init39=i = 0;
+wave_2_init40=x73 = 0;
+wave_2_init41=oldi = 0;
+wave_2_init42=c3 = 0;
+wave_2_init43=x79 = 0;
+wave_2_init44=tm = 0;
+wave_2_init45=a1 = 0;
+wave_2_init46=b2 = 0;
+wave_2_init47=t2 = 0;
+wave_2_init48=vol = 0;
+wave_2_init49=newchar = 0;
+wave_2_init50=c4 = 0;
+wave_2_init51=sp = 0;
+wave_2_init52=x71 = 0;
+wave_2_init53=x66 = 0;
+wave_2_init54=x84 = 0;
+wave_2_init55=x69 = 0;
+wave_2_init56=t4 = 0;
+wave_2_init57=x77 = 0;
+wave_2_init58=a2 = 0;
+wave_2_init59=c1 = 0;
+wave_2_init60=x89 = 0;
+wave_2_init61=b1 = 0;
+wave_2_init62=q8 = 0;
+wave_2_per_frame1=vol=(((bass_att+mid_att)+treb_att)*0.333333);
+wave_2_per_frame2=vol_avg=(0.1*((vol_avg*9)+vol));
+wave_2_per_frame3=vg=(vol_avg*0.1);
+wave_2_per_frame4=t1=(time*0.1);
+wave_2_per_frame5=t2=1;
+wave_2_per_frame6=t3=0;
+wavecode_3_enabled=0.0
+per_frame_init_1=pos = 0;
+per_frame_init_2=q6 = 0;
+per_frame_init_3=q1 = 0;
+per_frame_init_4=q5 = 0;
+per_frame_init_5=char = 0;
+per_frame_init_6=mt = 0;
+per_frame_init_7=posi = 0;
+per_frame_init_8=posb = 0;
+per_frame_init_9=dec = 0;
+per_frame_init_10=q7 = 0;
+per_frame_init_11=q8 = 0;
+per_frame_init_12=q1=0;
+per_frame_1=q1=dec;
+per_frame_2=dec=(dec+0.03);
+per_frame_3=dec=(if(abs(below(dec, 1))>0.00001,dec,1));
+per_frame_4=decay=dec;
+per_frame_5=q1=dec;
+per_frame_6=monitor=dec;
+per_frame_7=warp=0;
+per_frame_8=dx=0;
+per_frame_9=dy=0;
+per_frame_10=sx=1;
+per_frame_11=sy=1;
+per_frame_12=zoom=1;
+per_frame_13=pos=(pos+0.03);
+per_frame_14=pos=(below(pos, 6.5)*pos);
+per_frame_15=posi=((pos)%(10000));
+per_frame_16=posb=pow(2, posi);
+per_frame_17=char=(equal(posi, 1)*68);
+per_frame_18=char=((equal(posi, 2)*81)+char);
+per_frame_19=char=((equal(posi, 3)*81.1)+char);
+per_frame_20=char=((equal(posi, 4)*80)+char);
+per_frame_21=char=((equal(posi, 5)*81)+char);
+per_frame_22=char=((equal(posi, 6)*0)+char);
+per_frame_23=q7=equal(posi, 12);
+per_frame_24=monitor=((char)%(100));
+per_frame_25=q8=char;
+per_frame_26=q6=pos;
+per_frame_27=mt=(mt+pow((mid_att+bass), 3));
+per_frame_28=q5=mt;
+per_frame_29=dx=-0.004;

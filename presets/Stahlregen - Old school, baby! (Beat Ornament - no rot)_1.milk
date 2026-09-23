@@ -1,0 +1,77 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bDarken=1.0
+fDecay=0.985
+fWarpAnimSpeed=0.905
+fWarpScale=0.01
+fWaveScale=0.081
+fWaveSmoothing=0.0
+ib_a=0.03
+ib_b=0.3
+ib_g=0.3
+ib_r=0.3
+ib_size=0.18
+mv_a=0.0
+nWaveMode=7.0
+ob_a=0.25
+ob_size=0.025
+warp=0.01
+wave_y=1.0
+zoom=0.96098
+fVideoEchoAlpha=0.5
+fVideoEchoZoom=1.007
+nVideoEchoOrientation=1.0
+fWaveAlpha=1.006
+shapecode_0_enabled=1.0
+shapecode_0_sides=100.0
+shapecode_0_textured=1.0
+shapecode_0_rad=0.01
+shapecode_0_ang=3.1416
+shapecode_0_tex_ang=2.38751
+shapecode_0_tex_zoom=0.85274
+shapecode_0_r=0.9
+shapecode_0_g=0.9
+shapecode_0_b=0.9
+shapecode_0_a=0.9
+shapecode_0_r2=0.9
+shapecode_0_g2=0.9
+shapecode_0_b2=0.9
+shapecode_0_a2=0.9
+shapecode_0_border_r=0.0
+shapecode_0_border_g=0.0
+shapecode_0_border_b=0.0
+shapecode_0_border_a=0.0
+shape_0_per_frame1=rad=(0.65+(0.1*bass_att));
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+wavecode_0_enabled=0.0
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=vol = 0;
+per_frame_init_2=beat = 0;
+per_frame_init_3=res = 0;
+per_frame_init_4=diff = 0;
+per_frame_init_5=x = 0;
+per_frame_init_6=y = 0;
+per_frame_1=wave_r=(0.5+(0.5*sin((time*1.12))));
+per_frame_2=wave_g=(0.5+(0.5*sin((time*1.22))));
+per_frame_3=wave_b=((0.5*0.5)*sin((time*1.32)));
+per_frame_4=ib_r=wave_b;
+per_frame_5=ib_g=wave_r;
+per_frame_6=ib_b=wave_g;
+per_frame_7=vol=(((bass*8)+(mid*4))+(treb*2));
+per_frame_8=vol=(vol*above(vol, 17));
+per_frame_9=monitor=vol;
+per_frame_10=beat=above(vol, res);
+per_frame_11=diff=(((1-beat)*diff)+(beat*(vol-res)));
+per_frame_12=res=((beat*(vol+(2*diff)))+((1-beat)*(res-floor(((((diff*0.04)+0.12)*60))/(fps)))));
+per_frame_13=res=max(0, res);
+per_frame_14=monitor=res;
+per_frame_15=x=(if(abs(beat)>0.00001,((floor(int(rand(60)))*0.01)+0.2),x));
+per_frame_16=y=(if(abs(beat)>0.00001,((floor(int(rand(60)))*0.01)+0.2),y));
+per_frame_17=wave_mystery=(if(abs(above(x, y))>0.00001,0,-1));

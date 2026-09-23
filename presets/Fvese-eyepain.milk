@@ -1,0 +1,65 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bBrighten=1.0
+bDarken=1.0
+bModWaveAlphaByVolume=1.0
+bSolarize=1.0
+fDecay=0.925
+fGammaAdj=1.0
+fModWaveAlphaEnd=1.3
+fModWaveAlphaStart=0.71
+fWarpAnimSpeed=4.0
+fWarpScale=1.331
+fWaveScale=0.552311
+fWaveSmoothing=0.63
+ib_a=1.0
+ib_b=0.0
+ib_r=0.0
+ib_size=0.005
+mv_a=0.0
+mv_l=5.0
+nWaveMode=5.0
+ob_a=1.0
+ob_size=0.0
+sx=1.151247
+sy=0.999999
+warp=1.000737
+wave_b=0.65
+wave_g=0.65
+wave_r=0.65
+zoom=1.000722
+bAdditiveWaves=1.0
+fVideoEchoAlpha=0.5
+fVideoEchoZoom=1.006595
+nVideoEchoOrientation=1.0
+fWaveAlpha=4.099998
+fZoomExponent=0.999999
+nMotionVectorsX=6.4
+nMotionVectorsY=9.599999
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=beatrate = 0;
+per_frame_init_2=volume = 0;
+per_frame_init_3=att = 0;
+per_frame_init_4=rad = 0;
+per_frame_1=volume=((bass+mid)+att);
+per_frame_2=beatrate=(if(abs(equal(beatrate, 0))>0.00001,1,(if(abs(below(volume, 0.01))>0.00001,1,beatrate))));
+per_frame_3=wave_r=(wave_r+(0.350*((0.60*sin((0.980*time)))+(0.40*sin((1.047*time))))));
+per_frame_4=wave_g=(wave_g+(0.350*((0.60*sin((0.835*time)))+(0.40*sin((1.081*time))))));
+per_frame_5=wave_b=(wave_b+(0.350*((0.60*sin((0.814*time)))+(0.40*sin((1.011*time))))));
+per_frame_6=ib_r=bass;
+per_frame_7=ib_g=mid;
+per_frame_8=ib_b=treb;
+per_frame_9=decay=(decay-(0.05*((frame)%(10))));
+per_frame_10=rot=(0.3*tan(((0.1*sin(((pow(rad, 4)*20)+time)))+(sin((time*0.222))*0.1))));
+per_pixel_1=zoom=(1.1+(tan(4)*(0.2*cos((time-(ang*4))))));
+per_pixel_2=zoom=(zoom-((beatrate-0.4)*0.18));
+per_pixel_3=rot=(0.02*sin(((ang*5)+floor((2)/(3)))));
+per_pixel_4=dx=((x*2)-1);
+per_pixel_5=dy=((y*2)-1);

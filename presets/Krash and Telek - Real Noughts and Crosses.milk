@@ -1,0 +1,150 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bWaveThick=1.0
+fDecay=1.0
+fGammaAdj=1.0
+fModWaveAlphaEnd=2.0
+fModWaveAlphaStart=2.0
+fWaveScale=0.17573
+fWaveSmoothing=0.63
+ib_size=0.26
+mv_a=0.0
+mv_b=0.113328
+mv_dx=0.487946
+mv_dy=-0.126635
+mv_g=0.504464
+mv_l=2.261482
+mv_r=0.560473
+ob_size=0.005
+warp=0.001
+wave_b=0.65
+wave_g=0.65
+wave_r=0.65
+bAdditiveWaves=1.0
+fVideoEchoZoom=1.0
+fWaveAlpha=7.523887
+nMotionVectorsX=51.470699
+nMotionVectorsY=9.190255
+fWaveParam=1.0
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=temp = 0;
+per_frame_init_2=turn3 = 0;
+per_frame_init_3=tick = 0;
+per_frame_init_4=turn5 = 0;
+per_frame_init_5=turn4 = 0;
+per_frame_init_6=inx = 0;
+per_frame_init_7=posx = 0;
+per_frame_init_8=turn9 = 0;
+per_frame_init_9=q1 = 0;
+per_frame_init_10=cross = 0;
+per_frame_init_11=turn8 = 0;
+per_frame_init_12=oldcount = 0;
+per_frame_init_13=turn1 = 0;
+per_frame_init_14=oldstate = 0;
+per_frame_init_15=turn6 = 0;
+per_frame_init_16=count = 0;
+per_frame_init_17=mode = 0;
+per_frame_init_18=posy = 0;
+per_frame_init_19=line = 0;
+per_frame_init_20=last = 0;
+per_frame_init_21=delay = 0;
+per_frame_init_22=turn2 = 0;
+per_frame_init_23=wave_size = 0;
+per_frame_init_24=state = 0;
+per_frame_init_25=turn7 = 0;
+per_frame_init_26=flipped = 0;
+per_frame_init_27=nought = 0;
+per_frame_init_28=dist = 0;
+per_frame_init_29=temp2 = 0;
+per_frame_init_30=q8 = 0;
+per_frame_init_31=nought=0;
+per_frame_init_32=cross=1;
+per_frame_init_33=line=2;
+per_frame_init_34=state=0;
+per_frame_init_35=last=time;
+per_frame_init_36=delay=1;
+per_frame_1=flipped=(if(abs(equal(state, 0))>0.00001,int(rand(2)),flipped));
+per_frame_2=turn1=(if(abs(equal(state, 0))>0.00001,(if(abs(below(int(rand(3)), 1))>0.00001,1,(int(rand(2))+4))),turn1));
+per_frame_3=turn2=(if(abs(equal(state, 0))>0.00001,(if(abs(equal(turn1, 1))>0.00001,5,1)),turn2));
+per_frame_4=temp=(if(abs(equal((turn1+turn2), 6))>0.00001,int(rand(4)),int(rand(7))));
+per_frame_5=turn3=(if(abs(equal(state, 0))>0.00001,(if(abs(equal((turn1+turn2), 6))>0.00001,(if(abs(above(temp, 0))>0.00001,(temp+6),(temp+4))),(if(abs(above(temp, 1))>0.00001,(temp+3),(temp+2))))),turn3));
+per_frame_6=temp=(turn1+turn3);
+per_frame_7=temp=(if(abs(equal(temp, 5))>0.00001,7,(if(abs(equal(temp, 8))>0.00001,4,(if(abs(equal(temp, 9))>0.00001,6,(if(abs(equal(temp, 10))>0.00001,(if(abs(equal(turn3, 6))>0.00001,5,8)),(if(abs(equal(temp, 12))>0.00001,3,(if(abs(equal(temp, 7))>0.00001,5,0))))))))))));
+per_frame_8=turn4=(if(abs(equal(state, 0))>0.00001,(if(abs(temp)>0.00001,temp,(if(abs(equal(turn3, 2))>0.00001,(if(abs(equal(turn1, 4))>0.00001,5,8)),2)))),turn4));
+per_frame_9=temp=(turn1+turn3);
+per_frame_10=temp2=((temp+turn2)+turn4);
+per_frame_11=turn5=(if(abs(equal(state, 0))>0.00001,(if(abs(equal(temp2, 20))>0.00001,4,(if(abs(equal(temp2, 23))>0.00001,2,(if(abs(equal(temp2, 16))>0.00001,(if(abs(equal(temp, 9))>0.00001,8,(if(abs(equal(temp, 10))>0.00001,9,(if(abs(equal(temp, 13))>0.00001,(if(abs(equal(turn1, 5))>0.00001,3,3)),(if(abs(equal(turn1, 5))>0.00001,2,2)))))))),(if(abs(equal(temp2, 14))>0.00001,3,(if(abs(equal(temp2, 12))>0.00001,9,(if(abs(equal(temp2, 17))>0.00001,(if(abs(equal(temp, 8))>0.00001,6,(if(abs(equal(temp, 14))>0.00001,4,3)))),9)))))))))))),turn5));
+per_frame_12=turn6=(if(abs(equal(state, 0))>0.00001,(if(abs(equal(temp2, 20))>0.00001,7,(if(abs(equal(temp2, 23))>0.00001,3,(if(abs(equal(temp2, 16))>0.00001,(if(abs(equal(temp, 9))>0.00001,2,(if(abs(equal(temp, 10))>0.00001,3,(if(abs(equal(temp, 13))>0.00001,(if(abs(equal(turn1, 5))>0.00001,7,6)),(if(abs(equal(turn1, 5))>0.00001,8,5)))))))),(if(abs(equal(temp2, 14))>0.00001,5,(if(abs(equal(temp2, 12))>0.00001,7,(if(abs(equal(temp2, 17))>0.00001,(if(abs(equal(temp, 8))>0.00001,8,(if(abs(equal(temp, 14))>0.00001,6,2)))),6)))))))))))),turn6));
+per_frame_13=turn7=(if(abs(equal(state, 0))>0.00001,(if(abs(equal(temp2, 20))>0.00001,3,(if(abs(equal(temp2, 23))>0.00001,7,(if(abs(equal(temp2, 16))>0.00001,(if(abs(equal(temp, 9))>0.00001,3,(if(abs(equal(temp, 10))>0.00001,2,(if(abs(equal(temp, 13))>0.00001,(if(abs(equal(turn1, 5))>0.00001,4,8)),(if(abs(equal(turn1, 5))>0.00001,4,9)))))))),(if(abs(equal(temp2, 14))>0.00001,8,(if(abs(equal(temp2, 12))>0.00001,3,(if(abs(equal(temp2, 17))>0.00001,(if(abs(equal(temp, 8))>0.00001,2,(if(abs(equal(temp, 14))>0.00001,3,8)))),7)))))))))))),turn7));
+per_frame_14=turn8=(if(abs(equal(state, 0))>0.00001,(if(abs(equal(temp2, 20))>0.00001,2,(if(abs(equal(temp2, 23))>0.00001,4,(if(abs(equal(temp2, 16))>0.00001,(if(abs(equal(temp, 9))>0.00001,7,(if(abs(equal(temp, 10))>0.00001,7,(if(abs(equal(temp, 13))>0.00001,(if(abs(equal(turn1, 5))>0.00001,6,7)),(if(abs(equal(turn1, 5))>0.00001,6,7)))))))),(if(abs(equal(temp2, 14))>0.00001,9,(if(abs(equal(temp2, 12))>0.00001,6,(if(abs(equal(temp2, 17))>0.00001,(if(abs(equal(temp, 8))>0.00001,3,(if(abs(equal(temp, 14))>0.00001,7,9)))),8)))))))))))),turn8));
+per_frame_15=turn9=(if(abs(equal(state, 0))>0.00001,(if(abs(equal(temp2, 20))>0.00001,9,(if(abs(equal(temp2, 23))>0.00001,6,(if(abs(equal(temp2, 16))>0.00001,(if(abs(equal(temp, 9))>0.00001,9,(if(abs(equal(temp, 10))>0.00001,11,(if(abs(equal(temp, 13))>0.00001,(if(abs(equal(turn1, 5))>0.00001,9,5)),(if(abs(equal(turn1, 5))>0.00001,9,10)))))))),(if(abs(equal(temp2, 14))>0.00001,10,(if(abs(equal(temp2, 12))>0.00001,8,(if(abs(equal(temp2, 17))>0.00001,(if(abs(equal(temp, 8))>0.00001,9,(if(abs(equal(temp, 14))>0.00001,8,6)))),2)))))))))))),turn9));
+per_frame_16=turn1=(if(abs(equal(state, 0))>0.00001,(if(abs(flipped)>0.00001,(10-turn1),turn1)),turn1));
+per_frame_17=turn2=(if(abs(equal(state, 0))>0.00001,(if(abs(flipped)>0.00001,(10-turn2),turn2)),turn2));
+per_frame_18=turn3=(if(abs(equal(state, 0))>0.00001,(if(abs(flipped)>0.00001,(10-turn3),turn3)),turn3));
+per_frame_19=turn4=(if(abs(equal(state, 0))>0.00001,(if(abs(flipped)>0.00001,(10-turn4),turn4)),turn4));
+per_frame_20=turn5=(if(abs(equal(state, 0))>0.00001,(if(abs(flipped)>0.00001,(10-turn5),turn5)),turn5));
+per_frame_21=turn6=(if(abs(equal(state, 0))>0.00001,(if(abs(flipped)>0.00001,(10-turn6),turn6)),turn6));
+per_frame_22=turn7=(if(abs(equal(state, 0))>0.00001,(if(abs(flipped)>0.00001,(10-turn7),turn7)),turn7));
+per_frame_23=turn8=(if(abs(equal(state, 0))>0.00001,(if(abs(flipped)>0.00001,(10-turn8),turn8)),turn8));
+per_frame_24=turn9=(if(abs(equal(state, 0))>0.00001,(if(abs(flipped)>0.00001,(if(abs(below(turn9, 10))>0.00001,(10-turn9),turn9)),turn9)),turn9));
+per_frame_25=oldcount=count;
+per_frame_26=count=(if(abs(equal(state, 0))>0.00001,0,count));
+per_frame_27=count=(count+above((time-last), delay));
+per_frame_28=last=(if(abs(equal(count, oldcount))>0.00001,last,time));
+per_frame_29=tick=floor(((time-last))/(delay));
+per_frame_30=oldstate=state;
+per_frame_31=decay=(1-equal(state, 0));
+per_frame_32=state=(if(abs(equal(state, 0))>0.00001,1,state));
+per_frame_33=state=(if(abs((equal(state, 2)*equal(count, 9)))>0.00001,0,state));
+per_frame_34=state=(if(abs((equal(state, 1)*equal(count, 1)))>0.00001,1.5,state));
+per_frame_35=count=(if(abs(equal(state, 1.5))>0.00001,0,count));
+per_frame_36=last=(if(abs(equal(state, 1.5))>0.00001,time,last));
+per_frame_37=oldcount=(if(abs(equal(state, 1.5))>0.00001,-1,oldcount));
+per_frame_38=state=(if(abs(equal(state, 1.5))>0.00001,2,state));
+per_frame_39=posx=(if(abs(equal(count, 0))>0.00001,(((turn1-1))%(3)),posx));
+per_frame_40=posy=(if(abs(equal(count, 0))>0.00001,floor(floor(((turn1-0.5))/(3))),posy));
+per_frame_41=posx=(if(abs(equal(count, 1))>0.00001,(((turn2-1))%(3)),posx));
+per_frame_42=posy=(if(abs(equal(count, 1))>0.00001,floor(floor(((turn2-0.5))/(3))),posy));
+per_frame_43=posx=(if(abs(equal(count, 2))>0.00001,(((turn3-1))%(3)),posx));
+per_frame_44=posy=(if(abs(equal(count, 2))>0.00001,floor(floor(((turn3-0.5))/(3))),posy));
+per_frame_45=posx=(if(abs(equal(count, 3))>0.00001,(((turn4-1))%(3)),posx));
+per_frame_46=posy=(if(abs(equal(count, 3))>0.00001,floor(floor(((turn4-0.5))/(3))),posy));
+per_frame_47=posx=(if(abs(equal(count, 4))>0.00001,(((turn5-1))%(3)),posx));
+per_frame_48=posy=(if(abs(equal(count, 4))>0.00001,floor(floor(((turn5-0.5))/(3))),posy));
+per_frame_49=posx=(if(abs(equal(count, 5))>0.00001,(((turn6-1))%(3)),posx));
+per_frame_50=posy=(if(abs(equal(count, 5))>0.00001,floor(floor(((turn6-0.5))/(3))),posy));
+per_frame_51=posx=(if(abs(equal(count, 6))>0.00001,(((turn7-1))%(3)),posx));
+per_frame_52=posy=(if(abs(equal(count, 6))>0.00001,floor(floor(((turn7-0.5))/(3))),posy));
+per_frame_53=posx=(if(abs(equal(count, 7))>0.00001,(((turn8-1))%(3)),posx));
+per_frame_54=posy=(if(abs(equal(count, 7))>0.00001,floor(floor(((turn8-0.5))/(3))),posy));
+per_frame_55=posx=(if(abs(equal(count, 8))>0.00001,(((turn9-1))%(3)),posx));
+per_frame_56=posy=(if(abs(equal(count, 8))>0.00001,floor(floor(((turn9-0.5))/(3))),posy));
+per_frame_57=monitor=((((turn1+(turn2*0.1))+(turn3*0.01))+(turn4*0.001))+(flipped*0.0001));
+per_frame_58=cx=floor((((posx*2)+1))/(6));
+per_frame_59=cy=floor((((posy*2)+1))/(6));
+per_frame_60=q1=(((tick*4))%(4));
+per_frame_61=mode=(if(abs(equal(state, 0))>0.00001,-1,(if(abs(equal(state, 1))>0.00001,line,(if(abs(equal(count, oldcount))>0.00001,mode,(((mode+1))%(2))))))));
+per_frame_62=wave_x=(if(abs(equal(mode, nought))>0.00001,cx,(if(abs(equal(mode, cross))>0.00001,((cx+(((tick*2)-above(tick, 0.5))*0.3))-0.15),(if(abs(equal(mode, line))>0.00001,0.5,0))))));
+per_frame_63=wave_y=(if(abs(equal(mode, nought))>0.00001,(1-cy),(if(abs(equal(mode, cross))>0.00001,(((1-cy)+(((tick*2)-((above(tick, 0.5)*(tick-0.5))*4))*0.3))-0.15),0.57))));
+per_frame_64=wave_mystery=(if(abs(equal(mode, nought))>0.00001,(-0.2+(sin((time*20))*0.05)),(if(abs(equal(mode, cross))>0.00001,-0.45,(if(abs(equal(mode, line))>0.00001,(((q1+1))%(2)),0.5))))));
+per_frame_65=wave_mode=(if(abs(equal(mode, nought))>0.00001,0,(if(abs(equal(mode, cross))>0.00001,8,7))));
+per_frame_66=wave_size=(if(abs(equal(mode, nought))>0.00001,0.43,(if(abs(equal(mode, cross))>0.00001,0,0))));
+per_frame_67=wave_r=(if(abs(equal(mode, nought))>0.00001,1,(if(abs(equal(mode, cross))>0.00001,0,0))));
+per_frame_68=wave_g=(if(abs(equal(mode, nought))>0.00001,0,(if(abs(equal(mode, cross))>0.00001,0,1))));
+per_frame_69=wave_b=(if(abs(equal(mode, nought))>0.00001,0,(if(abs(equal(mode, cross))>0.00001,1,0))));
+per_frame_70=q8=mode;
+per_pixel_1=nought=0;
+per_pixel_2=cross=1;
+per_pixel_3=line=2;
+per_pixel_4=dist=sqrt((sqr((cx-x))+sqr((cy-y))));
+per_pixel_5=inx=(below(abs(((x-cx)-(y-cy))), 0.041)+below(abs(((x-cx)+(y-cy))), 0.041));
+per_pixel_6=rot=(if(abs(equal(q8, nought))>0.00001,(if(abs(below(abs((dist-0.12)), 0.02))>0.00001,(0.1*bass),0)),0));
+per_pixel_7=dx=(if(abs(equal(q8, nought))>0.00001,0,(if(abs(equal(q8, cross))>0.00001,((((below(dist, 0.15)*inx)*sign((x-cx)))*0.02)*bass),(if(abs(equal(q8, line))>0.00001,(if(abs((equal(((q1)%(2)), 1)*below(abs((y-(((q1*0.5)+0.5)*0.333))), 0.01)))>0.00001,0,0)),0))))));
+per_pixel_8=dy=(if(abs(equal(q8, nought))>0.00001,0,(if(abs(equal(q8, cross))>0.00001,((((below(dist, 0.15)*inx)*sign((y-cy)))*0.02)*bass),(if(abs(equal(q8, line))>0.00001,(if(abs((equal(((q1)%(2)), 0)*below(abs((x-(((q1*0.5)+1)*0.333))), 0.01)))>0.00001,0,0)),0))))));

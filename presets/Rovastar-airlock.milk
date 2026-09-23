@@ -1,0 +1,49 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+fDecay=0.92
+fGammaAdj=1.7
+fWarpAnimSpeed=0.01
+fWarpScale=0.01
+fWaveScale=0.763004
+fWaveSmoothing=0.0
+mv_a=0.0
+nWaveMode=6.0
+ob_a=0.1
+ob_size=0.0055
+warp=0.01
+wave_b=0.3
+wave_g=0.5
+wave_r=0.8
+wave_x=0.0
+zoom=1.025
+fVideoEchoZoom=0.999609
+fWaveAlpha=3.3
+fZoomExponent=2.1
+fWaveParam=1.0
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=q1 = 0;
+per_frame_init_2=q2 = 0;
+per_frame_init_3=test1 = 0;
+per_frame_init_4=test2 = 0;
+per_frame_init_5=test3 = 0;
+per_frame_1=wave_r=((0.5*sin((time*0.91)))+0.5);
+per_frame_2=wave_g=abs(cos(pow((time*1.22), 3)));
+per_frame_3=q1=(rot+(0.010*((0.60*sin((0.381*time)))+(0.40*sin((0.579*time))))));
+per_frame_4=q2=(decay-(0.01*equal(((frame)%(6)), 0)));
+per_frame_5=decay=q2;
+per_frame_6=test1=(if(abs(above((bass+bass_att), 2.1))>0.00001,0.99,0.01));
+per_frame_7=test2=(if(abs(below((treb+treb_att), 2.1))>0.00001,1,0));
+per_frame_8=wave_x=test1;
+per_frame_9=wave_mystery=test2;
+per_frame_10=test3=(if(abs(above((mid+(2*mid_att)), 3.3))>0.00001,1,0));
+per_frame_11=ob_b=(if(abs(above(((test1+test2)+test3), 2.9))>0.00001,1,0));
+per_frame_12=ob_r=(if(abs(below(((test1+test2)+test3), 0.9))>0.00001,1,0));
+per_pixel_1=rot=((0.5*q1)+((0.11*cos(((time*-3.3)+(rad*11))))*(q2-rad)));
+per_pixel_2=zoom=(0.985+(0.1*log(max((floor((sin((time*0.94)))/(10))+rad), rad))));

@@ -1,0 +1,32 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bBrighten=1.0
+fDecay=0.9
+fGammaAdj=1.0
+fWaveScale=0.01
+fWaveSmoothing=0.54
+mv_a=0.0
+sy=0.999998
+warp=0.01
+wave_b=0.0
+wave_g=0.0
+wave_x=0.0
+wave_y=0.0
+fVideoEchoZoom=0.999608
+fWaveAlpha=100.0
+fWaveParam=-0.5
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_1=decay=(if(abs(above(floor((bass_att)/(bass)), 1))>0.00001,1,0.5));
+per_frame_2=wave_x=min((bass*0.5), 0.9);
+per_frame_3=wave_y=min((mid*0.5), 0.9);
+per_frame_4=wave_r=(treb*1.2);
+per_frame_5=wave_g=(bass*0.6);
+per_frame_6=wave_b=(mid*0.9);
+per_frame_7=wave_mystery=(-0.5+(bass*0.1));

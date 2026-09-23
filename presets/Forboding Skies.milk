@@ -1,0 +1,32 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+fWaveScale=0.665002
+fWaveSmoothing=0.9
+nWaveMode=4.0
+wave_b=0.5
+wave_g=0.5
+wave_r=0.5
+bMotionVectorsOn=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=cpx = 0;
+per_frame_init_2=cpy = 0;
+per_frame_1=warp=0;
+per_frame_2=wave_r=(wave_r+(0.211*sin((time*0.444))));
+per_frame_3=wave_g=(wave_g+(0.211*sin((time*0.222))));
+per_frame_4=wave_b=(wave_b+(0.211*sin((time*0.333))));
+per_frame_5=wave_mystery=(wave_mystery+(0.2*sin(time)));
+per_frame_6=wave_y=(wave_y+(0.25*sin((time*0.555))));
+per_frame_7=dx=(dx-0.001);
+per_frame_8=dy=(dy-0.001);
+per_pixel_1=cpx=0.5;
+per_pixel_2=cpy=0.5;
+per_pixel_3=cpx=(cpx+(0.5*sin(time)));
+per_pixel_4=cpy=(cpy+(0.5*cos(time)));
+per_pixel_5=dx=(((dx+((tan((x-cpx))*0.04)*pow(rad, 3)))-(x-cpx))+(y-cpy));
+per_pixel_6=dy=(dy+((tan((y-cpy))*0.04)*pow(rad, 3)));

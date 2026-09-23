@@ -1,0 +1,90 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+fGammaAdj=6.099996
+fWaveScale=2e-06
+nWaveMode=2.0
+rot=1.08
+zoom=0.600001
+fVideoEchoZoom=0.284092
+nMotionVectorsX=0.0
+nMotionVectorsY=0.0
+fWaveParam=0.26
+shapecode_0_enabled=1.0
+shapecode_0_textured=1.0
+shapecode_0_x=0.75
+shapecode_0_y=0.26
+shapecode_0_rad=0.995946
+shape_0_init1=q1 = 0;
+shape_0_init2=bsides = 0;
+shape_0_init3=ang=0;
+shape_0_per_frame1=ang=q1;
+shape_0_per_frame2=bsides=(3+floor((6*bass)));
+shape_0_per_frame3=x=0.25;
+shape_0_per_frame4=y=0.25;
+shapecode_1_enabled=1.0
+shapecode_1_textured=1.0
+shapecode_1_x=0.25
+shapecode_1_y=0.25
+shapecode_1_rad=0.995947
+shape_1_init1=q3 = 0;
+shape_1_init2=bsides = 0;
+shape_1_init3=ang=0;
+shape_1_per_frame1=ang=q3;
+shape_1_per_frame2=bsides=(3+floor((6*bass)));
+shape_1_per_frame3=x=0.25;
+shape_1_per_frame4=y=0.75;
+shapecode_2_enabled=1.0
+shapecode_2_textured=1.0
+shapecode_2_x=0.25
+shapecode_2_y=0.75
+shapecode_2_rad=0.995946
+shapecode_2_tex_zoom=2.30672
+shape_2_init1=dang = 0;
+shape_2_init2=q1 = 0;
+shape_2_init3=bsides = 0;
+shape_2_init4=q2 = 0;
+shape_2_init5=ang=0;
+shape_2_per_frame1=dang=(ang+q1);
+shape_2_per_frame2=ang=q1;
+shape_2_per_frame3=bsides=(3+floor((6*q2)));
+shape_2_per_frame4=x=0.75;
+shape_2_per_frame5=y=0.75;
+shapecode_3_enabled=1.0
+shapecode_3_textured=1.0
+shapecode_3_x=0.75
+shapecode_3_y=0.75
+shapecode_3_rad=0.995947
+shape_3_init1=q3 = 0;
+shape_3_init2=dang = 0;
+shape_3_init3=q1 = 0;
+shape_3_init4=bsides = 0;
+shape_3_init5=q2 = 0;
+shape_3_init6=ang=0;
+shape_3_per_frame1=ang=q3;
+shape_3_per_frame2=dang=(ang-q1);
+shape_3_per_frame3=bsides=(3+floor((6*q2)));
+shape_3_per_frame4=x=0.75;
+shape_3_per_frame5=y=0.25;
+wavecode_0_enabled=0.0
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=my_q1 = 0;
+per_frame_init_2=q1 = 0;
+per_frame_init_3=q2 = 0;
+per_frame_init_4=q3 = 0;
+per_frame_init_5=my_zoom = 0;
+per_frame_init_6=bzoom = 0;
+per_frame_init_7=zoom=0.4;
+per_frame_1=my_q1=(my_q1+(0.07*bass));
+per_frame_2=q1=my_q1;
+per_frame_3=q2=bass;
+per_frame_4=q3=(6.283-q1);
+per_frame_5=monitor=treb;
+per_frame_6=my_zoom=(my_zoom+(0.001*bass));
+per_frame_7=zoom=my_zoom;
+per_frame_8=bzoom=(0.5+(0.3*bass));
+per_frame_9=monitor=zoom;

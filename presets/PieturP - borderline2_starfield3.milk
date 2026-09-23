@@ -1,0 +1,84 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bWaveDots=1.0
+bWaveThick=1.0
+fDecay=0.9
+fGammaAdj=2.05
+fModWaveAlphaEnd=1.4
+fWarpAnimSpeed=1.001828
+fWarpScale=1.008151
+fWaveScale=62.02578
+fWaveSmoothing=0.9
+ib_a=1.0
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+ib_size=0.12
+mv_a=0.0
+mv_l=0.0
+nWaveMode=2.0
+ob_a=0.5
+ob_g=0.03
+ob_r=1.0
+ob_size=0.185
+sx=1.147367
+sy=1.163092
+warp=0.01
+wave_b=0.5
+wave_g=0.5
+wave_r=0.5
+zoom=1.002331
+bAdditiveWaves=1.0
+fVideoEchoAlpha=0.4
+fVideoEchoZoom=0.682841
+fWaveAlpha=33.807667
+fZoomExponent=1.001828
+nMotionVectorsX=6.4
+nMotionVectorsY=4.8
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=btreb = 0;
+per_frame_init_2=dbass = 0;
+per_frame_init_3=cbass = 0;
+per_frame_init_4=ntreb = 0;
+per_frame_init_5=ctreb = 0;
+per_frame_init_6=dtreb = 0;
+per_frame_init_7=t = 0;
+per_frame_init_8=ztreb = 0;
+per_frame_init_9=bbass = 0;
+per_frame_init_10=nbass = 0;
+per_frame_init_11=ytreb = 0;
+per_frame_1=cx=((bass_att*0.7)-0.5);
+per_frame_2=cy=(treb_att*0.7);
+per_frame_3=ntreb=dtreb;
+per_frame_4=dtreb=ctreb;
+per_frame_5=ctreb=btreb;
+per_frame_6=btreb=ztreb;
+per_frame_7=ztreb=ytreb;
+per_frame_8=ytreb=treb;
+per_frame_9=nbass=dbass;
+per_frame_10=dbass=cbass;
+per_frame_11=cbass=bbass;
+per_frame_12=bbass=bass;
+per_frame_13=ob_size=((above(bass, 1)*ntreb)*0.14);
+per_frame_14=ib_size=((above(treb, 1)*nbass)*0.15);
+per_frame_15=ob_r=(sin((time*0.3))*0.5);
+per_frame_16=ob_g=(sin((time*0.7))*0.5);
+per_frame_17=ob_b=(sin((time*0.9))*0.5);
+per_frame_18=t=(t+0.001);
+per_frame_19=t=(t*below(t, 1));
+per_frame_20=monitor=t;
+per_frame_21=decay=1;
+per_frame_22=wave_r=bass;
+per_frame_23=wave_g=treb;
+per_frame_24=wave_b=mid;
+per_frame_25=dx=(above(t, 0.5)*1.002);
+per_frame_26=dy=(above(t, 0.7)*1.002);
+per_frame_27=sx=1;
+per_frame_28=sy=1;
+per_pixel_1=rot=(rot+0.001);

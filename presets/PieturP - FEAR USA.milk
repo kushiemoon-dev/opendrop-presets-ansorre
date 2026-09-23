@@ -1,0 +1,193 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bWaveThick=1.0
+dx=0.005
+fDecay=0.51
+fGammaAdj=1.0
+fModWaveAlphaEnd=1.3
+fModWaveAlphaStart=0.71
+fWarpScale=1.331
+fWaveScale=0.01
+fWaveSmoothing=0.63
+ib_a=1.0
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+ib_size=0.0
+mv_a=0.0
+mv_l=5.0
+nWaveMode=6.0
+ob_a=1.0
+ob_size=0.1
+warp=0.01
+wave_b=0.65
+wave_g=0.65
+wave_r=0.65
+wave_x=0.01
+zoom=0.999514
+bAdditiveWaves=1.0
+fVideoEchoAlpha=0.4
+fVideoEchoZoom=1.00815
+fWaveAlpha=4.099998
+nMotionVectorsX=12.799999
+nMotionVectorsY=48.0
+fWaveParam=-1.0
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=1.0
+shapecode_2_textured=1.0
+shapecode_2_x=0.14
+shapecode_2_rad=0.123235
+shapecode_2_ang=3.141593
+shapecode_2_tex_ang=3.141594
+shapecode_2_tex_zoom=0.489388
+shapecode_2_g=1.0
+shapecode_2_b=1.0
+shapecode_2_r2=1.0
+shapecode_2_b2=1.0
+shapecode_2_a2=1.0
+shapecode_2_border_r=0.0
+shapecode_2_border_g=0.0
+shapecode_2_border_b=0.0
+shapecode_2_border_a=0.0
+shape_2_init1=p = 0;
+shape_2_init2=slowp = 0;
+shape_2_init3=my = 0;
+shape_2_init4=v = 0;
+shape_2_per_frame1=p=(p+0.314);
+shape_2_per_frame2=slowp=(slowp+0.00628);
+shape_2_per_frame3=p=(below(p, 6.283)*p);
+shape_2_per_frame4=slowp=(below(slowp, 6.283)*slowp);
+shape_2_per_frame5=my=(my+(((mid*mid)*mid)*0.02));
+shape_2_per_frame6=y=0.88;
+shape_2_per_frame7=v=(v+1);
+shape_2_per_frame8=v=((v)%(4));
+shape_2_per_frame9=x=(v*0.25);
+shapecode_3_enabled=1.0
+shapecode_3_y=0.0
+shapecode_3_rad=1.809267
+shapecode_3_ang=3.141593
+shapecode_3_tex_ang=3.141593
+shapecode_3_tex_zoom=0.889069
+shapecode_3_r=0.0
+shapecode_3_a=0.0
+shapecode_3_g2=0.0
+shapecode_3_border_r=0.0
+shapecode_3_border_g=0.0
+shapecode_3_border_b=0.0
+shapecode_3_border_a=1.0
+shape_3_per_frame1=y=-0.115;
+wavecode_0_enabled=0.0
+wavecode_1_enabled=1.0
+wavecode_1_scaling=10.14108
+wavecode_1_smoothing=0.0
+wavecode_1_r=0.0
+wavecode_1_g=0.0
+wavecode_1_b=0.0
+wavecode_2_enabled=1.0
+wavecode_2_scaling=0.999996
+wavecode_2_smoothing=0.0
+wave_2_init1=xp = 0;
+wave_2_init2=b3 = 0;
+wave_2_init3=s = 0;
+wave_2_init4=d4 = 0;
+wave_2_init5=a3 = 0;
+wave_2_init6=ascii = 0;
+wave_2_init7=yp = 0;
+wave_2_init8=x86 = 0;
+wave_2_init9=t1 = 0;
+wave_2_init10=b4 = 0;
+wave_2_init11=x31 = 0;
+wave_2_init12=x74 = 0;
+wave_2_init13=x65 = 0;
+wave_2_init14=x87 = 0;
+wave_2_init15=x70 = 0;
+wave_2_init16=gg = 0;
+wave_2_init17=x88 = 0;
+wave_2_init18=x83 = 0;
+wave_2_init19=x80 = 0;
+wave_2_init20=vg = 0;
+wave_2_init21=x85 = 0;
+wave_2_init22=d1 = 0;
+wave_2_init23=t3 = 0;
+wave_2_init24=d3 = 0;
+wave_2_init25=x68 = 0;
+wave_2_init26=zf = 0;
+wave_2_init27=d2 = 0;
+wave_2_init28=x64 = 0;
+wave_2_init29=zq = 0;
+wave_2_init30=x78 = 0;
+wave_2_init31=x72 = 0;
+wave_2_init32=c2 = 0;
+wave_2_init33=x75 = 0;
+wave_2_init34=zm = 0;
+wave_2_init35=ex = 0;
+wave_2_init36=x67 = 0;
+wave_2_init37=x76 = 0;
+wave_2_init38=vol_avg = 0;
+wave_2_init39=x81 = 0;
+wave_2_init40=x82 = 0;
+wave_2_init41=a4 = 0;
+wave_2_init42=i = 0;
+wave_2_init43=x73 = 0;
+wave_2_init44=c3 = 0;
+wave_2_init45=x79 = 0;
+wave_2_init46=tm = 0;
+wave_2_init47=a1 = 0;
+wave_2_init48=b2 = 0;
+wave_2_init49=t2 = 0;
+wave_2_init50=l = 0;
+wave_2_init51=vol = 0;
+wave_2_init52=zp = 0;
+wave_2_init53=c4 = 0;
+wave_2_init54=sp = 0;
+wave_2_init55=bb = 0;
+wave_2_init56=x71 = 0;
+wave_2_init57=h = 0;
+wave_2_init58=x66 = 0;
+wave_2_init59=x84 = 0;
+wave_2_init60=x69 = 0;
+wave_2_init61=monitor = 0;
+wave_2_init62=t4 = 0;
+wave_2_init63=rr = 0;
+wave_2_init64=x77 = 0;
+wave_2_init65=a2 = 0;
+wave_2_init66=zt = 0;
+wave_2_init67=cc = 0;
+wave_2_init68=c1 = 0;
+wave_2_init69=x89 = 0;
+wave_2_init70=b1 = 0;
+wave_2_init71=q8 = 0;
+wave_2_per_frame1=vol=(((bass_att+mid_att)+treb_att)*0.333333);
+wave_2_per_frame2=vol_avg=(0.1*((vol_avg*9)+vol));
+wave_2_per_frame3=vg=(vol_avg*0.1);
+wave_2_per_frame4=t1=(time*0.1);
+wave_2_per_frame5=t2=2.5;
+wave_2_per_frame6=t3=0;
+wave_2_per_frame7=t4=-0.15;
+wavecode_3_enabled=1.0
+wavecode_3_scaling=10.14108
+wavecode_3_smoothing=0.0
+per_frame_init_1=char = 0;
+per_frame_init_2=pos = 0;
+per_frame_init_3=posi = 0;
+per_frame_init_4=q8 = 0;
+per_frame_1=wave_a=0;
+per_frame_2=decay=(if(abs(equal(char, 0))>0.00001,0.89,1));
+per_frame_3=warp=0;
+per_frame_4=dx=0;
+per_frame_5=dy=0;
+per_frame_6=sx=1;
+per_frame_7=sy=1;
+per_frame_8=zoom=1;
+per_frame_9=pos=(pos+0.01);
+per_frame_10=monitor=pos;
+per_frame_11=pos=(below(pos, 10.5)*pos);
+per_frame_12=posi=((pos)%(10000));
+per_frame_13=char=(if(abs(equal(posi, 1))>0.00001,69,(if(abs(equal(posi, 2))>0.00001,68,(if(abs(equal(posi, 3))>0.00001,64,(if(abs(equal(posi, 4))>0.00001,81,(if(abs(equal(posi, 5))>0.00001,0,(if(abs(equal(posi, 6))>0.00001,84,(if(abs(equal(posi, 7))>0.00001,82,(if(abs(equal(posi, 8))>0.00001,64,(if(abs(equal(posi, 9))>0.00001,31,(if(abs(equal(posi, 10))>0.00001,0,char))))))))))))))))))));
+per_frame_14=q8=char;
+per_pixel_1=dy=(if(abs(above(y, 0.67))>0.00001,-0.001,dy));

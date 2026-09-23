@@ -1,0 +1,36 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bModWaveAlphaByVolume=1.0
+bWaveThick=1.0
+fModWaveAlphaEnd=2.0
+fModWaveAlphaStart=0.8
+fWarpAnimSpeed=26.672
+fWarpScale=2.007
+fWaveScale=2.625
+mv_a=0.0
+nWaveMode=7.0
+wave_y=0.65
+bAdditiveWaves=1.0
+fVideoEchoAlpha=0.3
+fVideoEchoZoom=1.607
+fShader=1.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+wavecode_0_enabled=0.0
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=basst = 0;
+per_frame_1=basst=(basst+floor((bass)/(fps)));
+per_frame_2=monitor=basst;
+per_frame_3=warp=(bass_att-1);
+per_frame_4=wave_mystery=((0.25*time)+(0.25*basst));
+per_frame_5=sx=(1.0085-(0.0085*sin(((2*time)+(2*basst)))));
+per_frame_6=sy=(1.0085-(0.0085*cos(((2*time)+(2*basst)))));
+per_frame_7=wave_g=(1-above(bass_att, 1.5));
+per_frame_8=wave_b=(1-above(bass_att, 1.5));

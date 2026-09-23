@@ -1,0 +1,77 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bWaveDots=1.0
+bWaveThick=1.0
+fDecay=1.0
+fWarpAnimSpeed=9.8608
+fWarpScale=16.2174
+fWaveScale=4.574798
+ib_a=1.0
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+ib_size=0.015
+mv_b=0.0
+mv_dx=-0.002
+mv_g=0.0
+mv_l=0.0
+ob_a=1.0
+ob_b=1.0
+ob_size=0.005
+warp=0.826445
+wave_b=0.5
+wave_g=0.5
+wave_r=0.5
+fVideoEchoZoom=1.0
+nVideoEchoOrientation=1.0
+fWaveAlpha=0.7
+fZoomExponent=1.503744
+nMotionVectorsX=64.0
+nMotionVectorsY=48.0
+fWaveParam=-0.4
+shapecode_0_enabled=0.0
+shapecode_1_enabled=1.0
+shapecode_1_textured=1.0
+shapecode_1_y=1.8
+shapecode_2_enabled=1.0
+shapecode_2_textured=1.0
+shapecode_2_y=1.8
+shapecode_3_enabled=0.0
+wavecode_0_enabled=0.0
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=w = 0;
+per_frame_init_2=cc = 0;
+per_frame_init_3=movement = 0;
+per_frame_init_4=q4 = 0;
+per_frame_init_5=q4=(0.249+(0.5*(floor(int(rand(100)))*0.01)));
+per_frame_init_6=q5=(0.249+(0.5*(floor(int(rand(100)))*0.01)));
+per_frame_init_7=q6=(0.249+(0.5*(floor(int(rand(100)))*0.01)));
+per_frame_1=wave_a=0;
+per_frame_2=movement=(movement+(0.5*floor((((bass+bass_att)+(0.075*pow(((bass+(0.6*bass_att))+(0.2*treb_att)), 3))))/(fps))));
+per_frame_3=movement=(if(abs(above(movement, 10000))>0.00001,0,movement));
+per_frame_4=ob_b=(q4+(0.25*sin((movement*3.816))));
+per_frame_5=ob_g=(q4+(0.25*sin((movement*0.744))));
+per_frame_6=ob_r=(q4+(0.25*sin((movement*0.707))));
+per_frame_7=wrap=0;
+per_frame_8=decay=1;
+per_frame_9=rot=0;
+per_frame_10=zoom=0.98;
+per_frame_11=mv_r=0;
+per_frame_12=mv_g=0;
+per_frame_13=mv_b=0;
+per_frame_14=mv_dy=(0.03*sin((movement*0.34)));
+per_frame_15=mv_dx=(0.035*((sin((movement*0.217))+cos((movement*0.413)))+sin((movement*0.311))));
+per_frame_16=warp=0;
+per_frame_17=dy=(0.0005*(bass+bass_att));
+per_pixel_1=w=(y*0.9);
+per_pixel_2=cc=(floor((((((((((((((((((((((w*w)*w)*w)*w)*w)*w)*w)*w)*w)*w)*w)*w)*w)*w)*w)*w)*w)*w)*w)*(sin((ang*(9.6+(sin(floor((time)/(12)))*3))))+tan((ang*(9.6+(sin(floor((time)/(7)))*8.3)))))))/(1.2))+1);
+per_pixel_3=zoom=(cc-0.01);
+per_pixel_4=dx=(0+floor((sin((bass+treb)))/(9988)));
+per_pixel_5=dy=(-0.0041+((1-cc)*bass));
+per_pixel_6=sx=(floor((y)/(44))+1);
+per_pixel_7=rot=0.01;

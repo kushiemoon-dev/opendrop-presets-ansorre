@@ -1,0 +1,75 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bModWaveAlphaByVolume=1.0
+bWaveThick=1.0
+cx=0.56
+fDecay=0.999
+fGammaAdj=1.28
+fModWaveAlphaEnd=0.46
+fModWaveAlphaStart=0.3899
+fWarpAnimSpeed=59.123661
+fWarpScale=100.0
+fWaveScale=0.162175
+fWaveSmoothing=0.27
+ib_b=0.1
+ib_g=0.1
+ib_r=0.1
+ib_size=0.0
+mv_a=0.0
+mv_b=0.6
+mv_g=0.6
+mv_l=0.5
+mv_r=0.5
+nWaveMode=6.0
+ob_a=0.04
+ob_b=0.0599
+ob_g=0.06
+ob_r=0.06
+ob_size=0.075
+warp=0.01
+wave_g=0.78
+wave_r=0.310001
+wave_x=0.67
+wave_y=0.51
+zoom=0.9995
+bAdditiveWaves=1.0
+fVideoEchoAlpha=0.1
+fVideoEchoZoom=1.230565
+fWaveAlpha=45.111797
+fZoomExponent=1.009999
+fShader=0.4
+nMotionVectorsX=12.799999
+nMotionVectorsY=9.599999
+fWaveParam=-1.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=q1 = 0;
+per_frame_init_2=q2 = 0;
+per_frame_init_3=q3 = 0;
+per_frame_init_4=q4 = 0;
+per_frame_init_5=q5 = 0;
+per_frame_1=ib_r=((0.4*sin((0.43*time)))+(0.5*sin((0.3*time))));
+per_frame_2=wave_mode=((frame)%(8));
+per_frame_3=wave_r=(if(abs(equal(wave_mode, 6))>0.00001,4,0.1));
+per_frame_4=wave_g=(if(abs(equal(wave_mode, 6))>0.00001,0.7,0.2));
+per_frame_5=wave_r=(if(abs(equal(wave_mode, 1))>0.00001,0.3,wave_r));
+per_frame_6=wave_g=(if(abs(equal(wave_mode, 1))>0.00001,0.7,wave_g));
+per_frame_7=wave_b=(if(abs(equal(wave_mode, 1))>0.00001,0,wave_b));
+per_frame_8=cx=(sin(time)+(0.4*sin((time*1.4))));
+per_frame_9=cy=(sin((time*1.3))+(0.3*sin(time)));
+per_frame_10=zoom=(if(abs(above(bass_att, 1.5))>0.00001,1.01,zoom));
+per_frame_11=q1=(0.3+(0.7*sin(time)));
+per_frame_12=wave_r=(if(abs(equal(wave_mode, 0))>0.00001,q1,wave_r));
+per_frame_13=wave_b=(if(abs(equal(wave_mode, 0))>0.00001,(q1*0.6),wave_b));
+per_frame_14=q2=(0.8*sin((time*0.11)));
+per_frame_15=q3=(0.8*sin((time*0.22)));
+per_frame_16=q4=(0.8*sin((time*0.33)));
+per_frame_17=q5=(0.8*sin((time*0.44)));
+per_frame_18=rot=(if(abs(above(q2, q4))>0.00001,-0.01,0.01));
+per_frame_19=monitor=rot;
+per_frame_20=zoom=(if(abs(above(q1, q3))>0.00001,0.97,zoom));

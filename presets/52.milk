@@ -1,0 +1,129 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bDarken=1.0
+bModWaveAlphaByVolume=1.0
+bWaveDots=1.0
+bWaveThick=1.0
+fDecay=0.97
+fGammaAdj=1.21
+fModWaveAlphaEnd=1.3
+fModWaveAlphaStart=0.71
+fWarpAnimSpeed=1.459
+fWarpScale=2.007
+fWaveScale=5.552
+fWaveSmoothing=0.504
+ib_size=0.26
+mv_a=0.0
+mv_b=0.5
+mv_g=0.5
+mv_l=0.85
+mv_r=0.5
+nWaveMode=2.0
+ob_size=0.11
+sx=0.9999
+warp=0.01
+wave_b=0.0
+wave_g=0.0
+zoom=0.9999
+bAdditiveWaves=1.0
+fVideoEchoAlpha=0.5
+fVideoEchoZoom=1.0
+fWaveAlpha=0.001
+fShader=1.0
+nMotionVectorsX=64.0
+nMotionVectorsY=48.0
+fWaveParam=-1.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=1.0
+shapecode_2_sides=5.0
+shapecode_2_additive=1.0
+shapecode_2_x=0.9
+shapecode_2_rad=0.22613
+shapecode_2_g=0.6
+shapecode_2_g2=0.0
+shapecode_2_border_a=0.0
+shape_2_per_frame1=x=(0.05+floor((int(rand(900)))/(1000)));
+shape_2_per_frame2=y=(0.05+floor((int(rand(900)))/(1000)));
+shape_2_per_frame3=ang=floor((int(rand(320)))/(100));
+shapecode_3_enabled=0.0
+wavecode_0_enabled=0.0
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=index2 = 0;
+per_frame_init_2=index4 = 0;
+per_frame_init_3=index = 0;
+per_frame_init_4=q22 = 0;
+per_frame_init_5=q21 = 0;
+per_frame_init_6=q29 = 0;
+per_frame_init_7=movex = 0;
+per_frame_init_8=q1 = 0;
+per_frame_init_9=dec_med = 0;
+per_frame_init_10=index3 = 0;
+per_frame_init_11=rott = 0;
+per_frame_init_12=is_beat = 0;
+per_frame_init_13=q31 = 0;
+per_frame_init_14=q23 = 0;
+per_frame_init_15=k1 = 0;
+per_frame_init_16=q24 = 0;
+per_frame_init_17=dec_slow = 0;
+per_frame_init_18=q4 = 0;
+per_frame_init_19=q26 = 0;
+per_frame_init_20=p2 = 0;
+per_frame_init_21=avg = 0;
+per_frame_init_22=movez = 0;
+per_frame_init_23=beat = 0;
+per_frame_init_24=p1 = 0;
+per_frame_init_25=peak = 0;
+per_frame_init_26=q2 = 0;
+per_frame_init_27=q27 = 0;
+per_frame_init_28=q3 = 0;
+per_frame_init_29=t0 = 0;
+per_frame_init_30=q32 = 0;
+per_frame_init_31=q28 = 0;
+per_frame_init_32=q30 = 0;
+per_frame_init_33=q20 = 0;
+per_frame_init_34=p1=int(rand(16));
+per_frame_init_35=p2=p1;
+per_frame_1=dec_med=pow(0.96, floor((30)/(fps)));
+per_frame_2=dec_slow=pow(0.99, floor((30)/(fps)));
+per_frame_3=beat=max(max(bass, mid), treb);
+per_frame_4=avg=((avg*dec_slow)+(beat*(1-dec_slow)));
+per_frame_5=is_beat=(above(beat, ((0.4+avg)+peak))*above(time, (t0+0.2)));
+per_frame_6=t0=((is_beat*time)+((1-is_beat)*t0));
+per_frame_7=peak=((is_beat*beat)+(((1-is_beat)*peak)*dec_med));
+per_frame_8=index=(((index+is_beat))%(8));
+per_frame_9=index2=(((index2+(is_beat*bnot(index))))%(4));
+per_frame_10=index3=(((index3+((is_beat*bnot(index))*bnot(index2))))%(3));
+per_frame_11=q20=avg;
+per_frame_12=q21=beat;
+per_frame_13=q22=peak;
+per_frame_14=q23=index;
+per_frame_15=q24=is_beat;
+per_frame_16=q26=((bass+mid)+treb);
+per_frame_17=k1=(is_beat*equal(index, 0));
+per_frame_18=p1=((k1*(p1+1))+((1-k1)*p1));
+per_frame_19=p2=((dec_med*p2)+((1-dec_med)*p1));
+per_frame_20=rott=floor(((p2*3.14159265359))/(4));
+per_frame_21=q27=(8-index);
+per_frame_22=q28=sin(floor((time)/(7)));
+per_frame_23=q29=index4;
+per_frame_24=q1=cos(rott);
+per_frame_25=q2=sin(rott);
+per_frame_26=q3=-q2;
+per_frame_27=q4=q1;
+per_frame_28=mv_a=(0.5*q1);
+per_frame_29=movez=(movez+floor(((0.01*30))/(fps)));
+per_frame_30=q29=movez;
+per_frame_31=movex=(movex+(floor(((0.003*30))/(fps))*q2));
+per_frame_32=q30=movex;
+per_frame_33=q31=sqr(sin(floor((time)/(17))));
+per_frame_34=q32=sqr(cos(floor((time)/(17))));
+per_frame_35=zoom=1.0;
+per_frame_36=rot=0.0;
+per_frame_37=dx=0.0;
+per_frame_38=warp=0.2;

@@ -1,0 +1,46 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+fWaveScale=0.396379
+fWaveSmoothing=0.669
+nWaveMode=6.0
+wave_b=0.5
+wave_g=0.5
+wave_r=0.5
+bMotionVectorsOn=0.0
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=box_effect2 = 0;
+per_frame_init_2=width = 0;
+per_frame_init_3=box_effect = 0;
+per_frame_init_4=y_pos = 0;
+per_frame_init_5=height = 0;
+per_frame_init_6=effect3 = 0;
+per_frame_init_7=effect1 = 0;
+per_frame_init_8=x_pos = 0;
+per_frame_init_9=effect4 = 0;
+per_frame_init_10=effect2 = 0;
+per_frame_1=warp=0;
+per_frame_2=dx=(dx-0.001);
+per_frame_3=dy=(dy-0.001);
+per_frame_4=wave_mystery=floor((time)/(8));
+per_frame_5=wave_r=(wave_r+floor((sin((time*3)))/(2)));
+per_frame_6=wave_g=abs(wave_mystery);
+per_frame_7=wave_b=(0.5+floor((sin(floor((time)/(10))))/(2)));
+per_pixel_1=y_pos=((floor((sin(time))/(2))+0.5)-((floor((sin(time))/(2))+0.5)*height));
+per_pixel_2=x_pos=((floor((sin(floor((time)/(3))))/(2))+0.5)-((floor((sin(floor((time)/(3))))/(2))+0.5)*width));
+per_pixel_3=height=0.2;
+per_pixel_4=width=0.4;
+per_pixel_5=effect1=((1.8+sin(floor((((atan(rad)*3)*rad))/(2))))+floor((bass)/(15)));
+per_pixel_6=effect2=(0.1*sin(((ang*8)+(time*5))));
+per_pixel_7=box_effect=(if(abs(above(y, y_pos))>0.00001,(if(abs(below(y, (y_pos+height)))>0.00001,(if(abs(above(x, x_pos))>0.00001,(if(abs(below(x, (x_pos+width)))>0.00001,effect1,effect2)),effect2)),effect2)),effect2));
+per_pixel_8=rot=box_effect;
+per_pixel_9=effect3=((0.8+atan(floor((((atan(rad)*3)*rad))/(2))))+floor((bass)/(15)));
+per_pixel_10=effect4=(1+pow(abs(rot), 0.8));
+per_pixel_11=box_effect2=(if(abs(above(y, y_pos))>0.00001,(if(abs(below(y, (y_pos+height)))>0.00001,(if(abs(above(x, x_pos))>0.00001,(if(abs(below(x, (x_pos+width)))>0.00001,effect3,effect4)),effect4)),effect4)),effect4));
+per_pixel_12=zoom=box_effect2;

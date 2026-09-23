@@ -1,0 +1,146 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bBrighten=1.0
+bDarken=1.0
+bInvert=1.0
+bModWaveAlphaByVolume=1.0
+bWaveDots=1.0
+bWaveThick=1.0
+fDecay=0.955
+fGammaAdj=3.52
+fModWaveAlphaEnd=1.35
+fModWaveAlphaStart=0.81
+fWarpAnimSpeed=5.278
+fWarpScale=0.01
+fWaveScale=0.706
+fWaveSmoothing=0.126
+mv_a=0.0
+ob_a=1.0
+ob_size=0.005
+rot=-0.02
+warp=0.01
+zoom=1.12682
+fVideoEchoAlpha=1.0
+nVideoEchoOrientation=3.0
+fWaveAlpha=1.059
+fZoomExponent=2.00673
+fShader=1.0
+fWaveParam=-0.28
+bTexWrap=0.0
+shapecode_0_enabled=1.0
+shapecode_0_sides=32.0
+shapecode_0_additive=1.0
+shapecode_0_num_inst=22.0
+shapecode_0_rad=0.12953
+shapecode_0_r=0.0
+shapecode_0_g=0.5
+shapecode_0_g2=0.5
+shapecode_0_a2=1.0
+shapecode_0_border_a=0.0
+shape_0_init1=trans = 0;
+shape_0_init2=q3 = 0;
+shape_0_init3=instance_counter = 0;
+shape_0_init4=num_instance = 0;
+shape_0_init5=q1 = 0;
+shape_0_init6=q5 = 0;
+shape_0_init7=q2 = 0;
+shape_0_init8=q4 = 0;
+shape_0_per_frame1=trans=(if(abs(equal(q3, 3))>0.00001,0.15,0));
+shape_0_per_frame2=a=trans;
+shape_0_per_frame3=a2=trans;
+shape_0_per_frame4=border_a=0;
+shape_0_per_frame5=instance_counter=((3.14*instance)*floor((2)/(num_instance)));
+shape_0_per_frame6=x=(q1+(((0.1+(0.1*treb_att))*floor((1)/(q5)))*sin(instance_counter)));
+shape_0_per_frame7=y=(q2+(((0.1+(0.1*treb_att))*floor((1)/(q4)))*cos(instance_counter)));
+shapecode_1_enabled=1.0
+shapecode_1_sides=32.0
+shapecode_1_additive=1.0
+shapecode_1_num_inst=22.0
+shapecode_1_rad=0.12953
+shapecode_1_r=0.0
+shapecode_1_b=0.5
+shapecode_1_g2=0.0
+shapecode_1_b2=0.5
+shapecode_1_a2=1.0
+shapecode_1_border_a=0.0
+shape_1_init1=trans = 0;
+shape_1_init2=q3 = 0;
+shape_1_init3=instance_counter = 0;
+shape_1_init4=num_instance = 0;
+shape_1_init5=q1 = 0;
+shape_1_init6=q5 = 0;
+shape_1_init7=q2 = 0;
+shape_1_init8=q4 = 0;
+shape_1_per_frame1=trans=(if(abs(equal(q3, 6))>0.00001,0.15,0));
+shape_1_per_frame2=a=trans;
+shape_1_per_frame3=a2=trans;
+shape_1_per_frame4=border_a=0;
+shape_1_per_frame5=instance_counter=((3.14*instance)*floor((2)/(num_instance)));
+shape_1_per_frame6=x=(q1+(((0.1+(0.1*mid_att))*floor((1)/(q5)))*sin(instance_counter)));
+shape_1_per_frame7=y=(q2+(((0.1+(0.1*mid_att))*floor((1)/(q4)))*cos(instance_counter)));
+shapecode_2_enabled=1.0
+shapecode_2_sides=32.0
+shapecode_2_additive=1.0
+shapecode_2_num_inst=22.0
+shapecode_2_rad=0.12953
+shapecode_2_r=0.5
+shapecode_2_r2=0.5
+shapecode_2_g2=0.0
+shapecode_2_a2=1.0
+shapecode_2_border_a=0.0
+shape_2_init1=trans = 0;
+shape_2_init2=q3 = 0;
+shape_2_init3=instance_counter = 0;
+shape_2_init4=num_instance = 0;
+shape_2_init5=q1 = 0;
+shape_2_init6=q5 = 0;
+shape_2_init7=q2 = 0;
+shape_2_init8=q4 = 0;
+shape_2_per_frame1=trans=(if(abs(equal(q3, 9))>0.00001,0.15,0));
+shape_2_per_frame2=a=trans;
+shape_2_per_frame3=a2=trans;
+shape_2_per_frame4=border_a=0;
+shape_2_per_frame5=instance_counter=((3.14*instance)*floor((2)/(num_instance)));
+shape_2_per_frame6=x=(q1+(((0.1+(0.1*bass_att))*floor((1)/(q5)))*sin(instance_counter)));
+shape_2_per_frame7=y=(q2+(((0.1+(0.1*bass_att))*floor((1)/(q4)))*cos(instance_counter)));
+shapecode_3_enabled=1.0
+shapecode_3_sides=100.0
+shapecode_3_textured=1.0
+shapecode_3_rad=0.25481
+shapecode_3_g=1.0
+shapecode_3_b=1.0
+shapecode_3_r2=1.0
+shapecode_3_b2=1.0
+shapecode_3_border_a=0.0
+wavecode_0_enabled=0.0
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=ripple_r = 0;
+per_frame_init_2=ripple_x = 0;
+per_frame_init_3=q1 = 0;
+per_frame_init_4=q5 = 0;
+per_frame_init_5=timer_a = 0;
+per_frame_init_6=count = 0;
+per_frame_init_7=q4 = 0;
+per_frame_init_8=ripple = 0;
+per_frame_init_9=ripple_y = 0;
+per_frame_init_10=timer_b = 0;
+per_frame_init_11=q2 = 0;
+per_frame_init_12=q3 = 0;
+per_frame_1=count=(if(abs(below(count, 9))>0.00001,(count+1),0));
+per_frame_2=q1=0.5;
+per_frame_3=q2=0.5;
+per_frame_4=q3=count;
+per_frame_5=q4=aspectx;
+per_frame_6=q5=aspecty;
+per_pixel_1=timer_a=(10*sin(time));
+per_pixel_2=timer_b=(10*sin((time*0.5)));
+per_pixel_3=ripple_x=(cos(((x*timer_a)-timer_b))*bass_att);
+per_pixel_4=ripple_y=(cos(((y*timer_a)-timer_b))*treb_att);
+per_pixel_5=ripple_r=(cos(((rad*timer_b)-timer_a))*mid_att);
+per_pixel_6=ripple=((ripple_x+ripple_y)+ripple_r);
+per_pixel_7=zoom=(zoom+(ripple*0.1));

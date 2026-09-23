@@ -1,0 +1,103 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bWaveThick=1.0
+dy=-0.02
+fDecay=0.94
+fWaveScale=0.011567
+fWaveSmoothing=0.849
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+ib_size=0.0
+mv_dx=-0.5
+mv_dy=-0.5
+mv_l=2.0
+nWaveMode=4.0
+ob_size=0.0
+warp=0.999998
+wave_b=0.5
+wave_g=0.5
+wave_y=0.02
+fVideoEchoAlpha=0.5
+fVideoEchoZoom=1.0
+fWaveAlpha=1.0
+nMotionVectorsX=1.0
+nMotionVectorsY=1.0
+fWaveParam=-0.48
+bTexWrap=0.0
+shapecode_0_enabled=1.0
+shapecode_0_sides=3.0
+shapecode_0_x=0.4
+shapecode_0_y=0.3
+shapecode_0_r2=1.0
+shapecode_0_border_r=0.0
+shapecode_0_border_g=0.0
+shape_0_init1=ret = 0;
+shape_0_init2=progress = 0;
+shape_0_init3=facts = 0;
+shape_0_init4=fact = 0;
+shape_0_init5=tm = 0;
+shape_0_init6=trig = 0;
+shape_0_init7=arg = 0;
+shape_0_per_frame1=ret=(if(abs(above(progress, 0.8))>0.00001,(progress-0.8),0));
+shape_0_per_frame2=x=((0.5-(0.4*bass))-(5*ret));
+shape_0_per_frame3=y=0.1;
+shape_0_per_frame4=facts=bor(above(progress, 0.2), equal(progress, 0));
+shape_0_per_frame5=rad=(if(abs(facts)>0.00001,0.5,(2.5*progress)));
+shape_0_per_frame6=fact=above(progress, 0.5);
+shape_0_per_frame7=tm=(if(abs(fact)>0.00001,(if(abs(trig)>0.00001,tm,time)),tm));
+shape_0_per_frame8=trig=(if(abs(fact)>0.00001,1,trig));
+shape_0_per_frame9=arg=sin(((time-tm)*5));
+shape_0_per_frame10=ang=(if(abs(fact)>0.00001,arg,0));
+shapecode_1_enabled=1.0
+shapecode_1_sides=3.0
+shapecode_1_rad=0.542791
+shape_1_init1=ret = 0;
+shape_1_init2=progress = 0;
+shape_1_init3=facts = 0;
+shape_1_init4=fact = 0;
+shape_1_init5=tm = 0;
+shape_1_init6=trig = 0;
+shape_1_init7=arg = 0;
+shape_1_init8=y=0.1;
+shape_1_per_frame1=ret=(if(abs(above(progress, 0.8))>0.00001,(progress-0.8),0));
+shape_1_per_frame2=x=((0.5+(0.4*bass))+(5*ret));
+shape_1_per_frame3=y=0.1;
+shape_1_per_frame4=facts=bor(above(progress, 0.2), equal(progress, 0));
+shape_1_per_frame5=rad=(if(abs(facts)>0.00001,0.5,(2.5*progress)));
+shape_1_per_frame6=fact=above(progress, 0.5);
+shape_1_per_frame7=tm=(if(abs(fact)>0.00001,(if(abs(trig)>0.00001,tm,time)),tm));
+shape_1_per_frame8=trig=(if(abs(fact)>0.00001,1,trig));
+shape_1_per_frame9=arg=-sin(((time-tm)*5));
+shape_1_per_frame10=ang=(if(abs(fact)>0.00001,(arg-0.6),-0.6));
+shapecode_2_enabled=1.0
+shapecode_2_sides=34.0
+shapecode_2_a=0.0
+shapecode_2_border_a=0.0
+shape_2_init1=fno = 0;
+shape_2_init2=progress = 0;
+shape_2_init3=retire = 0;
+shape_2_init4=tfk = 0;
+shape_2_init5=tweak = 0;
+shape_2_init6=tribe = 0;
+shape_2_init7=x=0.5;
+shape_2_init8=y=0.5;
+shape_2_init9=signx=1;
+shape_2_init10=signy=1;
+shape_2_per_frame1=fno=above(progress, 0.9);
+shape_2_per_frame2=retire=above(progress, 0.8);
+shape_2_per_frame3=tfk=(if(abs(band(retire, bnot(fno)))>0.00001,(progress-0.8),0));
+shape_2_per_frame4=x=(x+(0.01*treb));
+shape_2_per_frame5=y=(((y+(0.1*bass))+tweak)+tfk);
+shape_2_per_frame6=tribe=(if(abs(fno)>0.00001,((3*progress)-2.7),0));
+shape_2_per_frame7=rad=(if(abs(retire)>0.00001,tribe,(0.3+((0.3*progress)*sin((time*10))))));
+shape_2_per_frame8=b2=treb;
+shape_2_per_frame9=a=1;
+shapecode_3_enabled=0.0
+wavecode_0_enabled=0.0
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0

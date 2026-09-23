@@ -1,0 +1,47 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bBrighten=1.0
+bWaveThick=1.0
+dx=1e-05
+dy=1e-05
+fDecay=0.99
+fGammaAdj=1.0
+fModWaveAlphaEnd=1.0
+fModWaveAlphaStart=0.5
+fWaveScale=0.01
+fWaveSmoothing=0.9
+ib_a=0.005
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+ib_size=0.3
+mv_a=0.0
+mv_l=1.0
+nWaveMode=6.0
+ob_a=1.0
+ob_size=0.005
+warp=0.01
+wave_b=0.0
+fVideoEchoAlpha=0.5
+fVideoEchoZoom=2.216707
+fWaveAlpha=100.0
+nMotionVectorsX=0.0
+nMotionVectorsY=0.0
+fWaveParam=1.0
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_1=wave_mystery=(wave_mystery+(1*sin((800*time))));
+per_frame_2=wave_r=(wave_r+(1.8*sin((5*bass))));
+per_frame_3=wave_g=(wave_g+(1.8*sin((5*mid))));
+per_frame_4=wave_b=(wave_b+(1.8*sin((5*treb))));
+per_frame_5=warp=0.25;
+per_pixel_1=rot=(rot+(if(abs(above(ang, (0.2+(3*tan((10*time))))))>0.00001,(if(abs(below(ang, (0.4+(3*tan((10*time))))))>0.00001,(0.25*sin((3*bass))),0)),0)));
+per_pixel_2=rot=(rot+(if(abs(above(ang, (0.5+(3*tan((10*time))))))>0.00001,(if(abs(below(ang, (0.7+(3*tan((10*time))))))>0.00001,(-0.35*sin((3*treb))),0)),0)));
+per_pixel_3=zoom=(zoom+(if(abs(above(ang, (0.3+(3*tan((10*time))))))>0.00001,(if(abs(below(ang, (0.5+(3*tan((10*time))))))>0.00001,(0.5*sin((3*mid))),0)),0)));
+per_pixel_4=zoom=(zoom-((0.04*(0.76-rad))*bass));

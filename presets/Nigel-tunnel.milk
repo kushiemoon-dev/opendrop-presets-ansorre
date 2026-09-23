@@ -1,0 +1,35 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bBrighten=1.0
+fDecay=1.0
+fGammaAdj=1.0
+fModWaveAlphaEnd=1.3
+fModWaveAlphaStart=0.71
+fWarpScale=1.331
+fWaveScale=0.202013
+fWaveSmoothing=0.63
+ib_size=0.26
+ob_r=0.01
+ob_size=0.5
+warp=0.01
+wave_b=0.0
+wave_r=0.0
+zoom=0.999514
+fVideoEchoZoom=0.999835
+nVideoEchoOrientation=1.0
+fWaveAlpha=4.099998
+bMotionVectorsOn=0.0
+fWaveParam=-0.48
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_1=wave_mystery=(wave_mystery+(0.2*(bass_att+mid_att)));
+per_frame_2=wave_r=(wave_r+max((bass_att-1), 0));
+per_frame_3=wave_g=(wave_g-max((bass_att-1), 0));
+per_frame_4=wave_b=(mid_att-1.5);
+per_pixel_1=zoom=(0.9+(0.1*rad));

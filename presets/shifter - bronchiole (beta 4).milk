@@ -1,0 +1,91 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bDarken=1.0
+bModWaveAlphaByVolume=1.0
+fGammaAdj=1.7
+fModWaveAlphaEnd=1.3
+fModWaveAlphaStart=0.71
+fWarpScale=1.331
+fWaveScale=1.285751
+fWaveSmoothing=0.63
+ib_a=0.3
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+ib_size=0.05
+mv_a=0.0
+nWaveMode=7.0
+warp=0.01
+wave_b=0.65
+wave_g=0.65
+wave_r=0.65
+zoom=0.999514
+bAdditiveWaves=1.0
+fVideoEchoAlpha=0.5
+fVideoEchoZoom=0.9996
+fWaveAlpha=0.001
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+wavecode_0_enabled=0.0
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=tic = 0;
+per_frame_init_2=vt = 0;
+per_frame_init_3=bt = 0;
+per_frame_init_4=decay_r = 0;
+per_frame_init_5=mid_avg = 0;
+per_frame_init_6=tt = 0;
+per_frame_init_7=my = 0;
+per_frame_init_8=tin = 0;
+per_frame_init_9=decay_b = 0;
+per_frame_init_10=ti = 0;
+per_frame_init_11=bass_avg = 0;
+per_frame_init_12=vav = 0;
+per_frame_init_13=mq7 = 0;
+per_frame_init_14=zm = 0;
+per_frame_init_15=mt = 0;
+per_frame_init_16=ra = 0;
+per_frame_init_17=mx = 0;
+per_frame_init_18=treb_avg = 0;
+per_frame_init_19=vol = 0;
+per_frame_init_20=decay_g = 0;
+per_frame_init_21=q7 = 0;
+per_frame_init_22=q8 = 0;
+per_frame_1=warp=0;
+per_frame_2=tic=min((time-tin), 0.1);
+per_frame_3=tin=time;
+per_frame_4=vol=(((bass_att+treb_att)+mid_att)*0.333333);
+per_frame_5=ra=(floor((1)/(tic))*0.25);
+per_frame_6=treb_avg=(tic*((treb_avg*(floor((1)/(tic))-ra))+(ra*treb)));
+per_frame_7=mid_avg=(tic*((mid_avg*(floor((1)/(tic))-ra))+(ra*mid)));
+per_frame_8=bass_avg=(tic*((bass_avg*(floor((1)/(tic))-ra))+(ra*bass)));
+per_frame_9=vav=(tic*((vav*(floor((1)/(tic))-ra))+((ra*((bass+treb)+mid))*0.33333)));
+per_frame_10=tt=(tt+(tic*treb));
+per_frame_11=mt=(mt+(tic*mid));
+per_frame_12=bt=(bt+(tic*bass));
+per_frame_13=vt=(vt+((tic*(((bass*bass)+(mid*mid))+(treb*treb)))*0.3333));
+per_frame_14=zoom=1;
+per_frame_15=ib_r=min(1, ((bass*bass)*0.5));
+per_frame_16=ib_g=min(1, ((mid*mid)*0.5));
+per_frame_17=ib_b=min(1, ((treb*treb)*0.5));
+per_frame_18=ti=(time*3);
+per_frame_19=q7=(0.15+(0.3*sin((2.5*vt))));
+per_frame_20=q8=(0.5+(0.3*sin((vt*1.6546))));
+per_pixel_1=mq7=(if(abs(above(x, 0.5))>0.00001,(1-q7),q7));
+per_pixel_2=mx=(x-mq7);
+per_pixel_3=my=(y-q8);
+per_pixel_4=mx=(mx+(equal(mx, 0)*0.000001));
+per_pixel_5=ra=(pow(((mx*mx)+((my*my)*0.5625)), 0.5)*4);
+per_pixel_6=zm=((ra*ra)+0.0001);
+per_pixel_7=zm=(1-floor((1)/(zm)));
+per_pixel_8=dx=(zm*(x-mq7));
+per_pixel_9=dy=(zm*(y-q8));
+per_pixel_10=decay_r=pow(y, 0.1);
+per_pixel_11=decay_g=pow((1-y), 0.1);
+per_pixel_12=decay_b=min(1, pow(rad, 0.1));

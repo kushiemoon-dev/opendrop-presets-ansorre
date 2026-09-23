@@ -1,0 +1,43 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+fDecay=0.97
+fWaveScale=0.01
+fWaveSmoothing=0.36
+mv_a=0.0
+mv_g=0.7
+mv_l=0.0
+mv_r=0.0
+ob_r=0.2
+ob_size=0.03
+wave_b=0.5
+wave_g=0.5
+wave_r=0.5
+fWaveAlpha=1.958904
+nMotionVectorsX=64.0
+nMotionVectorsY=48.0
+fWaveParam=-0.38
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=counter1 = 0;
+per_frame_init_2=counter2 = 0;
+per_frame_init_3=cdelay1 = 0;
+per_frame_init_4=cdelay2 = 0;
+per_frame_init_5=colorcounter = 0;
+per_frame_init_6=q1 = 0;
+per_frame_init_7=q2 = 0;
+per_frame_init_8=q3 = 0;
+per_frame_1=warp=0;
+per_frame_2=counter1=(if(abs(equal(counter2, 1))>0.00001,(if(abs(equal(counter1, 1))>0.00001,0,(counter1+0.02))),1));
+per_frame_3=counter2=(if(abs(equal(counter1, 1))>0.00001,(if(abs(equal(counter2, 1))>0.00001,0,(counter2+0.02))),1));
+per_frame_4=cdelay1=(if(abs(equal(cdelay2, 1))>0.00001,1,(if(abs(equal(((colorcounter)%(2)), 1))>0.00001,(if(abs(equal(counter1, 1))>0.00001,2,0)),(if(abs(equal(counter2, 1))>0.00001,2,0))))));
+per_frame_5=cdelay2=(if(abs(equal(cdelay1, 2))>0.00001,1,0));
+per_frame_6=colorcounter=(if(abs(above(colorcounter, 7))>0.00001,0,(if(abs(equal(cdelay1, 1))>0.00001,(colorcounter+1),colorcounter))));
+per_frame_7=q1=counter1;
+per_frame_8=q2=counter2;
+per_frame_9=q3=colorcounter;
+per_frame_10=monitor=colorcounter;

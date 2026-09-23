@@ -1,0 +1,107 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+fDecay=0.925
+fGammaAdj=1.0
+fModWaveAlphaEnd=1.0
+fModWaveAlphaStart=0.5
+fWarpAnimSpeed=0.037
+fWarpScale=0.015
+fWaveScale=100.0
+fWaveSmoothing=0.0
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+ib_size=0.0
+mv_a=0.0
+mv_l=1.0
+nWaveMode=5.0
+ob_b=0.1
+ob_r=0.11
+ob_size=0.0
+warp=0.033
+wave_b=0.5
+wave_g=0.5
+wave_r=0.5
+fVideoEchoZoom=1.002
+nVideoEchoOrientation=1.0
+fWaveAlpha=0.001
+nMotionVectorsX=0.0
+nMotionVectorsY=0.0
+shapecode_0_enabled=1.0
+shapecode_0_textured=1.0
+shapecode_0_y=1.8
+shapecode_1_enabled=1.0
+shapecode_1_textured=1.0
+shapecode_1_y=1.8
+shapecode_2_enabled=1.0
+shapecode_2_textured=1.0
+shapecode_2_y=1.8
+shapecode_3_enabled=0.0
+wavecode_0_enabled=1.0
+wavecode_0_sep=10.0
+wavecode_0_scaling=0.34421
+wavecode_0_smoothing=0.0
+wavecode_0_a=0.3
+wave_0_init1=nb = 0;
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=meanbass_att = 0;
+per_frame_init_2=q1 = 0;
+per_frame_init_3=q5 = 0;
+per_frame_init_4=flip = 0;
+per_frame_init_5=lastbeat = 0;
+per_frame_init_6=beatrate = 0;
+per_frame_init_7=mode = 0;
+per_frame_init_8=peakbass_att = 0;
+per_frame_init_9=beatcounter = 0;
+per_frame_init_10=q4 = 0;
+per_frame_init_11=att = 0;
+per_frame_init_12=mtimeb = 0;
+per_frame_init_13=volume = 0;
+per_frame_init_14=beat = 0;
+per_frame_init_15=vol = 0;
+per_frame_init_16=q2 = 0;
+per_frame_init_17=mtime = 0;
+per_frame_init_18=q8 = 0;
+per_frame_init_19=mv_x=64;
+per_frame_init_20=mv_y=48;
+per_frame_init_21=nut=0;
+per_frame_init_22=stp=0;
+per_frame_init_23=stq=0;
+per_frame_init_24=rtp=0;
+per_frame_init_25=rtq=0;
+per_frame_init_26=wvr=0;
+per_frame_init_27=decay=0;
+per_frame_init_28=dcsp=0;
+per_frame_init_29=warp=0;
+per_frame_init_30=mtime=floor(int(rand(10)));
+per_frame_1=volume=(0.01*((bass+mid)+att));
+per_frame_2=beatrate=(equal(beatrate, 0)+((1-equal(beatrate, 0))*(below(volume, 0.01)+((1-below(volume, 0.01))*beatrate))));
+per_frame_3=lastbeat=(lastbeat+(equal(lastbeat, 0)*time));
+per_frame_4=meanbass_att=(0.1*((meanbass_att*9)+bass_att));
+per_frame_5=peakbass_att=max(bass_att, peakbass_att);
+per_frame_6=beatrate=max((if(abs(beat)>0.00001,(if(abs(below((time-lastbeat), (2*beatrate)))>0.00001,(0.1*(((beatrate*9)+time)-lastbeat)),beatrate)),beatrate)), 0.1);
+per_frame_7=peakbass_att=((beat*bass_att)+(((1-beat)*peakbass_att)*((above((time-lastbeat), (2*beatrate))*0.95)+((1-above((time-lastbeat), (2*beatrate)))*0.995))));
+per_frame_8=lastbeat=((beat*time)+((1.0-beat)*lastbeat));
+per_frame_9=peakbass_att=max(peakbass_att, (1.1*meanbass_att));
+per_frame_10=beat=((above(volume, 0.8)*below((peakbass_att-bass_att), (0.05*peakbass_att)))*above((time-lastbeat), (0.1+(0.5*(beatrate-0.1)))));
+per_frame_11=beatcounter=(beatcounter+beat);
+per_frame_12=mode=(if(abs((beat*equal(((beatcounter)%(2)), 0)))>0.00001,(1-mode),mode));
+per_frame_13=flip=((2*mode)-1);
+per_frame_14=monitor=flip;
+per_frame_15=q8=flip;
+per_frame_16=decay=0.98;
+per_frame_17=vol=(((bass_att+mid_att)+treb_att)*0.25);
+per_frame_18=vol=(vol*vol);
+per_frame_19=mtime=(mtime+((vol*0.1)*0.1));
+per_frame_20=mtimeb=(mtimeb+((vol*0.1)*0.1));
+per_frame_21=q1=(mtime*0.9);
+per_frame_22=warp=0.0;
+per_frame_23=q4=((min((vol*0.8), 1)*0.1)+0.9);
+per_frame_24=q2=((sin(floor((mtimeb)/(3)))*0.355)+1.355);
+per_frame_25=q5=(1+(sin(floor((time)/(3)))*0.1));
+per_frame_26=zoom=1.01;

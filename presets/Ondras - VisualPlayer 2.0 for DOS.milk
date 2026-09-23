@@ -1,0 +1,97 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bWaveThick=1.0
+dx=0.001
+fDecay=0.95
+fGammaAdj=1.0
+fModWaveAlphaEnd=1.3
+fModWaveAlphaStart=0.71
+fWarpAnimSpeed=0.671653
+fWarpScale=1.000355
+fWaveScale=0.721412
+fWaveSmoothing=0.0
+ib_a=0.5
+ib_b=0.0
+ib_g=1.0
+ib_r=1.0
+ib_size=0.0
+mv_a=0.0
+mv_dy=-0.7
+mv_g=0.2
+mv_l=3.0
+mv_r=0.2
+ob_r=1.0
+ob_size=0.095
+warp=0.01
+wave_b=0.0
+wave_g=0.9
+zoom=0.999514
+fVideoEchoZoom=0.999605
+nVideoEchoOrientation=3.0
+fWaveAlpha=0.001
+fZoomExponent=0.9
+nMotionVectorsX=64.0
+nMotionVectorsY=48.0
+fWaveParam=-0.6
+bTexWrap=0.0
+shapecode_0_enabled=1.0
+shapecode_0_sides=100.0
+shapecode_0_x=0.28
+shapecode_0_y=0.72
+shapecode_0_rad=0.069892
+shapecode_0_tex_zoom=0.55045
+shapecode_0_r=0.9
+shapecode_0_r2=0.9
+shapecode_0_g2=0.2
+shapecode_0_border_g=0.0
+shapecode_0_border_b=0.0
+shapecode_0_border_a=0.0
+shape_0_init1=action = 0;
+shape_0_init2=polomer = 0;
+shape_0_per_frame1=action=above(bass_att, 1.3);
+shape_0_per_frame2=polomer=max((if(abs(action)>0.00001,0.45,(polomer-0.03))), 0);
+shape_0_per_frame3=rad=polomer;
+shapecode_1_enabled=1.0
+shapecode_1_sides=100.0
+shapecode_1_x=0.72
+shapecode_1_y=0.72
+shapecode_1_rad=0.069892
+shapecode_1_tex_zoom=0.55045
+shapecode_1_g=0.8
+shapecode_1_r2=1.0
+shapecode_1_g2=0.8
+shapecode_1_border_g=0.0
+shapecode_1_border_b=0.0
+shapecode_1_border_a=0.0
+shape_1_init1=action = 0;
+shape_1_init2=polomer = 0;
+shape_1_per_frame1=action=above(treb_att, 1.3);
+shape_1_per_frame2=polomer=max((if(abs(action)>0.00001,0.45,(polomer-0.03))), 0);
+shape_1_per_frame3=rad=polomer;
+shapecode_2_enabled=1.0
+shapecode_2_sides=100.0
+shapecode_2_y=0.28
+shapecode_2_rad=0.069892
+shapecode_2_tex_zoom=0.55045
+shapecode_2_r=0.2
+shapecode_2_g=0.7
+shapecode_2_r2=0.2
+shapecode_2_g2=0.7
+shapecode_2_border_g=0.0
+shapecode_2_border_b=0.0
+shapecode_2_border_a=0.0
+shape_2_init1=action = 0;
+shape_2_init2=polomer = 0;
+shape_2_per_frame1=action=above(mid_att, 1.3);
+shape_2_per_frame2=polomer=max((if(abs(action)>0.00001,0.45,(polomer-0.03))), 0);
+shape_2_per_frame3=rad=polomer;
+shapecode_3_enabled=0.0
+wavecode_0_enabled=0.0
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_1=dx=0;
+per_frame_2=dy=0;

@@ -1,0 +1,40 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bDarkenCenter=1.0
+bWaveDots=1.0
+fDecay=0.995
+fModWaveAlphaEnd=1.09
+fModWaveAlphaStart=0.83
+mv_a=0.0
+mv_l=0.0
+nWaveMode=6.0
+rot=0.02
+warp=0.01
+zoom=1.01
+fZoomExponent=0.998166
+nMotionVectorsX=31.199999
+nMotionVectorsY=23.399998
+shapecode_0_enabled=1.0
+shapecode_0_sides=30.0
+shapecode_0_textured=1.0
+shapecode_0_rad=0.526825
+shapecode_0_tex_zoom=1.136009
+shapecode_0_g=1.0
+shapecode_0_b=1.0
+shapecode_0_r2=1.0
+shapecode_0_b2=1.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+wavecode_0_enabled=0.0
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_1=wave_b=max(((floor((1)/(3.14))+(0.5*sin(time)))-(floor((2)/((3*3.14)))*cos((2*time)))), 0.3);
+per_frame_2=wave_g=(0.1*max(floor((((5*mid)*sin((mid*time))))/(((mid_att*mid_att)+(mid*mid)))), 0.1));
+per_frame_3=wave_r=max(floor((((5*treb)*sin((treb*time))))/(((treb_att*treb_att)+(treb*treb)))), 0.3);
+per_frame_4=decay=(0.99999995+(0.00000005*abs(sin((50*time)))));
+per_pixel_1=zoom=(if(abs(below(rad, 0.03))>0.00001,0.9,(1-floor(((2*((-floor((3)/(2))*pow(2.718, sin(floor(((((bass*bass)*time)*sin((31.4*rad))))/(rad)))))+(0.5*pow(2.718, sin(floor((((((treb*treb)*time)*rad)*sin((3.14*rad))))/(rad))))))))/(500)))));

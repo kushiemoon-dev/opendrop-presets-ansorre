@@ -1,0 +1,38 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bWaveDots=1.0
+dx=-0.005
+fGammaAdj=1.91
+fWarpScale=2.853
+fWaveScale=1.958949
+fWaveSmoothing=0.9
+mv_a=0.0
+nWaveMode=5.0
+rot=0.006
+warp=0.0
+wave_b=0.45
+wave_g=0.65
+wave_r=0.45
+fWaveAlpha=5.930533
+fWaveParam=0.04
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=q2 = 0;
+per_frame_init_2=q1 = 0;
+per_frame_1=wave_r=(0.5+(0.5*cos((1.045*bass))));
+per_frame_2=wave_g=(0.5+(0.5*sin((0.956*treb))));
+per_frame_3=wave_b=(0.5+(0.5*cos((mid+mid_att))));
+per_frame_4=decay=(decay-(0.01*equal(((frame)%(40)), 0)));
+per_frame_5=sx=(sx+(max(0, (max(bass_att, bass)-1))*0.37));
+per_frame_6=q1=(max(0, (bass-1))*0.05);
+per_frame_7=q2=max(floor((((1.7-bass)+bass_att))/(2)), 0);
+per_frame_8=dx=((q1*1.7)*sin((101*q2)));
+per_frame_9=dy=((q1*1.6)*cos((85*q2)));
+per_frame_10=rot=floor((sin(((bass*treb)*mid)))/(16));
+per_pixel_1=zoom=((0.9615+floor((rad)/(12)))+floor((q2)/(20)));

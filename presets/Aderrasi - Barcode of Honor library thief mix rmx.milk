@@ -1,0 +1,73 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bWaveThick=1.0
+dx=1e-05
+dy=1e-05
+fDecay=1.0
+fGammaAdj=1.0
+fModWaveAlphaEnd=1.0
+fModWaveAlphaStart=0.5
+fWaveScale=0.721421
+fWaveSmoothing=0.9
+ib_a=1.0
+ib_b=1.0
+ib_g=1.0
+ib_r=1.0
+ib_size=0.02
+mv_a=0.0
+mv_b=0.8
+mv_g=0.0
+mv_l=1.0
+mv_r=0.0
+nWaveMode=7.0
+ob_a=1.0
+ob_size=0.115
+sx=0.990099
+warp=0.01
+wave_b=0.0
+wave_g=0.0
+fVideoEchoZoom=1.0
+nVideoEchoOrientation=1.0
+fWaveAlpha=100.0
+nMotionVectorsX=64.0
+nMotionVectorsY=48.0
+fWaveParam=1.0
+bTexWrap=0.0
+shapecode_0_enabled=1.0
+shapecode_0_textured=1.0
+shapecode_0_y=1.8
+shapecode_1_enabled=1.0
+shapecode_1_textured=1.0
+shapecode_1_y=1.8
+shapecode_2_enabled=1.0
+shapecode_2_textured=1.0
+shapecode_2_y=1.8
+shapecode_3_enabled=0.0
+wavecode_0_enabled=0.0
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=thresh = 0;
+per_frame_init_2=dx_r = 0;
+per_frame_init_3=dy_r = 0;
+per_frame_init_4=xy = 0;
+per_frame_1=wave_y=(wave_y+(0.2*sin((1.85*time))));
+per_frame_2=warp=0;
+per_frame_3=wave_r=1;
+per_pixel_1=dx=(dx+(if(abs(below(x, 0.5))>0.00001,(if(abs(above(bass, 1.1))>0.00001,(0.05*(0.5-x)),0)),0)));
+per_pixel_2=dx=(dx+(if(abs(above(x, 0.5))>0.00001,(if(abs(above(treb, 1.1))>0.00001,(0.05*(0.5-x)),0)),0)));
+per_pixel_3=rot=(rot-((0.05*(0.5-x))*sin((3*bass))));
+per_pixel_4=thresh=((above(bass_att, thresh)*2)+((1-above(bass_att, thresh))*(((thresh-1.3)*0.96)+1.3)));
+per_pixel_5=dx_r=(((equal(thresh, 2)*0.015)*sin((5*time)))+((1-equal(thresh, 2))*dx_r));
+per_pixel_6=dy_r=(((equal(thresh, 2)*0.015)*sin((6*time)))+((1-equal(thresh, 2))*dy_r));
+per_pixel_7=xy=(((above(sin(time), 0)*x)+(below(sin((1.34*time)), 0)*y))+(above(bass_att, 1.1)*-1));
+per_pixel_8=dx=(dx+dx_r);
+per_pixel_9=dy=(dy+dy_r);
+per_pixel_10=sx=(sx-abs(((12*dx_r)*(xy*sin(((xy*bass_att)*1.25))))));
+per_pixel_11=sy=(sy-abs(((12*dy_r)*(xy*sin(((xy*bass_att)*1.25))))));
+per_pixel_12=rot=(rot+((22*dx_r)*(xy*cos(((4*xy)*treb_att)))));
+per_pixel_13=cx=(cx+((8*dx_r)*(xy*sin(((xy*mid_att)*1.1)))));
+per_pixel_14=cy=(cy+((8*dy_r)*(xy*sin(((xy*mid_att)*1.1)))));

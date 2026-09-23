@@ -1,0 +1,30 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bDarken=1.0
+fDecay=0.9902
+fGammaAdj=1.998
+fWarpScale=1.554884
+fWaveScale=0.408
+fWaveSmoothing=0.9
+mv_a=0.0
+nWaveMode=1.0
+rot=-0.01
+warp=0.0
+wave_b=0.0
+wave_g=0.45
+wave_r=0.9
+fWaveAlpha=5.9
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=pv = 0;
+per_frame_1=wave_r=(wave_r+(0.12*((0.6*sin((0.955*time)))+(0.4*sin((1.005*time))))));
+per_frame_2=wave_g=(wave_g+(0.03*((0.6*sin((0.9*time)))+(0.4*sin((0.875*time))))));
+per_frame_3=decay=(decay-(0.02*equal(((frame)%(80)), 0)));
+per_frame_4=pv=(0.00000002*time);
+per_frame_5=zoom=(zoom+(0.02*pv));

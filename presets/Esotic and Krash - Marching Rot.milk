@@ -1,0 +1,111 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+cx=1.263027
+cy=1.024518
+dx=-0.148479
+dy=-0.249353
+fDecay=0.990796
+fGammaAdj=1.366322
+fModWaveAlphaEnd=1.478585
+fModWaveAlphaStart=1.724614
+fWarpAnimSpeed=3.091619
+fWarpScale=9.380961
+fWaveScale=0.010639
+fWaveSmoothing=0.058145
+ib_a=0.569327
+ib_b=0.34629
+ib_g=0.213381
+ib_r=0.50038
+ib_size=0.008076
+mv_a=0.164745
+mv_b=0.087413
+mv_g=0.785085
+mv_l=0.184368
+mv_r=0.918841
+ob_a=0.335562
+ob_b=0.024818
+ob_g=0.37728
+ob_r=0.378221
+ob_size=0.034538
+rot=1.029757
+warp=1.713563
+wave_b=0.013898
+wave_g=0.920837
+wave_r=0.80873
+wave_x=0.134067
+wave_y=0.513002
+zoom=1.615647
+fVideoEchoAlpha=0.976711
+fVideoEchoZoom=1.0
+nVideoEchoOrientation=1.0
+fWaveAlpha=1.31586
+fShader=0.271874
+nMotionVectorsX=46.234951
+nMotionVectorsY=35.233147
+fWaveParam=-0.354588
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+wavecode_0_enabled=0.0
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=meanbass_att = 0;
+per_frame_init_2=q1 = 0;
+per_frame_init_3=lastbeat = 0;
+per_frame_init_4=my_rot = 0;
+per_frame_init_5=beatrate = 0;
+per_frame_init_6=peakbass_att = 0;
+per_frame_init_7=att = 0;
+per_frame_init_8=volume = 0;
+per_frame_init_9=beat = 0;
+per_frame_init_10=q2 = 0;
+per_frame_init_11=q3 = 0;
+per_frame_1=volume=(0.3*((bass+mid)+att));
+per_frame_2=beatrate=(if(abs(equal(beatrate, 0))>0.00001,1,(if(abs(below(volume, 0.01))>0.00001,1,beatrate))));
+per_frame_3=lastbeat=(if(abs(equal(lastbeat, 0))>0.00001,time,lastbeat));
+per_frame_4=meanbass_att=(0.1*((meanbass_att*9)+bass_att));
+per_frame_5=beat=(if(abs(above(volume, 0.8))>0.00001,(if(abs(below((peakbass_att-bass_att), (0.05*peakbass_att)))>0.00001,(if(abs(above((time-lastbeat), (0.1+(0.5*(beatrate-0.1)))))>0.00001,1,0)),0)),0));
+per_frame_6=beatrate=max((if(abs(beat)>0.00001,(if(abs(below((time-lastbeat), (2*beatrate)))>0.00001,(0.5*((beatrate+time)-lastbeat)),beatrate)),beatrate)), 0.1);
+per_frame_7=peakbass_att=(if(abs(equal(beat, 0))>0.00001,(if(abs(above((time-lastbeat), (2*beatrate)))>0.00001,(peakbass_att*0.95),(peakbass_att*0.995))),bass_att));
+per_frame_8=lastbeat=(if(abs(beat)>0.00001,time,lastbeat));
+per_frame_9=peakbass_att=max((if(abs(beat)>0.00001,bass_att,peakbass_att)), (1.1*meanbass_att));
+per_frame_10=q1=beat;
+per_frame_11=dy=(mid_att+mid_att);
+per_frame_12=dx=(mid-mid);
+per_frame_13=warp=(0.00001*(bass_att*treb));
+per_frame_14=zoom=(mid_att-mid_att);
+per_frame_15=wave_mystery=(bass-treb);
+per_frame_16=zoom=(zoom*mid_att);
+per_frame_17=wave_mystery=(wave_mystery*bass_att);
+per_frame_18=warp=(0.0001*(warp*treb));
+per_frame_19=dx=(dx*treb_att);
+per_frame_20=warp=(if(abs(below(warp, 0.01))>0.00001,0.01,warp));
+per_frame_21=warp=(if(abs(above(warp, 100.0))>0.00001,100.0,warp));
+per_frame_22=zoom=(if(abs(below(zoom, 0.01))>0.00001,0.01,zoom));
+per_frame_23=zoom=(if(abs(above(zoom, 100))>0.00001,100,zoom));
+per_frame_24=dx=(if(abs(below(dx, -1))>0.00001,-1,dx));
+per_frame_25=dx=(if(abs(above(dx, 1.0))>0.00001,1.0,dx));
+per_frame_26=dy=(if(abs(below(dy, -1))>0.00001,-1,dy));
+per_frame_27=dy=(if(abs(above(dy, 1.0))>0.00001,1.0,dy));
+per_frame_28=wave_mystery=(if(abs(below(wave_mystery, -1.0))>0.00001,-1.0,wave_mystery));
+per_frame_29=wave_mystery=(if(abs(above(wave_mystery, 1.0))>0.00001,1.0,wave_mystery));
+per_frame_30=my_rot=(my_rot+(0.03*beatrate));
+per_frame_31=rot=my_rot;
+per_pixel_1=cx=(rot+ang);
+per_pixel_2=dy=(x*q3);
+per_pixel_3=warp=(ang*q1);
+per_pixel_4=sy=(rot-q2);
+per_pixel_5=warp=(if(abs(below(warp, 0.01))>0.00001,0.01,warp));
+per_pixel_6=warp=(if(abs(above(warp, 100.0))>0.00001,100.0,warp));
+per_pixel_7=cx=(if(abs(below(cx, -1.0))>0.00001,-1.0,cx));
+per_pixel_8=cx=(if(abs(above(cx, 2.0))>0.00001,2.0,cx));
+per_pixel_9=dy=(if(abs(below(dy, -1))>0.00001,-1,dy));
+per_pixel_10=dy=(if(abs(above(dy, 1.0))>0.00001,1.0,dy));
+per_pixel_11=sy=(if(abs(below(sy, 0.01))>0.00001,0.01,sy));
+per_pixel_12=sy=(if(abs(above(sy, 100.0))>0.00001,100.0,sy));

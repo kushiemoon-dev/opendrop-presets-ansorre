@@ -1,0 +1,106 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bWaveThick=1.0
+dx=0.005
+fDecay=0.51
+fGammaAdj=1.0
+fModWaveAlphaEnd=1.3
+fModWaveAlphaStart=0.71
+fWarpScale=1.331
+fWaveScale=0.01
+fWaveSmoothing=0.63
+ib_a=0.05
+ib_b=1.0
+ib_g=1.0
+ib_r=1.0
+ib_size=0.0
+mv_a=0.0
+mv_l=5.0
+nWaveMode=6.0
+ob_a=1.0
+ob_size=0.0
+warp=0.01
+wave_b=0.65
+wave_g=0.65
+wave_r=0.65
+wave_x=0.01
+zoom=0.999514
+bAdditiveWaves=1.0
+fVideoEchoAlpha=0.5
+fVideoEchoZoom=1.00815
+fWaveAlpha=4.099998
+nMotionVectorsX=12.799999
+nMotionVectorsY=48.0
+fWaveParam=-1.0
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=1.0
+shapecode_1_sides=100.0
+shapecode_1_textured=1.0
+shapecode_1_rad=3.386595
+shapecode_1_tex_zoom=0.451118
+shapecode_1_g=1.0
+shapecode_1_b=1.0
+shapecode_1_a=0.1
+shapecode_1_r2=1.0
+shapecode_1_b2=1.0
+shapecode_1_a2=1.0
+shapecode_1_border_a=0.0
+shape_1_init1=v = 0;
+shape_1_init2=vol = 0;
+shape_1_per_frame1=v=(pow(mid_att, 3)+v);
+shape_1_per_frame2=vol=((bass+treb)+mid);
+shape_1_per_frame3=rad=(3.387+(sin(vol)*0.15));
+shape_1_per_frame4=a=((sin((v*0.003))*0.5)+0.5);
+shape_1_per_frame5=tex_ang=(sin((v*0.0005))*6.28);
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+wavecode_0_enabled=0.0
+wavecode_1_enabled=0.0
+wavecode_2_enabled=1.0
+wavecode_2_scaling=0.999996
+wavecode_2_smoothing=0.0
+wave_2_init1=xp = 0;
+wave_2_init2=s = 0;
+wave_2_init3=yp = 0;
+wave_2_init4=t1 = 0;
+wave_2_init5=gg = 0;
+wave_2_init6=vg = 0;
+wave_2_init7=t3 = 0;
+wave_2_init8=zf = 0;
+wave_2_init9=zq = 0;
+wave_2_init10=zm = 0;
+wave_2_init11=ex = 0;
+wave_2_init12=vol_avg = 0;
+wave_2_init13=tm = 0;
+wave_2_init14=t2 = 0;
+wave_2_init15=l = 0;
+wave_2_init16=vol = 0;
+wave_2_init17=zp = 0;
+wave_2_init18=sp = 0;
+wave_2_init19=bb = 0;
+wave_2_init20=h = 0;
+wave_2_init21=monitor = 0;
+wave_2_init22=t4 = 0;
+wave_2_init23=rr = 0;
+wave_2_init24=zt = 0;
+wave_2_init25=cc = 0;
+wave_2_per_frame1=vol=(((bass_att+mid_att)+treb_att)*0.333333);
+wave_2_per_frame2=vol_avg=(0.1*((vol_avg*9)+vol));
+wave_2_per_frame3=vg=(vol_avg*0.1);
+wave_2_per_frame4=t1=(time*0.3);
+wave_2_per_frame5=t2=2;
+wave_2_per_frame6=t3=0;
+wave_2_per_frame7=t4=0;
+wavecode_3_enabled=0.0
+per_frame_1=wave_a=0;
+per_frame_2=decay=1;
+per_frame_3=warp=0;
+per_frame_4=dx=0;
+per_frame_5=dy=0;
+per_frame_6=sx=1;
+per_frame_7=sy=1;
+per_frame_8=zoom=1;

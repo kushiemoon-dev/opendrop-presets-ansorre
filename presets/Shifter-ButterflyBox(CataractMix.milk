@@ -1,0 +1,77 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bInvert=1.0
+bModWaveAlphaByVolume=1.0
+fDecay=0.94
+fGammaAdj=1.7
+fModWaveAlphaEnd=1.8
+fModWaveAlphaStart=2.0
+fWarpAnimSpeed=0.999994
+fWarpScale=3.300355
+fWaveScale=0.653093
+fWaveSmoothing=0.0
+ib_a=0.5
+ib_b=1.0
+ib_g=1.0
+ib_r=1.0
+ib_size=0.1
+mv_a=0.0
+mv_b=0.6
+mv_g=0.6
+mv_l=5.0
+mv_r=0.6
+nWaveMode=1.0
+ob_b=0.1
+ob_size=0.25
+sx=0.99983
+sy=1.000158
+warp=2.630066
+wave_b=0.0
+wave_g=0.5
+wave_r=0.5
+zoom=0.999826
+fVideoEchoAlpha=0.5
+fVideoEchoZoom=0.999992
+nVideoEchoOrientation=1.0
+fWaveAlpha=0.001
+fZoomExponent=0.999997
+nMotionVectorsX=31.999994
+nMotionVectorsY=24.000004
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=onethird = 0;
+per_frame_init_2=r1 = 0;
+per_frame_init_3=g2 = 0;
+per_frame_init_4=aib_size = 0;
+per_frame_init_5=twothird = 0;
+per_frame_init_6=aob_a = 0;
+per_frame_init_7=r2 = 0;
+per_frame_init_8=b2 = 0;
+per_frame_init_9=g1 = 0;
+per_frame_init_10=b1 = 0;
+per_frame_init_11=onethird=2.0943951023;
+per_frame_init_12=twothird=4.1887902048;
+per_frame_init_13=r1=(1+int(rand(0.4)));
+per_frame_init_14=g1=(1+int(rand(0.4)));
+per_frame_init_15=b1=(1+int(rand(0.4)));
+per_frame_init_16=r2=(1+int(rand(0.4)));
+per_frame_init_17=g2=(1+int(rand(0.4)));
+per_frame_init_18=b2=(1+int(rand(0.4)));
+per_frame_1=ob_size=(1.8-bass);
+per_frame_2=dx=((sin((time*1.44))*0.015)+(sin((time*0.732))*0.01));
+per_frame_3=dy=((cos((time*1.12))*0.015)+(cos((time*0.833))*0.01));
+per_frame_4=ob_r=((sin((r1*(time+onethird)))*0.25)+0.75);
+per_frame_5=ob_g=((sin((g1*(time+twothird)))*0.25)+0.75);
+per_frame_6=ob_b=((sin((b1*time))*0.25)+0.75);
+per_frame_7=ib_r=((cos((r2*(time+onethird)))*0.25)+0.5);
+per_frame_8=ib_g=((cos((g2*(time+twothird)))*0.25)+0.5);
+per_frame_9=ib_b=((cos((b2*time))*0.25)+0.5);
+per_frame_10=ib_size=(0.033*((treb+mid)+bass));
+per_frame_11=aib_size=(0.1*mid);
+per_frame_12=warp=((warp*0.5)*((treb+mid)+bass));
+per_frame_13=aob_a=(0.2*equal(0, ((frame)%(10))));

@@ -1,0 +1,51 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bModWaveAlphaByVolume=1.0
+fDecay=0.925
+fGammaAdj=1.0
+fModWaveAlphaEnd=1.3
+fModWaveAlphaStart=0.71
+fWarpScale=5.053447
+fWaveScale=1.285751
+fWaveSmoothing=0.63
+ib_size=0.26
+mv_a=0.0
+mv_g=0.4
+mv_l=0.4
+nWaveMode=6.0
+ob_r=0.01
+ob_size=0.5
+warp=0.484545
+wave_b=0.65
+wave_g=0.65
+wave_r=0.65
+zoom=0.999514
+bAdditiveWaves=1.0
+fVideoEchoAlpha=0.5
+fVideoEchoZoom=0.336902
+fWaveAlpha=0.118647
+nMotionVectorsX=64.0
+nMotionVectorsY=20.160004
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+wavecode_0_enabled=1.0
+wave_0_init1=ma = 0;
+wave_0_init2=mx = 0;
+wave_0_init3=my = 0;
+wavecode_1_enabled=1.0
+wave_1_init1=ma = 0;
+wave_1_init2=mx = 0;
+wave_1_init3=my = 0;
+wavecode_2_enabled=1.0
+wave_2_init1=ma = 0;
+wave_2_init2=mx = 0;
+wave_2_init3=my = 0;
+wavecode_3_enabled=1.0
+wave_3_init1=ma = 0;
+wave_3_init2=mx = 0;
+wave_3_init3=my = 0;

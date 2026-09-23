@@ -1,0 +1,107 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bModWaveAlphaByVolume=1.0
+fDecay=1.0
+fGammaAdj=1.21
+fModWaveAlphaEnd=1.3
+fModWaveAlphaStart=0.71
+fWarpScale=1.331
+fWaveScale=0.01
+fWaveSmoothing=0.63
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+ib_size=0.26
+mv_a=0.51
+nWaveMode=1.0
+ob_a=0.1
+ob_size=0.1
+warp=0.01
+wave_b=0.0
+wave_g=0.0
+wave_r=0.0
+zoom=0.999514
+bAdditiveWaves=1.0
+fVideoEchoAlpha=1.0
+fVideoEchoZoom=1.111904
+fWaveAlpha=4.099998
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=bass_residual = 0;
+per_frame_init_2=grid_shift = 0;
+per_frame_init_3=old_treb_flop = 0;
+per_frame_init_4=bass_flop = 0;
+per_frame_init_5=grid = 0;
+per_frame_init_6=q6 = 0;
+per_frame_init_7=q1 = 0;
+per_frame_init_8=q5 = 0;
+per_frame_init_9=treb_flop = 0;
+per_frame_init_10=mytime = 0;
+per_frame_init_11=bass_thresh = 0;
+per_frame_init_12=old_bass_flop = 0;
+per_frame_init_13=treb_thresh = 0;
+per_frame_init_14=pulse = 0;
+per_frame_init_15=bass_changed = 0;
+per_frame_init_16=mid_thresh = 0;
+per_frame_init_17=q4 = 0;
+per_frame_init_18=mid_changed = 0;
+per_frame_init_19=entropy = 0;
+per_frame_init_20=bend = 0;
+per_frame_init_21=old_mid_flop = 0;
+per_frame_init_22=mid_residual = 0;
+per_frame_init_23=treb_residual = 0;
+per_frame_init_24=chaos = 0;
+per_frame_init_25=mid_flop = 0;
+per_frame_init_26=q2 = 0;
+per_frame_init_27=treb_changed = 0;
+per_frame_init_28=q3 = 0;
+per_frame_init_29=q7 = 0;
+per_frame_init_30=q8 = 0;
+per_frame_1=warp=0;
+per_frame_2=old_bass_flop=bass_flop;
+per_frame_3=old_treb_flop=treb_flop;
+per_frame_4=old_mid_flop=mid_flop;
+per_frame_5=chaos=(0.9+(0.1*sin(pulse)));
+per_frame_6=entropy=(if(abs(equal(pulse, -20))>0.00001,((((1+bass_flop)+treb_flop)+mid_flop)+int(rand(2))),entropy));
+per_frame_7=bass_thresh=((above(bass_att, bass_thresh)*2)+((1-above(bass_att, bass_thresh))*(((bass_thresh-1.6)*chaos)+1.6)));
+per_frame_8=bass_flop=abs((bass_flop-equal(bass_thresh, 2)));
+per_frame_9=treb_thresh=((above(treb_att, treb_thresh)*2)+((1-above(treb_att, treb_thresh))*(((treb_thresh-1.6)*chaos)+1.6)));
+per_frame_10=treb_flop=abs((treb_flop-equal(treb_thresh, 2)));
+per_frame_11=mid_thresh=((above(mid_att, mid_thresh)*2)+((1-above(mid_att, mid_thresh))*(((mid_thresh-1.6)*chaos)+1.6)));
+per_frame_12=mid_flop=abs((mid_flop-equal(mid_thresh, 2)));
+per_frame_13=bass_changed=bnot(equal(old_bass_flop, bass_flop));
+per_frame_14=mid_changed=bnot(equal(old_mid_flop, mid_flop));
+per_frame_15=treb_changed=bnot(equal(old_treb_flop, treb_flop));
+per_frame_16=bass_residual=((bass_changed*sin((pulse*3)))+(bnot(bass_changed)*bass_residual));
+per_frame_17=treb_residual=((treb_changed*sin((pulse*3)))+(bnot(treb_changed)*treb_residual));
+per_frame_18=mid_residual=((mid_changed*sin((pulse*3)))+(bnot(mid_changed)*mid_residual));
+per_frame_19=pulse=(if(abs(above(abs(pulse), 20))>0.00001,-20,(pulse+(((bass_thresh+mid_thresh)+treb_thresh)*0.018))));
+per_frame_20=q1=mid_residual;
+per_frame_21=q2=bass_residual;
+per_frame_22=q3=treb_residual;
+per_frame_23=q4=sin(pulse);
+per_frame_24=q5=cos((pulse*(0.5+(0.1*entropy))));
+per_frame_25=q6=sin((pulse*(0.5+pow(0.25, entropy))));
+per_frame_26=q7=(((((above(q1, 0)+above(q2, 0))+above(q3, 0))+(above(q3, 0)*treb_flop))+(above(q2, 0)*bass_flop))+(above(q1, 0)*mid_flop));
+per_frame_27=q8=entropy;
+per_frame_28=mytime=(q6*time);
+per_frame_29=ob_g=((mytime)%(2));
+per_frame_30=ob_r=((mytime)%(3));
+per_frame_31=ob_b=((mytime)%(4));
+per_frame_32=mv_b=(sin(mytime)+abs(sin(mytime)));
+per_frame_33=mv_r=cos(mytime);
+per_frame_34=mv_g=((-0.8*sign(sin(mytime)))*abs(sin(mytime)));
+per_frame_35=dx=(0.3*sin(time));
+per_frame_36=dy=(0.3*cos((3*time)));
+per_frame_37=monitor=q2;
+per_pixel_1=bend=cos(((((((x*10)*q2)*bnot(((q7)%(2))))+((((rad*10)*q2)-(10*q3))*bnot(((q1)%(7)))))+((y*10)*q6))-((10*q3)*bnot(((q7)%(3))))));
+per_pixel_2=grid=((((sin(((x*1.6)*q1))*10))%(2))+(((sin(((y*1.6)*q2))*10))%(2)));
+per_pixel_3=grid_shift=(1-(bnot(equal(grid, above(q7, 2)))*(if(abs(above(q8, 2))>0.00001,q6,sin(((rad*3.14)*q6))))));
+per_pixel_4=rot=(rot+((grid_shift*8)*sin(rad)));
+per_pixel_5=zoom=(zoom+(rad*bend));

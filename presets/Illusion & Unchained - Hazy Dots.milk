@@ -1,0 +1,42 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bBrighten=1.0
+bWaveDots=1.0
+fDecay=0.993
+fGammaAdj=1.0
+fModWaveAlphaEnd=0.75
+fModWaveAlphaStart=1.15
+fWarpAnimSpeed=1.53
+fWarpScale=1.731
+fWaveScale=2.594509
+fWaveSmoothing=0.18
+mv_a=0.0
+nWaveMode=6.0
+sx=1.006
+sy=0.9999
+warp=0.1401
+zoom=1.000223
+bAdditiveWaves=1.0
+fVideoEchoAlpha=0.88
+fVideoEchoZoom=7.523862
+fWaveAlpha=2.518211
+fZoomExponent=0.99817
+nMotionVectorsX=15.0
+nMotionVectorsY=6.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=basseffect = 0;
+per_frame_init_2=att = 0;
+per_frame_init_3=progress = 0;
+per_frame_1=basseffect=max((max(bass, att)-1), 0);
+per_frame_2=wave_y=min((0.35+(bass_att*0.2)), 1);
+per_frame_3=decay=(if(abs(above(progress, 0.05))>0.00001,1,0));
+per_frame_4=mv_y=(4-min((((bass_att+bass)-2)*0.25), 0.9));
+per_frame_5=mv_r=(basseffect*4);
+per_frame_6=mv_b=(basseffect*3);
+per_frame_7=mv_g=(basseffect*3.5);

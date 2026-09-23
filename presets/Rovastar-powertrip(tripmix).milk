@@ -1,0 +1,76 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bWaveDots=1.0
+bWaveThick=1.0
+fDecay=0.986
+fModWaveAlphaEnd=1.3
+fModWaveAlphaStart=0.71
+fWarpScale=1.331
+fWaveScale=0.799885
+fWaveSmoothing=0.153
+ib_a=1.0
+ib_r=0.65
+mv_a=0.0
+nWaveMode=3.0
+ob_a=1.0
+ob_b=0.4
+rot=0.02
+warp=0.198054
+wave_b=0.65
+wave_g=0.65
+wave_r=0.65
+zoom=1.070549
+fVideoEchoZoom=1.006596
+nVideoEchoOrientation=3.0
+fWaveAlpha=4.099998
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=counter = 0;
+per_frame_init_2=meanbass_att = 0;
+per_frame_init_3=q1 = 0;
+per_frame_init_4=bass_thresh = 0;
+per_frame_init_5=lastbeat = 0;
+per_frame_init_6=beatrate = 0;
+per_frame_init_7=peakbass_att = 0;
+per_frame_init_8=countertime = 0;
+per_frame_init_9=dx_residual = 0;
+per_frame_init_10=volume = 0;
+per_frame_init_11=beat = 0;
+per_frame_init_12=oldq1 = 0;
+per_frame_init_13=dy_residual = 0;
+per_frame_init_14=q1=1;
+per_frame_1=warp=0;
+per_frame_2=wave_r=((sin((time*0.561))*0.5)+0.5);
+per_frame_3=wave_g=((cos((time*0.431))*0.5)+0.5);
+per_frame_4=wave_b=((cos((time*0.531))*0.5)+0.5);
+per_frame_5=volume=(0.15*(((bass_att+bass)+mid)+mid_att));
+per_frame_6=beatrate=(if(abs(equal(beatrate, 0))>0.00001,1,(if(abs(below(volume, 0.01))>0.00001,1,beatrate))));
+per_frame_7=lastbeat=(if(abs(equal(lastbeat, 0))>0.00001,time,lastbeat));
+per_frame_8=meanbass_att=(0.1*((meanbass_att*9)+bass_att));
+per_frame_9=peakbass_att=(if(abs(above(bass_att, peakbass_att))>0.00001,bass_att,peakbass_att));
+per_frame_10=beat=(if(abs(above(volume, 0.8))>0.00001,(if(abs(below((peakbass_att-bass_att), (0.05*peakbass_att)))>0.00001,(if(abs(above((time-lastbeat), (0.1+(0.5*(beatrate-0.1)))))>0.00001,1,0)),0)),0));
+per_frame_11=beatrate=max((if(abs(beat)>0.00001,(if(abs(below((time-lastbeat), (2*beatrate)))>0.00001,(0.1*(((beatrate*9)+time)-lastbeat)),beatrate)),beatrate)), 0.1);
+per_frame_12=peakbass_att=(if(abs(equal(beat, 0))>0.00001,(if(abs(above((time-lastbeat), (2*beatrate)))>0.00001,(peakbass_att*0.95),(peakbass_att*0.995))),bass_att));
+per_frame_13=lastbeat=(if(abs(beat)>0.00001,time,lastbeat));
+per_frame_14=countertime=(if(abs(beat)>0.00001,time,countertime));
+per_frame_15=counter=(-1*pow(min(((time-countertime)-3), 0), 3));
+per_frame_16=q1=(oldq1+(0.003*counter));
+per_frame_17=oldq1=q1;
+per_frame_18=monitor=q1;
+per_frame_19=ib_r=(0.5+(0.5*sin(q1)));
+per_frame_20=ib_g=(0.5+(0.5*cos((beat+(0.1*q1)))));
+per_frame_21=ob_r=wave_r;
+per_frame_22=dx=(dx+dx_residual);
+per_frame_23=dy=(dy+dy_residual);
+per_frame_24=bass_thresh=((above(bass_att, bass_thresh)*2)+((1-above(bass_att, bass_thresh))*(((bass_thresh-1.3)*0.96)+1.3)));
+per_frame_25=dx_residual=(((equal(bass_thresh, 2)*0.016)*sin((time*7)))+((1-equal(bass_thresh, 2))*dx_residual));
+per_frame_26=dy_residual=(((equal(bass_thresh, 2)*0.012)*sin((time*9)))+((1-equal(bass_thresh, 2))*dy_residual));
+per_frame_27=cx=(0.5+(15*dx));
+per_frame_28=cy=(0.5+(15*dy));
+per_pixel_1=rot=(0.1*pow(tan(((ang-(3.14*q1))+rad)), 3));
+per_pixel_2=zoom=((1-(0.05*(1-rad)))+((0.05*sin(q1))*rad));

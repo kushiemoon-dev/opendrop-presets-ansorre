@@ -1,0 +1,81 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bWaveThick=1.0
+fDecay=1.0
+fGammaAdj=1.0
+fModWaveAlphaEnd=1.3
+fModWaveAlphaStart=0.71
+fWarpScale=1.331
+fWaveScale=0.796897
+fWaveSmoothing=0.9
+ib_size=0.26
+mv_a=0.0
+mv_b=0.0
+mv_g=0.0
+mv_l=5.0
+mv_r=0.0
+ob_size=0.004
+warp=0.01
+wave_b=0.65
+wave_g=0.65
+wave_r=0.65
+zoom=0.9995
+fVideoEchoAlpha=0.5
+fVideoEchoZoom=1.006596
+nVideoEchoOrientation=1.0
+fWaveAlpha=4.528948
+nMotionVectorsX=6.272
+nMotionVectorsY=19.200005
+fWaveParam=-0.36
+bTexWrap=0.0
+shapecode_0_enabled=1.0
+shapecode_0_sides=40.0
+shapecode_0_textured=1.0
+shapecode_0_rad=0.089248
+shapecode_0_g=1.0
+shapecode_0_b=1.0
+shapecode_0_r2=1.0
+shapecode_0_b2=1.0
+shapecode_0_border_a=0.0
+shape_0_init1=fran=1;
+shape_0_init2=xs=1;
+shape_0_init3=ys=1;
+shape_0_init4=xm=0.2;
+shape_0_init5=ym=0.2;
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+wavecode_0_enabled=0.0
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=ag = 0;
+per_frame_init_2=an = 0;
+per_frame_init_3=mod = 0;
+per_frame_init_4=vol = 0;
+per_frame_init_5=azoom = 0;
+per_frame_init_6=dv = 0;
+per_frame_init_7=decay=0;
+per_frame_1=dv=0.999;
+per_frame_2=dv=1;
+per_frame_3=decay=dv;
+per_frame_4=wave_r=(0.5+(0.5*((cos((time*0.434))*0.5)+(0.5*sin((time*0.556))))));
+per_frame_5=wave_g=(0.5+(0.5*((cos((time*0.624))*0.6)+(0.4*cos((time*0.846))))));
+per_frame_6=wave_b=(0.5+(0.5*((cos((time*0.736))*0.8)+(0.2*sin((time*0.256))))));
+per_frame_7=wave_r=(0.5+(0.5*sin((0.5*time))));
+per_frame_8=wave_g=(0.5+(0.5*sin((0.5*(time+2.094)))));
+per_frame_9=wave_b=(0.5+(0.5*sin((0.5*(time+4.188)))));
+per_pixel_1=rot=(0.01*sin(((rad+0.1)*20)));
+per_pixel_2=ag=((ag+0.1)-(900*above(ag, 900)));
+per_pixel_3=an=(ang+ag);
+per_pixel_4=mod=sin((an*30));
+per_pixel_5=mod=((mod*mod)*mod);
+per_pixel_6=mod=((mod*mod)*mod);
+per_pixel_7=mod=((mod*mod)*mod);
+per_pixel_8=mod=((mod*mod)*mod);
+per_pixel_9=vol=floor((((bass_att+mid_att)+treb_att))/(3));
+per_pixel_10=zoom=(1+(abs(mod)*above(vol, 1)));
+per_pixel_11=azoom=(1+(abs(mod)*equal(((frame)%(2)), 0)));

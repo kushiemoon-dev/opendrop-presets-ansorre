@@ -1,0 +1,101 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bSolarize=1.0
+bWaveDots=1.0
+fDecay=0.96
+fGammaAdj=1.0
+fWarpAnimSpeed=0.010284
+fWarpScale=0.01
+fWaveScale=0.011726
+fWaveSmoothing=0.9
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+ib_size=0.0
+mv_a=0.0
+mv_g=0.7
+mv_l=1.0
+mv_r=0.41
+nWaveMode=3.0
+ob_b=0.1
+ob_r=0.11
+ob_size=0.0
+warp=0.01
+wave_b=0.3
+wave_g=0.4
+wave_r=0.5
+fVideoEchoZoom=0.99663
+nVideoEchoOrientation=1.0
+fWaveAlpha=0.001
+nMotionVectorsX=12.799999
+nMotionVectorsY=9.599999
+bTexWrap=0.0
+shapecode_0_enabled=1.0
+shapecode_0_textured=1.0
+shapecode_0_rad=1.35581
+shapecode_0_ang=3.141593
+shapecode_0_tex_ang=3.141594
+shapecode_0_tex_zoom=0.787562
+shapecode_0_r=0.95
+shapecode_0_g=0.96
+shapecode_0_b=0.83
+shapecode_0_r2=1.0
+shapecode_0_b2=1.0
+shapecode_0_border_a=0.0
+shape_0_per_frame1=ang=(sin((time*0.5))*0.007);
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+wavecode_0_enabled=1.0
+wavecode_0_r=0.0
+wavecode_0_g=0.0
+wavecode_0_b=0.0
+wave_0_init1=advance = 0;
+wave_0_init2=t1 = 0;
+wave_0_init3=advance2 = 0;
+wave_0_init4=t2 = 0;
+wave_0_init5=advance=0;
+wave_0_init6=advance2=0;
+wave_0_per_frame1=advance=(advance+((bass_att*bass_att)*0.002));
+wave_0_per_frame2=advance=(if(abs(above(advance, 2))>0.00001,(advance-2),advance));
+wave_0_per_frame3=t1=advance;
+wave_0_per_frame4=advance2=(advance2+((mid_att*mid_att)*0.005));
+wave_0_per_frame5=t2=advance2;
+wavecode_1_enabled=1.0
+wave_1_init1=advance = 0;
+wave_1_init2=t1 = 0;
+wave_1_init3=advance2 = 0;
+wave_1_init4=t2 = 0;
+wave_1_init5=advance=0;
+wave_1_init6=advance2=0;
+wave_1_per_frame1=advance=(advance+((bass_att*bass_att)*0.002));
+wave_1_per_frame2=advance=(if(abs(above(advance, 2))>0.00001,(advance-2),advance));
+wave_1_per_frame3=t1=advance;
+wave_1_per_frame4=advance2=(advance2+((mid_att*mid_att)*0.001));
+wave_1_per_frame5=t2=advance2;
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=switch = 0;
+per_frame_init_2=q1 = 0;
+per_frame_init_3=q2 = 0;
+per_frame_init_4=q3 = 0;
+per_frame_init_5=mv_x=64;
+per_frame_init_6=mv_y=48;
+per_frame_init_7=nut=0;
+per_frame_init_8=stp=0;
+per_frame_init_9=stq=0;
+per_frame_init_10=rtp=0;
+per_frame_init_11=rtq=0;
+per_frame_init_12=wvr=0;
+per_frame_init_13=decay=0;
+per_frame_init_14=dcsp=0;
+per_frame_1=decay=0.995;
+per_frame_2=switch=(above(sin(time), 0.996)*0.02);
+per_frame_3=zoom=(-1.01-(treb_att*0.01));
+per_frame_4=q1=time;
+per_frame_5=q2=time;
+per_frame_6=q3=time;
+per_pixel_1=rot=(((floor((rad)/(100))*y)*bass)*4.5);

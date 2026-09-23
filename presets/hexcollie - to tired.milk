@@ -1,0 +1,124 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bDarkenCenter=1.0
+fDecay=0.9
+fGammaAdj=2.21
+ib_b=0.0
+ib_g=0.0
+ib_r=0.01
+ib_size=0.5
+mv_a=0.0
+mv_dx=0.32
+mv_dy=-0.22
+mv_g=0.0
+mv_l=0.05
+mv_r=0.76
+ob_a=0.02
+ob_size=0.5
+rot=-0.1
+sx=3.60958
+sy=1.47412
+wave_b=0.5
+wave_g=0.5
+wave_r=0.5
+fVideoEchoZoom=1.0
+fWaveAlpha=1.0
+fShader=0.17
+nMotionVectorsX=7.68
+nMotionVectorsY=6.24
+bTexWrap=0.0
+shapecode_0_enabled=1.0
+shapecode_0_sides=20.0
+shapecode_0_textured=1.0
+shapecode_0_rad=2.46309
+shapecode_0_ang=1.50796
+shapecode_0_tex_zoom=0.55045
+shapecode_0_g=1.0
+shapecode_0_b=1.0
+shapecode_0_a=0.61
+shapecode_0_r2=1.0
+shapecode_0_b2=1.0
+shapecode_0_a2=0.49
+shapecode_0_border_a=1.0
+shapecode_1_enabled=1.0
+shapecode_1_sides=8.0
+shapecode_1_textured=1.0
+shapecode_1_rad=1.80933
+shapecode_1_tex_ang=1.00531
+shapecode_1_tex_zoom=1.36133
+shapecode_1_g=1.0
+shapecode_1_b=1.0
+shapecode_1_a=0.5
+shapecode_1_r2=1.0
+shapecode_1_b2=1.0
+shapecode_1_border_a=0.0
+shape_1_per_frame1=tex_ang=(time*0.04);
+shape_1_per_frame2=tex_zoom=(if(abs(above(bass, 1.5))>0.00001,(tex_zoom*2),tex_zoom));
+shapecode_2_enabled=1.0
+shapecode_2_sides=15.0
+shapecode_2_textured=1.0
+shapecode_2_num_inst=2.0
+shapecode_2_rad=0.11961
+shape_2_init1=ready = 0;
+shape_2_init2=rotator = 0;
+shape_2_init3=xs = 0;
+shape_2_init4=dir1 = 0;
+shape_2_init5=dir2 = 0;
+shape_2_init6=mover2 = 0;
+shape_2_init7=ys = 0;
+shape_2_init8=rotator2 = 0;
+shape_2_init9=dir = 0;
+shape_2_init10=mover = 0;
+shape_2_init11=q2 = 0;
+shape_2_init12=rotator3 = 0;
+shape_2_init13=happy = 0;
+shape_2_init14=swap = 0;
+shape_2_init15=dir=2;
+shape_2_init16=rotator=0.255;
+shape_2_init17=mover=0;
+shape_2_init18=dir2=dir;
+shape_2_init19=rotator2=2.86;
+shape_2_init20=mover2=0;
+shape_2_init21=mover3=mover;
+shape_2_init22=rotator3=0;
+shape_2_init23=happy=0;
+shape_2_init24=swap=1;
+shape_2_per_frame1=ang=(if(abs(equal(dir, 5))>0.00001,rotator3,(if(abs(swap)>0.00001,rotator,rotator2))));
+shape_2_per_frame2=x=(if(abs(swap)>0.00001,(if(abs(equal(dir, 1))>0.00001,(0.85-mover),(if(abs(equal(dir, 1.5))>0.00001,0.15,(if(abs(equal(dir, 2))>0.00001,0.15,(if(abs(equal(dir, 2.5))>0.00001,0.15,(if(abs(equal(dir, 3))>0.00001,(0.15+mover),(if(abs(equal(dir, 3.5))>0.00001,0.85,(if(abs(equal(dir, 4))>0.00001,0.85,(if(abs(equal(dir, 5))>0.00001,xs,0.85)))))))))))))))),x));
+shape_2_per_frame3=y=(if(abs(swap)>0.00001,(if(abs(equal(dir, 1))>0.00001,0.85,(if(abs(equal(dir, 1.5))>0.00001,0.85,(if(abs(equal(dir, 2))>0.00001,(0.85-mover),(if(abs(equal(dir, 2.5))>0.00001,0.15,(if(abs(equal(dir, 3))>0.00001,0.15,(if(abs(equal(dir, 3.5))>0.00001,0.15,(if(abs(equal(dir, 4))>0.00001,(0.15+mover),(if(abs(equal(dir, 5))>0.00001,ys,0.85)))))))))))))))),y));
+shape_2_per_frame4=mover=(if(abs(swap)>0.00001,(if(abs(equal(dir, 1))>0.00001,(mover+0.005),(if(abs(equal(dir, 1.5))>0.00001,0,(if(abs(equal(dir, 2))>0.00001,(mover+0.005),(if(abs(equal(dir, 2.5))>0.00001,0,(if(abs(equal(dir, 3))>0.00001,(mover+0.005),(if(abs(equal(dir, 3.5))>0.00001,0,(if(abs(equal(dir, 4))>0.00001,(mover+0.005),(if(abs(equal(dir1, 4.5))>0.00001,0,(if(abs(equal(dir, 5))>0.00001,mover,0)))))))))))))))))),mover));
+shape_2_per_frame5=dir=(if(abs(swap)>0.00001,(if(abs(equal(dir, 1))>0.00001,(if(abs(above(mover, 0.695))>0.00001,1.5,dir)),(if(abs(equal(dir, 1.5))>0.00001,(if(abs(below(rotator, -1.29))>0.00001,2,dir)),(if(abs(equal(dir, 2))>0.00001,(if(abs(above(mover, 0.695))>0.00001,2.5,dir)),(if(abs(equal(dir, 2.5))>0.00001,(if(abs(below(rotator, -2.85))>0.00001,3,dir)),(if(abs(equal(dir, 3))>0.00001,(if(abs(above(mover, 0.695))>0.00001,3.5,dir)),(if(abs(equal(dir, 3.5))>0.00001,(if(abs(below(rotator, -4.44))>0.00001,4,dir)),(if(abs(equal(dir, 4))>0.00001,(if(abs(above(mover, 0.695))>0.00001,4.5,dir)),(if(abs(equal(dir, 4.5))>0.00001,(if(abs(below(rotator, -5.94))>0.00001,1,dir)),(if(abs(equal(dir, 5))>0.00001,(if(abs(happy)>0.00001,dir2,dir)),dir)))))))))))))))))),dir));
+shape_2_per_frame6=rotator=(if(abs(swap)>0.00001,(if(abs(equal(dir, 1.5))>0.00001,(if(abs(above(rotator, -1.31))>0.00001,(rotator-0.05),rotator)),(if(abs(equal(dir, 2))>0.00001,-1.3,(if(abs(equal(dir, 2.5))>0.00001,(if(abs(above(rotator, -2.87))>0.00001,(rotator-0.05),rotator)),(if(abs(equal(dir, 3))>0.00001,-2.86,(if(abs(equal(dir, 3.5))>0.00001,(if(abs(above(rotator, -4.46))>0.00001,(rotator-0.05),rotator)),(if(abs(equal(dir, 4))>0.00001,-4.45,(if(abs(equal(dir, 4.5))>0.00001,(if(abs(above(rotator, -5.97))>0.00001,(rotator-0.05),rotator)),(if(abs(equal(dir, 5))>0.00001,rotator,0.255)))))))))))))))),rotator));
+shape_2_per_frame7=x=(if(abs(swap)>0.00001,x,(if(abs(equal(dir, 1))>0.00001,(0.15+mover2),(if(abs(equal(dir, 1.5))>0.00001,0.15,(if(abs(equal(dir, 2))>0.00001,0.15,(if(abs(equal(dir, 2.5))>0.00001,0.15,(if(abs(equal(dir, 3))>0.00001,(0.85-mover2),(if(abs(equal(dir, 3.5))>0.00001,0.85,(if(abs(equal(dir, 4))>0.00001,0.85,(if(abs(equal(dir, 5))>0.00001,xs,0.85))))))))))))))))));
+shape_2_per_frame8=y=(if(abs(swap)>0.00001,y,(if(abs(equal(dir, 1))>0.00001,0.85,(if(abs(equal(dir, 1.5))>0.00001,0.85,(if(abs(equal(dir, 2))>0.00001,(0.15+mover2),(if(abs(equal(dir, 2.5))>0.00001,0.15,(if(abs(equal(dir, 3))>0.00001,0.15,(if(abs(equal(dir, 3.5))>0.00001,0.15,(if(abs(equal(dir, 4))>0.00001,(0.85-mover2),(if(abs(equal(dir, 5))>0.00001,ys,0.85))))))))))))))))));
+shape_2_per_frame9=mover2=(if(abs(swap)>0.00001,mover2,(if(abs(equal(dir, 1))>0.00001,(mover2+0.005),(if(abs(equal(dir, 1.5))>0.00001,0,(if(abs(equal(dir, 2))>0.00001,(mover2+0.005),(if(abs(equal(dir, 2.5))>0.00001,0,(if(abs(equal(dir, 3))>0.00001,(mover2+0.005),(if(abs(equal(dir, 3.5))>0.00001,0,(if(abs(equal(dir, 4))>0.00001,(mover2+0.005),(if(abs(equal(dir, 5))>0.00001,mover2,(if(abs(equal(dir, 4.5))>0.00001,0,mover2))))))))))))))))))));
+shape_2_per_frame10=dir=(if(abs(swap)>0.00001,dir,(if(abs(equal(dir, 1))>0.00001,(if(abs(above(mover2, 0.695))>0.00001,4.5,dir)),(if(abs(equal(dir, 1.5))>0.00001,(if(abs(above(rotator2, 3.39))>0.00001,1,dir)),(if(abs(equal(dir, 2))>0.00001,(if(abs(above(mover2, 0.695))>0.00001,1.5,dir)),(if(abs(equal(dir, 2.5))>0.00001,(if(abs(above(rotator2, 1.79))>0.00001,2,dir)),(if(abs(equal(dir, 3))>0.00001,(if(abs(above(mover2, 0.695))>0.00001,2.5,dir)),(if(abs(equal(dir, 3.5))>0.00001,(if(abs(above(rotator2, 0.254))>0.00001,3,dir)),(if(abs(equal(dir, 4))>0.00001,(if(abs(above(mover2, 0.695))>0.00001,3.5,dir)),(if(abs(equal(dir, 4.5))>0.00001,(if(abs(above(rotator2, -1.29))>0.00001,4,dir)),(if(abs(equal(dir, 5))>0.00001,(if(abs(happy)>0.00001,dir2,dir)),dir))))))))))))))))))));
+shape_2_per_frame11=rotator2=(if(abs(swap)>0.00001,rotator2,(if(abs(equal(dir, 1.5))>0.00001,(if(abs(below(rotator2, 3.41))>0.00001,(rotator2+0.05),rotator2)),(if(abs(equal(dir, 2))>0.00001,1.8,(if(abs(equal(dir, 2.5))>0.00001,(if(abs(below(rotator2, 1.81))>0.00001,(rotator2+0.05),rotator2)),(if(abs(equal(dir, 3))>0.00001,0.255,(if(abs(equal(dir, 3.5))>0.00001,(if(abs(below(rotator2, 0.256))>0.00001,(rotator2+0.05),rotator2)),(if(abs(equal(dir, 4))>0.00001,-1.3,(if(abs(equal(dir, 4.5))>0.00001,(if(abs(below(rotator2, -1.2))>0.00001,(rotator2+0.05),-2.86)),(if(abs(equal(dir, 4))>0.00001,-5.92,3.4))))))))))))))))));
+shape_2_per_frame12=xs=x;
+shape_2_per_frame13=ys=y;
+shape_2_per_frame14=ready=(if(abs(equal(dir, 1))>0.00001,1,(if(abs(equal(dir, 2))>0.00001,1,(if(abs(equal(dir, 3))>0.00001,1,(if(abs(equal(dir, 4))>0.00001,1,0))))))));
+shape_2_per_frame15=rotator3=(if(abs(ready)>0.00001,(if(abs(q2)>0.00001,(if(abs(swap)>0.00001,(if(abs(equal(dir, 1))>0.00001,0.255,(if(abs(equal(dir, 2))>0.00001,-1.3,(if(abs(equal(dir, 3))>0.00001,-2.86,(if(abs(equal(dir, 4))>0.00001,-4.45,0)))))))),(if(abs(equal(dir, 1))>0.00001,3.4,(if(abs(equal(dir, 2))>0.00001,1.8,(if(abs(equal(dir, 3))>0.00001,0.255,(if(abs(equal(dir, 4))>0.00001,-1.3,0)))))))))),rotator3)),rotator3));
+shape_2_per_frame16=dir2=(if(abs(ready)>0.00001,(if(abs(q2)>0.00001,dir,dir2)),dir2));
+shape_2_per_frame17=dir=(if(abs(ready)>0.00001,(if(abs(q2)>0.00001,5,dir)),dir));
+shape_2_per_frame18=mover2=(if(abs(ready)>0.00001,(if(abs(q2)>0.00001,(if(abs(swap)>0.00001,abs((mover-0.695)),mover2)),mover2)),mover2));
+shape_2_per_frame19=mover=(if(abs(ready)>0.00001,(if(abs(q2)>0.00001,(if(abs(swap)>0.00001,mover,abs((mover2-0.695)))),mover)),mover));
+shape_2_per_frame20=swap=(if(abs(ready)>0.00001,(if(abs(q2)>0.00001,(if(abs(swap)>0.00001,0,1)),swap)),swap));
+shape_2_per_frame21=rotator3=(if(abs(equal(dir, 5))>0.00001,(if(abs(swap)>0.00001,(if(abs(equal(dir2, 1))>0.00001,(if(abs(above(rotator3, 0.256))>0.00001,(rotator3-0.05),rotator3)),(if(abs(equal(dir2, 2))>0.00001,(if(abs(above(rotator3, -1.31))>0.00001,(rotator3-0.05),rotator3)),(if(abs(equal(dir2, 3))>0.00001,(if(abs(above(rotator3, -2.87))>0.00001,(rotator3-0.05),rotator3)),(if(abs(above(rotator3, -4.45))>0.00001,(rotator3-0.05),rotator3)))))))),(if(abs(equal(dir2, 1))>0.00001,(if(abs(below(rotator3, 3.45))>0.00001,(rotator3+0.05),rotator3)),(if(abs(equal(dir2, 2))>0.00001,(if(abs(below(rotator3, 1.8))>0.00001,(rotator3+0.05),rotator3)),(if(abs(equal(dir2, 3))>0.00001,(if(abs(below(rotator3, 0.255))>0.00001,(rotator3+0.05),rotator3)),(if(abs(below(rotator3, -1.3))>0.00001,(rotator3+0.05),rotator3)))))))))),rotator3));
+shape_2_per_frame22=happy=(if(abs(equal(dir, 5))>0.00001,(if(abs(happy)>0.00001,0,(if(abs(swap)>0.00001,(if(abs(equal(dir2, 1))>0.00001,(if(abs(below(rotator3, 0.256))>0.00001,1,0)),(if(abs(equal(dir2, 2))>0.00001,(if(abs(below(rotator3, -1.29))>0.00001,1,0)),(if(abs(equal(dir2, 3))>0.00001,(if(abs(below(rotator3, -2.85))>0.00001,1,0)),(if(abs(below(rotator3, -4.45))>0.00001,1,0)))))))),(if(abs(equal(dir2, 1))>0.00001,(if(abs(above(rotator3, 3.4))>0.00001,1,0)),(if(abs(equal(dir2, 2))>0.00001,(if(abs(above(rotator3, 1.79))>0.00001,1,0)),(if(abs(equal(dir2, 3))>0.00001,(if(abs(above(rotator3, 0.255))>0.00001,1,0)),(if(abs(above(rotator3, -1.3))>0.00001,1,0)))))))))))),0));
+shape_2_per_frame23=r=(bass*0.3);
+shape_2_per_frame24=g=(treb*0.3);
+shape_2_per_frame25=b=(mid*0.3);
+shape_2_per_frame26=r2=((above(bass, 1.5)*above(treb, 1.5))*above(mid, 1.5));
+shape_2_per_frame27=g2=((above(bass, 1.5)*above(treb, 1.5))*above(mid, 1.5));
+shape_2_per_frame28=b2=((above(bass, 1.5)*above(treb, 1.5))*above(mid, 1.5));
+shapecode_3_enabled=0.0
+wavecode_0_enabled=0.0
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=1.0
+per_frame_1=warp=0;
+per_frame_2=wave_a=0;
+per_frame_3=zoom=1.2;

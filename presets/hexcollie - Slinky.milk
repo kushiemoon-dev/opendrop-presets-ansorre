@@ -1,0 +1,102 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bDarken=1.0
+bWaveDots=1.0
+dx=-0.28
+dy=-0.32
+fDecay=1.0
+fGammaAdj=1.0
+fModWaveAlphaEnd=1.3
+fModWaveAlphaStart=0.71
+fWarpScale=1.331
+fWaveScale=2.85
+fWaveSmoothing=0.63
+ib_a=1.0
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+ib_size=0.17
+mv_a=0.0
+mv_b=0.11
+mv_g=0.21
+mv_l=1.8
+mv_r=0.3
+nWaveMode=2.0
+ob_a=0.2
+ob_g=0.5
+ob_r=1.0
+ob_size=0.0
+sx=1.00815
+sy=1.10462
+warp=0.01
+wave_b=0.0
+wave_g=0.0
+zoom=13.29089
+bAdditiveWaves=1.0
+fVideoEchoZoom=1.002
+nVideoEchoOrientation=1.0
+fWaveAlpha=4.1
+fShader=1.0
+nMotionVectorsX=64.0
+nMotionVectorsY=48.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+wavecode_0_enabled=1.0
+wave_0_init1=yq = 0;
+wave_0_init2=xp = 0;
+wave_0_init3=basstime = 0;
+wave_0_init4=xs = 0;
+wave_0_init5=yp = 0;
+wave_0_init6=t1 = 0;
+wave_0_init7=smp = 0;
+wave_0_init8=q1 = 0;
+wave_0_init9=q5 = 0;
+wave_0_init10=xq = 0;
+wave_0_init11=axs1 = 0;
+wave_0_init12=ys = 0;
+wave_0_init13=axs2 = 0;
+wave_0_init14=zq = 0;
+wave_0_init15=q4 = 0;
+wave_0_init16=zp = 0;
+wave_0_init17=q2 = 0;
+wave_0_init18=q3 = 0;
+wave_0_init19=angy = 0;
+wave_0_per_frame1=basstime=(basstime+(bass*bass));
+wave_0_per_frame2=t1=(basstime*0.003);
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=vol = 0;
+per_frame_init_2=musictime = 0;
+per_frame_init_3=q4 = 0;
+per_frame_init_4=q5 = 0;
+per_frame_init_5=zoom=1;
+per_frame_init_6=xpos=0;
+per_frame_init_7=ypos=0;
+per_frame_1=decay=1;
+per_frame_2=vol=(((bass+mid)+treb)*0.35);
+per_frame_3=vol=(vol*vol);
+per_frame_4=mv_r=(0.5+(0.4*sin((time*1.324))));
+per_frame_5=mv_g=(0.5+(0.4*cos((time*1.371))));
+per_frame_6=zoom=0.9;
+per_frame_7=musictime=(musictime+vol);
+per_frame_8=q4=0;
+per_frame_9=q5=0;
+per_frame_10=dx=(sin((musictime*0.1))*0.5);
+per_frame_11=dy=(pow((((bass+mid)+treb)*0.25), 2)*0.01);
+per_frame_12=sx=-1;
+per_frame_13=monitor=rot;
+per_frame_14=ob_r=tan(time);
+per_frame_15=ob_r=max(ob_r, 0);
+per_frame_16=ob_r=min(ob_r, 1);
+per_frame_17=ob_g=tan((time+2.1));
+per_frame_18=ob_g=max(ob_g, 0);
+per_frame_19=ob_g=min(ob_g, 1);
+per_frame_20=ob_b=tan((time+4.2));
+per_frame_21=ob_b=max(ob_b, 0);
+per_frame_22=ob_b=min(ob_b, 1);

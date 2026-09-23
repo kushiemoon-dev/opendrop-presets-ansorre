@@ -1,0 +1,83 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+fDecay=0.9
+fWarpAnimSpeed=53.523884
+fWarpScale=0.408391
+fWaveScale=0.3697
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+ib_size=0.0
+mv_a=0.9
+mv_b=0.0
+mv_g=0.6
+mv_l=0.05
+nWaveMode=6.0
+ob_size=0.0
+wave_b=0.8
+wave_g=0.6
+wave_r=0.6999
+wave_x=0.0
+fVideoEchoAlpha=0.85
+fVideoEchoZoom=5.427902
+nVideoEchoOrientation=1.0
+fWaveAlpha=1.0
+nMotionVectorsX=64.0
+nMotionVectorsY=6.2399
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=blue = 0;
+per_frame_init_2=red_aim = 0;
+per_frame_init_3=last_time = 0;
+per_frame_init_4=q1 = 0;
+per_frame_init_5=bass_thresh = 0;
+per_frame_init_6=bass_on = 0;
+per_frame_init_7=treb_thresh = 0;
+per_frame_init_8=frame_per_sec = 0;
+per_frame_init_9=treb_on = 0;
+per_frame_init_10=green = 0;
+per_frame_init_11=red = 0;
+per_frame_init_12=q2 = 0;
+per_frame_init_13=q3 = 0;
+per_frame_init_14=blue_aim = 0;
+per_frame_init_15=swapcolour = 0;
+per_frame_init_16=green_aim = 0;
+per_frame_1=dx=-0.0005;
+per_frame_2=dy=-0.0005;
+per_frame_3=q1=floor((((bass_att+mid_att)+treb_att))/(3));
+per_frame_4=q2=(time+(5*((bass+mid)+treb)));
+per_frame_5=bass_thresh=((above(bass_att, bass_thresh)*2)+((1-above(bass_att, bass_thresh))*(((bass_thresh-1.4)*0.95)+1.4)));
+per_frame_6=treb_thresh=((above(treb_att, treb_thresh)*2)+((1-above(treb_att, treb_thresh))*(((treb_thresh-1.5)*0.85)+1.2)));
+per_frame_7=bass_on=above(bass_thresh, 1.9);
+per_frame_8=treb_on=above(treb_thresh, 1.9);
+per_frame_9=swapcolour=(bass_on-treb_on);
+per_frame_10=red_aim=(if(abs(equal(swapcolour, 1))>0.00001,0.7,(if(abs(equal(swapcolour, 0))>0.00001,0.9,1))));
+per_frame_11=green_aim=(if(abs(equal(swapcolour, 1))>0.00001,0.6,(if(abs(equal(swapcolour, 0))>0.00001,0.3,0.7))));
+per_frame_12=blue_aim=(if(abs(equal(swapcolour, 1))>0.00001,0.8,(if(abs(equal(swapcolour, 0))>0.00001,0.2,0))));
+per_frame_13=red=(red+((red_aim-red)*0.5));
+per_frame_14=green=(green+((green_aim-green)*0.5));
+per_frame_15=blue=(blue+((blue_aim-blue)*0.5));
+per_frame_16=wave_r=red;
+per_frame_17=wave_g=green;
+per_frame_18=wave_b=blue;
+per_frame_19=mv_r=red;
+per_frame_20=mv_g=green;
+per_frame_21=mv_b=blue;
+per_frame_22=mv_y=6.1;
+per_frame_23=mv_x=(30*bass);
+per_frame_24=mv_a=(0.15*((bass+mid)+treb));
+per_frame_25=frame_per_sec=(0.01*((frame_per_sec*99)+floor((1)/((time-last_time)))));
+per_frame_26=last_time=time;
+per_frame_27=q3=floor((50)/(frame_per_sec));
+per_frame_28=decay=(decay+((1-q3)*0.1));
+per_frame_29=monitor=q3;
+per_pixel_1=dy=((-0.1*(q1-1))*log((2-abs(((y*2)-1.8)))));
+per_pixel_2=dy=((below(dy, 0.02)*dy)-0.02);
+per_pixel_3=dy=(dy+(0.01*(sin((((x*q2)*0.483)+((y*q2)*1.238)))+sin((((x*q2)*1.612)+((y*q2)*0.648))))));
+per_pixel_4=dy=(dy*q3);

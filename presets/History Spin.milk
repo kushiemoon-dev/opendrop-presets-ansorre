@@ -1,0 +1,42 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bModWaveAlphaByVolume=1.0
+dx=0.005
+fDecay=0.915
+fModWaveAlphaEnd=1.3
+fModWaveAlphaStart=0.71
+fWarpScale=1.331
+fWaveScale=0.3895
+fWaveSmoothing=0.63
+ib_size=0.26
+nWaveMode=2.0
+ob_r=0.01
+ob_size=0.5
+rot=0.02
+warp=0.198054
+wave_b=0.65
+wave_g=0.65
+wave_x=0.45
+zoom=1.070549
+bAdditiveWaves=1.0
+fVideoEchoZoom=1.006596
+nVideoEchoOrientation=3.0
+fWaveAlpha=4.099998
+bMotionVectorsOn=0.0
+fWaveParam=-0.8
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=tt = 0;
+per_frame_init_2=progress = 0;
+per_frame_1=tt=floor((time)/(3));
+per_frame_2=wave_r=((floor((sin((tt*4)))/(3))+0.2)+floor((progress)/(5)));
+per_frame_3=wave_b=(floor((cos(floor(((2*tt))/(3))))/(2))+0.5);
+per_frame_4=wave_g=(floor((atan(floor(((2*tt))/(5))))/(3))+0.6);
+per_pixel_1=zoom=(max(tan(rad), sin(rad))+0.9);
+per_pixel_2=rot=(min(cos(rad), sin(rad))-0.1);
+per_pixel_3=zoomexp=(max(cos(x), sin((y*x)))+0.5);

@@ -1,0 +1,74 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+fDecay=0.925
+fGammaAdj=1.0
+fModWaveAlphaEnd=1.3
+fModWaveAlphaStart=0.71
+fWarpScale=1.331
+fWaveScale=0.325445
+fWaveSmoothing=0.63
+ib_size=0.26
+mv_a=0.0
+ob_r=0.01
+ob_size=0.5
+rot=0.02
+warp=0.01
+zoom=0.999514
+bAdditiveWaves=1.0
+fVideoEchoZoom=1.006596
+nVideoEchoOrientation=3.0
+fWaveAlpha=4.099998
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=new_mid = 0;
+per_frame_init_2=temp_bass = 0;
+per_frame_init_3=new_bass_thresh = 0;
+per_frame_init_4=q6 = 0;
+per_frame_init_5=q1 = 0;
+per_frame_init_6=q5 = 0;
+per_frame_init_7=bass_thresh = 0;
+per_frame_init_8=treb_thresh = 0;
+per_frame_init_9=vol_att = 0;
+per_frame_init_10=temp_treb = 0;
+per_frame_init_11=mid_thresh = 0;
+per_frame_init_12=new_treb = 0;
+per_frame_init_13=q4 = 0;
+per_frame_init_14=old_mid = 0;
+per_frame_init_15=old_treb = 0;
+per_frame_init_16=new_treb_thresh = 0;
+per_frame_init_17=temp_mid = 0;
+per_frame_init_18=vol = 0;
+per_frame_init_19=old_vol = 0;
+per_frame_init_20=old_bass = 0;
+per_frame_init_21=new_bass = 0;
+per_frame_init_22=q2 = 0;
+per_frame_init_23=new_mid_thresh = 0;
+per_frame_init_24=q3 = 0;
+per_frame_1=old_bass=(bass-1);
+per_frame_2=old_treb=(treb-1);
+per_frame_3=old_mid=(mid-1);
+per_frame_4=old_vol=(vol-1);
+per_frame_5=vol_att=((bass_att+treb_att)+mid_att);
+per_frame_6=bass_thresh=((above(bass_att, bass_thresh)*2)+((1-above(bass_att, bass_thresh))*((bass_thresh-1.3)+1.3)));
+per_frame_7=treb_thresh=((above(treb_att, treb_thresh)*2)+((1-above(treb_att, treb_thresh))*((treb_thresh-1.3)+1.3)));
+per_frame_8=mid_thresh=((above(mid_att, mid_thresh)*2)+((1-above(mid_att, mid_thresh))*((mid_thresh-1.3)+1.3)));
+per_frame_9=temp_bass=(old_bass+(if(abs(above(old_bass, new_bass))>0.00001,bnot(bass),bnot(temp_bass))));
+per_frame_10=temp_treb=(old_treb+(if(abs(above(old_treb, new_treb))>0.00001,bnot(treb),bnot(temp_treb))));
+per_frame_11=temp_mid=(old_mid+(if(abs(above(old_mid, new_mid))>0.00001,bnot(mid),bnot(temp_mid))));
+per_frame_12=new_bass_thresh=(((above(bass_att, new_bass_thresh)*2)+((1-above(bass_att, new_bass_thresh))*((new_bass_thresh-1.3)+1.3)))+above(bass, bass_att));
+per_frame_13=new_treb_thresh=(((above(treb_att, new_treb_thresh)*2)+((1-above(treb_att, new_treb_thresh))*((new_treb_thresh-1.3)+1.3)))+above(treb, treb_att));
+per_frame_14=new_mid_thresh=(((above(mid_att, new_mid_thresh)*2)+((1-above(mid_att, new_mid_thresh))*((new_mid_thresh-1.3)+1.3)))+above(mid, mid_att));
+per_frame_15=new_bass=((temp_bass+bass_thresh)+bass_att);
+per_frame_16=new_treb=((temp_treb+treb_thresh)+treb_att);
+per_frame_17=new_mid=((temp_mid+mid_thresh)+mid_att);
+per_frame_18=q1=new_bass;
+per_frame_19=q2=new_treb;
+per_frame_20=q3=new_mid;
+per_frame_21=q4=new_bass_thresh;
+per_frame_22=q5=new_treb_thresh;
+per_frame_23=q6=new_mid_thresh;

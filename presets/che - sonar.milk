@@ -1,0 +1,41 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+fDecay=0.94
+fGammaAdj=1.0
+fModWaveAlphaEnd=1.0
+fModWaveAlphaStart=1.0
+fWaveScale=1.599175
+fWaveSmoothing=0.0
+ib_a=1.0
+ib_size=0.0
+mv_b=0.0
+mv_g=0.4
+mv_l=1.0
+mv_r=0.0
+nWaveMode=7.0
+ob_a=1.0
+ob_size=0.0
+warp=0.0
+wave_b=0.0
+wave_g=0.5
+wave_r=0.0
+wave_y=0.2
+zoom=1.000223
+bAdditiveWaves=1.0
+fVideoEchoZoom=1.000499
+fWaveAlpha=1.000416
+fZoomExponent=1.000158
+nMotionVectorsX=19.199995
+nMotionVectorsY=14.4
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_1=decay=min(((bass_att*0.05)+0.9), 1);
+per_frame_2=wave_r=(if(abs(above((bass+mid), 3))>0.00001,(0.5+(0.5*sqr(sin((bass+mid))))),0));
+per_frame_3=wave_g=((0.5+min(((bass+treb)*0.2), 0.5))-wave_r);
+per_pixel_1=dy=(if(abs(equal((((x*20))%(20)), (((time*48))%(20))))>0.00001,((sin(((y-0.5)*6.28))*(treb_att+bass_att))*0.1),(((y-0.5)*mid)*0.003)));

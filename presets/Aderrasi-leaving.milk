@@ -1,0 +1,53 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bWaveDots=1.0
+dx=1e-05
+dy=1e-05
+fDecay=0.99
+fGammaAdj=1.0
+fModWaveAlphaEnd=1.0
+fModWaveAlphaStart=0.5
+fWarpAnimSpeed=0.01
+fWarpScale=100.0
+fWaveScale=1.310601
+fWaveSmoothing=0.5
+ib_size=0.0
+mv_a=0.0
+mv_l=1.0
+nWaveMode=5.0
+ob_a=1.0
+ob_size=0.0
+warp=0.01
+wave_b=0.0
+wave_g=0.0
+wave_r=0.0
+fVideoEchoAlpha=0.5
+fVideoEchoZoom=1.220186
+nVideoEchoOrientation=3.0
+fWaveAlpha=100.0
+fZoomExponent=0.800204
+fShader=1.0
+nMotionVectorsX=0.0
+nMotionVectorsY=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=bass_effect = 0;
+per_frame_init_2=treb_effect = 0;
+per_frame_init_3=rad = 0;
+per_frame_1=bass_effect=max(0, (max(bass_att, bass)-1));
+per_frame_2=treb_effect=max(0, (max(treb_att, treb)-1));
+per_frame_3=wave_mystery=(((-0.5+bass_effect)-0.5)-floor((treb_effect)/(8)));
+per_frame_4=wave_b=(((wave_b+(0.33*cos((1.2*bass))))+(0.33*sin((1.1*treb))))+(0.33*cos(mid)));
+per_frame_5=wave_g=(((wave_g+(0.33*sin((1.1*bass))))+(0.33*cos(treb)))+(0.33*cos((1.2*mid))));
+per_frame_6=wave_r=(((wave_r+(2.33*bass))+(2.33*treb))+(2.33*mid));
+per_frame_7=rot=((1-rad)*floor((floor((time)/(bass)))/(200000)));
+per_frame_8=wave_x=(wave_x+floor(((0.01*bass))/(sin(time))));
+per_frame_9=wave_y=(wave_y+floor(((0.01*treb))/(cos(time))));
+per_frame_10=zoom=(zoom-0.005);
+per_frame_11=zoom=(zoom-floor(((0.005*((bass+treb)+mid)))/(3)));
+per_frame_12=warp=(warp+(if(abs(above(bass, 2))>0.00001,2,0)));

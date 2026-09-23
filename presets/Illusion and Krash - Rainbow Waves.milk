@@ -1,0 +1,40 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+fDecay=0.91
+fGammaAdj=1.994
+fWarpScale=1.331
+fWaveScale=1.151736
+fWaveSmoothing=0.1
+ib_size=0.0
+nWaveMode=4.0
+warp=0.012485
+wave_b=0.65
+wave_g=0.65
+wave_r=0.65
+zoom=1.280549
+bAdditiveWaves=1.0
+bMotionVectorsOn=0.0
+fWaveParam=-0.5
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=dx_residual = 0;
+per_frame_init_2=bass_thresh = 0;
+per_frame_init_3=dy_residual = 0;
+per_frame_1=dx=-0.0005;
+per_frame_2=dy=-0.0005;
+per_frame_3=wave_x=floor((int(rand(100)))/(100));
+per_frame_4=wave_r=(1+sin((-wave_x*3.1415)));
+per_frame_5=wave_g=abs(sin(((2*wave_x)*3.1415)));
+per_frame_6=wave_b=sin((wave_x*3.1415));
+per_frame_7=dx_residual=(((equal(bass_thresh, 2)*0.016)*sin((time*7)))+((1-equal(bass_thresh, 2))*dx_residual));
+per_frame_8=dy_residual=(((equal(bass_thresh, 2)*0.012)*sin((time*9)))+((1-equal(bass_thresh, 2))*dy_residual));
+per_frame_9=rot=(rot+(0.070*((0.80*sin((0.381*time)))+(0.40*sin((0.579*time))))));
+per_frame_10=ob_r=wave_r;
+per_frame_11=ob_g=wave_g;
+per_frame_12=ob_b=wave_b;
+per_pixel_1=zoom=(((zoom-1)*rad)+1);

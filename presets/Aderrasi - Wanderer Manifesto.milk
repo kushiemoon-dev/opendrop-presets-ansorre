@@ -1,0 +1,62 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bWaveThick=1.0
+dx=1e-05
+dy=1e-05
+fDecay=1.0
+fGammaAdj=1.07
+fModWaveAlphaEnd=1.0
+fModWaveAlphaStart=0.5
+fWaveScale=0.438652
+fWaveSmoothing=0.1998
+ib_a=0.3
+ib_b=0.4
+ib_g=0.4
+ib_r=0.0
+ib_size=0.0
+mv_a=0.0
+mv_l=1.0
+nWaveMode=5.0
+ob_a=0.5
+ob_size=0.005
+warp=0.01
+wave_b=0.5
+wave_g=0.5
+wave_r=0.5
+fVideoEchoZoom=2.00675
+fWaveAlpha=100.0
+nMotionVectorsX=0.0
+nMotionVectorsY=0.0
+fWaveParam=-0.2
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=thresh = 0;
+per_frame_init_2=dx_r = 0;
+per_frame_init_3=dy_r = 0;
+per_frame_init_4=crack = 0;
+per_frame_init_5=rip = 0;
+per_frame_init_6=crackdown = 0;
+per_frame_init_7=ripdown = 0;
+per_frame_1=wave_r=((wave_r+(0.35*sin((4*time))))+(0.15*sin((2.5*time))));
+per_frame_2=wave_g=((wave_g+(0.35*sin((3.7*time))))+(0.15*sin((2.11*time))));
+per_frame_3=wave_b=((wave_b+(0.35*sin((3.84*time))))+(0.15*sin((2.3*time))));
+per_frame_4=warp=0;
+per_frame_5=wave_x=(wave_x+(0.15*sin((0.75*time))));
+per_frame_6=wave_y=(wave_y+(0.15*cos((0.75*time))));
+per_pixel_1=thresh=((above(bass_att, thresh)*2)+((1-above(bass_att, thresh))*(((thresh-1.3)*0.96)+1.3)));
+per_pixel_2=dx_r=(((equal(thresh, 2)*0.015)*sin((5*time)))+((1-equal(thresh, 2))*dx_r));
+per_pixel_3=dy_r=(((equal(thresh, 2)*0.015)*sin((6*time)))+((1-equal(thresh, 2))*dy_r));
+per_pixel_4=crack=((((1.24*sin(((3.12*thresh)*time)))+(0.84*sin(((5*thresh)*time))))+(1.83*cos(((1.66*thresh)*time))))-(0.5*sin(((0.25*thresh)*time))));
+per_pixel_5=rip=((((2.22*cos(((1.96*thresh)*time)))-(0.95*cos(((3.2*thresh)*time))))+(0.266*sin(((5.25*thresh)*time))))+(1.5*sin((thresh*time))));
+per_pixel_6=crackdown=(((crack*2)*dx_r)*sin((1.25*time)));
+per_pixel_7=ripdown=(((rip*2)*dy_r)*sin((1.75*time)));
+per_pixel_8=dx=(dx+((if(abs(above(crack, rip))>0.00001,((2*dx_r)*crackdown),((-2*dx_r)*ripdown)))*25));
+per_pixel_9=dy=(dy+((if(abs(above(rip, crack))>0.00001,((2*dy_r)*crackdown),((-2*dy_r)*ripdown)))*25));
+per_pixel_10=rot=(rot+(min(max(crackdown, ripdown), max(ripdown, crackdown))*max((90*dx_r), (90*dy_r))));
+per_pixel_11=zoom=((zoom+(0.55*crackdown))-(0.25*ripdown));

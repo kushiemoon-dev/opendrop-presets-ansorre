@@ -1,0 +1,48 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+cx=0.4999
+fDecay=0.94
+fWaveScale=0.01
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+ib_size=0.0
+mv_a=0.0
+mv_b=0.3
+mv_dy=0.1
+mv_g=0.5
+mv_l=2.0
+mv_r=0.4
+nWaveMode=7.0
+ob_b=1.0
+ob_size=0.002
+sx=0.9999
+warp=0.008264
+wave_b=0.7
+wave_g=0.4
+wave_r=0.7
+fVideoEchoZoom=1.0
+nVideoEchoOrientation=1.0
+fWaveAlpha=1.0
+nMotionVectorsX=64.0
+nMotionVectorsY=1.4399
+fWaveParam=-0.38
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=vol = 0;
+per_frame_1=wave_x=((if(abs(above(bass, bass_att))>0.00001,0.300,(wave_x*sin(time))))*sin(time));
+per_frame_2=wave_y=((if(abs(above(treb, treb_att))>0.00001,0.600,(wave_y*sin(time))))*sin(time));
+per_frame_3=wave_r=(wave_r*sin(bass));
+per_frame_4=wave_b=(wave_b*sin(treb));
+per_frame_5=wave_g=(wave_g*sin(mid));
+per_frame_6=wave_mystery=floor(int(rand(5)));
+per_frame_7=sx=(sx+(0.10*sin((bass+mid))));
+per_frame_8=sy=(sy-(0.10*cos((mid+treb))));
+per_pixel_1=vol=(((bass+treb)+mid)+0.2);
+per_pixel_2=zoom=((if(abs(above(vol, bass))>0.00001,(zoom+(0.10*sin((rad+(ang*sin((((time+(ang*rad))-((ang*2)*sin(time)))-(rad*sin(time))))))))),(zoom-(0.10*sin((rad+(ang*sin(((((time*ang)*rad)-(rad*sin(time)))-(ang*sin(time)))))))))))-(0.10*sin(time)));
+per_pixel_3=(0.10*sin((time*0.53)));

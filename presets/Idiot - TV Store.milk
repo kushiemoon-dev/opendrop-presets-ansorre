@@ -1,0 +1,81 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bWaveThick=1.0
+fDecay=0.9
+fGammaAdj=1.0
+fModWaveAlphaEnd=1.3
+fModWaveAlphaStart=0.71
+fWarpScale=1.331
+fWaveScale=0.01
+fWaveSmoothing=0.63
+ib_size=0.1
+mv_g=0.0
+mv_l=0.0
+nWaveMode=7.0
+ob_a=1.0
+ob_r=0.01
+ob_size=0.045
+warp=0.01
+zoom=24.831751
+fVideoEchoAlpha=1.0
+fVideoEchoZoom=0.197884
+nVideoEchoOrientation=3.0
+fWaveAlpha=0.001
+nMotionVectorsX=38.399994
+nMotionVectorsY=14.400005
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=new_mid = 0;
+per_frame_init_2=q6 = 0;
+per_frame_init_3=q1 = 0;
+per_frame_init_4=q5 = 0;
+per_frame_init_5=treb_c = 0;
+per_frame_init_6=vol_att = 0;
+per_frame_init_7=mid_c = 0;
+per_frame_init_8=picky = 0;
+per_frame_init_9=new_treb = 0;
+per_frame_init_10=q4 = 0;
+per_frame_init_11=vol_c = 0;
+per_frame_init_12=bass_c = 0;
+per_frame_init_13=vol = 0;
+per_frame_init_14=new_bass = 0;
+per_frame_init_15=q2 = 0;
+per_frame_init_16=q3 = 0;
+per_frame_init_17=q7 = 0;
+per_frame_init_18=pickx = 0;
+per_frame_init_19=q8 = 0;
+per_frame_1=vol_att=(((treb_att*0.25)+(mid_att*0.25))+floor((((bass_att*0.25)+(0.5*sin(vol))))/(vol)));
+per_frame_2=vol=((bass+treb)+mid);
+per_frame_3=new_bass=((bass*0.25)+(0.5*sin((bass_att*0.25))));
+per_frame_4=new_treb=((treb*0.25)+(0.5*sin((treb_att*0.25))));
+per_frame_5=new_mid=((mid*0.25)+(0.4*sin((mid_att*0.25))));
+per_frame_6=bass_c=(q1-(1*sin(((bass_att)&((time*0.54))))));
+per_frame_7=treb_c=(q2-(1*sin(((treb_att)&((time*0.44))))));
+per_frame_8=mid_c=(q3-(1*sin(((mid_att)&((time*0.24))))));
+per_frame_9=vol_c=(q4-(1*sin(((vol_att)&((time*0.64))))));
+per_frame_10=q1=sin((((bass-new_bass))&((time*0.63))));
+per_frame_11=q2=sin((((treb-new_treb))&((time*0.43))));
+per_frame_12=q3=sin((((mid-new_mid))&((time*0.23))));
+per_frame_13=q4=sin(((vol)&((time*0.65))));
+per_frame_14=q5=bass_c;
+per_frame_15=q6=treb_c;
+per_frame_16=q7=mid_c;
+per_frame_17=q8=vol_c;
+per_frame_18=rot=(rot+(0.1*sin(q3)));
+per_frame_19=mv_l=(1*sin(((time*0.54)*sin(q1))));
+per_frame_20=mv_dx=(mv_dx+(0.2*sin((time*0.54))));
+per_frame_21=mv_dy=(mv_dy-(0.2*sin((time*0.34))));
+per_frame_22=mv_r=(mv_r+(0.3*sin((time*0.54))));
+per_frame_23=mv_b=(mv_b-(0.2*sin((time*0.23))));
+per_frame_24=mv_g=(1-(0.3*sin((time*0.12))));
+per_frame_25=pickx=above(q1, q2);
+per_frame_26=picky=above(q2, q1);
+per_frame_27=dx=(1*sin(pickx));
+per_frame_28=dy=(1*sin(picky));
+per_pixel_1=rot=(rot+(0.5*sin(((rad*3.14)*sin(q2)))));
+per_pixel_2=zoom=(zoom+(0.3*sin(((rad*3.14)*sin(q1)))));

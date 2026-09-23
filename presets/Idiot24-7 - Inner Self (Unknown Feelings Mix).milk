@@ -1,0 +1,96 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+dx=-1.0
+dy=-1.0
+fDecay=0.96
+fGammaAdj=1.0
+fModWaveAlphaEnd=1.3
+fModWaveAlphaStart=1.0
+fWarpScale=1.331
+fWaveScale=1.691359
+fWaveSmoothing=0.63
+ib_a=1.0
+ib_r=0.3
+ib_size=0.03
+mv_a=0.0
+nWaveMode=2.0
+ob_a=0.5
+ob_b=0.5
+ob_g=1.0
+ob_r=1.0
+ob_size=0.02
+rot=0.008
+warp=0.009
+wave_b=0.7
+wave_g=0.5
+wave_r=0.9
+zoom=0.980781
+bAdditiveWaves=1.0
+fVideoEchoZoom=1.006596
+nVideoEchoOrientation=3.0
+fWaveAlpha=3.9999
+fZoomExponent=0.9999
+fWaveParam=0.1999
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=intensity = 0;
+per_frame_init_2=thud = 0;
+per_frame_init_3=wave_coler = 0;
+per_frame_init_4=q6 = 0;
+per_frame_init_5=q1 = 0;
+per_frame_init_6=q5 = 0;
+per_frame_init_7=bass_thresh = 0;
+per_frame_init_8=ob_coler = 0;
+per_frame_init_9=minimal = 0;
+per_frame_init_10=treb_thresh = 0;
+per_frame_init_11=vol_att = 0;
+per_frame_init_12=mid_thresh = 0;
+per_frame_init_13=solice = 0;
+per_frame_init_14=q4 = 0;
+per_frame_init_15=ib_coler = 0;
+per_frame_init_16=vol_thresh = 0;
+per_frame_init_17=vol = 0;
+per_frame_init_18=q2 = 0;
+per_frame_init_19=vol2 = 0;
+per_frame_init_20=q3 = 0;
+per_frame_init_21=q7 = 0;
+per_frame_init_22=q8 = 0;
+per_frame_init_23=ob_coler=(floor(int(rand(10)))*0.1);
+per_frame_init_24=ib_coler=(floor(int(rand(10)))*0.1);
+per_frame_init_25=wave_coler=(floor(int(rand(10)))*0.1);
+per_frame_1=bass_thresh=((above(bass_att, bass_thresh)*2)+((1-above(bass_att, bass_thresh))*(((bass_thresh-1.4)*0.85)+1.5)));
+per_frame_2=treb_thresh=((above(treb_att, treb_thresh)*2)+((1-above(treb_att, treb_thresh))*(((treb_thresh-1.4)*0.85)+1.5)));
+per_frame_3=mid_thresh=((above(mid_att, mid_thresh)*2)+((1-above(mid_att, mid_thresh))*(((mid_thresh-1.4)*0.85)+1.5)));
+per_frame_4=vol=((bass+treb)+mid);
+per_frame_5=vol_att=((bass_att+treb_att)+mid_att);
+per_frame_6=vol_thresh=((bass_thresh+treb_thresh)+mid_att);
+per_frame_7=vol2=((vol+vol_att)+vol_thresh);
+per_frame_8=thud=(((bass+vol)-treb)-floor((floor((mid)/(treb_att)))/(mid_att)));
+per_frame_9=solice=floor(((0.05*sin(floor(int(rand(vol))))))/(floor(int(rand(vol2)))));
+per_frame_10=intensity=(if(abs(above(vol, floor(int(rand(2)))))>0.00001,0.02,0));
+per_frame_11=minimal=(if(abs(equal(vol2, floor(int(rand(3)))))>0.00001,0.02,-0.10));
+per_frame_12=q1=vol;
+per_frame_13=q2=vol_att;
+per_frame_14=q3=vol_thresh;
+per_frame_15=q4=vol2;
+per_frame_16=q5=solice;
+per_frame_17=q6=thud;
+per_frame_18=q7=intensity;
+per_frame_19=q8=minimal;
+per_frame_20=cx=(cx-(1*sin(time)));
+per_frame_21=cy=(cy+(1*sin(time)));
+per_frame_22=ob_r=(ob_coler+(0.02*sin(q2)));
+per_frame_23=ob_b=(ob_coler-(0.4*sin((q1+q4))));
+per_frame_24=ob_g=(ob_coler+(0.5*cos((q4+q6))));
+per_frame_25=wave_r=(wave_coler+((wave_r*sin(time))*cos((time+q2))));
+per_frame_26=wave_b=(wave_coler-((wave_b*sin(time))*cos(((time-q1)+q4))));
+per_frame_27=wave_g=(wave_coler-(wave_g*cos((q1+(q2*time)))));
+per_frame_28=ib_r=(ib_coler-((ib_r*sin(time))*cos((q2+q3))));
+per_frame_29=ib_b=(ib_coler+((ib_b*sin(time))*cos((q4-q1))));
+per_pixel_1=zoom=(zoom+((0.10*sin(((ang-(0.20*rad))+rad)))*sin((time+(floor(int(rand(2)))*q1)))));
+per_pixel_2=zoom=(zoom+((0.10*sin((((ang-(0.20*rad))+rad)+2)))*sin((time+(floor(int(rand(2)))*q4)))));

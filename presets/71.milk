@@ -1,0 +1,83 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bDarken=1.0
+bWaveDots=1.0
+fDecay=0.96
+fWaveScale=0.012
+fWaveSmoothing=0.9
+mv_a=0.0
+mv_b=0.0
+mv_g=0.0
+mv_l=5.0
+mv_r=0.0
+nWaveMode=2.0
+wave_b=0.3
+wave_g=0.4
+wave_r=0.5
+fVideoEchoZoom=1.007
+nVideoEchoOrientation=1.0
+fWaveAlpha=0.001
+nMotionVectorsX=64.0
+nMotionVectorsY=48.0
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+wavecode_0_enabled=1.0
+wavecode_0_r=0.1
+wavecode_0_g=0.28
+wavecode_0_a=0.2
+wave_0_init1=cang = 0;
+wave_0_init2=n = 0;
+wave_0_init3=yq = 0;
+wave_0_init4=xp = 0;
+wave_0_init5=cc_ad_a = 0;
+wave_0_init6=t5 = 0;
+wave_0_init7=xs = 0;
+wave_0_init8=yp = 0;
+wave_0_init9=t1 = 0;
+wave_0_init10=cc_int = 0;
+wave_0_init11=q1 = 0;
+wave_0_init12=cc_ramp = 0;
+wave_0_init13=cc_b = 0;
+wave_0_init14=xq = 0;
+wave_0_init15=sang = 0;
+wave_0_init16=t3 = 0;
+wave_0_init17=bias_i = 0;
+wave_0_init18=ys = 0;
+wave_0_init19=pi = 0;
+wave_0_init20=ang2 = 0;
+wave_0_init21=zq = 0;
+wave_0_init22=phs = 0;
+wave_0_init23=cc_ad_b = 0;
+wave_0_init24=ang = 0;
+wave_0_init25=cc_a = 0;
+wave_0_init26=t2 = 0;
+wave_0_init27=zp = 0;
+wave_0_init28=bias = 0;
+wave_0_init29=q2 = 0;
+wave_0_init30=t4 = 0;
+wave_0_init31=cc = 0;
+wave_0_init32=pi2 = 0;
+wave_0_init33=t2=0;
+wave_0_per_frame1=t1=(time*13);
+wave_0_per_frame2=t2=((sin((time*3))*0.5)+0.5);
+wave_0_per_frame3=t2=((t2*0.3)+0.1);
+wave_0_per_frame4=t2=((q2*0.003)+0.06);
+wave_0_per_frame5=t3=q1;
+wave_0_per_frame6=t4=floor((time)/(8));
+wave_0_per_frame7=t5=((sin(floor((time)/(4)))*0.5)+0.5);
+wave_0_per_frame8=t5=((t5*17)+1.3);
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_1=warp=0;
+per_frame_2=wave_r=(wave_r+(0.2*sin((time*0.111))));
+per_frame_3=wave_g=(wave_g+(0.2*sin((time*0.344))));
+per_frame_4=wave_b=(wave_b+(0.2*sin((time*0.222))));
+per_pixel_1=dx=((0.003+(bass*0.005))*sin(((pow(x, 2)*time)+rad)));
+per_pixel_2=dy=((0.003+(treb*0.005))*sin(((pow(y, 2)*time)+rad)));

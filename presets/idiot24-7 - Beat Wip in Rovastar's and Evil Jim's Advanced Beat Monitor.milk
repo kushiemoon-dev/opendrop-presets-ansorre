@@ -1,0 +1,70 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bBrighten=1.0
+bDarken=1.0
+dx=-0.012
+fDecay=0.999
+fGammaAdj=1.0
+fModWaveAlphaEnd=2.0
+fModWaveAlphaStart=2.0
+fWaveScale=0.10049
+fWaveSmoothing=0.9
+ib_a=1.0
+ib_g=0.0
+ib_r=0.45
+warp=0.01
+wave_b=0.0
+wave_r=0.0
+wave_x=0.9
+fVideoEchoZoom=0.999609
+fWaveAlpha=100.0
+nMotionVectorsX=64.0
+nMotionVectorsY=3.984009
+fWaveParam=-0.484
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=foo = 0;
+per_frame_init_2=bass_max = 0;
+per_frame_init_3=rozbeat = 0;
+per_frame_init_4=mid_max = 0;
+per_frame_init_5=min_treb = 0;
+per_frame_init_6=rozzorrate = 0;
+per_frame_init_7=treb_max = 0;
+per_frame_init_8=min_mid = 0;
+per_frame_init_9=max_beat = 0;
+per_frame_init_10=min_bass = 0;
+per_frame_init_11=initframe = 0;
+per_frame_init_12=min_beat = 0;
+per_frame_init_13=beat = 0;
+per_frame_init_14=beatcount = 0;
+per_frame_init_15=basseffect = 0;
+per_frame_1=bass_max=max(bass, bass_att);
+per_frame_2=treb_max=max(treb, treb_att);
+per_frame_3=mid_max=max(mid, mid_att);
+per_frame_4=min_bass=min(bass, bass_att);
+per_frame_5=min_treb=min(treb, treb_att);
+per_frame_6=min_mid=min(mid, mid_att);
+per_frame_7=max_beat=((bass_max*treb_max)*mid_max);
+per_frame_8=min_beat=((min_bass*min_treb)*min_mid);
+per_frame_9=beat=((max_beat*min_beat)-max(max_beat, min_beat));
+per_frame_10=rozbeat=(if(abs(above(beat, 10))>0.00001,1,0));
+per_frame_11=warp=0;
+per_frame_12=dx=(dx-0.0005);
+per_frame_13=dy=(dy-0.0005);
+per_frame_14=basseffect=max((max(bass, bass_att)-1), 0);
+per_frame_15=mv_y=(4-min((((bass_att+bass)-2)*0.25), 0.9));
+per_frame_16=mv_r=(basseffect*4);
+per_frame_17=mv_b=(basseffect*3);
+per_frame_18=mv_g=(basseffect*3.5);
+per_frame_19=wave_y=(if(abs(rozbeat)>0.00001,0.5,0.4));
+per_frame_20=ib_a=foo;
+per_frame_21=beatcount=(beatcount+beat);
+per_frame_22=initframe=(if(abs(below(beatcount, 1))>0.00001,frame,initframe));
+per_frame_23=rozzorrate=floor(((frame-initframe))/(beatcount));
+per_frame_24=monitor=beat;

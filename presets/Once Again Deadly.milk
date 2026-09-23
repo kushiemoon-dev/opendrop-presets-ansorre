@@ -1,0 +1,59 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bModWaveAlphaByVolume=1.0
+cx=0.47
+fDecay=0.981
+fModWaveAlphaEnd=0.75
+fModWaveAlphaStart=0.95
+fWaveScale=3.90839
+fWaveSmoothing=0.0
+ib_size=0.0
+nWaveMode=5.0
+sx=0.990099
+sy=0.990099
+wave_b=0.0
+wave_g=0.0
+wave_r=0.0
+zoom=1.009898
+bAdditiveWaves=1.0
+fVideoEchoAlpha=0.75
+fVideoEchoZoom=1.9997
+nVideoEchoOrientation=2.0
+fWaveAlpha=2.781664
+fZoomExponent=1.028265
+fShader=0.1
+bMotionVectorsOn=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=grid = 0;
+per_frame_init_2=q1 = 0;
+per_frame_init_3=bass_flip = 0;
+per_frame_init_4=treb_flip = 0;
+per_frame_init_5=state = 0;
+per_frame_init_6=zoom_fade = 0;
+per_frame_1=warp=0;
+per_frame_2=bass_flip=((if(abs(equal(abs(bass_flip), 1))>0.00001,bass_flip,-1))*(if(abs(above(bass_att, 1.4))>0.00001,-1,1)));
+per_frame_3=treb_flip=((if(abs(equal(abs(treb_flip), 1))>0.00001,treb_flip,-1))*(if(abs(above(treb_att, 1.4))>0.00001,-1,1)));
+per_frame_4=state=((1+(if(abs(equal(bass_flip, 1))>0.00001,2,0)))+(if(abs(equal(treb_flip, 1))>0.00001,1,0)));
+per_frame_5=wave_r=(if(abs(equal(abs((state-3)), 1))>0.00001,(0+(0.2*sin((time*0.6)))),(if(abs(above(state, 2))>0.00001,(0.9+(0.1*sin(time))),(0.6+(0.08*sin(time)))))));
+per_frame_6=wave_g=(if(abs(equal(abs((state-3)), 1))>0.00001,0,(if(abs(equal(state, 3))>0.00001,0,0.49))));
+per_frame_7=wave_b=(if(abs(equal(abs((state-3)), 1))>0.00001,(0.9+(0.1*sin((time*0.7)))),0));
+per_frame_8=zoom_fade=(if(abs(above(abs((1-zoom_fade)), 0.1))>0.00001,1,(if(abs(above(state, 2))>0.00001,(zoom_fade-0.008),(zoom_fade+0.01)))));
+per_frame_9=zoom=zoom_fade;
+per_frame_10=wave_x=(wave_x+((0.13*state)*sin(((time*1.1)*state))));
+per_frame_11=wave_y=(wave_y+((0.13*(4-state))*sin(((time*1.2)*(4-state)))));
+per_frame_12=rot=(rot+((0.05*sin(time))*state));
+per_frame_13=ob_r=wave_r;
+per_frame_14=ob_g=wave_g;
+per_frame_15=ob_b=wave_b;
+per_frame_16=ob_a=(0.3*(3-state));
+per_frame_17=q1=state;
+per_pixel_1=grid=(((abs(((x*10)-5)))%(2))+((abs(((y*10)-5)))%(2)));
+per_pixel_2=sx=(if(abs(equal(grid, (if(abs(above(q1, 2))>0.00001,0,1))))>0.00001,(if(abs(equal(abs((q1-3)), 1))>0.00001,(sx-((0.2*q1)*abs(sin((time*q1))))),sx)),sx));
+per_pixel_3=sy=sx;
+per_pixel_4=zoom=(zoom-(((0.07*acos(((y*2)-1)))*sin(((time*1.2)*q1)))*zoom));

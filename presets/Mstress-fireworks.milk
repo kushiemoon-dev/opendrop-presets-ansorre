@@ -1,0 +1,44 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bDarken=1.0
+bModWaveAlphaByVolume=1.0
+bWaveDots=1.0
+bWaveThick=1.0
+dy=-0.004
+fDecay=0.99
+fGammaAdj=1.998
+fWarpScale=2.853
+fWaveScale=0.472722
+fWaveSmoothing=0.027
+ib_size=0.0
+mv_a=0.0
+nWaveMode=5.0
+ob_size=0.0
+sx=1.003988
+warp=0.01
+wave_b=0.6
+wave_g=0.6
+wave_r=0.77
+wave_x=0.42
+zoom=1.001829
+bAdditiveWaves=1.0
+fWaveAlpha=1.179297
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=xpos = 0;
+per_frame_init_2=ypos = 0;
+per_frame_init_3=treble = 0;
+per_frame_1=wave_r=min(1, max(0, (0.2*bass)));
+per_frame_2=wave_g=min(1, max(0, (0.2*mid)));
+per_frame_3=wave_b=min(1, max(0, (0.2*treb)));
+per_frame_4=xpos=(0.01*int(rand(100)));
+per_frame_5=ypos=floor((max(0, (bass_att-0.3)))/(2));
+per_frame_6=wave_x=((wave_x+xpos)-0.5);
+per_frame_7=wave_y=(wave_y+min((ypos-0.4), 1));
+per_frame_8=decay=(decay-(0.91*treble));

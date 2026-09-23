@@ -1,0 +1,91 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bModWaveAlphaByVolume=1.0
+bWaveThick=1.0
+fDecay=0.97
+fGammaAdj=1.0
+fModWaveAlphaEnd=1.2
+fModWaveAlphaStart=0.6
+fWarpScale=0.01
+fWaveScale=0.282
+fWaveSmoothing=0.81
+ib_a=1.0
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+ib_size=0.0
+mv_a=0.5
+mv_b=0.0
+mv_dx=0.86
+mv_l=0.2
+nWaveMode=3.0
+ob_a=1.0
+sx=1.00183
+sy=1.00815
+warp=0.01
+wave_b=0.67
+wave_g=0.65
+wave_r=0.65
+zoom=1.0018
+bAdditiveWaves=1.0
+fWaveAlpha=0.029
+fZoomExponent=1.00815
+nMotionVectorsX=11.52
+nMotionVectorsY=28.8
+fWaveParam=1.0
+shapecode_0_enabled=1.0
+shapecode_0_textured=1.0
+shapecode_0_rad=1.36936
+shapecode_0_tex_zoom=0.28543
+shapecode_0_r=0.66
+shapecode_0_g=0.71
+shapecode_0_b=0.34
+shapecode_0_g2=0.0
+shapecode_0_a2=1.0
+shapecode_0_border_a=0.0
+shape_0_init1=ope = 0;
+shape_0_per_frame1=ope=(ope+(0.3*sin(((0.1*bass)+time))));
+shape_0_per_frame2=rad=(0.44*ope);
+shape_0_per_frame3=ang=(ang-(0.08*tan(sin(((bass+treb)+floor((time)/(3)))))));
+shape_0_per_frame4=r2=(r*rad);
+shape_0_per_frame5=g2=(g*rad);
+shape_0_per_frame6=b2=(b*rad);
+shape_0_per_frame7=x=((1.1*x)+(0.004*tan(ope)));
+shape_0_per_frame8=y=(y-(0.002*tan((0.7*ope))));
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+wavecode_0_enabled=0.0
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=1.0
+wavecode_3_sep=30.0
+wavecode_3_scaling=1.25486
+wavecode_3_smoothing=0.0
+wavecode_3_g=0.6
+wavecode_3_b=0.0
+wavecode_3_a=0.53
+per_frame_init_1=q1 = 0;
+per_frame_init_2=q2 = 0;
+per_frame_init_3=d = 0;
+per_frame_init_4=z = 0;
+per_frame_init_5=decay=0;
+per_frame_init_6=d=0;
+per_frame_1=sx=1;
+per_frame_2=sy=1;
+per_frame_3=zoom=1;
+per_frame_4=monitor=d;
+per_frame_5=decay=1;
+per_frame_6=z=(above(treb, 1.1)+(z*0.975));
+per_frame_7=rot=(sin((z*0.3))*0.025);
+per_frame_8=zoom=(if(abs(above(bass, 1.3))>0.00001,0.95,1));
+per_frame_9=echo_zoom=(if(abs(above(bass, 1.3))>0.00001,1,0.95));
+per_frame_10=q1=above(treb, 1.3);
+per_frame_11=q2=above(mid, 1.3);
+per_frame_12=echo_alpha=0.5;
+per_frame_13=echo_orient=3;
+per_pixel_1=dx=(dx+(if(abs(q1)>0.00001,(sin((x*48))*0.004),0)));
+per_pixel_2=dy=(dy+(if(abs(q2)>0.00001,(sin((y*48))*0.004),0)));

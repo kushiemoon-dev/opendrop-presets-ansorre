@@ -1,0 +1,62 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bDarkenCenter=1.0
+bWaveThick=1.0
+fDecay=0.9
+fGammaAdj=1.14
+fModWaveAlphaEnd=1.3
+fModWaveAlphaStart=0.71
+fWarpScale=1.331
+fWaveScale=2.010432
+fWaveSmoothing=0.0
+ib_a=0.638229
+ib_b=0.572346
+ib_g=0.388354
+ib_r=0.803058
+ib_size=0.005
+mv_a=0.701722
+mv_b=0.3801
+mv_dx=-0.797986
+mv_dy=0.997558
+mv_g=0.196963
+mv_l=2.01627
+mv_r=0.833957
+nWaveMode=7.0
+ob_a=0.634601
+ob_b=0.899422
+ob_g=0.31654
+ob_r=0.099314
+ob_size=0.0
+sx=0.905286
+sy=0.932718
+warp=0.01
+wave_y=1.0
+zoom=1.001827
+bAdditiveWaves=1.0
+fVideoEchoAlpha=0.010001
+fVideoEchoZoom=0.072059
+nVideoEchoOrientation=3.0
+fWaveAlpha=1.657818
+nMotionVectorsX=11.52
+nMotionVectorsY=10.559999
+fWaveParam=-1.0
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=tempb = 0;
+per_frame_init_2=tempg = 0;
+per_frame_init_3=tempr = 0;
+per_frame_1=tempb=(cos(time)+abs(cos(time)));
+per_frame_2=tempg=abs(sin(time));
+per_frame_3=tempr=(((-1*cos(time))+abs((-1*cos(time))))+(0.2*(cos(sin(time))+(abs(cos(sin(time)))+cos(sin(time))))));
+per_frame_4=ib_r=(if(abs(above(tempr, 1))>0.00001,1,(if(abs(above(tempr, 0))>0.00001,abs(tempr),0))));
+per_frame_5=ib_g=(if(abs(above(tempg, 1))>0.00001,1,(if(abs(above(tempg, 0))>0.00001,abs(tempg),0))));
+per_frame_6=ib_b=(if(abs(above(tempb, 1))>0.00001,1,(if(abs(above(tempb, 0))>0.00001,abs(tempb),0))));
+per_pixel_1=rot=(if(abs(above(bnot((1*bass)), bnot((1*treb))))>0.00001,(rot*sin((rad*sin(time)))),(-rot*sin((rad*cos(time))))));
+per_pixel_2=rot=(rot+(0.1*sin(((pow(x, 2)*50)+(time*5)))));
+per_pixel_3=dy=rot;

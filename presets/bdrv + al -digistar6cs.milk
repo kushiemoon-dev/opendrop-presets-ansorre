@@ -1,0 +1,80 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+dx=1e-05
+dy=1e-05
+fDecay=1.0
+fGammaAdj=1.0
+fModWaveAlphaEnd=1.0
+fModWaveAlphaStart=0.5
+fWaveScale=0.054279
+fWaveSmoothing=0.5
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+ib_size=0.0
+mv_a=0.0
+mv_l=1.0
+nWaveMode=2.0
+ob_a=1.0
+ob_size=0.005
+warp=0.009091
+wave_b=0.5
+wave_g=0.5
+wave_r=0.5
+fVideoEchoAlpha=1.0
+fVideoEchoZoom=0.999972
+nVideoEchoOrientation=2.0
+fWaveAlpha=0.001949
+nMotionVectorsX=0.0
+nMotionVectorsY=0.0
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=1.0
+shapecode_1_textured=1.0
+shapecode_1_y=1.8
+shapecode_2_enabled=1.0
+shapecode_2_textured=1.0
+shapecode_2_y=1.8
+shapecode_3_enabled=0.0
+wavecode_0_enabled=1.0
+wavecode_0_scaling=59.123661
+wave_0_init1=sz = 0;
+wave_0_init2=jk = 0;
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=rx = 0;
+per_frame_init_2=ry = 0;
+per_frame_init_3=rf = 0;
+per_frame_init_4=vt = 0;
+per_frame_1=wave_r=(0.5+(0.5*sin((6*time))));
+per_frame_2=wave_g=(0.5+(0.5*sin((4.1*time))));
+per_frame_3=wave_b=(-1+(((1-wave_r)+1)-wave_g));
+per_frame_4=warp=0;
+per_pixel_1=rx=ang;
+per_pixel_2=ry=rad;
+per_pixel_3=rot=(floor((sin((floor((1+(ry*2.864)))*(8446669+(sin((floor((time)/(21774898))+floor((treb)/(55555559))))*667777)))))/(2))+0.5);
+per_pixel_4=zoom=(floor((sin((floor((1+(rx*2.654)))*(4747833+(sin((floor((time)/(26666825))+floor((mid)/(59555599))))*754166)))))/(2))+0.5);
+per_pixel_5=rot=floor((sin((((rot*rot)*rad)*88)))/(399));
+per_pixel_6=zoom=((0.999-floor((sin(((sqr(zoom)*ang)*88)))/(356)))+(0.007141*(0.7-rad)));
+per_pixel_7=zoom=(((zoom-1)*8)+1);
+per_pixel_8=dx=dx;
+per_pixel_9=dy=dy;
+per_pixel_10=rf=(if(abs(above(x, 0.5))>0.00001,1,0));
+per_pixel_11=vt=((x-0.5)*2);
+per_pixel_12=dx=((rf*vt)+(dx*(1-rf)));
+per_pixel_13=rf=(1-rf);
+per_pixel_14=rot=(rf*rot);
+per_pixel_15=zoom=((rf*zoom)+(1*(1-rf)));
+per_pixel_16=dy=(dy*rf);
+per_pixel_17=sx=((rf*sx)+(1*(1-rf)));
+per_pixel_18=rf=(if(abs(above(y, 0.5))>0.00001,1,0));
+per_pixel_19=vt=((y-0.5)*2);
+per_pixel_20=dy=((rf*vt)+(dy*(1-rf)));
+per_pixel_21=rf=(1-rf);
+per_pixel_22=rot=(rf*rot);
+per_pixel_23=zoom=((rf*zoom)+(1*(1-rf)));
+per_pixel_24=sx=((rf*sx)+(1*(1-rf)));

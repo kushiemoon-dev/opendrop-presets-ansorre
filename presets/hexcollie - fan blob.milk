@@ -1,0 +1,127 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+dx=1e-05
+dy=1e-05
+fGammaAdj=1.9
+fWaveScale=0.9759
+fWaveSmoothing=0.9
+ib_a=1.0
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+mv_a=0.0
+nWaveMode=5.0
+ob_a=1.0
+warp=0.01
+wave_b=0.5
+wave_g=0.5
+wave_r=0.5
+fVideoEchoZoom=1.169
+fWaveAlpha=11.202061
+fZoomExponent=0.01
+fWaveParam=-0.5
+shapecode_0_enabled=1.0
+shapecode_0_sides=100.0
+shapecode_0_textured=1.0
+shapecode_0_rad=0.270481
+shapecode_0_tex_zoom=0.999997
+shapecode_0_r=0.0
+shapecode_0_b=1.0
+shapecode_0_r2=1.0
+shapecode_0_b2=1.0
+shapecode_0_border_a=0.0
+shape_0_per_frame1=x=(x+(0.362*cos((2.452*time))));
+shape_0_per_frame2=y=(y+(0.352*sin((1.52*time))));
+shapecode_1_enabled=1.0
+shapecode_1_sides=100.0
+shapecode_1_textured=1.0
+shapecode_1_rad=0.270481
+shapecode_1_tex_zoom=0.999997
+shapecode_1_r2=1.0
+shapecode_1_b2=1.0
+shapecode_1_border_a=0.0
+shape_1_per_frame1=x=(x+(0.362*sin((2.452*time))));
+shape_1_per_frame2=y=(y+(0.352*cos((1.52*time))));
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+wavecode_0_enabled=1.0
+wavecode_0_smoothing=0.8
+wavecode_0_r=0.5
+wavecode_0_g=0.0
+wavecode_0_b=0.0
+wavecode_0_a=0.5
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=tg3 = 0;
+per_frame_init_2=rg2 = 0;
+per_frame_init_3=pfdx_r = 0;
+per_frame_init_4=pfthresh = 0;
+per_frame_init_5=ocog = 0;
+per_frame_init_6=q6 = 0;
+per_frame_init_7=thresh = 0;
+per_frame_init_8=q1 = 0;
+per_frame_init_9=q5 = 0;
+per_frame_init_10=cog = 0;
+per_frame_init_11=dy_r = 0;
+per_frame_init_12=tg2 = 0;
+per_frame_init_13=treb_thresh = 0;
+per_frame_init_14=tg1 = 0;
+per_frame_init_15=rg3 = 0;
+per_frame_init_16=pfdy_r = 0;
+per_frame_init_17=mid_thresh = 0;
+per_frame_init_18=rg1 = 0;
+per_frame_init_19=q4 = 0;
+per_frame_init_20=dx_r = 0;
+per_frame_init_21=vol_thresh = 0;
+per_frame_init_22=mid_mid_att = 0;
+per_frame_init_23=rcog = 0;
+per_frame_init_24=q2 = 0;
+per_frame_init_25=orcog = 0;
+per_frame_init_26=q3 = 0;
+per_frame_init_27=q7 = 0;
+per_frame_init_28=q8 = 0;
+per_frame_1=treb_thresh=((above(treb_att, treb_thresh)*2)+((1-above(treb_att, treb_thresh))*(((treb_thresh-1.3)*0.96)+1.3)));
+per_frame_2=mid_thresh=((above(mid_att, mid_thresh)*2)+((1-above(mid_mid_att, mid_thresh))*(((mid_thresh-1.3)*0.96)+1.3)));
+per_frame_3=vol_thresh=floor((((pfthresh+treb_thresh)+mid_thresh))/(3));
+per_frame_4=q6=vol_thresh;
+per_frame_5=q7=treb_thresh;
+per_frame_6=q8=mid_thresh;
+per_frame_7=wave_r=(0.65+(0.5*sin((time*1.13))));
+per_frame_8=wave_g=(0.65+(0.5*sin((time*1.23))));
+per_frame_9=wave_b=(0.65+(0.5*sin((time*1.33))));
+per_frame_10=warp=0;
+per_frame_11=pfthresh=((above(bass_att, pfthresh)*2)+((1-above(bass_att, pfthresh))*(((pfthresh-1.3)*0.96)+1.3)));
+per_frame_12=pfdx_r=(((equal(pfthresh, 2)*0.015)*sin((5*time)))+((1-equal(pfthresh, 2))*pfdx_r));
+per_frame_13=pfdy_r=(((equal(pfthresh, 2)*0.015)*sin((6*time)))+((1-equal(pfthresh, 2))*pfdy_r));
+per_frame_14=rg1=abs(sin(time));
+per_frame_15=rg2=((((0*above(rg1, 0.75))+(3*below(rg1, 0.25)))+((1*above(rg1, 0.25))*below(rg1, 0.5)))+((2*above(rg1, 0.5))*below(rg1, 0.75)));
+per_frame_16=rg3=(if(abs(equal(pfthresh, 2))>0.00001,rg2,rg3));
+per_frame_17=q1=wave_r;
+per_frame_18=q2=wave_g;
+per_frame_19=q3=wave_b;
+per_frame_20=cog=(ocog+(0.005*(((bass+bass_att)+(bass*bass_att))-2)));
+per_frame_21=ocog=(below(cog, 30000)*cog);
+per_frame_22=q4=cog;
+per_frame_23=rcog=(orcog+(0.5*(floor(int(rand(100)))*0.01)));
+per_frame_24=orcog=(below(rcog, 20000)*rcog);
+per_frame_25=q5=rcog;
+per_frame_26=ob_r=q1;
+per_frame_27=ob_b=q3;
+per_frame_28=ob_g=q2;
+per_frame_29=ib_r=(1-abs(q1));
+per_frame_30=ib_b=(1-abs(q3));
+per_frame_31=ib_g=(1-abs(q2));
+per_pixel_1=thresh=((above(bass_att, thresh)*2)+((1-above(bass_att, thresh))*(((thresh-1.3)*0.96)+1.3)));
+per_pixel_2=dx_r=(((equal(thresh, 2)*0.015)*sin((5*time)))+((1-equal(thresh, 2))*dx_r));
+per_pixel_3=dy_r=(((equal(thresh, 2)*0.015)*sin((6*time)))+((1-equal(thresh, 2))*dy_r));
+per_pixel_4=tg1=abs(sin(time));
+per_pixel_5=tg2=(((12*dx_r)*above(tg1, 0.5))+((12*dy_r)*below(tg1, 0.5)));
+per_pixel_6=tg3=(if(abs(equal(thresh, 2))>0.00001,tg2,tg3));
+per_pixel_7=cx=(cx+(tg3*cos(q4)));
+per_pixel_8=cy=((cy*tg3)*sin(q4));
+per_pixel_9=rot=(rot+(tg3*cos(q4)));
+per_pixel_10=zoom=(zoom+0.02);

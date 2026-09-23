@@ -1,0 +1,58 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bModWaveAlphaByVolume=1.0
+bWaveThick=1.0
+cx=0.0
+cy=0.0
+fDecay=0.985
+fGammaAdj=1.0
+fModWaveAlphaEnd=1.000001
+fModWaveAlphaStart=1.000001
+fWarpAnimSpeed=0.55
+fWarpScale=100.0
+fWaveScale=2.997491
+fWaveSmoothing=0.0
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+ib_size=0.0
+mv_a=0.0
+mv_l=5.0
+ob_a=1.0
+ob_size=0.0
+warp=0.0
+wave_b=0.0
+wave_g=0.02
+wave_r=0.02
+zoom=1.009705
+fVideoEchoAlpha=0.5
+fVideoEchoZoom=1.0
+nVideoEchoOrientation=3.0
+fWaveAlpha=0.9
+fZoomExponent=0.120416
+nMotionVectorsX=0.0
+nMotionVectorsY=0.0
+fWaveParam=-0.5
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+wavecode_0_enabled=0.0
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=f = 0;
+per_frame_init_2=d = 0;
+per_frame_init_3=q1 = 0;
+per_frame_init_4=q2 = 0;
+per_frame_init_5=bas = 0;
+per_frame_1=f=(((treb+mid)+bass)*10);
+per_frame_2=d=2;
+per_frame_3=q1=(if(abs(above(((frame)%(((2*f)*bass))), (f*bass)))>0.00001,(d*bass),(-d*bass)));
+per_frame_4=q2=(if(abs(above(((frame)%(((2*f)*treb))), (f*treb)))>0.00001,(d*treb),(-d*treb)));
+per_frame_5=wave_r=((treb*0.005)+(bass*0.005));
+per_frame_6=wave_g=(bass*0.005);
+per_frame_7=zoom=(0.99+((pow((((bas+mid)+treb)+1), 3)-1)*0.0005));

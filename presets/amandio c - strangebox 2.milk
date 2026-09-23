@@ -1,0 +1,153 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+fDecay=1.0
+fGammaAdj=1.28
+fModWaveAlphaEnd=1.0
+fModWaveAlphaStart=0.5
+fWaveScale=0.007
+fWaveSmoothing=0.5
+ib_a=1.0
+ib_b=0.5
+ib_g=0.2
+ib_r=0.2
+ib_size=0.002
+mv_a=0.0
+mv_l=0.0
+nWaveMode=1.0
+ob_a=1.0
+ob_size=0.0
+sx=0.99817
+sy=0.9981
+warp=0.01
+wave_b=0.0
+wave_g=0.0
+wave_r=0.0
+zoom=1.0099
+fVideoEchoAlpha=1.0
+fVideoEchoZoom=1.0
+nVideoEchoOrientation=1.0
+fWaveAlpha=100.0
+nMotionVectorsX=64.0
+nMotionVectorsY=48.0
+fWaveParam=-0.4
+shapecode_0_enabled=1.0
+shapecode_0_textured=1.0
+shapecode_0_rad=1.1333
+shapecode_0_tex_ang=0.87965
+shapecode_0_tex_zoom=0.86994
+shapecode_0_g=1.0
+shapecode_0_b=1.0
+shapecode_0_r2=1.0
+shapecode_0_b2=1.0
+shapecode_0_a2=0.6
+shapecode_0_border_a=0.5
+shape_0_per_frame1=tex_ang=3.14;
+shapecode_1_enabled=1.0
+shapecode_1_sides=50.0
+shapecode_1_textured=1.0
+shapecode_1_x=0.51
+shapecode_1_y=0.52
+shapecode_1_rad=0.22381
+shapecode_1_ang=1.94779
+shapecode_1_tex_zoom=2.42413
+shapecode_1_g=1.0
+shapecode_1_b=1.0
+shapecode_1_r2=1.0
+shapecode_1_b2=1.0
+shapecode_1_a2=1.0
+shapecode_1_border_a=0.2
+shape_1_init1=q1 = 0;
+shape_1_per_frame1=x=(x+(0.04*sin(((0.5*time)+(0.3*q1)))));
+shape_1_per_frame2=y=(y+(0.12*sin(((0.55*time)+(0.2*q1)))));
+shape_1_per_frame3=ang=(3*sin((0.55*time)));
+shapecode_2_enabled=1.0
+shapecode_2_sides=6.0
+shapecode_2_num_inst=49.0
+shapecode_2_x=0.53
+shapecode_2_y=0.61
+shapecode_2_rad=0.0779
+shapecode_2_tex_ang=2.07345
+shapecode_2_tex_zoom=1.10456
+shapecode_2_g=1.0
+shapecode_2_b=1.0
+shapecode_2_r2=1.0
+shapecode_2_b2=1.0
+shapecode_2_a2=1.0
+shape_2_init1=sample = 0;
+shape_2_init2=i = 0;
+shape_2_init3=ni = 0;
+shape_2_init4=sx = 0;
+shape_2_init5=sy = 0;
+shape_2_init6=q6 = 0;
+shape_2_init7=q5 = 0;
+shape_2_per_frame1=sample=floor((instance)/(num_inst));
+shape_2_per_frame2=i=instance;
+shape_2_per_frame3=ni=num_inst;
+shape_2_per_frame4=sx=(-0.5+floor((((i)%(ni)))/(ni)));
+shape_2_per_frame5=sy=(-0.5+floor((((i)%(sqrt(ni))))/(sqrt(ni))));
+shape_2_per_frame6=sy=(sy-(0.4*sx));
+shape_2_per_frame7=sx=(sx-(0.17*sy));
+shape_2_per_frame8=x=(0.405+floor(((0.21*sx))/(q6)));
+shape_2_per_frame9=y=(0.45+floor(((0.3*sy))/(q5)));
+shape_2_per_frame10=ang=floor((3.14)/(4));
+shape_2_per_frame11=r=(0.5+(0.5*((i)%(2))));
+shape_2_per_frame12=g=(0.2+(0.8*((i)%(2))));
+shape_2_per_frame13=b=(0.2+(0.8*((i)%(2))));
+shape_2_per_frame14=r2=(r*sqrt((1-sample)));
+shape_2_per_frame15=g2=(g*sqrt((1-sample)));
+shape_2_per_frame16=b2=(b*sqrt((1-sample)));
+shapecode_3_enabled=1.0
+shapecode_3_sides=6.0
+shapecode_3_num_inst=49.0
+shapecode_3_x=0.73
+shapecode_3_rad=0.07766
+shapecode_3_tex_ang=3.14159
+shapecode_3_tex_zoom=2.84274
+shapecode_3_g=1.0
+shapecode_3_b=1.0
+shapecode_3_r2=1.0
+shapecode_3_b2=1.0
+shapecode_3_a2=1.0
+shapecode_3_border_a=0.02
+shape_3_init1=sample = 0;
+shape_3_init2=i = 0;
+shape_3_init3=ni = 0;
+shape_3_init4=sx = 0;
+shape_3_init5=sy = 0;
+shape_3_init6=q6 = 0;
+shape_3_init7=q5 = 0;
+shape_3_per_frame1=sample=floor((instance)/(num_inst));
+shape_3_per_frame2=i=instance;
+shape_3_per_frame3=ni=num_inst;
+shape_3_per_frame4=sx=(-0.5+floor((((i)%(ni)))/(ni)));
+shape_3_per_frame5=sy=(-0.5+floor((((i)%(sqrt(ni))))/(sqrt(ni))));
+shape_3_per_frame6=sy=(sy-(0.4*sx));
+shape_3_per_frame7=sx=(sx-(0.17*sy));
+shape_3_per_frame8=x=(0.595-floor(((0.21*sx))/(q6)));
+shape_3_per_frame9=y=(0.445+floor(((0.3*sy))/(q5)));
+shape_3_per_frame10=ang=floor((3.14)/(4));
+shape_3_per_frame11=r=(0.2+(0.8*((i)%(2))));
+shape_3_per_frame12=g=(0.2+(0.8*((i)%(2))));
+shape_3_per_frame13=b=(0.5+(0.5*((i)%(2))));
+shape_3_per_frame14=r2=(r*sqrt((1-sample)));
+shape_3_per_frame15=g2=(g*sqrt((1-sample)));
+shape_3_per_frame16=b2=(b*sqrt((1-sample)));
+wavecode_0_enabled=0.0
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=bt = 0;
+per_frame_init_2=q1 = 0;
+per_frame_init_3=q5 = 0;
+per_frame_init_4=q6 = 0;
+per_frame_1=wave_a=0;
+per_frame_2=warp=0;
+per_frame_3=decay=1;
+per_frame_4=zoom=0.99;
+per_frame_5=bt=(bt+floor((bass_att)/(fps)));
+per_frame_6=q1=bt;
+per_frame_7=q5=aspectx;
+per_frame_8=q6=aspecty;

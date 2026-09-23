@@ -1,0 +1,62 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+dx=1e-05
+dy=1e-05
+fDecay=0.99
+fGammaAdj=1.0
+fModWaveAlphaEnd=1.0
+fModWaveAlphaStart=0.5
+fWaveScale=0.653093
+fWaveSmoothing=0.5
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+ib_size=0.0
+mv_a=0.0
+mv_g=0.0
+mv_l=5.0
+mv_r=0.0
+nWaveMode=7.0
+ob_a=0.01
+ob_size=0.0
+warp=0.01
+wave_b=0.5
+wave_g=0.5
+wave_r=0.5
+bAdditiveWaves=1.0
+fVideoEchoZoom=1.0
+nVideoEchoOrientation=2.0
+fWaveAlpha=100.0
+nMotionVectorsX=6.4
+nMotionVectorsY=4.800006
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+wavecode_0_enabled=0.0
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=thresh = 0;
+per_frame_init_2=dx_r = 0;
+per_frame_init_3=dy_r = 0;
+per_frame_init_4=dy_r2 = 0;
+per_frame_1=warp=0;
+per_frame_2=wave_r=((wave_r+(0.52*cos((1.2*time))))+(0.2*(((0.3*sin(time))*0.2)*sin(time))));
+per_frame_3=wave_g=((wave_g+(0.52*cos((1.4*time))))+(0.2*(((0.3*cos(time))*0.3)*sin(time))));
+per_frame_4=wave_b=((wave_b+(0.52*sin((1.3*time))))+(0.2*(((0.4*cos(time))*0.34)*cos(time))));
+per_frame_5=ob_r=wave_g;
+per_frame_6=ob_b=wave_r;
+per_frame_7=ob_g=wave_b;
+per_pixel_1=thresh=((above(bass_att, thresh)*2)+((1-above(bass_att, thresh))*(((thresh-1.3)*0.96)+1.3)));
+per_pixel_2=dx_r=(((equal(thresh, 2)*0.015)*sin((5*time)))+((1-equal(thresh, 2))*dx_r));
+per_pixel_3=dy_r=(((equal(thresh, 2)*0.015)*sin((6*time)))+((1-equal(thresh, 2))*dy_r));
+per_pixel_4=warp=(warp-((bass*1.525)*(cos((rad+(2*(0.75-rad))))*cos(((rad*0.9)*dx_r)))));
+per_pixel_5=dx=(dx-(dx_r*((1.3*sin((1.15*rad)))+log((1.1*bass_att)))));
+per_pixel_6=dy=(dy-(dy_r*((1.3*cos((1.15*rad)))+log((1.1*treb_att)))));
+per_pixel_7=zoom=(zoom+(0.1*(((floor((((7*warp)*3))/(2.2))*dy_r)*cos((12*ang)))*(5-(rad*5)))));
+per_pixel_8=rot=(rot+(dy_r2*(((0.2*cos((24*rad)))*0.4)*sin(rad))));

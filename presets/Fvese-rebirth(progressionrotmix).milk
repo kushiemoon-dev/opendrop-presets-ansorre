@@ -1,0 +1,81 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bDarkenCenter=1.0
+fDecay=0.995
+fGammaAdj=1.0
+fModWaveAlphaEnd=1.0
+fModWaveAlphaStart=0.5
+fWarpAnimSpeed=1.0018
+fWarpScale=1.0018
+fWaveScale=0.744429
+fWaveSmoothing=0.9
+ib_a=1.0
+ib_b=0.0
+ib_g=0.3
+ib_r=0.0
+mv_a=0.0
+mv_b=0.39
+mv_g=0.48
+mv_l=5.0
+mv_r=0.7599
+nWaveMode=3.0
+ob_b=0.4
+ob_size=0.005
+rot=0.02
+sy=0.999999
+warp=0.01
+wave_b=0.5
+wave_g=0.5
+wave_r=0.5
+zoom=0.998169
+fVideoEchoAlpha=0.5
+fVideoEchoZoom=1.0
+nVideoEchoOrientation=1.0
+fWaveAlpha=1.0
+fZoomExponent=0.39961
+nMotionVectorsX=0.0
+nMotionVectorsY=2.400001
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=rad = 0;
+per_frame_init_2=xpos = 0;
+per_frame_init_3=q1 = 0;
+per_frame_init_4=mytime = 0;
+per_frame_init_5=x = 0;
+per_frame_init_6=dy_r = 0;
+per_frame_init_7=dx_r = 0;
+per_frame_init_8=ypos = 0;
+per_frame_init_9=y = 0;
+per_frame_init_10=vol = 0;
+per_frame_init_11=q2 = 0;
+per_frame_init_12=q3 = 0;
+per_frame_1=wave_r=(wave_r+(0.45*((0.5*sin((time*0.701)))+(0.3*cos((time*0.438))))));
+per_frame_2=wave_b=(wave_b-(0.4*((0.5*sin((time*4.782)))+(0.5*cos((time*0.722))))));
+per_frame_3=wave_g=(wave_g+(0.4*sin((time*1.931))));
+per_frame_4=vol=(0.15*(((bass_att+bass)+mid)+mid_att));
+per_frame_5=dx=(if(abs(below(q1, 0))>0.00001,(dx-((dx_r*q3)*0.3)),dx));
+per_frame_6=dy=(if(abs(below(q1, 0))>0.00001,(dy-((dx_r*q3)*0.3)),dy));
+per_frame_7=dx_r=(if(abs(equal(q3, 0))>0.00001,(if(abs(above(x, xpos))>0.00001,((dx-q1)-xpos),((dx+q2)-xpos))),dx));
+per_frame_8=dy_r=(if(abs(equal(q3, 0))>0.00001,(if(abs(above(y, ypos))>0.00001,((dy-q1)-ypos),((dy+q2)-ypos))),dy));
+per_frame_9=rot=(rot+(0.030*((0.60*sin((0.381*time)))+(0.40*sin((0.479*time))))));
+per_frame_10=mytime=0.7;
+per_frame_11=q1=sin(((time*mytime)*4));
+per_frame_12=q2=sin(((time*mytime)*2));
+per_frame_13=q3=(abs((rad-0.5))*(q2*q1));
+per_frame_14=xpos=floor((0.5)/(vol));
+per_frame_15=ypos=floor((0.5)/(vol));
+per_frame_16=wave_x=0.5;
+per_frame_17=wave_y=0.5;
+per_frame_18=monitor=q3;
+per_frame_19=ib_r=q3;
+per_frame_20=ib_b=q2;
+per_frame_21=ib_g=q1;
+per_pixel_1=zoom=(((zoom+(0.05*q3))+(0.05*q1))-vol);
+per_pixel_2=rot=(rot+((zoom-1.0)*0.16));
+per_pixel_3=zoom=((zoom+(((ypos*q2)-q1)*(0.06+(0.12*sin((time*0.351))))))+(((xpos*q2)-q1)*(0.06+(0.12*cos((time*0.351))))));

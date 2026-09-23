@@ -1,0 +1,62 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bBrighten=1.0
+bDarken=1.0
+dx=-0.012
+fDecay=0.999
+fGammaAdj=1.0
+fModWaveAlphaEnd=2.0
+fModWaveAlphaStart=2.0
+fWaveScale=0.10049
+fWaveSmoothing=0.9
+warp=0.01
+wave_b=0.0
+wave_r=0.0
+wave_x=0.9
+fVideoEchoZoom=0.999609
+fWaveAlpha=100.0
+nMotionVectorsX=64.0
+nMotionVectorsY=3.984009
+fWaveParam=-0.484
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=vol_now = 0;
+per_frame_init_2=rozzorrate = 0;
+per_frame_init_3=beat_max = 0;
+per_frame_init_4=new_beat = 0;
+per_frame_init_5=beat_min = 0;
+per_frame_init_6=initframe = 0;
+per_frame_init_7=beat_rate = 0;
+per_frame_init_8=beat = 0;
+per_frame_init_9=last_beat_rate = 0;
+per_frame_init_10=beatcount = 0;
+per_frame_init_11=q3 = 0;
+per_frame_init_12=basseffect = 0;
+per_frame_1=vol_now=(0.65*bass);
+per_frame_2=beat_max=(if(abs(equal(((frame)%(50)), 0))>0.00001,vol_now,max(beat_max, vol_now)));
+per_frame_3=beat_min=(if(abs(equal(((frame)%(50)), 0))>0.00001,vol_now,min(beat_min, vol_now)));
+per_frame_4=beat_rate=(if(abs(equal(((frame)%(50)), 0))>0.00001,0,(beat_rate+beat)));
+per_frame_5=last_beat_rate=(if(abs(equal(((frame)%(50)), 49))>0.00001,(if(abs(above(beat_rate, 10))>0.00001,(if(abs(below(beat_rate, 30))>0.00001,beat_rate,last_beat_rate)),last_beat_rate)),last_beat_rate));
+per_frame_6=last_beat_rate=max(last_beat_rate, (10*beat_min));
+per_frame_7=beat=(if(abs(above(vol_now, ((0.035*last_beat_rate)*(beat_max-beat_min))))>0.00001,1,0));
+per_frame_8=q3=sin((beat_max-vol_now));
+per_frame_9=new_beat=(if(abs(above(q3, 0.55))>0.00001,1,0));
+per_frame_10=warp=0;
+per_frame_11=dx=(dx-0.0005);
+per_frame_12=dy=(dy-0.0005);
+per_frame_13=basseffect=max((max(bass, bass_att)-1), 0);
+per_frame_14=mv_y=(4-min((((bass_att+bass)-2)*0.25), 0.9));
+per_frame_15=mv_r=(basseffect*4);
+per_frame_16=mv_b=(basseffect*3);
+per_frame_17=mv_g=(basseffect*3.5);
+per_frame_18=wave_y=(if(abs(new_beat)>0.00001,0.5,0.4));
+per_frame_19=beatcount=(beatcount+new_beat);
+per_frame_20=initframe=(if(abs(below(beatcount, 1))>0.00001,frame,initframe));
+per_frame_21=rozzorrate=floor(((frame-initframe))/(beatcount));
+per_frame_22=monitor=q3;

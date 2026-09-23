@@ -1,0 +1,53 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bWaveDots=1.0
+fDecay=0.96
+fWaveScale=0.224562
+fWaveSmoothing=0.0
+ib_b=0.5
+ib_g=0.5
+ib_r=0.1
+ib_size=0.5
+mv_a=0.0
+mv_g=0.7
+mv_l=0.0
+mv_r=0.0
+nWaveMode=1.0
+ob_b=0.25
+ob_g=0.15
+ob_r=0.03
+ob_size=0.5
+wave_b=0.7
+wave_g=0.1999
+wave_r=0.0
+wave_x=0.6
+fVideoEchoZoom=1.0
+fWaveAlpha=1.0
+nMotionVectorsX=64.0
+nMotionVectorsY=48.0
+fWaveParam=-0.5
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=newx = 0;
+per_frame_init_2=q1 = 0;
+per_frame_init_3=newy = 0;
+per_frame_init_4=q2 = 0;
+per_frame_init_5=newrad = 0;
+per_frame_init_6=newzoom = 0;
+per_frame_1=warp=0;
+per_frame_2=q1=wave_x;
+per_frame_3=q2=(1-wave_y);
+per_frame_4=cx=wave_x;
+per_frame_5=cy=(1-wave_y);
+per_pixel_1=newx=(x-q1);
+per_pixel_2=newy=(y-q2);
+per_pixel_3=newrad=(sqrt(((newx*newx)+((0.5625*newy)*newy)))*2);
+per_pixel_4=newzoom=pow(1.03, pow((0.01+sin((newrad*newrad))), ((newrad*2)-1)));
+per_pixel_5=dx=((newx*newzoom)-newx);
+per_pixel_6=dy=((newy*newzoom)-newy);
+per_pixel_7=rot=((-0.1*newrad)*((0.5*rad)+0.1));

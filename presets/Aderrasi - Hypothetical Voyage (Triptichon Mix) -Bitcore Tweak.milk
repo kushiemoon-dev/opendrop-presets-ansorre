@@ -1,0 +1,79 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bDarkenCenter=1.0
+bWaveThick=1.0
+dx=1e-05
+dy=0.02001
+fDecay=0.95
+fGammaAdj=1.14
+fModWaveAlphaEnd=1.0
+fModWaveAlphaStart=0.5
+fWarpAnimSpeed=0.038558
+fWarpScale=5.002614
+fWaveScale=0.066231
+fWaveSmoothing=0.5
+ib_a=0.1
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+ib_size=0.005
+mv_a=0.5
+mv_dy=-0.09
+mv_l=0.5
+nWaveMode=7.0
+ob_a=0.1
+ob_b=0.1
+ob_g=0.1
+ob_r=0.1
+ob_size=0.005
+sx=0.949574
+warp=0.01
+wave_b=0.0
+wave_g=0.0
+wave_r=0.0
+fVideoEchoAlpha=0.5
+fVideoEchoZoom=0.999999
+nVideoEchoOrientation=1.0
+fWaveAlpha=100.0
+fZoomExponent=0.499723
+fShader=1.0
+nMotionVectorsX=64.0
+nMotionVectorsY=1.488
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=turn = 0;
+per_frame_init_2=dx_r = 0;
+per_frame_init_3=dy_r = 0;
+per_frame_1=ib_r=((ib_r+(0.135*sin((0.365*time))))+(0.35*sin((0.8*time))));
+per_frame_2=ib_b=((ib_b+(0.135*sin((0.267*time))))+(0.35*sin((0.98*time))));
+per_frame_3=ib_g=((ib_g+(0.135*sin((0.187*time))))+(0.35*sin((1.1*time))));
+per_frame_4=ob_r=(ib_r*1.1);
+per_frame_5=ob_b=(ib_b*1.1);
+per_frame_6=ob_g=(ib_g*1.1);
+per_frame_7=wave_r=(0.95*(ob_r+ib_r));
+per_frame_8=wave_g=(0.95*(ob_g+ib_g));
+per_frame_9=wave_b=(0.95*(ob_b+ib_b));
+per_frame_10=mv_l=(mv_l+bass_att);
+per_frame_11=mv_r=(ib_r-0.3);
+per_frame_12=mv_g=(ib_g-0.3);
+per_frame_13=mv_b=(ib_b-0.3);
+per_frame_14=mv_x=(mv_x+(0.25*bass_att));
+per_frame_15=mv_y=(mv_y+(0.25*bass_att));
+per_frame_16=wave_y=(wave_y+(0.94*tan((0.6*time))));
+per_pixel_1=dx=(dx+(((((0.35*sin((0.8*time)))*0.2)*rad)-((dx*0.5)*sin((1.5*time))))*sin((1.2*time))));
+per_pixel_2=dy=(dy+(((((0.35*cos((0.8*time)))*0.2)*rad)-((dy*0.5)*sin((1.25*time))))*cos((1.25*time))));
+per_pixel_3=rot=(rot+((((0.3*((1.55-rad)-floor((cy)/(cx))))*2)*turn)*sin(time)));
+per_pixel_4=zoom=(zoom-(min((turn*dx_r), (turn*dy_r))*-15.9));
+per_pixel_5=cx=(cx+((max(dx_r, (dy_r*sin(time)))*1.9)*sin((0.7*treb_att))));
+per_pixel_6=cy=(cy+((max(dx_r, (dy_r*sin(time)))*1.9)*cos((0.7*bass_att))));
+per_pixel_7=zoom=(zoom+(0.3*(0.5-rot)));
+per_pixel_8=dx=(((dx+(1.13*dx_r))+((0.5*bass_att)*dy_r))-((0.5*dy_r)*sin((1.6*time))));
+per_pixel_9=dy=(((dy+(1.15*dy_r))+((0.5*bass_att)*dx_r))-((0.5*dx_r)*cos((1.2*time))));
+per_pixel_10=turn=((above(bass_att, turn)*2)+((1-above(bass_att, turn))*(((turn-1.3)*0.96)+1.3)));
+per_pixel_11=dx_r=(((equal(turn, 2)*0.016)*sin((6.8*time)))+((1-equal(turn, 2))*dx_r));
+per_pixel_12=dy_r=(((equal(turn, 2)*0.013)*sin((8*time)))+((1-equal(turn, 2))*dy_r));

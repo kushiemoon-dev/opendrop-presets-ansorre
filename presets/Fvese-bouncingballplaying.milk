@@ -1,0 +1,90 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bBrighten=1.0
+bSolarize=1.0
+bWaveThick=1.0
+fDecay=0.95
+fGammaAdj=2.2
+fModWaveAlphaEnd=1.0
+fModWaveAlphaStart=1.0
+fWaveScale=0.01
+fWaveSmoothing=0.9
+ib_b=0.5
+ib_g=0.0
+ib_r=0.0
+ib_size=0.0
+mv_a=0.0
+mv_g=0.0
+mv_l=0.05
+mv_r=0.0
+ob_r=0.5
+ob_size=0.0
+warp=0.0
+wave_b=0.4
+wave_g=0.4
+wave_r=0.4
+bAdditiveWaves=1.0
+fVideoEchoAlpha=0.5
+fVideoEchoZoom=1.0
+nVideoEchoOrientation=1.0
+fWaveAlpha=0.999999
+fWaveParam=-0.4
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=rad = 0;
+per_frame_init_2=left_extreme = 0;
+per_frame_init_3=wave_y_mod = 0;
+per_frame_init_4=wave_x_mod = 0;
+per_frame_init_5=myeff = 0;
+per_frame_init_6=bottom_extreme = 0;
+per_frame_init_7=top_extreme = 0;
+per_frame_init_8=gravity = 0;
+per_frame_init_9=direction = 0;
+per_frame_init_10=y_speed = 0;
+per_frame_init_11=bounce = 0;
+per_frame_init_12=x_speed = 0;
+per_frame_init_13=y = 0;
+per_frame_init_14=vol = 0;
+per_frame_init_15=y_speed_loss = 0;
+per_frame_init_16=x_speed_loss = 0;
+per_frame_init_17=right_extreme = 0;
+per_frame_init_18=right_extreme=0.9;
+per_frame_init_19=left_extreme=0.1;
+per_frame_init_20=bottom_extreme=0.3;
+per_frame_init_21=top_extreme=0.9;
+per_frame_init_22=x_speed_loss=1;
+per_frame_init_23=gravity=0.0002;
+per_frame_init_24=y_speed_loss=1;
+per_frame_init_25=direction=1;
+per_frame_init_26=x_speed=0.01;
+per_frame_init_27=y_speed=0.05;
+per_frame_init_28=wave_x_mod=(right_extreme-0.5);
+per_frame_init_29=wave_y_mod=0.001;
+per_frame_1=wave_r=floor((int(rand(100)))/(100));
+per_frame_2=wave_g=floor((int(rand(100)))/(100));
+per_frame_3=wave_b=floor((int(rand(100)))/(100));
+per_frame_4=cx=((cx+(0.410*(((0.60*sin((0.374*time)))+(0.40*sin((0.294*time))))+vol)))+myeff);
+per_frame_5=cy=((cy+(0.410*(((0.60*sin((0.393*time)))+(0.40*sin((0.223*time))))+vol)))+myeff);
+per_frame_6=zoom=(zoom+(0.020*((0.60*sin((0.339*time)))+((0.40*sin((0.276*time)))*vol))));
+per_frame_7=rot=(rot+floor(((0.005*((0.60*sin((0.281*time)))+floor(((0.40*sin((0.839*time))))/(vol)))))/(myeff)));
+per_frame_8=vol=(((((bass_att+bass)+mid)+mid_att)+treb)+treb_att);
+per_frame_9=myeff=(((((sx+(if(abs(above(dy, 0.75))>0.00001,(0.1*tan(time)),(0.1*tan(time)))))+0.4)+floor((cos(vol))/(2))))&((((sy+(0.40*sin((8*mid))))+0.25)+floor((vol)/(10)))));
+per_frame_10=dx=((dx+floor((((0.085*pow(rad, (y*2)))*sin(time)))/(vol)))+myeff);
+per_frame_11=dy=((dy+floor((((0.085*pow(rad, (y*2)))*cos(time)))/(vol)))+myeff);
+per_frame_12=monitor=rot;
+per_frame_13=direction=(if(abs(above(wave_x_mod, (right_extreme-0.5)))>0.00001,-1,(if(abs(below(wave_x_mod, (left_extreme-0.5)))>0.00001,1,direction))));
+per_frame_14=bounce=(((below(wave_y_mod, 0)+equal(wave_y_mod, 0))+above(wave_y_mod, (top_extreme-bottom_extreme)))+equal(wave_y_mod, (top_extreme-bottom_extreme)));
+per_frame_15=x_speed=(((x_speed*(if(abs(equal(bounce, 0))>0.00001,1,x_speed_loss)))*(if(abs(above(wave_x_mod, (right_extreme-0.5)))>0.00001,x_speed_loss,(if(abs(below(wave_x_mod, (left_extreme-0.5)))>0.00001,x_speed_loss,1)))))*(if(abs(equal(y_speed, 0))>0.00001,x_speed_loss,1)));
+per_frame_16=wave_x_mod=(wave_x_mod+(direction*x_speed));
+per_frame_17=wave_x=(wave_x+wave_x_mod);
+per_frame_18=y_speed=((y_speed-(if(abs(equal(bounce, 0))>0.00001,(if(abs(equal(y_speed_loss, 1))>0.00001,0,gravity)),(2*y_speed))))-(equal(y_speed_loss, 1)*gravity));
+per_frame_19=y_speed=(if(abs(above(wave_y_mod, 0))>0.00001,(if(abs(below(wave_y_mod, 0.001))>0.00001,(if(abs(below(abs(y_speed), (gravity*1.01)))>0.00001,0,y_speed)),y_speed)),(if(abs(below(y_speed, 0))>0.00001,(-y_speed*0.9),y_speed))));
+per_frame_20=wave_y_mod=(wave_y_mod+y_speed);
+per_frame_21=wave_y=(bottom_extreme+wave_y_mod);
+per_pixel_1=zoom=(pow(rad, 0.05)+0.050);
+per_pixel_2=zoom=(((0.7+x))&((0.7+y)));

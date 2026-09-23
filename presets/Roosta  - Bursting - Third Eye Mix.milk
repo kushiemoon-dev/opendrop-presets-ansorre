@@ -1,0 +1,75 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bModWaveAlphaByVolume=1.0
+fDecay=0.925
+fGammaAdj=1.77
+fModWaveAlphaEnd=1.3
+fModWaveAlphaStart=0.71
+fWarpScale=1.331
+fWaveScale=1.2857
+fWaveSmoothing=0.63
+ib_size=0.26
+mv_a=0.0
+nWaveMode=5.0
+ob_r=0.01
+ob_size=0.5
+warp=0.01
+wave_b=0.65
+wave_g=0.65
+wave_r=0.65
+zoom=0.9995
+bAdditiveWaves=1.0
+fVideoEchoAlpha=0.7
+fVideoEchoZoom=1.006493
+nVideoEchoOrientation=3.0
+fWaveAlpha=0.533069
+shapecode_0_enabled=0.0
+shapecode_1_enabled=1.0
+shapecode_1_rad=2.41456
+shapecode_1_g2=0.0
+shapecode_1_border_r=0.3999
+shapecode_1_border_g=0.5
+shape_1_init1=frametest = 0;
+shape_1_init2=oldr = 0;
+shape_1_init3=monitor = 0;
+shape_1_per_frame1=r=(0.5*sin((time*2.234)));
+shape_1_per_frame2=g=(0.5*sin((time*2.345)));
+shape_1_per_frame3=b=(0.5*sin((time*2.456)));
+shape_1_per_frame4=border_a=(0.25*sin(time));
+shape_1_per_frame5=ang=(ang+(0.67*sin(time)));
+shape_1_per_frame6=rad=(rad+(bass*0.1));
+shape_1_per_frame7=frametest=equal(((frame)%(2)), 0);
+shape_1_per_frame8=x=(x-(0.2*sin((time*2))));
+shape_1_per_frame9=y=(y-(0.2*tan((time*2))));
+shape_1_per_frame10=x=(if(abs(frametest)>0.00001,x,(1-x)));
+shape_1_per_frame11=y=(if(abs(frametest)>0.00001,y,(1-y)));
+shape_1_per_frame12=oldr=r;
+shape_1_per_frame13=r=(if(abs(frametest)>0.00001,r,b));
+shape_1_per_frame14=b=(if(abs(frametest)>0.00001,b,oldr));
+shape_1_per_frame15=monitor=frametest;
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+wavecode_0_enabled=0.0
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=bass_thresh = 0;
+per_frame_init_2=old_orient = 0;
+per_frame_init_3=wave_size = 0;
+per_frame_init_4=q1=0;
+per_frame_1=bass_thresh=((above(bass_att, bass_thresh)*2)+((1-above(bass_att, bass_thresh))*(((bass_thresh-1.3)*0.96)+1.3)));
+per_frame_2=echo_orient=(old_orient+equal(bass_thresh, 2));
+per_frame_3=echo_orient=(if(abs(equal(echo_orient, 4))>0.00001,1,echo_orient));
+per_frame_4=old_orient=echo_orient;
+per_frame_5=dy=(dy+(0.2*cos(time)));
+per_frame_6=dx=(dx+(0.3*sin((time*1.234))));
+per_frame_7=wave_r=(wave_r+(0.5*sin((time*2.2))));
+per_frame_8=wave_g=(wave_g+(0.5*sin((time*3))));
+per_frame_9=wave_b=(wave_b+(0.5*sin((time*4))));
+per_frame_10=wave_size=(wave_size+bass);
+per_pixel_1=rot=(rot+ang);
+per_pixel_2=cx=(cx+rad);
+per_pixel_3=cy=(cy-ang);

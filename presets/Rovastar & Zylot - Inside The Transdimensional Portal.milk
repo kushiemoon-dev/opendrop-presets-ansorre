@@ -1,0 +1,44 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+fDecay=1.0
+fWaveScale=0.01
+ib_a=1.0
+ib_size=0.0
+mv_a=0.0
+mv_g=0.7
+mv_l=0.0
+mv_r=0.0
+ob_a=1.0
+ob_size=0.0025
+wave_b=0.0
+wave_g=0.0
+wave_r=0.0
+wave_x=0.03
+wave_y=0.96
+nMotionVectorsX=64.0
+nMotionVectorsY=48.0
+fWaveParam=-0.44
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=q7 = 0;
+per_frame_init_2=q8 = 0;
+per_frame_init_3=oldq8 = 0;
+per_frame_init_4=decay=0.05;
+per_frame_1=warp=0;
+per_frame_2=wave_r=(bass_att*0.5);
+per_frame_3=wave_g=(treb_att*0.5);
+per_frame_4=wave_b=(mid_att*0.5);
+per_frame_5=q8=(oldq8+(0.005*floor((pow(((((((1.2*bass)+(0.4*bass_att))+(0.1*treb))+(0.1*treb_att))+(0.1*mid))+(0.1*mid_att)), 5))/(fps))));
+per_frame_6=oldq8=q8;
+per_frame_7=q7=(0.001*(((((floor((pow(((((((1.2*bass)+(0.4*bass_att))+(0.1*treb))+(0.1*treb_att))+(0.1*mid))+(0.1*mid_att)), 6))/(fps))+floor((pow(((((((1.2*bass)+(0.4*bass_att))+(0.1*treb))+(0.1*treb_att))+(0.1*mid))+(0.1*mid_att)), 5))/(fps)))+floor((pow(((((((1.2*bass)+(0.4*bass_att))+(0.1*treb))+(0.1*treb_att))+(0.1*mid))+(0.1*mid_att)), 4))/(fps)))+floor((pow(((((((1.2*bass)+(0.4*bass_att))+(0.1*treb))+(0.1*treb_att))+(0.1*mid))+(0.1*mid_att)), 3))/(fps)))+floor((pow(((((((1.2*bass)+(0.4*bass_att))+(0.1*treb))+(0.1*treb_att))+(0.1*mid))+(0.1*mid_att)), 2))/(fps)))+floor((((((((1.2*bass)+(0.4*bass_att))+(0.1*treb))+(0.1*treb_att))+(0.1*mid))+(0.1*mid_att)))/(fps))));
+per_pixel_1=dx=(if(abs(above(y, 0.93))>0.00001,0.01,(if(abs(below(y, 0.01))>0.00001,(if(abs(below(x, 0.3))>0.00001,(if(abs(below(y, 0.5))>0.00001,0,-0.01)),-0.01)),0))));
+per_pixel_2=dy=(if(abs(below(x, 0.05))>0.00001,0.01,(if(abs(above(x, (0.94-q7)))>0.00001,-0.01,0))));
+per_pixel_3=zoom=(if(abs(above(x, 0.09))>0.00001,(if(abs(below(x, 0.85))>0.00001,(if(abs(above(y, 0.09))>0.00001,(if(abs(below(y, 0.85))>0.00001,0.95,1)),1)),1)),1));
+per_pixel_4=dy=(if(abs(below(y, 0.5))>0.00001,(if(abs(below(x, 0.3))>0.00001,0.01,dy)),dy));
+per_pixel_5=rot=(if(abs(above(x, 0.09))>0.00001,(if(abs(below(x, 0.85))>0.00001,(if(abs(above(y, 0.09))>0.00001,(if(abs(below(y, 0.85))>0.00001,(0.1*sin(((rad*6)+(q8*0.444)))),0)),0)),0)),0));

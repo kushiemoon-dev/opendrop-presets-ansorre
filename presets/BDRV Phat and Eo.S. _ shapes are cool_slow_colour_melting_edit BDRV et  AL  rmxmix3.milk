@@ -1,0 +1,215 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bBrighten=1.0
+bInvert=1.0
+bWaveDots=1.0
+fDecay=0.96
+fGammaAdj=8.0
+fWarpAnimSpeed=0.010284
+fWarpScale=0.01
+fWaveScale=0.011726
+fWaveSmoothing=0.9
+ib_a=1.0
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+ib_size=0.0
+mv_a=0.0
+mv_b=0.300001
+mv_dx=0.02
+mv_dy=-0.02
+mv_g=0.48
+mv_l=5.0
+mv_r=0.49
+nWaveMode=2.0
+ob_b=0.1
+ob_r=0.11
+ob_size=0.0
+warp=0.01
+wave_b=0.3
+wave_g=0.4
+wave_r=0.5
+fVideoEchoZoom=1.006596
+nVideoEchoOrientation=3.0
+fWaveAlpha=0.019788
+nMotionVectorsX=31.999994
+nMotionVectorsY=24.000004
+shapecode_0_enabled=1.0
+shapecode_0_textured=1.0
+shapecode_0_y=1.8
+shapecode_0_rad=1.670888
+shapecode_0_tex_ang=0.942478
+shapecode_0_tex_zoom=0.534261
+shapecode_0_g=1.0
+shapecode_0_b=1.0
+shapecode_0_r2=1.0
+shapecode_0_b2=1.0
+shapecode_0_a2=1.0
+shapecode_0_border_r=0.2
+shapecode_0_border_g=0.0
+shapecode_0_border_b=0.3
+shapecode_0_border_a=1.0
+shape_0_init1=flux = 0;
+shape_0_init2=q5 = 0;
+shape_0_init3=fluxs = 0;
+shape_0_init4=advflux = 0;
+shape_0_init5=q3 = 0;
+shape_0_init6=adv = 0;
+shape_0_init7=advs = 0;
+shape_0_per_frame1=flux=(q5*9);
+shape_0_per_frame2=fluxs=max(flux, 0);
+shape_0_per_frame3=fluxs=min(fluxs, 1);
+shape_0_per_frame4=advflux=((q3*fluxs)+(-q3*(1-fluxs)));
+shape_0_per_frame5=adv=(adv+advflux);
+shape_0_per_frame6=advs=floor((adv)/(256));
+shape_0_per_frame7=ang=advs;
+shape_0_per_frame8=rad=(1.671+floor((q3)/(25)));
+shape_0_per_frame9=a=above(1, (bass-0.1));
+shape_0_per_frame10=a2=above(1, (bass-0.1));
+shapecode_1_enabled=0.0
+shapecode_2_enabled=1.0
+shapecode_2_sides=3.0
+shapecode_2_textured=1.0
+shapecode_2_x=0.59
+shapecode_2_y=1.8
+shapecode_2_rad=0.444842
+shapecode_2_r=0.0
+shapecode_2_r2=0.1
+shapecode_2_g2=0.05
+shapecode_2_border_a=0.0
+shape_2_init1=rotator = 0;
+shape_2_init2=dir = 0;
+shape_2_init3=mover = 0;
+shape_2_init4=dir=3;
+shape_2_init5=mover=0;
+shape_2_init6=rotator=0.255;
+shape_2_per_frame1=ang=rotator;
+shape_2_per_frame2=x=(if(abs(equal(dir, 1))>0.00001,(1-mover),(if(abs(equal(dir, 1.5))>0.00001,0.15,(if(abs(equal(dir, 2))>0.00001,0,(if(abs(equal(dir, 2.5))>0.00001,0,(if(abs(equal(dir, 3))>0.00001,(0+mover),(if(abs(equal(dir, 3.5))>0.00001,1,(if(abs(equal(dir, 4))>0.00001,1,1))))))))))))));
+shape_2_per_frame3=y=(if(abs(equal(dir, 1))>0.00001,1,(if(abs(equal(dir, 1.5))>0.00001,1,(if(abs(equal(dir, 2))>0.00001,(1-mover),(if(abs(equal(dir, 2.5))>0.00001,0,(if(abs(equal(dir, 3))>0.00001,0,(if(abs(equal(dir, 3.5))>0.00001,0,(if(abs(equal(dir, 4))>0.00001,(0+mover),1))))))))))))));
+shape_2_per_frame4=mover=(if(abs(equal(dir, 1))>0.00001,(mover+0.005),(if(abs(equal(dir, 1.5))>0.00001,0,(if(abs(equal(dir, 2))>0.00001,(mover+0.005),(if(abs(equal(dir, 2.5))>0.00001,0,(if(abs(equal(dir, 3))>0.00001,(mover+0.005),(if(abs(equal(dir, 3.5))>0.00001,0,(if(abs(equal(dir, 4))>0.00001,(mover+0.005),0))))))))))))));
+shape_2_per_frame5=dir=(if(abs(equal(dir, 1))>0.00001,(if(abs(above(mover, 0.995))>0.00001,1.5,dir)),(if(abs(equal(dir, 1.5))>0.00001,(if(abs(below(rotator, -1.29))>0.00001,2,dir)),(if(abs(equal(dir, 2))>0.00001,(if(abs(above(mover, 0.995))>0.00001,2.5,dir)),(if(abs(equal(dir, 2.5))>0.00001,(if(abs(below(rotator, -2.85))>0.00001,3,dir)),(if(abs(equal(dir, 3))>0.00001,(if(abs(above(mover, 0.995))>0.00001,3.5,dir)),(if(abs(equal(dir, 3.5))>0.00001,(if(abs(below(rotator, -4.44))>0.00001,4,dir)),(if(abs(equal(dir, 4))>0.00001,(if(abs(above(mover, 0.995))>0.00001,4.5,dir)),(if(abs(equal(dir, 4.5))>0.00001,(if(abs(below(rotator, -5.94))>0.00001,1,dir)),dir))))))))))))))));
+shape_2_per_frame6=rotator=(if(abs(equal(dir, 1.5))>0.00001,(if(abs(above(rotator, -1.31))>0.00001,(rotator-0.05),rotator)),(if(abs(equal(dir, 2))>0.00001,-1.3,(if(abs(equal(dir, 2.5))>0.00001,(if(abs(above(rotator, -2.87))>0.00001,(rotator-0.05),rotator)),(if(abs(equal(dir, 3))>0.00001,-2.86,(if(abs(equal(dir, 3.5))>0.00001,(if(abs(above(rotator, -4.46))>0.00001,(rotator-0.05),rotator)),(if(abs(equal(dir, 4))>0.00001,-4.45,(if(abs(equal(dir, 4.5))>0.00001,(if(abs(above(rotator, -5.97))>0.00001,(rotator-0.05),rotator)),(if(abs(equal(dir, 4))>0.00001,-5.96,0.26))))))))))))))));
+shape_2_per_frame7=b=above(mid, 1.5);
+shape_2_per_frame8=r2=above(mid, 1.5);
+shape_2_per_frame9=g2=above(mid, 1.5);
+shape_2_per_frame10=b2=above(mid, 1.5);
+shapecode_3_enabled=1.0
+shapecode_3_sides=6.0
+shapecode_3_x=0.84
+shapecode_3_r=0.98
+shapecode_3_g=1.0
+shapecode_3_b=0.98
+shapecode_3_g2=0.09
+shapecode_3_a2=1.0
+shapecode_3_border_a=0.0
+shape_3_init1=q1 = 0;
+shape_3_per_frame1=x=((sin(floor((time)/(2)))*0.4)+0.5);
+shape_3_per_frame2=y=((sin(time)*0.4)+0.5);
+shape_3_per_frame3=rad=floor(((q1*q1))/(2));
+shape_3_per_frame4=ang=(q1*4);
+shape_3_per_frame5=r=(0.70+(sin(floor((time)/(2)))*0.50));
+shape_3_per_frame6=g=(0.70+(sin((floor((time)/(2))+2))*0.50));
+shape_3_per_frame7=b=(0.70+(sin((floor((time)/(2))+4))*0.50));
+wavecode_0_enabled=0.0
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=speedinv = 0;
+per_frame_init_2=star = 0;
+per_frame_init_3=q6 = 0;
+per_frame_init_4=q1 = 0;
+per_frame_init_5=q5 = 0;
+per_frame_init_6=flux = 0;
+per_frame_init_7=pi = 0;
+per_frame_init_8=an = 0;
+per_frame_init_9=q4 = 0;
+per_frame_init_10=zm = 0;
+per_frame_init_11=rd = 0;
+per_frame_init_12=oy = 0;
+per_frame_init_13=mod = 0;
+per_frame_init_14=ag = 0;
+per_frame_init_15=num = 0;
+per_frame_init_16=q2 = 0;
+per_frame_init_17=qb = 0;
+per_frame_init_18=seg = 0;
+per_frame_init_19=speed = 0;
+per_frame_init_20=qc = 0;
+per_frame_init_21=q3 = 0;
+per_frame_init_22=q7 = 0;
+per_frame_init_23=anga = 0;
+per_frame_init_24=radi = 0;
+per_frame_init_25=qa = 0;
+per_frame_init_26=ox = 0;
+per_frame_init_27=q8 = 0;
+per_frame_init_28=mv_x=64;
+per_frame_init_29=mv_y=48;
+per_frame_init_30=nut=0;
+per_frame_init_31=stp=0;
+per_frame_init_32=stq=0;
+per_frame_init_33=rtp=0;
+per_frame_init_34=rtq=0;
+per_frame_init_35=wvr=0;
+per_frame_init_36=decay=0;
+per_frame_init_37=dcsp=0;
+per_frame_init_38=q1=0;
+per_frame_init_39=q2=0;
+per_frame_init_40=q3=0;
+per_frame_1=decay=1;
+per_frame_2=speed=0.80;
+per_frame_3=speedinv=(1-speed);
+per_frame_4=q1=((qa*speed)+(bass*speedinv));
+per_frame_5=q2=((qb*speed)+(mid*speedinv));
+per_frame_6=q3=((qc*speed)+(treb*speedinv));
+per_frame_7=qa=q1;
+per_frame_8=qb=q2;
+per_frame_9=qc=q3;
+per_frame_10=flux=sin(floor((time)/(2)));
+per_frame_11=q4=((flux*0.5)+0.5);
+per_frame_12=q5=flux;
+per_frame_13=zoom=0.9995;
+per_pixel_1=sx=(-0.95+((bass*0.5)*rd));
+per_pixel_2=sy=(-0.95-((treb*0.5)*ag));
+per_pixel_3=cx=(0.5+q4);
+per_pixel_4=cy=(0.5-q5);
+per_pixel_5=rd=sqrt((sqr((((x-0.5)-q4)*2))+sqr((((y-0.5)+q5)*1.5))));
+per_pixel_6=zm=0.95;
+per_pixel_7=ag=atan(floor((((y-0.5)+q5))/(((x-0.5)-q4))));
+per_pixel_8=star=floor(((atan((ag*6))*((4-rd)-ag)))/(5));
+per_pixel_9=zm=(zm+(floor(((star*ag))/(20))*ag));
+per_pixel_10=sx=zm;
+per_pixel_11=sy=zm;
+per_pixel_12=dx=(sin((y*140))*(bass*0.01));
+per_pixel_13=dy=(cos((x*140))*(bass*0.01));
+per_pixel_14=q1=(0.4*rad);
+per_pixel_15=q2=(0.3*rad);
+per_pixel_16=q3=below(rad, ((0.1*q5)+0.3));
+per_pixel_17=q7=(if(abs(q3)>0.00001,0,(10+floor((1*rad)))));
+per_pixel_18=q8=(if(abs(q3)>0.00001,0,(10+floor((1*rad)))));
+per_pixel_19=cx=(if(abs(q3)>0.00001,0.5,((((0)&(((x*q7)-q1)))*floor((1)/(q7)))+(0.1*q1))));
+per_pixel_20=cy=(if(abs(q3)>0.00001,0.5,((((0)&(((y*q8)-q2)))*floor((1)/(q8)))+(0.1*q2))));
+per_pixel_21=rot=(if(abs(q3)>0.00001,((2*q6)*rad),(((0.1*rad)+(0.1*bass))+((0.00*cx)*cy))));
+per_pixel_22=zoom=(if(abs(q3)>0.00001,((0.3+(0.3*q5))+(0.5*q4)),zoom));
+per_pixel_23=num=8;
+per_pixel_24=pi=3.141592654;
+per_pixel_25=radi=((y-0.5)*0.75);
+per_pixel_26=radi=(y-0.5);
+per_pixel_27=radi=pow(((radi*radi)+((x-0.5)*(x-0.5))), 0.5);
+per_pixel_28=an=((ang+pi)+time);
+per_pixel_29=an=(an-((pi*2)*floor(floor((an)/((pi*2))))));
+per_pixel_30=mod=0.1;
+per_pixel_31=seg=(ang+pi);
+per_pixel_32=seg=(floor((seg)/((pi*2)))*num);
+per_pixel_33=seg=floor(seg);
+per_pixel_34=seg=(seg-equal(seg, num));
+per_pixel_35=anga=((ang+pi)-(floor(((pi*2))/(num))*seg));
+per_pixel_36=anga=(if(abs(equal(((seg)%(2)), 0))>0.00001,(floor(((pi*2))/(num))-anga),anga));
+per_pixel_37=anga=(anga+floor((pi)/(4)));
+per_pixel_38=ox=(0.5-(radi*sin(anga)));
+per_pixel_39=oy=(0.5+(radi*cos(anga)));
+per_pixel_40=dx=(equal(seg, 3)*(x-ox));
+per_pixel_41=dy=(equal(seg, 3)*(y-oy));
+per_pixel_42=dx=(above(seg, 0)*(x-ox));
+per_pixel_43=dy=(above(seg, 0)*(y-oy));

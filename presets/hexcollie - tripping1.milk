@@ -1,0 +1,93 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bBrighten=1.0
+bSolarize=1.0
+fDecay=0.94
+fGammaAdj=3.8
+fModWaveAlphaEnd=1.3
+fModWaveAlphaStart=0.71
+fWarpAnimSpeed=0.01
+fWarpScale=0.01
+fWaveScale=0.01
+fWaveSmoothing=0.63
+ib_a=0.62
+ib_b=0.1
+ib_g=0.5
+ib_r=0.8
+ib_size=0.025
+mv_a=0.0
+mv_b=0.71
+mv_g=0.91
+mv_l=1.0
+ob_b=0.1
+ob_r=0.11
+ob_size=0.0
+warp=0.01
+wave_b=0.65
+wave_g=0.65
+wave_r=0.65
+bAdditiveWaves=1.0
+fVideoEchoZoom=0.645
+nVideoEchoOrientation=1.0
+fWaveAlpha=0.001
+nMotionVectorsX=0.0
+nMotionVectorsY=0.0
+fWaveParam=-1.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+wavecode_0_enabled=0.0
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=xfade_ctrl = 0;
+per_frame_init_2=xpos1 = 0;
+per_frame_init_3=ycheck = 0;
+per_frame_init_4=crossfade2 = 0;
+per_frame_init_5=crossfade1 = 0;
+per_frame_init_6=xcheck = 0;
+per_frame_init_7=yp_hi = 0;
+per_frame_init_8=ypos1 = 0;
+per_frame_init_9=rflux = 0;
+per_frame_init_10=xp_hi = 0;
+per_frame_init_11=xp_lo = 0;
+per_frame_init_12=size = 0;
+per_frame_init_13=yp_lo = 0;
+per_frame_init_14=zflux = 0;
+per_frame_init_15=mv_x=64;
+per_frame_init_16=mv_y=48;
+per_frame_init_17=nut=0;
+per_frame_init_18=stp=0;
+per_frame_init_19=stq=0;
+per_frame_init_20=rtp=0;
+per_frame_init_21=rtq=0;
+per_frame_init_22=wvr=0;
+per_frame_init_23=decay=0;
+per_frame_init_24=dcsp=0;
+per_frame_1=decay=0.97;
+per_frame_2=zoom=1.000;
+per_frame_3=mv_x=((sin(floor((time)/(4)))*8)+56);
+per_frame_4=mv_y=((cos(floor((time)/(4)))*8)+40);
+per_frame_5=mv_r=((sin(floor((time)/(3)))*0.3)+0.3);
+per_frame_6=mv_g=((cos(floor((time)/(3)))*0.3)+0.3);
+per_frame_7=mv_b=((sin((time+1.5))*0.3)+0.3);
+per_pixel_1=xpos1=((sin(floor((time)/(2)))*0.3)+0.5);
+per_pixel_2=ypos1=((cos(floor((time)/(2)))*0.4)+0.5);
+per_pixel_3=size=0.2;
+per_pixel_4=xp_lo=(xpos1-size);
+per_pixel_5=xp_hi=(xpos1+size);
+per_pixel_6=yp_lo=(ypos1-size);
+per_pixel_7=yp_hi=(ypos1+size);
+per_pixel_8=xcheck=(above(x, xp_lo)*below(x, xp_hi));
+per_pixel_9=ycheck=(above(y, yp_lo)*below(y, yp_hi));
+per_pixel_10=xfade_ctrl=((sin(floor((time)/(5)))*0.5)+0.5);
+per_pixel_11=crossfade1=((xcheck*xfade_ctrl)+(ycheck*(1-xfade_ctrl)));
+per_pixel_12=crossfade2=((ycheck*xfade_ctrl)+(xcheck*(1-xfade_ctrl)));
+per_pixel_13=zflux=((sin(floor((time)/(2)))*0.4)+0.5);
+per_pixel_14=rflux=(sin(floor((time)/(1.5)))*0.8);
+per_pixel_15=zoom=((1.0*xcheck)+(zflux*(1-xcheck)));
+per_pixel_16=rot=((0.00*ycheck)+(rflux*(1-ycheck)));

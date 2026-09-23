@@ -1,0 +1,76 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bModWaveAlphaByVolume=1.0
+dy=-0.001
+fDecay=0.995
+fGammaAdj=1.0
+fModWaveAlphaEnd=0.25
+fModWaveAlphaStart=0.02
+fWarpAnimSpeed=79.689735
+fWarpScale=14.684906
+fWaveScale=2.449024
+fWaveSmoothing=0.54
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+ib_size=0.055
+mv_a=0.0
+mv_dx=-0.16
+mv_dy=0.02
+mv_l=0.7
+ob_size=0.02
+sx=1.208107
+sy=1.208108
+warp=0.01
+wave_b=0.0
+wave_g=0.0
+wave_r=0.4
+zoom=0.861076
+bAdditiveWaves=1.0
+fVideoEchoZoom=2.423651
+fWaveAlpha=1.091683
+fZoomExponent=0.512474
+fWaveParam=-0.6
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=base_att = 0;
+per_frame_init_2=q1 = 0;
+per_frame_init_3=q5 = 0;
+per_frame_init_4=rt = 0;
+per_frame_init_5=t = 0;
+per_frame_init_6=vol = 0;
+per_frame_init_7=q2 = 0;
+per_frame_init_8=q3 = 0;
+per_frame_init_9=beat_q1 = 0;
+per_frame_init_10=t=time;
+per_frame_init_11=q3=1;
+per_frame_init_12=rt=1;
+per_frame_1=vol=floor((((base_att+mid_att)+treb_att))/(6));
+per_frame_2=q2=max((vol*0.9), 0.4);
+per_frame_3=t=(t+(vol*0.07));
+per_frame_4=q5=t;
+per_frame_5=q1=above(bass_att, (beat_q1*1.15));
+per_frame_6=beat_q1=((q1*5)+((((1-q1)*(beat_q1-1.1))*0.9)+1.1));
+per_frame_7=rt=(if(abs(q1)>0.00001,(rt*-1),rt));
+per_frame_8=q3=rt;
+per_frame_9=wave_x=((0.5+(0.1*cos((t*3.14))))+(0.05*cos((t*1.3))));
+per_frame_10=wave_y=((0.5+(0.1*sin((t*2.14))))+(0.03*sin((t*0.5))));
+per_frame_11=wave_a=vol;
+per_frame_12=wave_r=(wave_r+(0.5*sin((t*3.034))));
+per_frame_13=wave_g=(wave_g+(0.5*sin((t*2.547))));
+per_frame_14=wave_b=(wave_b-(0.5*sin((t*1.431))));
+per_frame_15=ob_size=min((0.95-floor((vol)/(2))), 0.95);
+per_frame_16=ib_size=max(0.01, floor((vol)/(15)));
+per_frame_17=ib_a=(((vol+0.2)*(vol+0.2))*(vol+0.2));
+per_frame_18=ib_r=max((0.1+(0.6*sin((t*1.747)))), 0);
+per_frame_19=ib_g=max((0.1-(0.3*sin((t*0.731)))), 0);
+per_frame_20=ib_b=max((0.4+(0.5*cos((t*0.834)))), 0);
+per_frame_21=monitor=q3;
+per_pixel_1=rot=((((q3*q2)*(0.5+floor((1)/((rad+0.1)))))*0.2)*max(sin((q5*1.31)), 0.3));
+per_pixel_2=zoom=(0.85+(0.1*sin(((rad*25)-((q5*(q2-3.14))*1.5)))));

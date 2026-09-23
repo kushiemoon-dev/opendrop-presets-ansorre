@@ -1,0 +1,44 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bModWaveAlphaByVolume=1.0
+bWaveDots=1.0
+fDecay=0.9359
+fModWaveAlphaEnd=1.3
+fModWaveAlphaStart=0.71
+fWarpScale=0.01
+fWaveScale=0.729184
+fWaveSmoothing=0.63
+ib_size=0.26
+mv_a=0.0
+nWaveMode=3.0
+ob_r=0.01
+ob_size=0.3
+sx=1.00815
+warp=0.01
+wave_b=0.65
+wave_g=0.65
+zoom=1.001829
+fVideoEchoZoom=6.440059
+fWaveAlpha=4.099998
+fWaveParam=1.0
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=ddoe1 = 0;
+per_frame_init_2=ddoe2 = 0;
+per_frame_init_3=doen = 0;
+per_frame_1=zoom=1.001;
+per_frame_2=ddoe1=((1-below(treb_att, 1.4))*0.9);
+per_frame_3=ddoe2=((1-below(bass_att, 1.4))*0.7);
+per_frame_4=warp=(ddoe1-(ddoe2*2));
+per_frame_5=doen=below(bass_att, 1.45);
+per_frame_6=decay=doen;
+per_frame_7=rot=(sin(time)*0.009);
+per_frame_8=wave_r=(max((max(bass, bass_att)-1.2), 0)+0.5);
+per_frame_9=wave_g=(max((max(treb, treb_att)-1.2), 0)+0.5);
+per_frame_10=wave_b=(max((max(mid, mid_att)-1.2), 0)+0.5);

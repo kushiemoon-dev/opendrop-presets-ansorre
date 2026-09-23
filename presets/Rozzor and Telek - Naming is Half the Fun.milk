@@ -1,0 +1,74 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bWaveThick=1.0
+fWarpScale=1.772
+fWaveScale=100.0
+fWaveSmoothing=0.45
+ib_a=0.152454
+ib_b=0.969948
+ib_g=0.955039
+ib_r=0.714423
+ib_size=0.015
+mv_a=0.746083
+mv_b=0.866615
+mv_dx=0.894801
+mv_dy=0.458259
+mv_g=0.645468
+mv_l=2.018044
+mv_r=0.258674
+ob_a=0.721107
+ob_b=0.632306
+ob_g=0.151672
+ob_r=0.238906
+warp=0.513
+wave_b=0.923396
+wave_g=0.274247
+wave_r=0.583179
+wave_x=0.0
+wave_y=0.1535
+zoom=0.999698
+fVideoEchoAlpha=0.5
+fVideoEchoZoom=0.998169
+nVideoEchoOrientation=3.0
+fWaveAlpha=0.320553
+fZoomExponent=1.96
+fShader=0.19
+fWaveParam=-0.499171
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=progress = 0;
+per_frame_init_2=ying = 0;
+per_frame_init_3=vol_now = 0;
+per_frame_init_4=yin = 0;
+per_frame_init_5=slowtime = 0;
+per_frame_init_6=dvy = 0;
+per_frame_init_7=vx = 0;
+per_frame_init_8=vy = 0;
+per_frame_init_9=vang = 0;
+per_frame_init_10=beat = 0;
+per_frame_init_11=dvx = 0;
+per_frame_init_12=vol_mean = 0;
+per_frame_1=slowtime=(slowtime+(beat*time));
+per_frame_2=vol_now=((0.4*bass)+(0.1*((bass_att+treb)+mid)));
+per_frame_3=vol_mean=(if(abs(equal(((frame)%(50)), 0))>0.00001,(vol_mean-(0.5*(vol_mean-vol_now))),(0.1*((vol_mean*9)+vol_now))));
+per_frame_4=beat=(if(abs(above(vol_now, (1.15*vol_mean)))>0.00001,1,0));
+per_frame_5=rot=(0.15*cos((0.4+(0.323*cos((slowtime*0.14))))));
+per_frame_6=ib_r=(0.4+(0.324*cos((time*0.14))));
+per_frame_7=ib_g=(0.4+(0.324*cos((time*0.1))));
+per_frame_8=ying=(if(abs(below(ying, 1))>0.00001,1,ying));
+per_frame_9=ying=(ying+equal(abs(sin((time+5000))), 1));
+per_frame_10=yin=((ying)%(2));
+per_frame_11=ib_a=(if(abs(yin)>0.00001,(beat*(progress+1)),(0.1*(progress+1))));
+per_frame_12=monitor=ib_a;
+per_pixel_1=vang=time;
+per_pixel_2=vx=((((x-0.5)*cos(vang))-((y-0.5)*sin(vang)))+0.5);
+per_pixel_3=vy=((((x-0.5)*sin(vang))+((y-0.5)*cos(vang)))+0.5);
+per_pixel_4=dvx=(0.05*vx);
+per_pixel_5=dvy=(0.1*vy);
+per_pixel_6=dx=((dvx*cos(vang))-(dvy*sin(vang)));
+per_pixel_7=dy=((-dvx*sin(vang))-(dvy*cos(vang)));

@@ -1,0 +1,99 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bBrighten=1.0
+bInvert=1.0
+bWaveDots=1.0
+fDecay=0.96
+fGammaAdj=8.0
+fWarpAnimSpeed=0.010284
+fWarpScale=0.01
+fWaveScale=0.011726
+fWaveSmoothing=0.9
+ib_a=1.0
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+ib_size=0.0
+mv_a=0.0
+mv_b=0.300001
+mv_dx=0.02
+mv_dy=-0.02
+mv_g=0.48
+mv_l=5.0
+mv_r=0.49
+nWaveMode=2.0
+ob_b=0.1
+ob_r=0.11
+ob_size=0.0
+warp=0.01
+wave_b=0.3
+wave_g=0.4
+wave_r=0.5
+fVideoEchoZoom=1.006596
+nVideoEchoOrientation=3.0
+fWaveAlpha=0.019788
+nMotionVectorsX=31.999994
+nMotionVectorsY=24.000004
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=1.0
+shapecode_3_sides=3.0
+shapecode_3_x=0.84
+shapecode_3_r=0.98
+shapecode_3_g=1.0
+shapecode_3_b=0.98
+shapecode_3_g2=0.09
+shapecode_3_a2=1.0
+shapecode_3_border_a=0.0
+shape_3_init1=q1 = 0;
+shape_3_per_frame1=x=((sin(floor((time)/(2)))*0.4)+0.5);
+shape_3_per_frame2=y=((sin(time)*0.4)+0.5);
+shape_3_per_frame3=rad=floor(((q1*q1))/(2));
+shape_3_per_frame4=ang=(q1*4);
+shape_3_per_frame5=r=(0.70+(sin(floor((time)/(2)))*0.50));
+shape_3_per_frame6=g=(0.70+(sin((floor((time)/(2))+2))*0.50));
+shape_3_per_frame7=b=(0.70+(sin((floor((time)/(2))+4))*0.50));
+wavecode_0_enabled=0.0
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=speedinv = 0;
+per_frame_init_2=q1 = 0;
+per_frame_init_3=q5 = 0;
+per_frame_init_4=flux = 0;
+per_frame_init_5=q4 = 0;
+per_frame_init_6=q2 = 0;
+per_frame_init_7=qb = 0;
+per_frame_init_8=speed = 0;
+per_frame_init_9=qc = 0;
+per_frame_init_10=q3 = 0;
+per_frame_init_11=qa = 0;
+per_frame_init_12=mv_x=64;
+per_frame_init_13=mv_y=48;
+per_frame_init_14=nut=0;
+per_frame_init_15=stp=0;
+per_frame_init_16=stq=0;
+per_frame_init_17=rtp=0;
+per_frame_init_18=rtq=0;
+per_frame_init_19=wvr=0;
+per_frame_init_20=decay=0;
+per_frame_init_21=dcsp=0;
+per_frame_init_22=q1=0;
+per_frame_init_23=q2=0;
+per_frame_init_24=q3=0;
+per_frame_1=decay=1;
+per_frame_2=speed=0.80;
+per_frame_3=speedinv=(1-speed);
+per_frame_4=q1=((qa*speed)+(bass*speedinv));
+per_frame_5=q2=((qb*speed)+(mid*speedinv));
+per_frame_6=q3=((qc*speed)+(treb*speedinv));
+per_frame_7=qa=q1;
+per_frame_8=qb=q2;
+per_frame_9=qc=q3;
+per_frame_10=flux=sin(floor((time)/(2)));
+per_frame_11=q4=((flux*0.5)+0.5);
+per_frame_12=q5=flux;

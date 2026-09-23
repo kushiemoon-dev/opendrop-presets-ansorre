@@ -1,0 +1,40 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bDarkenCenter=1.0
+fWarpScale=0.011
+fWaveScale=0.672
+mv_a=0.0
+zoom=1.01
+bAdditiveWaves=1.0
+fZoomExponent=0.55045
+fWaveParam=-0.3
+shapecode_0_enabled=1.0
+shapecode_0_sides=32.0
+shapecode_0_r=0.0
+shapecode_0_g2=0.0
+shapecode_0_border_a=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+wavecode_0_enabled=0.0
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=box = 0;
+per_frame_init_2=q1 = 0;
+per_frame_init_3=box2 = 0;
+per_frame_init_4=dbass = 0;
+per_frame_init_5=basst = 0;
+per_frame_1=wave_r=0;
+per_frame_2=wave_g=(0.85+(0.15*sin((2*time))));
+per_frame_3=dbass=((0.5*dbass)+(0.5*bass));
+per_frame_4=basst=(basst+(0.1*dbass));
+per_frame_5=q1=((0.15*time)+(0.85*basst));
+per_frame_6=warp=0;
+per_pixel_1=box=(above(rad, (0.3+(0.3*tan((4*q1)))))*below(rad, (1+(0.3*tan((4*q1))))));
+per_pixel_2=box2=(above(rad, (0.3+(0.3*tan(((4*q1)+1.57)))))*below(rad, (1+(0.3*tan(((4*q1)+1.57))))));
+per_pixel_3=sx=((1+(0.05*box))+(0.05*box2));
+per_pixel_4=sy=((1+(0.05*box))+(0.05*box2));

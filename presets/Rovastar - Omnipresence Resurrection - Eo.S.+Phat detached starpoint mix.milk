@@ -1,0 +1,97 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+dx=-0.28
+dy=-0.32
+fDecay=0.94
+fGammaAdj=1.0
+fModWaveAlphaEnd=1.3
+fModWaveAlphaStart=0.71
+fWarpScale=1.331
+fWaveScale=0.01
+fWaveSmoothing=0.63
+ib_a=1.0
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+ib_size=0.02
+mv_b=0.71
+mv_g=0.91
+mv_l=1.0
+ob_a=1.0
+ob_size=0.02
+warp=0.01
+wave_b=0.65
+wave_g=0.65
+wave_r=0.65
+zoom=13.290894
+bAdditiveWaves=1.0
+fVideoEchoZoom=1.0
+nVideoEchoOrientation=1.0
+fWaveAlpha=0.001
+fZoomExponent=0.999998
+fShader=1.0
+nMotionVectorsX=12.799995
+nMotionVectorsY=9.600006
+fWaveParam=-1.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+wavecode_0_enabled=0.0
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=xpos = 0;
+per_frame_init_2=yamptarg = 0;
+per_frame_init_3=ydir = 0;
+per_frame_init_4=q5 = 0;
+per_frame_init_5=musictime = 0;
+per_frame_init_6=xamptarg = 0;
+per_frame_init_7=xamp = 0;
+per_frame_init_8=xspeed = 0;
+per_frame_init_9=q4 = 0;
+per_frame_init_10=ypos = 0;
+per_frame_init_11=zm = 0;
+per_frame_init_12=rd = 0;
+per_frame_init_13=volume = 0;
+per_frame_init_14=vol = 0;
+per_frame_init_15=yamp = 0;
+per_frame_init_16=xdir = 0;
+per_frame_init_17=yspeed = 0;
+per_frame_init_18=zoom=1;
+per_frame_init_19=xpos=0;
+per_frame_init_20=ypos=0;
+per_frame_1=decay=0.9;
+per_frame_2=vol=(((bass+mid)+treb)*0.25);
+per_frame_3=vol=(vol*vol);
+per_frame_4=volume=(0.15*(((((bass+bass_att)+treb)+treb_att)+mid)+mid_att));
+per_frame_5=xamptarg=(if(abs(equal(((frame)%(15)), 0))>0.00001,min(((0.5*volume)*bass_att), 0.5),xamptarg));
+per_frame_6=xamp=(xamp+(0.5*(xamptarg-xamp)));
+per_frame_7=xdir=(if(abs(above(abs(xpos), xamp))>0.00001,-sign(xpos),(if(abs(below(abs(xspeed), 0.1))>0.00001,((2*above(xpos, 0))-1),xdir))));
+per_frame_8=xspeed=(((xspeed+(xdir*xamp))-xpos)-((xspeed*0.055)*below(abs(xpos), xamp)));
+per_frame_9=xpos=(xpos+((0.002*xspeed)*vol));
+per_frame_10=dx=xpos;
+per_frame_11=yamptarg=(if(abs(equal(((frame)%(15)), 0))>0.00001,min(((0.3*volume)*treb_att), 0.5),yamptarg));
+per_frame_12=yamp=(yamp+(0.5*(yamptarg-yamp)));
+per_frame_13=ydir=(if(abs(above(abs(ypos), yamp))>0.00001,-sign(ypos),(if(abs(below(abs(yspeed), 0.1))>0.00001,((2*above(ypos, 0))-1),ydir))));
+per_frame_14=yspeed=(((yspeed+(ydir*yamp))-ypos)-((yspeed*0.055)*below(abs(ypos), yamp)));
+per_frame_15=ypos=(ypos+((0.002*yspeed)*vol));
+per_frame_16=dy=ypos;
+per_frame_17=wave_a=0;
+per_frame_18=zoom=1;
+per_frame_19=musictime=(musictime+vol);
+per_frame_20=q4=(sin((musictime*0.02))*0.3);
+per_frame_21=q5=(sin((musictime*0.01))*0.3);
+per_frame_22=dx=(sin((musictime*0.1))*0.3);
+per_frame_23=dy=(cos((musictime*0.069))*0.3);
+per_frame_24=monitor=rot;
+per_pixel_1=rd=sqrt((sqr((((x-0.5)-q4)*1.7))+sqr((((y-0.5)+q5)*1.2))));
+per_pixel_2=cx=(0.5+q4);
+per_pixel_3=cy=(0.5-q5);
+per_pixel_4=zm=(log((sqrt(2)-rd))-0.24);
+per_pixel_5=zm=(max(abs(zm), 0.25)*sign(zm));
+per_pixel_6=sx=zm;
+per_pixel_7=sy=zm;

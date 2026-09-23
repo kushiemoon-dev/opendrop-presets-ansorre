@@ -1,0 +1,58 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bInvert=1.0
+fDecay=1.0
+mv_a=0.0
+ob_a=1.0
+ob_b=1.0
+warp=0.01
+wave_b=0.0
+wave_g=0.0
+wave_r=0.0
+fVideoEchoAlpha=0.5
+fVideoEchoZoom=0.99663
+nVideoEchoOrientation=1.0
+fWaveAlpha=0.001
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+wavecode_0_enabled=0.0
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=basstime = 0;
+per_frame_init_2=stickybit = 0;
+per_frame_init_3=volavg2 = 0;
+per_frame_init_4=q1 = 0;
+per_frame_init_5=diff = 0;
+per_frame_init_6=edge = 0;
+per_frame_init_7=volavg = 0;
+per_frame_init_8=bit2 = 0;
+per_frame_init_9=vol = 0;
+per_frame_init_10=q2 = 0;
+per_frame_init_11=basssum = 0;
+per_frame_1=basstime=(basstime+(bass_att*0.03));
+per_frame_2=vol=pow(((bass+mid)+treb), 2);
+per_frame_3=basssum=vol;
+per_frame_4=stickybit=((time)%(2));
+per_frame_5=volavg=(volavg+(vol*equal(stickybit, 1)));
+per_frame_6=volavg2=(volavg2+(vol*equal(stickybit, 0)));
+per_frame_7=edge=bnot(equal(bit2, stickybit));
+per_frame_8=volavg=(volavg-((volavg*edge)*stickybit));
+per_frame_9=volavg2=(volavg2-((volavg2*edge)*equal(stickybit, 0)));
+per_frame_10=diff=(if(abs(equal(stickybit, 1))>0.00001,floor((basssum)/(volavg2)),0));
+per_frame_11=diff=(if(abs(equal(stickybit, 0))>0.00001,floor((basssum)/(volavg)),diff));
+per_frame_12=bit2=((time)%(2));
+per_frame_13=q1=diff;
+per_frame_14=ob_r=(0.5+(0.5*sin((basstime*4.5))));
+per_frame_15=ob_g=(0.5+(0.5*sin((basstime*5))));
+per_frame_16=ob_b=(0.5+(0.5*sin((basstime*3.8))));
+per_frame_17=q2=basstime;
+per_pixel_1=rot=(((1*q1)*ang)*0.5);
+per_pixel_2=sx=(1-(q1*0.6));
+per_pixel_3=sy=(1-(q1*0.6));
+per_pixel_4=cx=(0.5+(0.3*sin(time)));

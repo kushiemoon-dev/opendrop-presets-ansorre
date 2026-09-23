@@ -1,0 +1,159 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bDarken=1.0
+fGammaAdj=1.14
+fModWaveAlphaEnd=1.3
+fModWaveAlphaStart=0.71
+fWarpAnimSpeed=5.582132
+fWarpScale=2.1889
+fWaveScale=1.285751
+fWaveSmoothing=0.63
+ib_a=0.3
+ib_b=0.05
+ib_g=0.45
+ib_r=0.7
+mv_a=0.03
+mv_l=0.5
+nWaveMode=7.0
+ob_a=0.3
+ob_b=0.1
+ob_g=0.7
+ob_r=0.9
+ob_size=0.02
+sx=0.9999
+sy=0.9999
+warp=0.01
+wave_b=0.65
+wave_g=0.65
+wave_r=0.65
+zoom=1.009509
+bAdditiveWaves=1.0
+fVideoEchoAlpha=0.5
+fVideoEchoZoom=1.001827
+nVideoEchoOrientation=1.0
+fWaveAlpha=0.001
+fZoomExponent=1.001827
+fShader=1.0
+nMotionVectorsX=64.0
+nMotionVectorsY=48.0
+shapecode_0_enabled=1.0
+shapecode_0_sides=3.0
+shapecode_0_textured=1.0
+shapecode_0_rad=0.506271
+shapecode_0_tex_zoom=0.513405
+shapecode_0_g=1.0
+shapecode_0_b=1.0
+shapecode_0_a=0.8
+shapecode_0_r2=1.0
+shapecode_0_b2=1.0
+shapecode_0_border_a=0.0
+shape_0_per_frame1=ang=time;
+shapecode_1_enabled=1.0
+shapecode_1_sides=3.0
+shapecode_1_additive=1.0
+shapecode_1_textured=1.0
+shapecode_1_y=0.65
+shapecode_1_rad=0.32033
+shapecode_1_tex_zoom=2.006753
+shapecode_1_g=1.0
+shapecode_1_b=1.0
+shapecode_1_r2=1.0
+shapecode_1_b2=1.0
+shapecode_1_border_a=0.0
+shape_1_per_frame1=x=((sin(time)*0.05)+0.5);
+shape_1_per_frame2=ang=(time*0.25);
+shape_1_per_frame3=rad=(rad+((treb_att*treb_att)*0.1));
+shape_1_per_frame4=r=sin((time*0.1));
+shape_1_per_frame5=g=sin((time*0.25));
+shape_1_per_frame6=b=sin((time*0.75));
+shape_1_per_frame7=r2=(bass_att*0.65);
+shape_1_per_frame8=g2=(mid_att*0.65);
+shape_1_per_frame9=b2=(treb_att*0.65);
+shapecode_2_enabled=1.0
+shapecode_2_sides=3.0
+shapecode_2_textured=1.0
+shapecode_2_x=0.32
+shapecode_2_y=0.34
+shapecode_2_rad=0.364567
+shapecode_2_tex_zoom=0.608034
+shapecode_2_g=1.0
+shapecode_2_r2=1.0
+shapecode_2_b2=1.0
+shapecode_2_border_a=0.0
+shape_2_per_frame1=ang=time;
+shape_2_per_frame2=rad=(rad+((bass*bass)*0.1));
+shape_2_per_frame3=r=sin((time*0.2));
+shape_2_per_frame4=g=sin((time*0.5));
+shape_2_per_frame5=b=sin((time*1.25));
+shape_2_per_frame6=r2=(bass_att*0.65);
+shape_2_per_frame7=g2=(mid_att*0.65);
+shape_2_per_frame8=b2=(treb_att*0.65);
+shapecode_3_enabled=0.0
+wavecode_0_enabled=1.0
+wavecode_0_r=0.4
+wavecode_0_b=0.3
+wave_0_init1=d = 0;
+wave_0_init2=la = 0;
+wave_0_init3=wx = 0;
+wave_0_init4=branch = 0;
+wave_0_init5=sc = 0;
+wave_0_init6=wa = 0;
+wave_0_init7=wy = 0;
+wave_0_init8=ra = 0;
+wave_0_init9=wainc = 0;
+wavecode_1_enabled=1.0
+wavecode_1_scaling=0.999998
+wavecode_1_a=0.02
+wave_1_init1=d = 0;
+wave_1_init2=la = 0;
+wave_1_init3=wx = 0;
+wave_1_init4=branch = 0;
+wave_1_init5=sc = 0;
+wave_1_init6=wa = 0;
+wave_1_init7=wy = 0;
+wave_1_init8=ra = 0;
+wave_1_init9=wainc = 0;
+wavecode_2_enabled=1.0
+wavecode_2_a=0.0
+wave_2_init1=d = 0;
+wave_2_init2=la = 0;
+wave_2_init3=wx = 0;
+wave_2_init4=branch = 0;
+wave_2_init5=sc = 0;
+wave_2_init6=wa = 0;
+wave_2_init7=wy = 0;
+wave_2_init8=ra = 0;
+wave_2_init9=wainc = 0;
+wavecode_3_enabled=1.0
+wavecode_3_r=0.7
+wavecode_3_g=0.7
+wave_3_init1=d = 0;
+wave_3_init2=la = 0;
+wave_3_init3=wx = 0;
+wave_3_init4=branch = 0;
+wave_3_init5=sc = 0;
+wave_3_init6=wa = 0;
+wave_3_init7=wy = 0;
+wave_3_init8=ra = 0;
+wave_3_init9=wainc = 0;
+per_frame_init_1=rb = 0;
+per_frame_init_2=ra = 0;
+per_frame_init_3=zb = 0;
+per_frame_init_4=za = 0;
+per_frame_1=ob_r=abs(sin(time));
+per_frame_2=ob_g=abs(sin((time*0.05)));
+per_pixel_1=rb=(((above(treb, 0.7)*rad)*sin((time*3)))*3);
+per_pixel_2=ra=(if(abs(above(rb, 0))>0.00001,1,(ra-0.05)));
+per_pixel_3=ra=(if(abs(above(ra, 1))>0.00001,1,ra));
+per_pixel_4=ra=(if(abs(below(ra, 0))>0.00001,0,ra));
+per_pixel_5=rot=(rot+(((rb*ra)*ra)*0.1));
+per_pixel_6=zb=(((above(bass, 0.7)*rad)*sin((time*2)))*2);
+per_pixel_7=za=(if(abs(above(zb, 0))>0.00001,1,(za-0.05)));
+per_pixel_8=za=(if(abs(above(za, 1))>0.00001,1,za));
+per_pixel_9=za=(if(abs(below(za, 0))>0.00001,0,za));
+per_pixel_10=zoom=(zoom+(((zb*za)*za)*0.1));
+per_pixel_11=dx=(dx+(((((zb*za)*za)*(1-rad))*0.23)*above(ra, 0)));
+per_pixel_12=dy=(dy+(((y*sin(time))*0.01)*ang));

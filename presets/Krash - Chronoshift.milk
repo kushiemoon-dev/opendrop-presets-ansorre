@@ -1,0 +1,52 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+fDecay=0.97
+fWaveScale=0.741922
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+ib_size=0.0
+mv_a=0.0
+ob_size=0.0
+wave_b=0.5
+wave_g=0.5
+wave_r=0.5
+fVideoEchoZoom=1.0
+fWaveAlpha=1.0
+fZoomExponent=0.248317
+fWaveParam=-0.5
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=angval = 0;
+per_frame_init_2=angval2 = 0;
+per_frame_init_3=minute_dir = 0;
+per_frame_init_4=last_time = 0;
+per_frame_init_5=q1 = 0;
+per_frame_init_6=hour_dir = 0;
+per_frame_init_7=bass_thresh = 0;
+per_frame_init_8=bass_time = 0;
+per_frame_init_9=q2 = 0;
+per_frame_init_10=q3 = 0;
+per_frame_1=warp=0;
+per_frame_2=wave_r=(wave_r+(0.350*((0.60*sin((0.823*time)))+(0.40*sin((0.916*time))))));
+per_frame_3=wave_g=(wave_g+(0.350*((0.60*sin((0.900*time)))+(0.40*sin((1.023*time))))));
+per_frame_4=wave_b=(wave_b+(0.350*((0.60*sin((0.808*time)))+(0.40*sin((0.949*time))))));
+per_frame_5=bass_time=(bass_time+((if(abs(above(treb_att, 1.2))>0.00001,(2*treb_att),1))*(time-last_time)));
+per_frame_6=q1=bass_time;
+per_frame_7=last_time=time;
+per_frame_8=bass_thresh=((above(bass_att, bass_thresh)*2)+((1-above(bass_att, bass_thresh))*(((bass_thresh-1.3)*0.99)+1.3)));
+per_frame_9=minute_dir=(if(abs(equal(minute_dir, 0))>0.00001,-1,(if(abs(equal(bass_thresh, 2))>0.00001,sign(sin(time)),minute_dir))));
+per_frame_10=hour_dir=(if(abs(equal(hour_dir, 0))>0.00001,-1,(if(abs(equal(bass_thresh, 2))>0.00001,sign(cos(time)),hour_dir))));
+per_frame_11=q2=minute_dir;
+per_frame_12=q3=hour_dir;
+per_pixel_1=angval=floor((0.3)/(sqrt(((3.14*tan((((q2*ang)*0.5)-q1)))+4))));
+per_pixel_2=angval2=floor((0.3)/(sqrt(((3.14*tan(((((q3*ang)*0.5)-floor((q1)/(12)))+1.2)))+4))));
+per_pixel_3=zoom=(0.8+(3*sqr(angval)));
+per_pixel_4=zoom=(zoom+(if(abs(below(rad, 0.4))>0.00001,(3*sqr(angval2)),0)));
+per_pixel_5=rot=(0.1*(sin(angval)-sin(angval2)));

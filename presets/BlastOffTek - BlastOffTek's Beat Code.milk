@@ -1,0 +1,63 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+fDecay=0.925
+fGammaAdj=1.0
+fModWaveAlphaEnd=2.0
+fModWaveAlphaStart=0.0
+fWaveSmoothing=0.5
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+ib_size=0.5
+mv_a=0.0
+mv_b=0.0
+mv_l=5.0
+nWaveMode=7.0
+ob_size=0.5
+warp=0.0
+bAdditiveWaves=1.0
+fVideoEchoZoom=1.0
+nVideoEchoOrientation=3.0
+fWaveAlpha=1.0
+nMotionVectorsX=64.0
+nMotionVectorsY=1.248
+bTexWrap=0.0
+shapecode_0_enabled=1.0
+shapecode_0_rad=0.99992
+shapecode_0_ang=0.7853
+shapecode_0_tex_ang=0.81681
+shapecode_0_tex_zoom=0.86996
+shapecode_0_r=0.0
+shapecode_0_g=1.0
+shapecode_0_a2=1.0
+shapecode_0_border_a=1.0
+shape_0_init1=yrapidness = 0;
+shape_0_init2=nowdiff = 0;
+shape_0_init3=backdiff = 0;
+shape_0_init4=steadiff = 0;
+shape_0_init5=threshold = 0;
+shape_0_init6=beat = 0;
+shape_0_per_frame1=yrapidness=0.01;
+shape_0_per_frame2=nowdiff=(treb_att-bass_att);
+shape_0_per_frame3=backdiff=nowdiff;
+shape_0_per_frame4=nowdiff=(if(abs(above(nowdiff, 1))>0.00001,1,nowdiff));
+shape_0_per_frame5=nowdiff=(if(abs(below(nowdiff, -1))>0.00001,-1,nowdiff));
+shape_0_per_frame6=steadiff=(if(abs(equal(steadiff, nowdiff))>0.00001,nowdiff,steadiff));
+shape_0_per_frame7=steadiff=(if(abs(below(steadiff, nowdiff))>0.00001,(steadiff+(yrapidness*(nowdiff-steadiff))),steadiff));
+shape_0_per_frame8=steadiff=(if(abs(above(steadiff, nowdiff))>0.00001,(steadiff-(yrapidness*(steadiff-nowdiff))),steadiff));
+shape_0_per_frame9=threshold=(0.24-(0.3*steadiff));
+shape_0_per_frame10=beat=(if(abs(above((treb+bass), 1.4))>0.00001,(if(abs(below(beat, 0.02))>0.00001,(if(abs(above((bass+mid), ((mid_att+threshold)+(bass_att+threshold))))>0.00001,1,beat)),beat)),beat));
+shape_0_per_frame11=beat=(beat*0.8);
+shape_0_per_frame12=a=beat;
+shape_0_per_frame13=a2=beat;
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+wavecode_0_enabled=0.0
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_1=wave_a=0;

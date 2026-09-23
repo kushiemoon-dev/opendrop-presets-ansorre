@@ -1,0 +1,107 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bSolarize=1.0
+bWaveDots=1.0
+fDecay=0.94
+fGammaAdj=1.7
+fWarpAnimSpeed=0.01
+fWarpScale=0.01
+fWaveScale=0.012
+fWaveSmoothing=0.9
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+ib_size=0.0
+mv_a=0.0
+mv_b=0.3
+mv_dx=0.02
+mv_dy=-0.02
+mv_g=0.48
+mv_l=0.15
+mv_r=0.49
+nWaveMode=2.0
+ob_b=0.1
+ob_r=0.11
+ob_size=0.0
+warp=0.01
+wave_b=0.3
+wave_g=0.4
+wave_r=0.5
+fVideoEchoAlpha=0.5
+fVideoEchoZoom=1.0
+nVideoEchoOrientation=1.0
+fWaveAlpha=0.001
+fShader=1.0
+nMotionVectorsX=3.0
+nMotionVectorsY=2.0
+shapecode_0_enabled=1.0
+shapecode_0_sides=5.0
+shapecode_0_textured=1.0
+shapecode_0_rad=1.06779
+shapecode_0_ang=0.75398
+shapecode_0_tex_zoom=0.77977
+shapecode_0_g=1.0
+shapecode_0_b=1.0
+shapecode_0_r2=1.0
+shapecode_0_b2=1.0
+shapecode_0_border_a=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+wavecode_0_enabled=1.0
+wavecode_0_r=0.1
+wavecode_0_b=0.7
+wave_0_init1=n = 0;
+wave_0_init2=yq = 0;
+wave_0_init3=xp = 0;
+wave_0_init4=xs = 0;
+wave_0_init5=yp = 0;
+wave_0_init6=q1 = 0;
+wave_0_init7=xq = 0;
+wave_0_init8=flip = 0;
+wave_0_init9=ys = 0;
+wave_0_init10=zq = 0;
+wave_0_init11=phs = 0;
+wave_0_init12=ang = 0;
+wave_0_init13=tm = 0;
+wave_0_init14=zp = 0;
+wavecode_1_enabled=1.0
+wavecode_1_r=0.2
+wavecode_1_b=0.6
+wave_1_init1=n = 0;
+wave_1_init2=yq = 0;
+wave_1_init3=xp = 0;
+wave_1_init4=xs = 0;
+wave_1_init5=yp = 0;
+wave_1_init6=q1 = 0;
+wave_1_init7=xq = 0;
+wave_1_init8=flip = 0;
+wave_1_init9=ys = 0;
+wave_1_init10=zq = 0;
+wave_1_init11=phs = 0;
+wave_1_init12=ang = 0;
+wave_1_init13=tm = 0;
+wave_1_init14=zp = 0;
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=q1 = 0;
+per_frame_init_2=q2 = 0;
+per_frame_init_3=mv_x=64;
+per_frame_init_4=mv_y=48;
+per_frame_init_5=nut=0;
+per_frame_init_6=stp=0;
+per_frame_init_7=stq=0;
+per_frame_init_8=rtp=0;
+per_frame_init_9=rtq=0;
+per_frame_init_10=wvr=0;
+per_frame_init_11=decay=0;
+per_frame_init_12=dcsp=0;
+per_frame_1=decay=0.95;
+per_frame_2=zoom=1.005;
+per_frame_3=monitor=floor((512)/(8));
+per_frame_4=warp=0;
+per_frame_5=q1=(time*0.4);
+per_frame_6=q2=8;

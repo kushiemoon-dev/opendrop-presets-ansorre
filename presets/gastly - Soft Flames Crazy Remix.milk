@@ -1,0 +1,48 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bWaveThick=1.0
+fDecay=0.925
+fGammaAdj=1.0
+fModWaveAlphaEnd=1.7
+fModWaveAlphaStart=1.11
+fWaveScale=1.236
+fWaveSmoothing=0.9
+mv_a=0.0
+mv_l=4.4
+nWaveMode=6.0
+warp=0.90909
+wave_g=0.95
+wave_r=0.7
+wave_x=0.6
+wave_y=1.0
+bAdditiveWaves=1.0
+fVideoEchoZoom=1.007
+nVideoEchoOrientation=3.0
+fWaveAlpha=8.311
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+wavecode_0_enabled=1.0
+wave_0_init1=rot = 0;
+wave_0_init2=ang = 0;
+wave_0_per_frame1=r=(sin((time+1.31))*bass);
+wave_0_per_frame2=g=(sin((time+1.32))*bass);
+wave_0_per_frame3=b=(sin((time+1.33))*bass);
+wave_0_per_frame4=samples=time;
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=vol = 0;
+per_frame_init_2=ang = 0;
+per_frame_init_3=rad = 0;
+per_frame_init_4=x = 0;
+per_frame_init_5=y = 0;
+per_frame_1=wave_r=(0.5+(0.5*sin((time*1.31))));
+per_frame_2=wave_b=(0.5+(0.5*sin((time*1.32))));
+per_frame_3=wave_g=(0.5+(0.5*sin((time*1.33))));
+per_frame_4=zoom=((1.12+floor((sin((-2*ang)))/(9)))-floor((cos((rad+((2*x)-y))))/(11)));
+per_pixel_1=zoom=(sin(bass)-(sin(time)*vol));

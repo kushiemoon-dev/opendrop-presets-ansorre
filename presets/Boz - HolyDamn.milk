@@ -1,0 +1,56 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+fDecay=1.0
+fGammaAdj=2.4
+fModWaveAlphaEnd=1.3
+fModWaveAlphaStart=0.71
+fWarpScale=1.331
+fWaveScale=0.389574
+fWaveSmoothing=0.63
+ib_r=1.0
+ib_size=0.5
+mv_a=0.4
+mv_dx=0.32
+mv_dy=0.42
+mv_l=3.199998
+nWaveMode=2.0
+ob_r=1.0
+ob_size=0.0
+warp=0.01
+wave_b=0.65
+wave_g=0.65
+wave_r=0.65
+wave_x=0.67
+zoom=0.997527
+bAdditiveWaves=1.0
+fVideoEchoAlpha=0.5
+fVideoEchoZoom=0.999603
+nVideoEchoOrientation=2.0
+fWaveAlpha=100.0
+nMotionVectorsX=30.079998
+nMotionVectorsY=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=antirot = 0;
+per_frame_init_2=wave_color = 0;
+per_frame_init_3=q1 = 0;
+per_frame_init_4=q2 = 0;
+per_frame_1=wave_r=(0.3+(0.6*sin((time*2))));
+per_frame_2=wave_g=(0.3+(0.55*sin((time*1.8))));
+per_frame_3=wave_b=((wave_r-0.3)+(0.4*sin((time*5))));
+per_frame_4=wave_mystery=(2*sin(floor((time)/(10))));
+per_frame_5=ib_r=(wave_color*sin((time*0.9)));
+per_frame_6=ib_g=(wave_color*sin((time*0.85)));
+per_frame_7=ib_b=(wave_color*sin((time*0.78)));
+per_frame_8=wave_color=max(q1, q2);
+per_frame_9=q1=(0.7+(0.3*sin((time*2))));
+per_frame_10=q2=(0.6+(0.4*sin((time*1.5))));
+per_frame_11=dx=-0.07;
+per_frame_12=decay=(if(abs(above(((frame)%(30)), 4))>0.00001,1.00,0.990));
+per_frame_13=monitor=decay;
+per_pixel_1=rot=((antirot)&(floor((rad)/(-ang))));

@@ -1,0 +1,70 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+fDecay=1.0
+fWaveScale=0.999996
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+mv_a=0.0
+ob_a=0.1
+rot=0.1
+sx=13.290947
+wave_b=0.5
+wave_g=0.5
+wave_r=0.5
+zoom=0.9999
+fVideoEchoZoom=1.0
+fWaveAlpha=1.0
+fWaveParam=-0.4999
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=xpos = 0;
+per_frame_init_2=yamptarg = 0;
+per_frame_init_3=ydir = 0;
+per_frame_init_4=bass_thresh = 0;
+per_frame_init_5=xamptarg = 0;
+per_frame_init_6=xamp = 0;
+per_frame_init_7=xspeed = 0;
+per_frame_init_8=dx_residual = 0;
+per_frame_init_9=ypos = 0;
+per_frame_init_10=att = 0;
+per_frame_init_11=vol = 0;
+per_frame_init_12=yamp = 0;
+per_frame_init_13=xdir = 0;
+per_frame_init_14=yspeed = 0;
+per_frame_init_15=dy_residual = 0;
+per_frame_1=dx=-0.0005;
+per_frame_2=dy=-0.0005;
+per_frame_3=warp=0;
+per_frame_4=wave_r=(wave_r+(0.45*((0.5*sin((time*0.701)))+(0.3*cos((time*0.438))))));
+per_frame_5=wave_b=(wave_b-(0.4*((0.5*sin((time*4.782)))+(0.5*cos((time*0.522))))));
+per_frame_6=wave_g=(wave_g+(0.4*sin((time*1.731))));
+per_frame_7=decay=(decay-(equal(((frame)%(100)), 0)*0.1));
+per_frame_8=vol=(0.167*((bass+mid)+att));
+per_frame_9=xamptarg=(if(abs(equal(((frame)%(15)), 0))>0.00001,min(((0.5*vol)*bass_att), 0.5),xamptarg));
+per_frame_10=xamp=(xamp+(0.5*(xamptarg-xamp)));
+per_frame_11=xdir=(if(abs(above(abs(xpos), xamp))>0.00001,-sign(xpos),(if(abs(below(abs(xspeed), 0.1))>0.00001,((2*above(xpos, 0))-1),xdir))));
+per_frame_12=xspeed=(((xspeed+(xdir*xamp))-xpos)-((xspeed*0.055)*below(abs(xpos), xamp)));
+per_frame_13=xpos=(xpos+(0.001*xspeed));
+per_frame_14=wave_x=((1.5*xpos)+0.5);
+per_frame_15=yamptarg=(if(abs(equal(((frame)%(15)), 0))>0.00001,min(((0.3*vol)*treb_att), 0.5),yamptarg));
+per_frame_16=yamp=(yamp+(0.5*(yamptarg-yamp)));
+per_frame_17=ydir=(if(abs(above(abs(ypos), yamp))>0.00001,-sign(ypos),(if(abs(below(abs(yspeed), 0.1))>0.00001,((2*above(ypos, 0))-1),ydir))));
+per_frame_18=yspeed=(((yspeed+(ydir*yamp))-ypos)-((yspeed*0.055)*below(abs(ypos), yamp)));
+per_frame_19=ypos=(ypos+(0.001*yspeed));
+per_frame_20=wave_y=((1.5*ypos)+0.5);
+per_frame_21=dx=(dx+dx_residual);
+per_frame_22=dy=(dy+dy_residual);
+per_frame_23=bass_thresh=((above(bass_att, bass_thresh)*2)+((1-above(bass_att, bass_thresh))*(((bass_thresh-1.3)*0.96)+1.3)));
+per_frame_24=dx_residual=(((equal(bass_thresh, 2)*0.003)*sin((time*7)))+((1-equal(bass_thresh, 2))*dx_residual));
+per_frame_25=dy_residual=(((equal(bass_thresh, 2)*0.001)*sin((time*9)))+((1-equal(bass_thresh, 2))*dy_residual));
+per_pixel_1=cx=((((0)&(((x*10)-0.5)))*0.1)+0.05);
+per_pixel_2=cy=((((0)&(((y*10)-0.5)))*0.1)+0.05);
+per_pixel_3=rot=(rot*pow(-1, (((0)&(((x*10)-0.5)))+((0)&(((y*10)-0.5))))));
+per_pixel_4=rot=0.1;

@@ -1,0 +1,40 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bDarkenCenter=1.0
+fDecay=0.95
+fGammaAdj=1.7
+fModWaveAlphaEnd=1.0
+fModWaveAlphaStart=1.0
+fWaveScale=1.4023
+fWaveSmoothing=0.0
+mv_a=0.0
+warp=0.0
+wave_b=0.64
+wave_g=0.65
+wave_r=0.65
+bAdditiveWaves=1.0
+fVideoEchoAlpha=0.5
+fVideoEchoZoom=1.0
+nVideoEchoOrientation=1.0
+fWaveAlpha=4.0
+fZoomExponent=100.0
+nMotionVectorsX=1.0
+nMotionVectorsY=3.0
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+per_frame_init_1=ff = 0;
+per_frame_1=ff=floor((frame)/(150));
+per_frame_2=zoom=(1+floor(((pow(cos(ff), 4)*pow(sin(ff), 3)))/(mid_att)));
+per_frame_3=wave_g=((cos(ff)-(pow(sin(ff), 2)*0.45))+0.55);
+per_frame_4=wave_b=(floor((sin(ff))/(2))+0.5);
+per_frame_5=wave_r=(floor((cos(ff))/(2))+0.5);
+per_frame_6=decay=(1-(floor((sin(ff))/(20))+0.055));
+per_frame_7=dx=floor((cos(ff))/(200));
+per_frame_8=rot=((floor((pow(sin((4*ff)), 5))/(30))+floor((pow(sin((2*ff)), 3))/(30)))-floor((sin(ff))/(30)));
+per_frame_9=dx=floor((pow(sin(ff), 3))/(100));

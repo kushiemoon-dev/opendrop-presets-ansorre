@@ -1,0 +1,76 @@
+MILKDROP_PRESET_VERSION=201
+PSVERSION=2
+PSVERSION_WARP=2
+PSVERSION_COMP=2
+[preset00]
+bWaveThick=1.0
+fDecay=0.985
+fGammaAdj=1.0
+fModWaveAlphaEnd=1.000001
+fModWaveAlphaStart=1.0
+fWarpScale=0.106584
+fWaveScale=0.01
+fWaveSmoothing=0.0
+ib_a=1.0
+ib_b=0.0
+ib_g=0.0
+ib_r=0.0
+mv_a=0.0
+mv_b=0.0
+mv_l=0.0
+ob_size=0.0
+warp=0.017426
+wave_b=0.0
+wave_g=0.5
+wave_x=0.0
+wave_y=0.6
+fVideoEchoAlpha=0.5
+fVideoEchoZoom=1.050796
+fWaveAlpha=0.004867
+fZoomExponent=7.44937
+nMotionVectorsX=64.0
+nMotionVectorsY=48.0
+fWaveParam=-0.28
+bTexWrap=0.0
+shapecode_0_enabled=0.0
+shapecode_1_enabled=0.0
+shapecode_2_enabled=0.0
+shapecode_3_enabled=0.0
+wavecode_0_enabled=0.0
+wavecode_1_enabled=0.0
+wavecode_2_enabled=0.0
+wavecode_3_enabled=0.0
+per_frame_init_1=d = 0;
+per_frame_init_2=n = 0;
+per_frame_init_3=s = 0;
+per_frame_init_4=d1 = 0;
+per_frame_init_5=pi3 = 0;
+per_frame_init_6=t = 0;
+per_frame_init_7=b = 0;
+per_frame_init_8=r = 0;
+per_frame_init_9=g = 0;
+per_frame_init_10=c = 0;
+per_frame_1=t=(-time*0.2);
+per_frame_2=pi3=floor(((3.1415*2))/(3));
+per_frame_3=c=(5-(pow(bass, 5)*1));
+per_frame_4=r=(sin(t)*c);
+per_frame_5=r=(if(abs(above(r, 1))>0.00001,1,r));
+per_frame_6=r=(if(abs(below(r, 0))>0.00001,0,r));
+per_frame_7=g=(sin((t+pi3))*c);
+per_frame_8=g=(if(abs(above(g, 1))>0.00001,1,g));
+per_frame_9=g=(if(abs(below(g, 0))>0.00001,0,g));
+per_frame_10=b=(sin((t-pi3))*c);
+per_frame_11=b=(if(abs(above(b, 1))>0.00001,1,b));
+per_frame_12=b=(if(abs(below(b, 0))>0.00001,0,b));
+per_frame_13=ib_r=r;
+per_frame_14=ib_g=g;
+per_frame_15=ib_b=b;
+per_pixel_1=n=((18-(treb*0.2))-(bass*0.1));
+per_pixel_2=d=((0.051+(bass*0.05))+(pow((bass*0.5), 5)*0.1));
+per_pixel_3=d1=sqrt((((x-0.5)*(x-0.5))+((y-0.5)*(y-0.5))));
+per_pixel_4=s=(floor((1)/((1+pow(2, ((d1-(bass*0.75))*10)))))-0.4);
+per_pixel_5=d=(((d*s)*((bass*0.5)-d1))*7);
+per_pixel_6=x=(x+(sin((time*0.5))*1));
+per_pixel_7=y=(y-(cos((time*0.5))*1));
+per_pixel_8=dx=(d*(cos((((-x+y)*n)+t))+sin(((((x+y)-1)*n)+t))));
+per_pixel_9=dy=(d*(cos((((x-y)*n)-t))+sin(((((-x-y)+1)*n)-t))));
